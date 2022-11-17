@@ -14,9 +14,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="IRepositories\" />
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
 </Project>
