@@ -19,6 +19,7 @@ namespace _1.DAL.Configurations
             builder.Property(c => c.MaNV).IsRequired();
             builder.Property(c => c.MaNV).IsRequired();
             builder.Property(c => c.NgayTao).HasColumnType("date").IsRequired();
+            //Khoá ngoại
             builder.HasOne(c => c.KhachHang).WithMany().HasForeignKey(c => c.MaKH);
             builder.HasOne(c => c.NhanVien).WithMany().HasForeignKey(c => c.MaNV);
             builder.HasOne(c => c.Voucher).WithMany().HasForeignKey(c => c.MaVC);
