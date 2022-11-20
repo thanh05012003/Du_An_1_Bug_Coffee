@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\Source\\Repos\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj": {}
+    "C:\\Users\\ADMIN\\Desktop\\HocC#\\Du_An_1_Bug_Coffee\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\Source\\Repos\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj": {
+    "C:\\Users\\ADMIN\\Desktop\\HocC#\\Du_An_1_Bug_Coffee\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Source\\Repos\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\HocC#\\Du_An_1_Bug_Coffee\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj",
         "projectName": "1.DAL",
-        "projectPath": "C:\\Users\\ADMIN\\Source\\Repos\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj",
+        "projectPath": "C:\\Users\\ADMIN\\Desktop\\HocC#\\Du_An_1_Bug_Coffee\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Source\\Repos\\Du_An_1_Bug_Coffee\\1.DAL\\obj\\",
+        "outputPath": "C:\\Users\\ADMIN\\Desktop\\HocC#\\Du_An_1_Bug_Coffee\\Du_An_1_Bug_Coffee\\1.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
