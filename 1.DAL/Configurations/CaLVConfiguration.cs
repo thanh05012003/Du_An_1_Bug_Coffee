@@ -19,6 +19,7 @@ namespace _1.DAL.Configurations
             builder.Property(p => p.Ten).HasColumnType("nvarchar(100)").IsRequired();
             builder.Property(p => p.ThoiGianBatDau).HasColumnType("date").IsRequired();
             builder.Property(p => p.ThoiGianKetThuc).HasColumnType("date").IsRequired();
+            builder.Property(p => p.SoTien).HasColumnType("money").IsRequired();
         }
     }
 }

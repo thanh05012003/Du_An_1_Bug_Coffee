@@ -41,6 +41,10 @@ namespace _1.DAL.Migrations
                     b.Property<string>("Ma")
                         .HasColumnType("varchar(20)");
 
+                    b.Property<decimal?>("SoTien")
+                        .IsRequired()
+                        .HasColumnType("money");
+
                     b.Property<string>("Ten")
                         .IsRequired()
                         .HasColumnType("nvarchar(100)");
