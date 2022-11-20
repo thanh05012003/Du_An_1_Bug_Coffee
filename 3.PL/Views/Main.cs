@@ -19,7 +19,7 @@ namespace _3.PL.Views
 
         private void Main_Load(object sender, EventArgs e)
         {
-
+dddd
         }
     }
 }
