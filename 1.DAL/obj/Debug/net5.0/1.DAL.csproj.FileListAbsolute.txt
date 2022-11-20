@@ -28,3 +28,18 @@ C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\1.DAL\obj\Debug\net5.0\refi
 C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\1.DAL\obj\Debug\net5.0\1.DAL.pdb
 C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\1.DAL\obj\Debug\net5.0\1.DAL.genruntimeconfig.cache
 C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\1.DAL\obj\Debug\net5.0\ref\1.DAL.dll
+C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\1.DAL\bin\Debug\net5.0\1.DAL.deps.json
+C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\1.DAL\bin\Debug\net5.0\1.DAL.runtimeconfig.json
+C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\1.DAL\bin\Debug\net5.0\1.DAL.runtimeconfig.dev.json
+C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\1.DAL\bin\Debug\net5.0\1.DAL.dll
+C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\1.DAL\bin\Debug\net5.0\1.DAL.pdb
+C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\1.DAL\obj\Debug\net5.0\1.DAL.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\1.DAL\obj\Debug\net5.0\1.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\1.DAL\obj\Debug\net5.0\1.DAL.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\1.DAL\obj\Debug\net5.0\1.DAL.AssemblyInfo.cs
+C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\1.DAL\obj\Debug\net5.0\1.DAL.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\1.DAL\obj\Debug\net5.0\1.DAL.dll
+C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\1.DAL\obj\Debug\net5.0\refint\1.DAL.dll
+C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\1.DAL\obj\Debug\net5.0\1.DAL.pdb
+C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\1.DAL\obj\Debug\net5.0\1.DAL.genruntimeconfig.cache
+C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\1.DAL\obj\Debug\net5.0\ref\1.DAL.dll
