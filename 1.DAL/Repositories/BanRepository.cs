@@ -3,32 +3,46 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using _1.DAL.Context;
 using _1.DAL.DomainClass;
 using _1.DAL.IRepositories;
 
 namespace _1.DAL.Repositories
 {
-    public class BanRepository:IBanRepository
-
+    public class BanRepository : IBanRepository
     {
-        public bool add(Ban obj)
+        private FpolyDbContext _DbContext;
+        public BanRepository()
         {
-            throw new NotImplementedException();
+            _DbContext = new FpolyDbContext();
+        }
+        public bool Add(Ban obj)
+        {
+            if(obj == null) return false;
+            _DbContext.Ban.Add(obj);
+            _DbContext.SaveChanges();
+            return true;
         }
 
-        public bool delete(Ban obj)
+        public bool Delete(Ban obj)
         {
-            throw new NotImplementedException();
-        }
-
-        public bool udpate(Ban obj)
-        {
-            throw new NotImplementedException();
+            if (obj == null) return false;
+            _DbContext.Remove(obj);
+            _DbContext.SaveChanges();
+            return true;
         }
 
         public List<Ban> GetAll()
         {
-            throw new NotImplementedException();
+            return _DbContext.Ban.ToList();
+        }
+
+        public bool Udpate(Ban obj)
+        {
+            if (obj == null) return false;
+            _DbContext.Update(obj);
+            _DbContext.SaveChanges();
+            return true;
         }
     }
 }
