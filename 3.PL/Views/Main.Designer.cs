@@ -28,145 +28,151 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_NhanVien = new System.Windows.Forms.Button();
+            this.btn_ThongKe = new System.Windows.Forms.Button();
+            this.btn_KhuyenMai = new System.Windows.Forms.Button();
+            this.btn_SanPham = new System.Windows.Forms.Button();
+            this.btn_HoaDon = new System.Windows.Forms.Button();
+            this.btn_BanHang = new System.Windows.Forms.Button();
+            this.btn_TrangChu = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pn_for = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_NhanVien);
+            this.panel1.Controls.Add(this.btn_ThongKe);
+            this.panel1.Controls.Add(this.btn_KhuyenMai);
+            this.panel1.Controls.Add(this.btn_SanPham);
+            this.panel1.Controls.Add(this.btn_HoaDon);
+            this.panel1.Controls.Add(this.btn_BanHang);
+            this.panel1.Controls.Add(this.btn_TrangChu);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(272, 853);
+            this.panel1.Size = new System.Drawing.Size(272, 877);
             this.panel1.TabIndex = 0;
             // 
-            // button5
+            // btn_NhanVien
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.Location = new System.Drawing.Point(0, 513);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(272, 86);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_NhanVien.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_NhanVien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_NhanVien.Location = new System.Drawing.Point(0, 227);
+            this.btn_NhanVien.Name = "btn_NhanVien";
+            this.btn_NhanVien.Size = new System.Drawing.Size(272, 104);
+            this.btn_NhanVien.TabIndex = 7;
+            this.btn_NhanVien.Text = "Nhân viên";
+            this.btn_NhanVien.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btn_ThongKe
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.Location = new System.Drawing.Point(0, 427);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(272, 86);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_ThongKe.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_ThongKe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_ThongKe.Location = new System.Drawing.Point(0, 331);
+            this.btn_ThongKe.Name = "btn_ThongKe";
+            this.btn_ThongKe.Size = new System.Drawing.Size(272, 91);
+            this.btn_ThongKe.TabIndex = 6;
+            this.btn_ThongKe.Text = "Thống kê";
+            this.btn_ThongKe.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_KhuyenMai
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.Location = new System.Drawing.Point(0, 341);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(272, 86);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_KhuyenMai.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_KhuyenMai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_KhuyenMai.Location = new System.Drawing.Point(0, 422);
+            this.btn_KhuyenMai.Name = "btn_KhuyenMai";
+            this.btn_KhuyenMai.Size = new System.Drawing.Size(272, 91);
+            this.btn_KhuyenMai.TabIndex = 5;
+            this.btn_KhuyenMai.Text = "Khuyến mãi";
+            this.btn_KhuyenMai.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_SanPham
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.Location = new System.Drawing.Point(0, 255);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(272, 86);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_SanPham.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_SanPham.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_SanPham.Location = new System.Drawing.Point(0, 513);
+            this.btn_SanPham.Name = "btn_SanPham";
+            this.btn_SanPham.Size = new System.Drawing.Size(272, 91);
+            this.btn_SanPham.TabIndex = 4;
+            this.btn_SanPham.Text = "Sản phẩm";
+            this.btn_SanPham.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_HoaDon
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Location = new System.Drawing.Point(0, 169);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(272, 86);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_HoaDon.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_HoaDon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_HoaDon.Location = new System.Drawing.Point(0, 604);
+            this.btn_HoaDon.Name = "btn_HoaDon";
+            this.btn_HoaDon.Size = new System.Drawing.Size(272, 91);
+            this.btn_HoaDon.TabIndex = 3;
+            this.btn_HoaDon.Text = "Hoá đơn";
+            this.btn_HoaDon.UseVisualStyleBackColor = true;
+            // 
+            // btn_BanHang
+            // 
+            this.btn_BanHang.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_BanHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_BanHang.Location = new System.Drawing.Point(0, 695);
+            this.btn_BanHang.Name = "btn_BanHang";
+            this.btn_BanHang.Size = new System.Drawing.Size(272, 91);
+            this.btn_BanHang.TabIndex = 2;
+            this.btn_BanHang.Text = "Bán Hàng";
+            this.btn_BanHang.UseVisualStyleBackColor = true;
+            // 
+            // btn_TrangChu
+            // 
+            this.btn_TrangChu.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_TrangChu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_TrangChu.Location = new System.Drawing.Point(0, 786);
+            this.btn_TrangChu.Name = "btn_TrangChu";
+            this.btn_TrangChu.Size = new System.Drawing.Size(272, 91);
+            this.btn_TrangChu.TabIndex = 1;
+            this.btn_TrangChu.Text = "Trang chủ";
+            this.btn_TrangChu.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
+            this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(272, 169);
+            this.groupBox1.Size = new System.Drawing.Size(272, 224);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // pn_for
             // 
-            this.pn_for.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pn_for.Location = new System.Drawing.Point(278, 0);
+            this.pn_for.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pn_for.Location = new System.Drawing.Point(272, 74);
             this.pn_for.Name = "pn_for";
-            this.pn_for.Size = new System.Drawing.Size(1175, 853);
+            this.pn_for.Size = new System.Drawing.Size(1232, 803);
             this.pn_for.TabIndex = 1;
             // 
-            // button6
+            // panel2
             // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.Location = new System.Drawing.Point(0, 599);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(272, 86);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.Location = new System.Drawing.Point(0, 685);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(272, 86);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button8.Location = new System.Drawing.Point(0, 771);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(272, 82);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(272, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1232, 68);
+            this.panel2.TabIndex = 2;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1453, 853);
+            this.ClientSize = new System.Drawing.Size(1504, 877);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pn_for);
             this.Controls.Add(this.panel1);
             this.Name = "Main";
             this.Text = "Main";
-            this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -175,15 +181,15 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_KhuyenMai;
+        private System.Windows.Forms.Button btn_SanPham;
+        private System.Windows.Forms.Button btn_HoaDon;
+        private System.Windows.Forms.Button btn_BanHang;
+        private System.Windows.Forms.Button btn_TrangChu;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel pn_for;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btn_NhanVien;
+        private System.Windows.Forms.Button btn_ThongKe;
+        private System.Windows.Forms.Panel panel2;
     }
 }
