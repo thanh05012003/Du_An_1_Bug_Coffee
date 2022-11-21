@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace _3.PL.Views
 {
-    public partial class Main : Form
+    public partial class FrmLogIn : Form
     {
-        public Main()
+        public FrmLogIn()
         {
             InitializeComponent();
         }
-
     }
 }
