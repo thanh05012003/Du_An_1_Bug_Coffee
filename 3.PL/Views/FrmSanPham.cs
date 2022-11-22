@@ -16,5 +16,10 @@ namespace _3.PL.Views
         {
             InitializeComponent();
         }
+
+        private void FrmSanPham_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

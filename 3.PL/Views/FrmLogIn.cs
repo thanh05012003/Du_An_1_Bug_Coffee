@@ -2,29 +2,38 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.DirectoryServices.ActiveDirectory;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _2.BUS.IServices;
+using _2.BUS.Services;
 using _3.PL.Utilities;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace _3.PL.Views
 {
     public partial class FrmLogin : Form
     {
         private Utility _utility;
+        INhanVienService _nhanVienService;
         public FrmLogin()
         {
             InitializeComponent();
             _utility = new Utility();
+            _nhanVienService = new NhanVienService();
             lb_EmailFail.Visible = false;
             lb_MatKhauFail.Visible = false;
         }
 
         public void Check()
         {
+            var login = _nhanVienService.GetAll().FirstOrDefault(c =>
+                c.Email.ToLower() == txt_Email.Text.ToLower().Trim() &&
+                c.MatKhau.ToLower() == txt_MatKhau.Text.ToLower().Trim());
             if (txt_Email.Text.Trim() == "")
             {
                 lb_EmailFail.Visible = true;
@@ -32,26 +41,44 @@ namespace _3.PL.Views
             }
             else
             {
-                if (!_utility.IsValidEmail(txt_Email.Text))
-                {
-                    lb_EmailFail.Visible = true;
-                    lb_EmailFail.Text = "Email sai định dạng";
-                }
-            }
-            
-            if (txt_MatKhau.Text.Trim() == "")
-            {
-                lb_MatKhauFail.Visible = true;
-                lb_MatKhauFail.Text = "Không được để trống mật khẩu";
-            }
-            else
-            {
-                if (txt_MatKhau.Text.Length < 8)
+                if (txt_MatKhau.Text.Trim() == "")
                 {
                     lb_MatKhauFail.Visible = true;
-                    lb_MatKhauFail.Text = "Mật khẩu phải nhiều hơn 8 kí tự";
+                    lb_MatKhauFail.Text = "Không được để trống mật khẩu";
                 }
+                else
+                {
+                    if (!_utility.IsValidEmail(txt_Email.Text))
+                    {
+                        lb_EmailFail.Visible = true;
+                        lb_EmailFail.Text = "Email sai định dạng";
+                    }
+                    else
+                    {
+                        if (txt_MatKhau.Text.Length < 8)
+                        {
+                            lb_MatKhauFail.Visible = true;
+                            lb_MatKhauFail.Text = "Mật khẩu phải nhiều hơn 8 kí tự";
+                        }
+                        else
+                        {
+                            if (login == null)
+                            {
+                                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
+                            }
+                            else
+                            {
+                                Properties.Settings.Default.Tk = txt_Email.Text;
+                                Properties.Settings.Default.Mk = txt_MatKhau.Text;
+                                FrmMain main = new FrmMain();
+                                main.ShowDialog();
+                            }
+                        }
+                    }
+                }
+
             }
+
         }
 
         private void btn_DangNhap_Click(object sender, EventArgs e)

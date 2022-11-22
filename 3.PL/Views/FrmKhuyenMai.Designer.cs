@@ -149,7 +149,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(87, 515);
+            this.button1.Location = new System.Drawing.Point(84, 545);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 53);
             this.button1.TabIndex = 1;
@@ -179,7 +179,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(12, 1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(541, 743);
+            this.groupBox1.Size = new System.Drawing.Size(577, 834);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -188,7 +188,7 @@
             // 
             this.groupBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox5.BackgroundImage")));
             this.groupBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.groupBox5.Location = new System.Drawing.Point(172, 574);
+            this.groupBox5.Location = new System.Drawing.Point(192, 632);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(143, 142);
             this.groupBox5.TabIndex = 6;
@@ -236,7 +236,7 @@
             // 
             this.groupBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox2.BackgroundImage")));
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.groupBox2.Location = new System.Drawing.Point(203, 52);
+            this.groupBox2.Location = new System.Drawing.Point(201, 37);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(120, 98);
             this.groupBox2.TabIndex = 2;
@@ -273,7 +273,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(300, 515);
+            this.button2.Location = new System.Drawing.Point(327, 545);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(112, 53);
             this.button2.TabIndex = 1;
@@ -296,9 +296,9 @@
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.dataGridView1);
-            this.groupBox3.Location = new System.Drawing.Point(572, 1);
+            this.groupBox3.Location = new System.Drawing.Point(607, 1);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(630, 390);
+            this.groupBox3.Size = new System.Drawing.Size(704, 414);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Sản Phẩm";
@@ -306,7 +306,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(454, 52);
+            this.comboBox2.Location = new System.Drawing.Point(454, 53);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(170, 28);
             this.comboBox2.TabIndex = 4;
@@ -314,7 +314,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(323, 52);
+            this.comboBox1.Location = new System.Drawing.Point(323, 53);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(106, 28);
             this.comboBox1.TabIndex = 4;
@@ -322,7 +322,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(210, 52);
+            this.button3.Location = new System.Drawing.Point(210, 53);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(91, 29);
             this.button3.TabIndex = 3;
@@ -369,11 +369,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 92);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 120);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(618, 271);
+            this.dataGridView1.Size = new System.Drawing.Size(689, 288);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox4
@@ -386,9 +386,9 @@
             this.groupBox4.Controls.Add(this.textBox6);
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Location = new System.Drawing.Point(572, 397);
+            this.groupBox4.Location = new System.Drawing.Point(607, 421);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(630, 347);
+            this.groupBox4.Size = new System.Drawing.Size(704, 414);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Khuyến Mãi";
@@ -412,11 +412,11 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 81);
+            this.dataGridView2.Location = new System.Drawing.Point(9, 95);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 29;
-            this.dataGridView2.Size = new System.Drawing.Size(618, 260);
+            this.dataGridView2.Size = new System.Drawing.Size(689, 313);
             this.dataGridView2.TabIndex = 1;
             // 
             // button4
@@ -470,7 +470,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1214, 757);
+            this.ClientSize = new System.Drawing.Size(1323, 847);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
