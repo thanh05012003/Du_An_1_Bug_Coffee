@@ -136,6 +136,7 @@
             this.btn_BanHang.TabIndex = 20;
             this.btn_BanHang.Text = "Bán Hàng";
             this.btn_BanHang.UseVisualStyleBackColor = false;
+            this.btn_BanHang.Click += new System.EventHandler(this.btn_BanHang_Click);
             // 
             // btn_HoaDon
             // 
@@ -147,6 +148,7 @@
             this.btn_HoaDon.TabIndex = 19;
             this.btn_HoaDon.Text = "Hoá đơn";
             this.btn_HoaDon.UseVisualStyleBackColor = false;
+            this.btn_HoaDon.Click += new System.EventHandler(this.btn_HoaDon_Click);
             // 
             // btn_ThongKe
             // 
@@ -158,6 +160,7 @@
             this.btn_ThongKe.TabIndex = 16;
             this.btn_ThongKe.Text = "Thống kê";
             this.btn_ThongKe.UseVisualStyleBackColor = false;
+            this.btn_ThongKe.Click += new System.EventHandler(this.btn_ThongKe_Click);
             // 
             // btn_KhuyenMai
             // 
@@ -215,7 +218,6 @@
             this.lb_Time.Size = new System.Drawing.Size(181, 25);
             this.lb_Time.TabIndex = 3;
             this.lb_Time.Text = "22:14:00 21-01-2022";
-            this.lb_Time.Click += new System.EventHandler(this.lb_Time_Click);
             // 
             // btn_DangXuat
             // 

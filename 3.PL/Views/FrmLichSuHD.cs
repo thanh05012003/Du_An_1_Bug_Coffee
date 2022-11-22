@@ -12,6 +12,7 @@ namespace _3.PL.Views
 {
     public partial class FrmLichSuHD : Form
     {
+        
         public FrmLichSuHD()
         {
             InitializeComponent();

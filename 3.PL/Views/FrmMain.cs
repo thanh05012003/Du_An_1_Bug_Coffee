@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using _2.BUS.IServices;
 using _2.BUS.Services;
-using Timer = System.Windows.Forms.Timer;
 
 namespace _3.PL.Views
 {
@@ -65,15 +57,11 @@ namespace _3.PL.Views
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
             this.gr_CuaHang.Controls.Add(childForm);
-            this.gr_CuaHang.Tag = activeForm;
+            //this.gr_CuaHang.Tag = activeForm;
             childForm.BringToFront();
             childForm.Show();
         }
 
-        private void btnTrangChu_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btn_SanPham_Click(object sender, EventArgs e)
         {
@@ -98,9 +86,20 @@ namespace _3.PL.Views
             OpenChildForm(new FrmKhuyenMai(),sender);
         }
 
-        private void lb_Time_Click(object sender, EventArgs e)
+
+        private void btn_BanHang_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_HoaDon_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmHoaDon(),sender);
+        }
+
+        private void btn_ThongKe_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

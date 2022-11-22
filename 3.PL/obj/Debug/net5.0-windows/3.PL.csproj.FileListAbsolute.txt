@@ -305,3 +305,4 @@ C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debu
 C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmGiaoCa.resources
 C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmHDPhaChe.resources
 C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmLichSuHD.resources
+C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmHoaDon.resources

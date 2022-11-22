@@ -16,5 +16,6 @@ namespace _3.PL.Views
         {
             InitializeComponent();
         }
+        
     }
 }
