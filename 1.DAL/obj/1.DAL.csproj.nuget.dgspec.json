@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\taibeo\\OneDrive\\Desktop\\Du_An_1_Bug_Coffee\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj": {}
+    "C:\\Users\\taibeo\\OneDrive\\Desktop\\du an 1\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\taibeo\\OneDrive\\Desktop\\Du_An_1_Bug_Coffee\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj": {
+    "C:\\Users\\taibeo\\OneDrive\\Desktop\\du an 1\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\taibeo\\OneDrive\\Desktop\\Du_An_1_Bug_Coffee\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\taibeo\\OneDrive\\Desktop\\du an 1\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj",
         "projectName": "1.DAL",
-        "projectPath": "C:\\Users\\taibeo\\OneDrive\\Desktop\\Du_An_1_Bug_Coffee\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj",
+        "projectPath": "C:\\Users\\taibeo\\OneDrive\\Desktop\\du an 1\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj",
         "packagesPath": "C:\\Users\\taibeo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\taibeo\\OneDrive\\Desktop\\Du_An_1_Bug_Coffee\\Du_An_1_Bug_Coffee\\1.DAL\\obj\\",
+        "outputPath": "C:\\Users\\taibeo\\OneDrive\\Desktop\\du an 1\\Du_An_1_Bug_Coffee\\1.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

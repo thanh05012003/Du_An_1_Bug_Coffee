@@ -47,7 +47,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(433, 475);
+            this.panel2.Size = new System.Drawing.Size(427, 475);
             this.panel2.TabIndex = 23;
             // 
             // panel1
@@ -60,9 +60,9 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(433, 0);
+            this.panel1.Location = new System.Drawing.Point(427, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(422, 475);
+            this.panel1.Size = new System.Drawing.Size(428, 475);
             this.panel1.TabIndex = 24;
             // 
             // label3
