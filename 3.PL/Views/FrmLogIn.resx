@@ -61,7 +61,11 @@
   <data name="panel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA+gAAAPoCAYAAABNo9TkAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAD
+<<<<<<< HEAD
         5AAAA+QBbgzdHAAAhGdJREFUeF7t3QmYfnP9P/5v9j37vmeLkFT+diLZIoWihGQpu5Q2UrKlkK2k7LIk
+=======
+        3wAAA98BPAPFSgAAhGdJREFUeF7t3QmYfnP9P/5v9j37vmeLkFT+diLZIoWihGQpu5Q2UrKlkK2k7LIk
+>>>>>>> 3737ae52f53e6a4473001228c3c2dee1b6fceaae
         W5QQWYuQlCLLL/uWfSfO/3od5zDm875n5p57e889j8d1va4yc59zn/vc99yf8zzv7f8KAAAAoOcEdAAA
         AMiAgA4AAAAZENABAAAgAwI6AAAAZEBABwAAgAwI6AAAAJABAR0AAAAyIKADAABABgR0AAAAyICADgAA
         ABkQ0AEAACADAjoAAABkQEAHAACADAjoAAAAkAEBHQAAADIgoAMAAEAGBHQAAADIgIAOAAAAGRDQAQAA

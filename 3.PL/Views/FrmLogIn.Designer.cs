@@ -31,12 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogIn));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lb_EmailFail = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_DangNhap = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_MatKhau = new System.Windows.Forms.TextBox();
+            this.txt_Email = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lb_MatKhauFail = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,23 +49,44 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
+<<<<<<< HEAD
             this.panel2.Size = new System.Drawing.Size(427, 475);
+=======
+            this.panel2.Size = new System.Drawing.Size(433, 483);
+>>>>>>> 3737ae52f53e6a4473001228c3c2dee1b6fceaae
             this.panel2.TabIndex = 23;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lb_MatKhauFail);
+            this.panel1.Controls.Add(this.lb_EmailFail);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btn_DangNhap);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txt_MatKhau);
+            this.panel1.Controls.Add(this.txt_Email);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(427, 0);
             this.panel1.Name = "panel1";
+<<<<<<< HEAD
             this.panel1.Size = new System.Drawing.Size(428, 475);
+=======
+            this.panel1.Size = new System.Drawing.Size(422, 483);
+>>>>>>> 3737ae52f53e6a4473001228c3c2dee1b6fceaae
             this.panel1.TabIndex = 24;
+            // 
+            // lb_EmailFail
+            // 
+            this.lb_EmailFail.AutoSize = true;
+            this.lb_EmailFail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_EmailFail.ForeColor = System.Drawing.Color.Red;
+            this.lb_EmailFail.Location = new System.Drawing.Point(17, 209);
+            this.lb_EmailFail.Name = "lb_EmailFail";
+            this.lb_EmailFail.Size = new System.Drawing.Size(55, 23);
+            this.lb_EmailFail.TabIndex = 29;
+            this.lb_EmailFail.Text = "label4";
             // 
             // label3
             // 
@@ -79,36 +102,39 @@
             // 
             this.btn_DangNhap.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_DangNhap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_DangNhap.Location = new System.Drawing.Point(72, 358);
+            this.btn_DangNhap.Location = new System.Drawing.Point(64, 375);
             this.btn_DangNhap.Name = "btn_DangNhap";
             this.btn_DangNhap.Size = new System.Drawing.Size(272, 88);
             this.btn_DangNhap.TabIndex = 27;
             this.btn_DangNhap.Text = "Đăng nhập";
             this.btn_DangNhap.UseVisualStyleBackColor = false;
+            this.btn_DangNhap.Click += new System.EventHandler(this.btn_DangNhap_Click);
             // 
-            // textBox2
+            // txt_MatKhau
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(12, 288);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(390, 45);
-            this.textBox2.TabIndex = 26;
+            this.txt_MatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_MatKhau.Location = new System.Drawing.Point(12, 279);
+            this.txt_MatKhau.Multiline = true;
+            this.txt_MatKhau.Name = "txt_MatKhau";
+            this.txt_MatKhau.Size = new System.Drawing.Size(390, 45);
+            this.txt_MatKhau.TabIndex = 26;
+            this.txt_MatKhau.TextChanged += new System.EventHandler(this.txt_MatKhau_TextChanged);
             // 
-            // textBox1
+            // txt_Email
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(12, 180);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(390, 45);
-            this.textBox1.TabIndex = 25;
+            this.txt_Email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Email.Location = new System.Drawing.Point(12, 160);
+            this.txt_Email.Multiline = true;
+            this.txt_Email.Name = "txt_Email";
+            this.txt_Email.Size = new System.Drawing.Size(390, 45);
+            this.txt_Email.TabIndex = 25;
+            this.txt_Email.TextChanged += new System.EventHandler(this.txt_Email_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Ink Free", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(12, 251);
+            this.label2.Location = new System.Drawing.Point(12, 239);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(151, 34);
             this.label2.TabIndex = 24;
@@ -118,17 +144,28 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ink Free", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(12, 143);
+            this.label1.Location = new System.Drawing.Point(12, 125);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 34);
             this.label1.TabIndex = 23;
             this.label1.Text = "Email:";
             // 
+            // lb_MatKhauFail
+            // 
+            this.lb_MatKhauFail.AutoSize = true;
+            this.lb_MatKhauFail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_MatKhauFail.ForeColor = System.Drawing.Color.Red;
+            this.lb_MatKhauFail.Location = new System.Drawing.Point(21, 333);
+            this.lb_MatKhauFail.Name = "lb_MatKhauFail";
+            this.lb_MatKhauFail.Size = new System.Drawing.Size(55, 23);
+            this.lb_MatKhauFail.TabIndex = 30;
+            this.lb_MatKhauFail.Text = "label4";
+            // 
             // FrmLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(855, 475);
+            this.ClientSize = new System.Drawing.Size(855, 483);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "FrmLogIn";
@@ -145,9 +182,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_DangNhap;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_MatKhau;
+        private System.Windows.Forms.TextBox txt_Email;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lb_EmailFail;
+        private System.Windows.Forms.Label lb_MatKhauFail;
     }
 }
