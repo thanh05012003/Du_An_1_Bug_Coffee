@@ -16,6 +16,7 @@ namespace _3.PL.Views
 {
     public partial class FrmMain : Form
     {
+        private Form activeForm;
         private INhanVienService _nhanVienService;
         public FrmMain()
         {
@@ -24,12 +25,6 @@ namespace _3.PL.Views
            ;
         }
 
-        private void LoadNgay()
-        {
-         
-               
-         
-        }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -55,9 +50,24 @@ namespace _3.PL.Views
             timer1.Start();
             lb_Time.Text = DateTime.Now.ToString();
             var nv = _nhanVienService.GetAll().FirstOrDefault(c =>
-                c.Email.ToLower() == Properties.Settings.Default.Tk.Trim() &&
-                c.MatKhau.ToLower() == Properties.Settings.Default.Mk.Trim());
+                c.Email.ToLower() == Properties.Settings.Default.Tk &&
+                c.MatKhau.ToLower() == Properties.Settings.Default.Mk);
             lb_UserName.Text = nv.Ten;
+        }
+        private void OpenChildForm(Form childForm, object btnSender)
+        {
+            if (childForm == null)
+            {
+                childForm.Close();
+            }
+
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.gr_CuaHang.Controls.Add(childForm);
+            this.gr_CuaHang.Tag = activeForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
 
         private void btnTrangChu_Click(object sender, EventArgs e)
@@ -65,5 +75,22 @@ namespace _3.PL.Views
 
         }
 
+        private void btn_SanPham_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmSanPham(),sender);
+        }
+
+        private void btn_DangXuat_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Bạn có chắc muốn đăng xuất không ?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dr == DialogResult.OK)
+            {
+                Properties.Settings.Default.Tk = "";
+                Properties.Settings.Default.Mk = "";
+                FrmLogin frmLogin = new FrmLogin();
+                frmLogin.Show();
+                this.Hide();
+            }
+        }
     }
 }

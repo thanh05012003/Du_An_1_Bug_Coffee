@@ -68,10 +68,11 @@ namespace _3.PL.Views
                             }
                             else
                             {
-                                Properties.Settings.Default.Tk = txt_Email.Text;
-                                Properties.Settings.Default.Mk = txt_MatKhau.Text;
+                                Properties.Settings.Default.Tk = txt_Email.Text.ToLower().Trim();
+                                Properties.Settings.Default.Mk = txt_MatKhau.Text.ToLower().Trim();
                                 FrmMain main = new FrmMain();
-                                main.ShowDialog();
+                                main.Show();
+                                this.Hide();
                             }
                         }
                     }
@@ -94,6 +95,19 @@ namespace _3.PL.Views
         private void txt_MatKhau_TextChanged(object sender, EventArgs e)
         {
             lb_MatKhauFail.Visible = false;
+        }
+
+        private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Bạn có chắc muốn thoát không ?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dr != DialogResult.OK)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                Application.ExitThread();
+            }
         }
     }
 }

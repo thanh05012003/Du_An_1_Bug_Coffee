@@ -44,10 +44,10 @@
             this.lb_UserName = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lb_Time = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_DangXuat = new System.Windows.Forms.Button();
             this.btn_DoiMatKhau = new System.Windows.Forms.Button();
             this.btn_GiaoCa = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gr_CuaHang = new System.Windows.Forms.GroupBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -113,6 +113,7 @@
             this.btn_SanPham.TabIndex = 18;
             this.btn_SanPham.Text = "Sản phẩm";
             this.btn_SanPham.UseVisualStyleBackColor = false;
+            this.btn_SanPham.Click += new System.EventHandler(this.btn_SanPham_Click);
             // 
             // btnTrangChu
             // 
@@ -174,7 +175,7 @@
             this.panel2.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.panel2.Controls.Add(this.lb_UserName);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.btn_DangXuat);
             this.panel2.Controls.Add(this.btn_DoiMatKhau);
             this.panel2.Controls.Add(this.btn_GiaoCa);
             this.panel2.Location = new System.Drawing.Point(272, 12);
@@ -213,14 +214,15 @@
             this.lb_Time.TabIndex = 3;
             this.lb_Time.Text = "22:14:00 21-01-2022 CH";
             // 
-            // button3
+            // btn_DangXuat
             // 
-            this.button3.Location = new System.Drawing.Point(313, 14);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 41);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Đăng xuất";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_DangXuat.Location = new System.Drawing.Point(313, 14);
+            this.btn_DangXuat.Name = "btn_DangXuat";
+            this.btn_DangXuat.Size = new System.Drawing.Size(123, 41);
+            this.btn_DangXuat.TabIndex = 2;
+            this.btn_DangXuat.Text = "Đăng xuất";
+            this.btn_DangXuat.UseVisualStyleBackColor = true;
+            this.btn_DangXuat.Click += new System.EventHandler(this.btn_DangXuat_Click);
             // 
             // btn_DoiMatKhau
             // 
@@ -240,16 +242,16 @@
             this.btn_GiaoCa.Text = "Giao ca";
             this.btn_GiaoCa.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
+            // gr_CuaHang
             // 
-            this.groupBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox2.BackgroundImage")));
-            this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox2.Location = new System.Drawing.Point(272, 73);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1341, 894);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
+            this.gr_CuaHang.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gr_CuaHang.BackgroundImage")));
+            this.gr_CuaHang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.gr_CuaHang.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gr_CuaHang.Location = new System.Drawing.Point(272, 73);
+            this.gr_CuaHang.Name = "gr_CuaHang";
+            this.gr_CuaHang.Size = new System.Drawing.Size(1341, 894);
+            this.gr_CuaHang.TabIndex = 3;
+            this.gr_CuaHang.TabStop = false;
             // 
             // timer1
             // 
@@ -263,7 +265,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1613, 967);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gr_CuaHang);
             this.Controls.Add(this.panel1);
             this.Name = "FrmMain";
             this.ShowIcon = false;
@@ -284,8 +286,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.GroupBox gr_CuaHang;
+        private System.Windows.Forms.Button btn_DangXuat;
         private System.Windows.Forms.Button btn_DoiMatKhau;
         private System.Windows.Forms.Button btn_GiaoCa;
         private System.Windows.Forms.Timer timer1;
