@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.pane_HDPC = new System.Windows.Forms.Panel();
-            this.pane_HoaDon = new System.Windows.Forms.Panel();
             this.txt_DiaChi = new System.Windows.Forms.TextBox();
             this.txt_GhiChu = new System.Windows.Forms.TextBox();
             this.lbl_TrangThai = new System.Windows.Forms.Label();
@@ -60,57 +59,47 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pane_HDPC.SuspendLayout();
-            this.pane_HoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_HoaDonCT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_HoaDon)).BeginInit();
             this.SuspendLayout();
             // 
             // pane_HDPC
             // 
-            this.pane_HDPC.Controls.Add(this.pane_HoaDon);
+            this.pane_HDPC.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.pane_HDPC.Controls.Add(this.txt_DiaChi);
+            this.pane_HDPC.Controls.Add(this.txt_GhiChu);
+            this.pane_HDPC.Controls.Add(this.lbl_TrangThai);
+            this.pane_HDPC.Controls.Add(this.lbl_TongTienHD);
+            this.pane_HDPC.Controls.Add(this.lbl_ChiPhi);
+            this.pane_HDPC.Controls.Add(this.lbl_TongTienSP);
+            this.pane_HDPC.Controls.Add(this.lbl_LoaiTT);
+            this.pane_HDPC.Controls.Add(this.lbl_TGThanhToan);
+            this.pane_HDPC.Controls.Add(this.lbl_TGTao);
+            this.pane_HDPC.Controls.Add(this.lbl_Sdt);
+            this.pane_HDPC.Controls.Add(this.lbl_KhachHang);
+            this.pane_HDPC.Controls.Add(this.lbl_MaHD);
+            this.pane_HDPC.Controls.Add(this.label14);
+            this.pane_HDPC.Controls.Add(this.label13);
+            this.pane_HDPC.Controls.Add(this.label12);
+            this.pane_HDPC.Controls.Add(this.label11);
+            this.pane_HDPC.Controls.Add(this.label10);
+            this.pane_HDPC.Controls.Add(this.label9);
+            this.pane_HDPC.Controls.Add(this.label8);
+            this.pane_HDPC.Controls.Add(this.label7);
+            this.pane_HDPC.Controls.Add(this.label6);
+            this.pane_HDPC.Controls.Add(this.label5);
+            this.pane_HDPC.Controls.Add(this.label4);
+            this.pane_HDPC.Controls.Add(this.label3);
+            this.pane_HDPC.Controls.Add(this.btn_XacNhan);
+            this.pane_HDPC.Controls.Add(this.dgrid_HoaDonCT);
+            this.pane_HDPC.Controls.Add(this.dgrid_HoaDon);
+            this.pane_HDPC.Controls.Add(this.label2);
+            this.pane_HDPC.Controls.Add(this.label1);
             this.pane_HDPC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pane_HDPC.Location = new System.Drawing.Point(0, 0);
             this.pane_HDPC.Name = "pane_HDPC";
             this.pane_HDPC.Size = new System.Drawing.Size(1305, 770);
-            this.pane_HDPC.TabIndex = 0;
-            // 
-            // pane_HoaDon
-            // 
-            this.pane_HoaDon.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.pane_HoaDon.Controls.Add(this.txt_DiaChi);
-            this.pane_HoaDon.Controls.Add(this.txt_GhiChu);
-            this.pane_HoaDon.Controls.Add(this.lbl_TrangThai);
-            this.pane_HoaDon.Controls.Add(this.lbl_TongTienHD);
-            this.pane_HoaDon.Controls.Add(this.lbl_ChiPhi);
-            this.pane_HoaDon.Controls.Add(this.lbl_TongTienSP);
-            this.pane_HoaDon.Controls.Add(this.lbl_LoaiTT);
-            this.pane_HoaDon.Controls.Add(this.lbl_TGThanhToan);
-            this.pane_HoaDon.Controls.Add(this.lbl_TGTao);
-            this.pane_HoaDon.Controls.Add(this.lbl_Sdt);
-            this.pane_HoaDon.Controls.Add(this.lbl_KhachHang);
-            this.pane_HoaDon.Controls.Add(this.lbl_MaHD);
-            this.pane_HoaDon.Controls.Add(this.label14);
-            this.pane_HoaDon.Controls.Add(this.label13);
-            this.pane_HoaDon.Controls.Add(this.label12);
-            this.pane_HoaDon.Controls.Add(this.label11);
-            this.pane_HoaDon.Controls.Add(this.label10);
-            this.pane_HoaDon.Controls.Add(this.label9);
-            this.pane_HoaDon.Controls.Add(this.label8);
-            this.pane_HoaDon.Controls.Add(this.label7);
-            this.pane_HoaDon.Controls.Add(this.label6);
-            this.pane_HoaDon.Controls.Add(this.label5);
-            this.pane_HoaDon.Controls.Add(this.label4);
-            this.pane_HoaDon.Controls.Add(this.label3);
-            this.pane_HoaDon.Controls.Add(this.btn_XacNhan);
-            this.pane_HoaDon.Controls.Add(this.dgrid_HoaDonCT);
-            this.pane_HoaDon.Controls.Add(this.dgrid_HoaDon);
-            this.pane_HoaDon.Controls.Add(this.label2);
-            this.pane_HoaDon.Controls.Add(this.label1);
-            this.pane_HoaDon.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pane_HoaDon.Location = new System.Drawing.Point(0, 0);
-            this.pane_HoaDon.Name = "pane_HoaDon";
-            this.pane_HoaDon.Size = new System.Drawing.Size(1305, 770);
-            this.pane_HoaDon.TabIndex = 7;
+            this.pane_HDPC.TabIndex = 8;
             // 
             // txt_DiaChi
             // 
@@ -411,8 +400,7 @@
             this.Name = "FrmHDPhaChe";
             this.Text = "HD Pha chế";
             this.pane_HDPC.ResumeLayout(false);
-            this.pane_HoaDon.ResumeLayout(false);
-            this.pane_HoaDon.PerformLayout();
+            this.pane_HDPC.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_HoaDonCT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_HoaDon)).EndInit();
             this.ResumeLayout(false);
@@ -422,7 +410,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pane_HDPC;
-        private System.Windows.Forms.Panel pane_HoaDon;
         private System.Windows.Forms.TextBox txt_DiaChi;
         private System.Windows.Forms.TextBox txt_GhiChu;
         private System.Windows.Forms.Label lbl_TrangThai;

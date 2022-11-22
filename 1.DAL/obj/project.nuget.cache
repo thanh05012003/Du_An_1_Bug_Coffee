@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pE6fyZ4WU1Xkf2ZZ+gMyEZiUxcv1zP4OiD/0fgwEI1uqvy88KzygIta09w6WeHBGqRo54PF4pk+CcKWB78cxuA==",
+  "dgSpecHash": "3eiqTIwZ0v32OIxsHRXZl0aJSfTY6kyZI2Ue1qR061x6FUxA2xBHCFqgJ3VemusqEx3WqlqEJwkJ0Py1VbpyBA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ADMIN\\Desktop\\HocC#\\Du_An_1_Bug_Coffee\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj",
+  "projectFilePath": "C:\\Users\\ADMIN\\Desktop\\HocC#\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

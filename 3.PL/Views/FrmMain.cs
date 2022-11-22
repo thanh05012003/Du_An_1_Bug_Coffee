@@ -8,7 +8,7 @@ namespace _3.PL.Views
 {
     public partial class FrmMain : Form
     {
-        private Form activeForm;
+      
         private INhanVienService _nhanVienService;
         public FrmMain()
         {
@@ -65,7 +65,7 @@ namespace _3.PL.Views
 
         private void btn_SanPham_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FrmSanPham(),sender);
+            OpenChildForm(new FrmSanPham(), sender);
         }
 
         private void btn_DangXuat_Click(object sender, EventArgs e)

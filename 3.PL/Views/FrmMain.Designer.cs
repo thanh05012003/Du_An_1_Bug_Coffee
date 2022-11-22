@@ -252,9 +252,9 @@
             this.gr_CuaHang.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gr_CuaHang.BackgroundImage")));
             this.gr_CuaHang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.gr_CuaHang.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gr_CuaHang.Location = new System.Drawing.Point(272, 60);
+            this.gr_CuaHang.Location = new System.Drawing.Point(272, 61);
             this.gr_CuaHang.Name = "gr_CuaHang";
-            this.gr_CuaHang.Size = new System.Drawing.Size(1341, 907);
+            this.gr_CuaHang.Size = new System.Drawing.Size(1341, 906);
             this.gr_CuaHang.TabIndex = 3;
             this.gr_CuaHang.TabStop = false;
             // 

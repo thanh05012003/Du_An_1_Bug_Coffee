@@ -27,6 +27,7 @@ namespace _3.PL.Views
             _nhanVienService = new NhanVienService();
             lb_EmailFail.Visible = false;
             lb_MatKhauFail.Visible = false;
+            txt_MatKhau.UseSystemPasswordChar = true;
         }
 
         public void Check()
@@ -107,6 +108,18 @@ namespace _3.PL.Views
             else
             {
                 Application.ExitThread();
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                txt_MatKhau.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txt_MatKhau.UseSystemPasswordChar = true;
             }
         }
     }

@@ -1,8 +1,3 @@
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.AssemblyReference.cache
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.AssemblyInfoInputs.cache
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.AssemblyInfo.cs
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.CoreCompileInputs.cache
 C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.exe
 C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.deps.json
 C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.runtimeconfig.json
@@ -48,261 +43,25 @@ C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\1.
 C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\2.BUS.dll
 C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\2.BUS.pdb
 C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\1.DAL.pdb
+C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Properties.Resources.resources
+C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmDT_SP.resources
+C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmGiaoCa.resources
+C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmHDPhaChe.resources
+C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmHoaDon.resources
+C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmKhuyenMai.resources
+C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmLichSuHD.resources
+C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmLogin.resources
+C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmMain.resources
+C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmSanPham.resources
+C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.GenerateResource.cache
+C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.AssemblyInfo.cs
+C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.CoreCompileInputs.cache
 C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.CopyComplete
 C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.dll
 C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\refint\3.PL.dll
 C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.pdb
 C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.genruntimeconfig.cache
 C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\ref\3.PL.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\3.PL.exe
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\3.PL.deps.json
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\3.PL.runtimeconfig.json
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\3.PL.runtimeconfig.dev.json
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\3.PL.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\3.PL.pdb
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Options.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\1.DAL.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\2.BUS.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\2.BUS.pdb
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\bin\Debug\net5.0-windows\1.DAL.pdb
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.AssemblyReference.cache
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\obj\Debug\net5.0-windows\3.PL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\obj\Debug\net5.0-windows\3.PL.AssemblyInfoInputs.cache
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\obj\Debug\net5.0-windows\3.PL.AssemblyInfo.cs
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.CoreCompileInputs.cache
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.CopyComplete
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\obj\Debug\net5.0-windows\3.PL.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\obj\Debug\net5.0-windows\refint\3.PL.dll
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\obj\Debug\net5.0-windows\3.PL.pdb
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\obj\Debug\net5.0-windows\3.PL.genruntimeconfig.cache
-C:\Users\Dong Xuan Huy\source\repos\DuAn1_PTPM__FA22\3.PL\obj\Debug\net5.0-windows\ref\3.PL.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.exe
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.deps.json
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.runtimeconfig.json
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.runtimeconfig.dev.json
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.pdb
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Options.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\System.Diagnostics.DiagnosticSource.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\1.DAL.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\2.BUS.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\2.BUS.pdb
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\1.DAL.pdb
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.AssemblyReference.cache
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.Main.resources
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.GenerateResource.cache
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.AssemblyInfoInputs.cache
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.AssemblyInfo.cs
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.CoreCompileInputs.cache
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.CopyComplete
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\refint\3.PL.dll
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.pdb
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.genruntimeconfig.cache
-C:\Users\ADMIN\Source\Repos\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\ref\3.PL.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.exe
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.deps.json
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.runtimeconfig.json
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.runtimeconfig.dev.json
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.pdb
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Options.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\System.Diagnostics.DiagnosticSource.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\1.DAL.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\2.BUS.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\2.BUS.pdb
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\1.DAL.pdb
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.AssemblyReference.cache
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.GenerateResource.cache
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.AssemblyInfoInputs.cache
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.AssemblyInfo.cs
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.CoreCompileInputs.cache
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.CopyComplete
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\refint\3.PL.dll
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.pdb
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.genruntimeconfig.cache
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\ref\3.PL.dll
-<<<<<<< HEAD
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.exe
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.deps.json
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.runtimeconfig.json
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.runtimeconfig.dev.json
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.pdb
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Options.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\1.DAL.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\2.BUS.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\2.BUS.pdb
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\1.DAL.pdb
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.AssemblyReference.cache
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.Main.resources
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.GenerateResource.cache
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.AssemblyInfoInputs.cache
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.AssemblyInfo.cs
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.CoreCompileInputs.cache
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.CopyComplete
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\refint\3.PL.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.pdb
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.genruntimeconfig.cache
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\ref\3.PL.dll
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmHDPhaChe.resources
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmLichSuHD.resources
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmThongKe.resources
-=======
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Properties.Resources.resources
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmLogIn.resources
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmMain.resources
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmKhuyenMai.resources
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmSanPham.resources
->>>>>>> f25fcee5c39acb3f4f548d99a313fef8ccdc32d1
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Properties.Resources.resources
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmDT_SP.resources
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmGiaoCa.resources
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmKhuyenMai.resources
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmLogin.resources
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmMain.resources
-C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\Du_An_1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmSanPham.resources
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmDT_SP.resources
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmGiaoCa.resources
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmHDPhaChe.resources
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmLichSuHD.resources
-C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmHoaDon.resources

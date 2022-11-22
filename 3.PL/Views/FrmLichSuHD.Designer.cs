@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.pane_LSHD = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btn_KhoiPhuc = new System.Windows.Forms.Button();
             this.dgrid_HoaDonCT = new System.Windows.Forms.DataGridView();
             this.txt_DiaChi = new System.Windows.Forms.TextBox();
@@ -72,69 +71,59 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pane_LSHD.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_HoaDonCT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_HoaDon)).BeginInit();
             this.SuspendLayout();
             // 
             // pane_LSHD
             // 
-            this.pane_LSHD.Controls.Add(this.panel2);
+            this.pane_LSHD.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.pane_LSHD.Controls.Add(this.btn_KhoiPhuc);
+            this.pane_LSHD.Controls.Add(this.dgrid_HoaDonCT);
+            this.pane_LSHD.Controls.Add(this.txt_DiaChi);
+            this.pane_LSHD.Controls.Add(this.txt_GhiChu);
+            this.pane_LSHD.Controls.Add(this.lbl_TrangThai);
+            this.pane_LSHD.Controls.Add(this.lbl_TongTienHD);
+            this.pane_LSHD.Controls.Add(this.lbl_ChiPhi);
+            this.pane_LSHD.Controls.Add(this.lbl_TongTienSP);
+            this.pane_LSHD.Controls.Add(this.lbl_LoaiTT);
+            this.pane_LSHD.Controls.Add(this.lbl_TGThanhToan);
+            this.pane_LSHD.Controls.Add(this.lbl_TGTao);
+            this.pane_LSHD.Controls.Add(this.lbl_Sdt);
+            this.pane_LSHD.Controls.Add(this.lbl_KhachHang);
+            this.pane_LSHD.Controls.Add(this.lbl_MaHD);
+            this.pane_LSHD.Controls.Add(this.label14);
+            this.pane_LSHD.Controls.Add(this.label13);
+            this.pane_LSHD.Controls.Add(this.label12);
+            this.pane_LSHD.Controls.Add(this.label11);
+            this.pane_LSHD.Controls.Add(this.label10);
+            this.pane_LSHD.Controls.Add(this.label9);
+            this.pane_LSHD.Controls.Add(this.label8);
+            this.pane_LSHD.Controls.Add(this.label7);
+            this.pane_LSHD.Controls.Add(this.label6);
+            this.pane_LSHD.Controls.Add(this.label25);
+            this.pane_LSHD.Controls.Add(this.label26);
+            this.pane_LSHD.Controls.Add(this.label27);
+            this.pane_LSHD.Controls.Add(this.textBox4);
+            this.pane_LSHD.Controls.Add(this.label5);
+            this.pane_LSHD.Controls.Add(this.dgrid_HoaDon);
+            this.pane_LSHD.Controls.Add(this.cmb_TrangThai);
+            this.pane_LSHD.Controls.Add(this.dtp_KetThuc);
+            this.pane_LSHD.Controls.Add(this.txt_TimKiem);
+            this.pane_LSHD.Controls.Add(this.dtp_BatDau);
+            this.pane_LSHD.Controls.Add(this.btn_TimKiem);
+            this.pane_LSHD.Controls.Add(this.btn_Loc);
+            this.pane_LSHD.Controls.Add(this.label4);
+            this.pane_LSHD.Controls.Add(this.label2);
+            this.pane_LSHD.Controls.Add(this.label1);
+            this.pane_LSHD.Controls.Add(this.textBox2);
+            this.pane_LSHD.Controls.Add(this.textBox1);
+            this.pane_LSHD.Controls.Add(this.label3);
             this.pane_LSHD.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pane_LSHD.Location = new System.Drawing.Point(0, 0);
             this.pane_LSHD.Name = "pane_LSHD";
             this.pane_LSHD.Size = new System.Drawing.Size(1305, 770);
-            this.pane_LSHD.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.panel2.Controls.Add(this.btn_KhoiPhuc);
-            this.panel2.Controls.Add(this.dgrid_HoaDonCT);
-            this.panel2.Controls.Add(this.txt_DiaChi);
-            this.panel2.Controls.Add(this.txt_GhiChu);
-            this.panel2.Controls.Add(this.lbl_TrangThai);
-            this.panel2.Controls.Add(this.lbl_TongTienHD);
-            this.panel2.Controls.Add(this.lbl_ChiPhi);
-            this.panel2.Controls.Add(this.lbl_TongTienSP);
-            this.panel2.Controls.Add(this.lbl_LoaiTT);
-            this.panel2.Controls.Add(this.lbl_TGThanhToan);
-            this.panel2.Controls.Add(this.lbl_TGTao);
-            this.panel2.Controls.Add(this.lbl_Sdt);
-            this.panel2.Controls.Add(this.lbl_KhachHang);
-            this.panel2.Controls.Add(this.lbl_MaHD);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label25);
-            this.panel2.Controls.Add(this.label26);
-            this.panel2.Controls.Add(this.label27);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.dgrid_HoaDon);
-            this.panel2.Controls.Add(this.cmb_TrangThai);
-            this.panel2.Controls.Add(this.dtp_KetThuc);
-            this.panel2.Controls.Add(this.txt_TimKiem);
-            this.panel2.Controls.Add(this.dtp_BatDau);
-            this.panel2.Controls.Add(this.btn_TimKiem);
-            this.panel2.Controls.Add(this.btn_Loc);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1305, 770);
-            this.panel2.TabIndex = 4;
+            this.pane_LSHD.TabIndex = 5;
             // 
             // btn_KhoiPhuc
             // 
@@ -554,8 +543,7 @@
             this.Name = "FrmLichSuHD";
             this.Text = "Lịch sử HD";
             this.pane_LSHD.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pane_LSHD.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_HoaDonCT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_HoaDon)).EndInit();
             this.ResumeLayout(false);
@@ -565,7 +553,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pane_LSHD;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_KhoiPhuc;
         private System.Windows.Forms.DataGridView dgrid_HoaDonCT;
         private System.Windows.Forms.TextBox txt_DiaChi;

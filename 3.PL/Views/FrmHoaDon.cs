@@ -12,7 +12,7 @@ namespace _3.PL.Views
 {
     public partial class FrmHoaDon : Form
     {
-        private Form activeForm;
+       
         public FrmHoaDon()
         {
             InitializeComponent();

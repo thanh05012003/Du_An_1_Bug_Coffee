@@ -37,6 +37,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btn_LichSu);
             this.panel1.Controls.Add(this.btn_PhaChe);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -76,9 +77,9 @@
             // pane_HoaDon
             // 
             this.pane_HoaDon.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pane_HoaDon.Location = new System.Drawing.Point(0, 43);
+            this.pane_HoaDon.Location = new System.Drawing.Point(0, 32);
             this.pane_HoaDon.Name = "pane_HoaDon";
-            this.pane_HoaDon.Size = new System.Drawing.Size(1323, 817);
+            this.pane_HoaDon.Size = new System.Drawing.Size(1323, 828);
             this.pane_HoaDon.TabIndex = 1;
             // 
             // FrmHoaDon
