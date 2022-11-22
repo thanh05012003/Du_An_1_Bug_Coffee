@@ -228,3 +228,5 @@ C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debu
 C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Properties.Resources.resources
 C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmLogIn.resources
 C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmMain.resources
+C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmKhuyenMai.resources
+C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmSanPham.resources

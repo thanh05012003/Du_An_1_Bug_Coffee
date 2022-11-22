@@ -24,13 +24,6 @@ namespace _1.DAL.Repositories
             return true;
         }
 
-        public bool Delete(Ban obj)
-        {
-            if (obj == null) return false;
-            _DbContext.Remove(obj);
-            _DbContext.SaveChanges();
-            return true;
-        }
 
         public List<Ban> GetAll()
         {

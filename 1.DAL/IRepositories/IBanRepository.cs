@@ -11,7 +11,6 @@ namespace _1.DAL.IRepositories
     {
         bool Add(Ban obj);
         bool Udpate(Ban obj);
-        bool Delete(Ban obj);
         List<Ban> GetAll();
     }
 }

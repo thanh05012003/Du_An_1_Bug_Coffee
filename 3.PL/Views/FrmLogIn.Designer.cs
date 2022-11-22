@@ -111,6 +111,7 @@
             this.btn_DangNhap.TabIndex = 27;
             this.btn_DangNhap.Text = "Đăng nhập";
             this.btn_DangNhap.UseVisualStyleBackColor = false;
+            this.btn_DangNhap.Click += new System.EventHandler(this.btn_DangNhap_Click);
             // 
             // txt_MatKhau
             // 
@@ -120,6 +121,7 @@
             this.txt_MatKhau.Name = "txt_MatKhau";
             this.txt_MatKhau.Size = new System.Drawing.Size(390, 45);
             this.txt_MatKhau.TabIndex = 26;
+            this.txt_MatKhau.TextChanged += new System.EventHandler(this.txt_MatKhau_TextChanged);
             // 
             // txt_Email
             // 
@@ -129,6 +131,7 @@
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(390, 45);
             this.txt_Email.TabIndex = 25;
+            this.txt_Email.TextChanged += new System.EventHandler(this.txt_Email_TextChanged);
             // 
             // label2
             // 
@@ -150,14 +153,14 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Email:";
             // 
-            // FrmLog
+            // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(855, 483);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Name = "FrmLog";
+            this.Name = "FrmLogin";
             this.ShowIcon = false;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
