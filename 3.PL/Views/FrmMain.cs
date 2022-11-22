@@ -41,14 +41,14 @@ namespace _3.PL.Views
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lb_Time.Text = DateTime.Now.ToString();
+            lb_Time.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
             timer1.Enabled = true;
             timer1.Start();
-            lb_Time.Text = DateTime.Now.ToString();
+            lb_Time.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
             var nv = _nhanVienService.GetAll().FirstOrDefault(c =>
                 c.Email.ToLower() == Properties.Settings.Default.Tk &&
                 c.MatKhau.ToLower() == Properties.Settings.Default.Mk);
@@ -91,6 +91,16 @@ namespace _3.PL.Views
                 frmLogin.Show();
                 this.Hide();
             }
+        }
+
+        private void btn_KhuyenMai_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmKhuyenMai(),sender);
+        }
+
+        private void lb_Time_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

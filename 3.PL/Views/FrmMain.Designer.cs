@@ -169,6 +169,7 @@
             this.btn_KhuyenMai.TabIndex = 17;
             this.btn_KhuyenMai.Text = "Khuyến mãi";
             this.btn_KhuyenMai.UseVisualStyleBackColor = false;
+            this.btn_KhuyenMai.Click += new System.EventHandler(this.btn_KhuyenMai_Click);
             // 
             // panel2
             // 
@@ -178,7 +179,8 @@
             this.panel2.Controls.Add(this.btn_DangXuat);
             this.panel2.Controls.Add(this.btn_DoiMatKhau);
             this.panel2.Controls.Add(this.btn_GiaoCa);
-            this.panel2.Location = new System.Drawing.Point(272, 12);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(272, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1341, 72);
             this.panel2.TabIndex = 2;
@@ -198,9 +200,9 @@
             // 
             this.panel3.Controls.Add(this.lb_Time);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(1112, 0);
+            this.panel3.Location = new System.Drawing.Point(1104, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(229, 72);
+            this.panel3.Size = new System.Drawing.Size(237, 72);
             this.panel3.TabIndex = 4;
             // 
             // lb_Time
@@ -208,11 +210,12 @@
             this.lb_Time.AutoSize = true;
             this.lb_Time.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lb_Time.ForeColor = System.Drawing.Color.White;
-            this.lb_Time.Location = new System.Drawing.Point(59, 20);
+            this.lb_Time.Location = new System.Drawing.Point(36, 22);
             this.lb_Time.Name = "lb_Time";
-            this.lb_Time.Size = new System.Drawing.Size(211, 25);
+            this.lb_Time.Size = new System.Drawing.Size(181, 25);
             this.lb_Time.TabIndex = 3;
-            this.lb_Time.Text = "22:14:00 21-01-2022 CH";
+            this.lb_Time.Text = "22:14:00 21-01-2022";
+            this.lb_Time.Click += new System.EventHandler(this.lb_Time_Click);
             // 
             // btn_DangXuat
             // 
@@ -247,9 +250,9 @@
             this.gr_CuaHang.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gr_CuaHang.BackgroundImage")));
             this.gr_CuaHang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.gr_CuaHang.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gr_CuaHang.Location = new System.Drawing.Point(272, 73);
+            this.gr_CuaHang.Location = new System.Drawing.Point(272, 60);
             this.gr_CuaHang.Name = "gr_CuaHang";
-            this.gr_CuaHang.Size = new System.Drawing.Size(1341, 894);
+            this.gr_CuaHang.Size = new System.Drawing.Size(1341, 907);
             this.gr_CuaHang.TabIndex = 3;
             this.gr_CuaHang.TabStop = false;
             // 
