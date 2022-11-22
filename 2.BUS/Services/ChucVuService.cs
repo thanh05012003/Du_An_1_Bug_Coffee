@@ -11,43 +11,44 @@ using _2.BUS.ViewModels;
 
 namespace _2.BUS.Services
 {
-    public class BanService:IBanService
+    public class ChucVuService:IChucVuService
     {
-        private IBanRepository _banRepository;
+        IChucVuRepository _chucVuRepository;
 
-        public BanService()
+        public ChucVuService()
         {
-            _banRepository = new BanRepository();
+            _chucVuRepository = new ChucVuRepository();
         }
-        public string add(QlBanView obj)
+        public string add(QlChucVuView obj)
         {
             if (obj == null) return "Thêm không thành công";
-            Ban ban = new Ban()
+            ChucVu cv = new ChucVu()
             {
                 Ma = obj.Ma,
                 Ten = obj.Ten,
-                TrangThai = obj.TrangThai
             };
-            if (_banRepository.Add(ban))
+            if (_chucVuRepository.Add(cv))
             {
                 return "Thêm thành công";
             }
 
             return "Thêm không thành công";
-
         }
 
-
-        public string update(QlBanView obj)
+        public string delete(QlChucVuView obj)
         {
-            if (obj == null) return "cập nhật không thành công";
-            Ban ban = new Ban()
+            throw new NotImplementedException();
+        }
+
+        public string update(QlChucVuView obj)
+        {
+            if (obj == null) return "Cập nhật không thành công";
+            ChucVu cv = new ChucVu()
             {
                 Ma = obj.Ma,
                 Ten = obj.Ten,
-                TrangThai = obj.TrangThai
             };
-            if (_banRepository.Update(ban))
+            if (_chucVuRepository.Update(cv))
             {
                 return "Cập nhật thành công";
             }
@@ -55,16 +56,15 @@ namespace _2.BUS.Services
             return "Cập nhật không thành công";
         }
 
-        public List<QlBanView> GetAll()
+        public List<QlChucVuView> GetAll()
         {
-            var lstBan = from a in _banRepository.GetAll()
-                select new QlBanView()
+            var lstChucVu = from a in _chucVuRepository.GetAll()
+                select new QlChucVuView()
                 {
                     Ma = a.Ma,
-                    Ten = a.Ten,
-                    TrangThai = a.TrangThai
+                    Ten = a.Ten
                 };
-            return lstBan.ToList();
+            return lstChucVu.ToList();
         }
     }
 }

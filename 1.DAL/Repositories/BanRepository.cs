@@ -30,7 +30,7 @@ namespace _1.DAL.Repositories
             return _DbContext.Ban.ToList();
         }
 
-        public bool Udpate(Ban obj)
+        public bool Update(Ban obj)
         {
             if (obj == null) return false;
             _DbContext.Update(obj);

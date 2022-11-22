@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace _1.DAL.IRepositories
 {
-    internal interface INhanVienRepository
+    public interface INhanVienRepository
     {
         bool Add(NhanVien obj);
-        bool Udpate(NhanVien obj);
+        bool Update(NhanVien obj);
         bool Delete(NhanVien obj);
         List<NhanVien> GetAll();
     }

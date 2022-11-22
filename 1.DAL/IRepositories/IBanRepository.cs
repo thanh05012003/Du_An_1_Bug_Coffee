@@ -10,7 +10,7 @@ namespace _1.DAL.IRepositories
     public interface IBanRepository
     {
         bool Add(Ban obj);
-        bool Udpate(Ban obj);
+        bool Update(Ban obj);
         List<Ban> GetAll();
     }
 }
