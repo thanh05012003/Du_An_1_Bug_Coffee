@@ -10,7 +10,7 @@ namespace _1.DAL.IRepositories
     public interface ILoaiSanPhamRepository
     {
         bool Add(LoaiSanPham obj);
-        bool Udpate(LoaiSanPham obj);
+        bool Update(LoaiSanPham obj);
         bool Delete(LoaiSanPham obj);
         List<LoaiSanPham> GetAll();
     }

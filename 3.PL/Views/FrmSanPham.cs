@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace _3.PL.Views
 {
-    public partial class Main : Form
+    public partial class FrmSanPham : Form
     {
-        public Main()
+        public FrmSanPham()
         {
             InitializeComponent();
         }
 
-        private void Main_Load(object sender, EventArgs e)
+        private void FrmSanPham_Load(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

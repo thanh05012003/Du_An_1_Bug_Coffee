@@ -38,7 +38,7 @@ namespace _1.DAL.Repositories
             return _DbContext.LoaiSanPham.ToList();
         }
 
-        public bool Udpate(LoaiSanPham obj)
+        public bool Update(LoaiSanPham obj)
         {
             if (obj == null) return false;
             _DbContext.Update(obj);

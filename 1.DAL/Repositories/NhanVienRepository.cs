@@ -38,7 +38,7 @@ namespace _1.DAL.Repositories
             return _DbContext.NhanVien.ToList();
         }
 
-        public bool Udpate(NhanVien obj)
+        public bool Update(NhanVien obj)
         {
             if (obj == null) return false;
             _DbContext.Update(obj);
