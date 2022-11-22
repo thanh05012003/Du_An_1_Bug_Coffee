@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_SanPham = new System.Windows.Forms.Button();
             this.btnTrangChu = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.btn_HoaDon = new System.Windows.Forms.Button();
             this.btn_ThongKe = new System.Windows.Forms.Button();
             this.btn_KhuyenMai = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lb_Time = new System.Windows.Forms.Label();
@@ -63,6 +63,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(272, 877);
             this.panel1.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(272, 255);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
             // 
             // panel4
             // 
@@ -163,17 +174,6 @@
             this.btn_KhuyenMai.Text = "Khuyến mãi";
             this.btn_KhuyenMai.UseVisualStyleBackColor = false;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
-            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(272, 255);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSeaGreen;
@@ -238,9 +238,9 @@
             this.groupBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox2.BackgroundImage")));
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox2.Location = new System.Drawing.Point(272, 0);
+            this.groupBox2.Location = new System.Drawing.Point(272, 73);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1232, 877);
+            this.groupBox2.Size = new System.Drawing.Size(1232, 804);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
@@ -249,7 +249,7 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // Main
+            // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -258,7 +258,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel1);
-            this.Name = "Main";
+            this.Name = "FrmMain";
             this.ShowIcon = false;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
