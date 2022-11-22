@@ -1,6 +1,6 @@
 ﻿namespace _3.PL.Views
 {
-    partial class FrmLogIn
+    partial class FrmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogIn));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lb_MatKhauFail = new System.Windows.Forms.Label();
             this.lb_EmailFail = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_DangNhap = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@
             this.txt_Email = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lb_MatKhauFail = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,11 +49,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-<<<<<<< HEAD
-            this.panel2.Size = new System.Drawing.Size(427, 475);
-=======
             this.panel2.Size = new System.Drawing.Size(433, 483);
->>>>>>> 3737ae52f53e6a4473001228c3c2dee1b6fceaae
             this.panel2.TabIndex = 23;
             // 
             // panel1
@@ -68,14 +64,21 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(427, 0);
+            this.panel1.Location = new System.Drawing.Point(433, 0);
             this.panel1.Name = "panel1";
-<<<<<<< HEAD
-            this.panel1.Size = new System.Drawing.Size(428, 475);
-=======
             this.panel1.Size = new System.Drawing.Size(422, 483);
->>>>>>> 3737ae52f53e6a4473001228c3c2dee1b6fceaae
             this.panel1.TabIndex = 24;
+            // 
+            // lb_MatKhauFail
+            // 
+            this.lb_MatKhauFail.AutoSize = true;
+            this.lb_MatKhauFail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_MatKhauFail.ForeColor = System.Drawing.Color.Red;
+            this.lb_MatKhauFail.Location = new System.Drawing.Point(21, 333);
+            this.lb_MatKhauFail.Name = "lb_MatKhauFail";
+            this.lb_MatKhauFail.Size = new System.Drawing.Size(55, 23);
+            this.lb_MatKhauFail.TabIndex = 30;
+            this.lb_MatKhauFail.Text = "label4";
             // 
             // lb_EmailFail
             // 
@@ -150,25 +153,14 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Email:";
             // 
-            // lb_MatKhauFail
-            // 
-            this.lb_MatKhauFail.AutoSize = true;
-            this.lb_MatKhauFail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lb_MatKhauFail.ForeColor = System.Drawing.Color.Red;
-            this.lb_MatKhauFail.Location = new System.Drawing.Point(21, 333);
-            this.lb_MatKhauFail.Name = "lb_MatKhauFail";
-            this.lb_MatKhauFail.Size = new System.Drawing.Size(55, 23);
-            this.lb_MatKhauFail.TabIndex = 30;
-            this.lb_MatKhauFail.Text = "label4";
-            // 
-            // FrmLogIn
+            // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(855, 483);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Name = "FrmLogIn";
+            this.Name = "FrmLogin";
             this.ShowIcon = false;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -188,5 +180,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lb_EmailFail;
         private System.Windows.Forms.Label lb_MatKhauFail;
+
     }
-}
+
+        //#endregion
+
+        //private System.Windows.Forms.Label label1;
+    }

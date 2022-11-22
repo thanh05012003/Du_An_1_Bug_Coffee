@@ -38,7 +38,7 @@ namespace _1.DAL.Repositories
             return _DbContext.Voucher.ToList();
         }
 
-        public bool Udpate(Voucher obj)
+        public bool Update(Voucher obj)
         {
             if (obj == null) return false;
             _DbContext.Update(obj);

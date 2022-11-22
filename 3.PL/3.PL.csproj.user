@@ -4,7 +4,7 @@
     <Compile Update="Views\FrmKhuyenMai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\FrmLogIn.cs">
+    <Compile Update="Views\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmMain.cs">

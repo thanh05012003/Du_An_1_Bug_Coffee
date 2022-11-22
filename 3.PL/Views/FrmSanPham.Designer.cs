@@ -42,6 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -54,6 +55,8 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+=======
+>>>>>>> 5deb1ce91c6519a15d79bc95b64629674494ca51
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -77,9 +80,13 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 36);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
+<<<<<<< HEAD
             this.groupBox1.Size = new System.Drawing.Size(1190, 329);
+=======
+            this.groupBox1.Size = new System.Drawing.Size(1190, 252);
+>>>>>>> 5deb1ce91c6519a15d79bc95b64629674494ca51
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -88,7 +95,11 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(702, 162);
             this.comboBox1.Name = "comboBox1";
+<<<<<<< HEAD
             this.comboBox1.Size = new System.Drawing.Size(318, 28);
+=======
+            this.comboBox1.Size = new System.Drawing.Size(306, 28);
+>>>>>>> 5deb1ce91c6519a15d79bc95b64629674494ca51
             this.comboBox1.TabIndex = 3;
             // 
             // radioButton2
@@ -194,6 +205,7 @@
             this.label1.Size = new System.Drawing.Size(106, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Sản Phẩm :";
+<<<<<<< HEAD
             // 
             // button1
             // 
@@ -307,6 +319,8 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(250, 28);
             this.comboBox3.TabIndex = 6;
+=======
+>>>>>>> 5deb1ce91c6519a15d79bc95b64629674494ca51
             // 
             // FrmSanPham
             // 
@@ -317,6 +331,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmSanPham";
             this.Text = "FrmSanPham";
+            this.Load += new System.EventHandler(this.FrmSanPham_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

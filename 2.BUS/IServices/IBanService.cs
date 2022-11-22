@@ -10,7 +10,6 @@ namespace _2.BUS.IServices
     public interface IBanService
     {
         string add(QlBanView obj);
-        string delete(QlBanView obj);
         string update(QlBanView obj);
         List<QlBanView> GetAll();
     }

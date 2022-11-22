@@ -9,9 +9,9 @@ namespace _2.BUS.IServices
 {
     public interface ILoaiSanPhamService
     {
-        string add(QlLoaiKhachHangView obj);
-        string delete(QlLoaiKhachHangView obj);
-        string update(QlLoaiKhachHangView obj);
-        List<QlLoaiKhachHangView> GetAll();
+        string add(QlLoaiSanPhamView obj);
+        string delete(QlLoaiSanPhamView obj);
+        string update(QlLoaiSanPhamView obj);
+        List<QlLoaiSanPhamView> GetAll();
     }
 }
