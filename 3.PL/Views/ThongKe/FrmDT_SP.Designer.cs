@@ -29,18 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_Loc = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.cmb_TrangThai = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dtp_BDLoc = new System.Windows.Forms.DateTimePicker();
-            this.dtp_KTLoc = new System.Windows.Forms.DateTimePicker();
-            this.dgrid_ThongKe = new System.Windows.Forms.DataGridView();
-            this.cmb_LoaiSP = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.pnl_TuyChon = new System.Windows.Forms.Panel();
             this.lbl_HuyTC = new System.Windows.Forms.Label();
@@ -84,25 +72,36 @@
             this.lbl_VndToday = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Chon = new System.Windows.Forms.Button();
-            this.btn_DT_SP = new System.Windows.Forms.Button();
-            this.btn_GiaoCa = new System.Windows.Forms.Button();
-            this.btn_XuatTK = new System.Windows.Forms.Button();
-            this.dtp_BDXuat = new System.Windows.Forms.DateTimePicker();
-            this.dtp_KTXuat = new System.Windows.Forms.DateTimePicker();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
+            this.btn_Loc = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.cmb_TrangThai = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.dtp_BDLoc = new System.Windows.Forms.DateTimePicker();
+            this.dtp_KTLoc = new System.Windows.Forms.DateTimePicker();
+            this.dgrid_ThongKe = new System.Windows.Forms.DataGridView();
+            this.cmb_LoaiSP = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgrid_ThongKe)).BeginInit();
-            this.panel2.SuspendLayout();
             this.pnl_TuyChon.SuspendLayout();
             this.pnl_Month.SuspendLayout();
             this.pnl_7Day.SuspendLayout();
             this.pnl_Today.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrid_ThongKe)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.pnl_TuyChon);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.pnl_Month);
+            this.panel1.Controls.Add(this.dtp_BDChon);
+            this.panel1.Controls.Add(this.pnl_7Day);
+            this.panel1.Controls.Add(this.dtp_KTChon);
+            this.panel1.Controls.Add(this.pnl_Today);
+            this.panel1.Controls.Add(this.btn_Chon);
             this.panel1.Controls.Add(this.btn_Loc);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.cmb_TrangThai);
@@ -114,142 +113,20 @@
             this.panel1.Controls.Add(this.dgrid_ThongKe);
             this.panel1.Controls.Add(this.cmb_LoaiSP);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Location = new System.Drawing.Point(12, 473);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1190, 271);
+            this.panel1.Size = new System.Drawing.Size(1299, 721);
             this.panel1.TabIndex = 0;
-            // 
-            // btn_Loc
-            // 
-            this.btn_Loc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btn_Loc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Loc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Loc.Location = new System.Drawing.Point(949, 200);
-            this.btn_Loc.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Loc.Name = "btn_Loc";
-            this.btn_Loc.Size = new System.Drawing.Size(76, 45);
-            this.btn_Loc.TabIndex = 47;
-            this.btn_Loc.Text = "Lọc";
-            this.btn_Loc.UseVisualStyleBackColor = false;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(1006, 116);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(100, 24);
-            this.label15.TabIndex = 53;
-            this.label15.Text = "Trạng thái:";
-            // 
-            // cmb_TrangThai
-            // 
-            this.cmb_TrangThai.FormattingEnabled = true;
-            this.cmb_TrangThai.Location = new System.Drawing.Point(1006, 150);
-            this.cmb_TrangThai.Name = "cmb_TrangThai";
-            this.cmb_TrangThai.Size = new System.Drawing.Size(161, 28);
-            this.cmb_TrangThai.TabIndex = 52;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(810, 116);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(137, 24);
-            this.label13.TabIndex = 51;
-            this.label13.Text = "Loại sản phẩm:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(810, 29);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 24);
-            this.label9.TabIndex = 50;
-            this.label9.Text = "Từ ngày:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(1013, 29);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(94, 24);
-            this.label11.TabIndex = 49;
-            this.label11.Text = "Đến ngày:";
-            // 
-            // dtp_BDLoc
-            // 
-            this.dtp_BDLoc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_BDLoc.Location = new System.Drawing.Point(810, 63);
-            this.dtp_BDLoc.Name = "dtp_BDLoc";
-            this.dtp_BDLoc.Size = new System.Drawing.Size(154, 27);
-            this.dtp_BDLoc.TabIndex = 48;
-            // 
-            // dtp_KTLoc
-            // 
-            this.dtp_KTLoc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_KTLoc.Location = new System.Drawing.Point(1013, 63);
-            this.dtp_KTLoc.Name = "dtp_KTLoc";
-            this.dtp_KTLoc.Size = new System.Drawing.Size(154, 27);
-            this.dtp_KTLoc.TabIndex = 47;
-            // 
-            // dgrid_ThongKe
-            // 
-            this.dgrid_ThongKe.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.dgrid_ThongKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrid_ThongKe.Location = new System.Drawing.Point(8, 29);
-            this.dgrid_ThongKe.Name = "dgrid_ThongKe";
-            this.dgrid_ThongKe.RowHeadersWidth = 51;
-            this.dgrid_ThongKe.RowTemplate.Height = 29;
-            this.dgrid_ThongKe.Size = new System.Drawing.Size(745, 234);
-            this.dgrid_ThongKe.TabIndex = 31;
-            // 
-            // cmb_LoaiSP
-            // 
-            this.cmb_LoaiSP.FormattingEnabled = true;
-            this.cmb_LoaiSP.Location = new System.Drawing.Point(810, 150);
-            this.cmb_LoaiSP.Name = "cmb_LoaiSP";
-            this.cmb_LoaiSP.Size = new System.Drawing.Size(154, 28);
-            this.cmb_LoaiSP.TabIndex = 30;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(6, 2);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(179, 24);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "Thống kê sản phẩm:";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.pnl_TuyChon);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.pnl_Month);
-            this.panel2.Controls.Add(this.dtp_BDChon);
-            this.panel2.Controls.Add(this.pnl_7Day);
-            this.panel2.Controls.Add(this.dtp_KTChon);
-            this.panel2.Controls.Add(this.pnl_Today);
-            this.panel2.Controls.Add(this.btn_Chon);
-            this.panel2.Location = new System.Drawing.Point(12, 101);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1190, 366);
-            this.panel2.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(914, 275);
+            this.label5.Location = new System.Drawing.Point(922, 314);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 24);
-            this.label5.TabIndex = 46;
+            this.label5.TabIndex = 73;
             this.label5.Text = "Từ:";
             // 
             // pnl_TuyChon
@@ -264,10 +141,10 @@
             this.pnl_TuyChon.Controls.Add(this.lbl_VndTC);
             this.pnl_TuyChon.Controls.Add(this.label4);
             this.pnl_TuyChon.Controls.Add(this.panel8);
-            this.pnl_TuyChon.Location = new System.Drawing.Point(904, 16);
+            this.pnl_TuyChon.Location = new System.Drawing.Point(1008, 42);
             this.pnl_TuyChon.Name = "pnl_TuyChon";
             this.pnl_TuyChon.Size = new System.Drawing.Size(278, 248);
-            this.pnl_TuyChon.TabIndex = 0;
+            this.pnl_TuyChon.TabIndex = 65;
             // 
             // lbl_HuyTC
             // 
@@ -360,10 +237,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(914, 318);
+            this.label6.Location = new System.Drawing.Point(922, 357);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 24);
-            this.label6.TabIndex = 45;
+            this.label6.TabIndex = 72;
             this.label6.Text = "Đến:";
             // 
             // pnl_Month
@@ -378,10 +255,10 @@
             this.pnl_Month.Controls.Add(this.lbl_VndMonth);
             this.pnl_Month.Controls.Add(this.label3);
             this.pnl_Month.Controls.Add(this.panel6);
-            this.pnl_Month.Location = new System.Drawing.Point(605, 16);
+            this.pnl_Month.Location = new System.Drawing.Point(675, 42);
             this.pnl_Month.Name = "pnl_Month";
             this.pnl_Month.Size = new System.Drawing.Size(278, 248);
-            this.pnl_Month.TabIndex = 1;
+            this.pnl_Month.TabIndex = 67;
             // 
             // lbl_HuyMonth
             // 
@@ -473,10 +350,10 @@
             // dtp_BDChon
             // 
             this.dtp_BDChon.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_BDChon.Location = new System.Drawing.Point(967, 274);
+            this.dtp_BDChon.Location = new System.Drawing.Point(975, 313);
             this.dtp_BDChon.Name = "dtp_BDChon";
             this.dtp_BDChon.Size = new System.Drawing.Size(124, 27);
-            this.dtp_BDChon.TabIndex = 44;
+            this.dtp_BDChon.TabIndex = 71;
             // 
             // pnl_7Day
             // 
@@ -489,10 +366,10 @@
             this.pnl_7Day.Controls.Add(this.label18);
             this.pnl_7Day.Controls.Add(this.lbl_VndDay);
             this.pnl_7Day.Controls.Add(this.label2);
-            this.pnl_7Day.Location = new System.Drawing.Point(306, 16);
+            this.pnl_7Day.Location = new System.Drawing.Point(342, 42);
             this.pnl_7Day.Name = "pnl_7Day";
             this.pnl_7Day.Size = new System.Drawing.Size(278, 248);
-            this.pnl_7Day.TabIndex = 1;
+            this.pnl_7Day.TabIndex = 68;
             // 
             // lbl_Huy7Day
             // 
@@ -577,10 +454,10 @@
             // dtp_KTChon
             // 
             this.dtp_KTChon.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_KTChon.Location = new System.Drawing.Point(967, 317);
+            this.dtp_KTChon.Location = new System.Drawing.Point(975, 356);
             this.dtp_KTChon.Name = "dtp_KTChon";
             this.dtp_KTChon.Size = new System.Drawing.Size(124, 27);
-            this.dtp_KTChon.TabIndex = 43;
+            this.dtp_KTChon.TabIndex = 70;
             // 
             // pnl_Today
             // 
@@ -593,10 +470,10 @@
             this.pnl_Today.Controls.Add(this.label8);
             this.pnl_Today.Controls.Add(this.lbl_VndToday);
             this.pnl_Today.Controls.Add(this.label1);
-            this.pnl_Today.Location = new System.Drawing.Point(7, 16);
+            this.pnl_Today.Location = new System.Drawing.Point(9, 42);
             this.pnl_Today.Name = "pnl_Today";
             this.pnl_Today.Size = new System.Drawing.Size(278, 248);
-            this.pnl_Today.TabIndex = 0;
+            this.pnl_Today.TabIndex = 66;
             // 
             // lbl_HuyToday
             // 
@@ -683,111 +560,131 @@
             this.btn_Chon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btn_Chon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Chon.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Chon.Location = new System.Drawing.Point(1106, 274);
+            this.btn_Chon.Location = new System.Drawing.Point(1114, 313);
             this.btn_Chon.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Chon.Name = "btn_Chon";
             this.btn_Chon.Size = new System.Drawing.Size(76, 70);
-            this.btn_Chon.TabIndex = 42;
+            this.btn_Chon.TabIndex = 69;
             this.btn_Chon.Text = "Chọn";
             this.btn_Chon.UseVisualStyleBackColor = false;
             // 
-            // btn_DT_SP
+            // btn_Loc
             // 
-            this.btn_DT_SP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btn_DT_SP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DT_SP.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_DT_SP.Location = new System.Drawing.Point(12, 10);
-            this.btn_DT_SP.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_DT_SP.Name = "btn_DT_SP";
-            this.btn_DT_SP.Size = new System.Drawing.Size(180, 66);
-            this.btn_DT_SP.TabIndex = 2;
-            this.btn_DT_SP.Text = "Doanh thu - Sản phẩm";
-            this.btn_DT_SP.UseVisualStyleBackColor = false;
+            this.btn_Loc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_Loc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Loc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_Loc.Location = new System.Drawing.Point(1008, 632);
+            this.btn_Loc.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Loc.Name = "btn_Loc";
+            this.btn_Loc.Size = new System.Drawing.Size(76, 45);
+            this.btn_Loc.TabIndex = 57;
+            this.btn_Loc.Text = "Lọc";
+            this.btn_Loc.UseVisualStyleBackColor = false;
             // 
-            // btn_GiaoCa
+            // label15
             // 
-            this.btn_GiaoCa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btn_GiaoCa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_GiaoCa.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_GiaoCa.Location = new System.Drawing.Point(216, 10);
-            this.btn_GiaoCa.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_GiaoCa.Name = "btn_GiaoCa";
-            this.btn_GiaoCa.Size = new System.Drawing.Size(180, 66);
-            this.btn_GiaoCa.TabIndex = 3;
-            this.btn_GiaoCa.Text = "Giao ca";
-            this.btn_GiaoCa.UseVisualStyleBackColor = false;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(1059, 540);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(100, 24);
+            this.label15.TabIndex = 64;
+            this.label15.Text = "Trạng thái:";
             // 
-            // btn_XuatTK
+            // cmb_TrangThai
             // 
-            this.btn_XuatTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btn_XuatTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_XuatTK.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_XuatTK.Location = new System.Drawing.Point(1082, 10);
-            this.btn_XuatTK.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_XuatTK.Name = "btn_XuatTK";
-            this.btn_XuatTK.Size = new System.Drawing.Size(120, 66);
-            this.btn_XuatTK.TabIndex = 4;
-            this.btn_XuatTK.Text = "Xuất TK";
-            this.btn_XuatTK.UseVisualStyleBackColor = false;
+            this.cmb_TrangThai.FormattingEnabled = true;
+            this.cmb_TrangThai.Location = new System.Drawing.Point(1059, 574);
+            this.cmb_TrangThai.Name = "cmb_TrangThai";
+            this.cmb_TrangThai.Size = new System.Drawing.Size(161, 28);
+            this.cmb_TrangThai.TabIndex = 63;
             // 
-            // dtp_BDXuat
+            // label13
             // 
-            this.dtp_BDXuat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_BDXuat.Location = new System.Drawing.Point(935, 10);
-            this.dtp_BDXuat.Name = "dtp_BDXuat";
-            this.dtp_BDXuat.Size = new System.Drawing.Size(124, 27);
-            this.dtp_BDXuat.TabIndex = 5;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(863, 540);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(137, 24);
+            this.label13.TabIndex = 62;
+            this.label13.Text = "Loại sản phẩm:";
             // 
-            // dtp_KTXuat
+            // label9
             // 
-            this.dtp_KTXuat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_KTXuat.Location = new System.Drawing.Point(935, 49);
-            this.dtp_KTXuat.Name = "dtp_KTXuat";
-            this.dtp_KTXuat.Size = new System.Drawing.Size(124, 27);
-            this.dtp_KTXuat.TabIndex = 6;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(863, 453);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(82, 24);
+            this.label9.TabIndex = 61;
+            this.label9.Text = "Từ ngày:";
             // 
-            // label31
+            // label11
             // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label31.Location = new System.Drawing.Point(870, 10);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(38, 24);
-            this.label31.TabIndex = 40;
-            this.label31.Text = "Từ:";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(1066, 453);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(94, 24);
+            this.label11.TabIndex = 60;
+            this.label11.Text = "Đến ngày:";
             // 
-            // label32
+            // dtp_BDLoc
             // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label32.Location = new System.Drawing.Point(870, 52);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(50, 24);
-            this.label32.TabIndex = 41;
-            this.label32.Text = "Đến:";
+            this.dtp_BDLoc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_BDLoc.Location = new System.Drawing.Point(863, 487);
+            this.dtp_BDLoc.Name = "dtp_BDLoc";
+            this.dtp_BDLoc.Size = new System.Drawing.Size(154, 27);
+            this.dtp_BDLoc.TabIndex = 59;
+            // 
+            // dtp_KTLoc
+            // 
+            this.dtp_KTLoc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_KTLoc.Location = new System.Drawing.Point(1066, 487);
+            this.dtp_KTLoc.Name = "dtp_KTLoc";
+            this.dtp_KTLoc.Size = new System.Drawing.Size(154, 27);
+            this.dtp_KTLoc.TabIndex = 58;
+            // 
+            // dgrid_ThongKe
+            // 
+            this.dgrid_ThongKe.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dgrid_ThongKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgrid_ThongKe.Location = new System.Drawing.Point(61, 453);
+            this.dgrid_ThongKe.Name = "dgrid_ThongKe";
+            this.dgrid_ThongKe.RowHeadersWidth = 51;
+            this.dgrid_ThongKe.RowTemplate.Height = 29;
+            this.dgrid_ThongKe.Size = new System.Drawing.Size(745, 234);
+            this.dgrid_ThongKe.TabIndex = 56;
+            // 
+            // cmb_LoaiSP
+            // 
+            this.cmb_LoaiSP.FormattingEnabled = true;
+            this.cmb_LoaiSP.Location = new System.Drawing.Point(863, 574);
+            this.cmb_LoaiSP.Name = "cmb_LoaiSP";
+            this.cmb_LoaiSP.Size = new System.Drawing.Size(154, 28);
+            this.cmb_LoaiSP.TabIndex = 55;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(59, 426);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(179, 24);
+            this.label7.TabIndex = 54;
+            this.label7.Text = "Thống kê sản phẩm:";
             // 
             // FrmDT_SP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1214, 756);
-            this.Controls.Add(this.label32);
-            this.Controls.Add(this.label31);
-            this.Controls.Add(this.dtp_KTXuat);
-            this.Controls.Add(this.dtp_BDXuat);
-            this.Controls.Add(this.btn_XuatTK);
-            this.Controls.Add(this.btn_GiaoCa);
-            this.Controls.Add(this.btn_DT_SP);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1305, 727);
             this.Controls.Add(this.panel1);
             this.Name = "FrmDT_SP";
             this.Padding = new System.Windows.Forms.Padding(3);
             this.Text = "Doanh thu - Sản phẩm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgrid_ThongKe)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.pnl_TuyChon.ResumeLayout(false);
             this.pnl_TuyChon.PerformLayout();
             this.pnl_Month.ResumeLayout(false);
@@ -796,60 +693,18 @@
             this.pnl_7Day.PerformLayout();
             this.pnl_Today.ResumeLayout(false);
             this.pnl_Today.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrid_ThongKe)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel pnl_TuyChon;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel pnl_Month;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel pnl_7Day;
-        private System.Windows.Forms.Panel pnl_Today;
-        private System.Windows.Forms.Button btn_DT_SP;
-        private System.Windows.Forms.Button btn_GiaoCa;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbl_VndTC;
-        private System.Windows.Forms.Label lbl_VndMonth;
-        private System.Windows.Forms.Label lbl_VndDay;
-        private System.Windows.Forms.Label lbl_VndToday;
-        private System.Windows.Forms.Label lbl_HuyTC;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label lbl_GiaoTC;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label lbl_BanTC;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label lbl_HuyMonth;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label lbl_GiaoMonth;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label lbl_BanMonth;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label lbl_Huy7Day;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label lbl_Giao7Day;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label lbl_Ban7Day;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label lbl_HuyToday;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label lbl_GiaoToday;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lbl_BanToday;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btn_XuatTK;
-        private System.Windows.Forms.DateTimePicker dtp_BDXuat;
-        private System.Windows.Forms.DateTimePicker dtp_KTXuat;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Button btn_Loc;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox cmb_TrangThai;
+        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dtp_BDLoc;
@@ -858,13 +713,47 @@
         private System.Windows.Forms.ComboBox cmb_LoaiSP;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel pnl_TuyChon;
+        private System.Windows.Forms.Label lbl_HuyTC;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label lbl_GiaoTC;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label lbl_BanTC;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label lbl_VndTC;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel pnl_Month;
+        private System.Windows.Forms.Label lbl_HuyMonth;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lbl_GiaoMonth;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label lbl_BanMonth;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label lbl_VndMonth;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.DateTimePicker dtp_BDChon;
+        private System.Windows.Forms.Panel pnl_7Day;
+        private System.Windows.Forms.Label lbl_Huy7Day;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lbl_Giao7Day;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lbl_Ban7Day;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lbl_VndDay;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtp_KTChon;
+        private System.Windows.Forms.Panel pnl_Today;
+        private System.Windows.Forms.Label lbl_HuyToday;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lbl_GiaoToday;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbl_BanToday;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbl_VndToday;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Chon;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox cmb_TrangThai;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button btn_Loc;
     }
 }

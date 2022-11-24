@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using _2.BUS.IServices;
 using _2.BUS.Services;
+using _3.PL.Views.ThongKe;
 using Timer = System.Windows.Forms.Timer;
 
 namespace _3.PL.Views
@@ -21,7 +22,6 @@ namespace _3.PL.Views
         {
             InitializeComponent();
            _nhanVienService = new NhanVienService();
-           ;
         }
 
 
@@ -66,7 +66,7 @@ namespace _3.PL.Views
             var nv = _nhanVienService.GetAll().FirstOrDefault(c =>
                 c.Email.ToLower() == Properties.Settings.Default.Tk.Trim() &&
                 c.MatKhau.ToLower() == Properties.Settings.Default.Mk.Trim());
-            lb_UserName.Text = nv.Ten;
+            //lb_UserName.Text = nv.Ten;
         }
 
 
@@ -84,6 +84,21 @@ namespace _3.PL.Views
                 frm.Show();
                 this.Hide();
             }
+        }
+
+        private void btn_KhuyenMai_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmKhuyenMai(),sender);
+        }
+
+        private void btn_ThongKe_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmThongKe(),sender);
+        }
+
+        private void btn_HoaDon_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmHoaDon(),sender);
         }
     }
 }

@@ -43,7 +43,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1323, 45);
+            this.panel1.Size = new System.Drawing.Size(1323, 48);
             this.panel1.TabIndex = 0;
             // 
             // btn_LichSu
@@ -54,7 +54,7 @@
             this.btn_LichSu.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_LichSu.Location = new System.Drawing.Point(109, 0);
             this.btn_LichSu.Name = "btn_LichSu";
-            this.btn_LichSu.Size = new System.Drawing.Size(109, 45);
+            this.btn_LichSu.Size = new System.Drawing.Size(109, 48);
             this.btn_LichSu.TabIndex = 3;
             this.btn_LichSu.Text = "Lịch sử HD";
             this.btn_LichSu.UseVisualStyleBackColor = false;
@@ -68,7 +68,7 @@
             this.btn_PhaChe.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_PhaChe.Location = new System.Drawing.Point(0, 0);
             this.btn_PhaChe.Name = "btn_PhaChe";
-            this.btn_PhaChe.Size = new System.Drawing.Size(109, 45);
+            this.btn_PhaChe.Size = new System.Drawing.Size(109, 48);
             this.btn_PhaChe.TabIndex = 2;
             this.btn_PhaChe.Text = "HD Pha chế";
             this.btn_PhaChe.UseVisualStyleBackColor = false;

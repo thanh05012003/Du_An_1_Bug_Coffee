@@ -147,6 +147,7 @@
             this.btn_HoaDon.TabIndex = 19;
             this.btn_HoaDon.Text = "Hoá đơn";
             this.btn_HoaDon.UseVisualStyleBackColor = false;
+            this.btn_HoaDon.Click += new System.EventHandler(this.btn_HoaDon_Click);
             // 
             // btn_ThongKe
             // 
@@ -158,6 +159,7 @@
             this.btn_ThongKe.TabIndex = 16;
             this.btn_ThongKe.Text = "Thống kê";
             this.btn_ThongKe.UseVisualStyleBackColor = false;
+            this.btn_ThongKe.Click += new System.EventHandler(this.btn_ThongKe_Click);
             // 
             // btn_KhuyenMai
             // 
@@ -169,6 +171,7 @@
             this.btn_KhuyenMai.TabIndex = 17;
             this.btn_KhuyenMai.Text = "Khuyến mãi";
             this.btn_KhuyenMai.UseVisualStyleBackColor = false;
+            this.btn_KhuyenMai.Click += new System.EventHandler(this.btn_KhuyenMai_Click);
             // 
             // panel2
             // 

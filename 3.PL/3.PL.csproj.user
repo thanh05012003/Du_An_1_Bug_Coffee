@@ -4,10 +4,10 @@
     <Compile Update="Views\BanHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\FrmDT_SP.cs">
+    <Compile Update="Views\ThongKe\FrmDT_SP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\FrmGiaoCa.cs">
+    <Compile Update="Views\ThongKe\FrmGiaoCa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmHDPhaChe.cs">
@@ -38,6 +38,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\TachHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\ThongKe\FrmThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\TichDiemKH.cs">
