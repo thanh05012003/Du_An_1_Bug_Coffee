@@ -1,6 +1,6 @@
 ﻿namespace _3.PL.Views
 {
-    partial class TachHD
+    partial class FrmTachHD
     {
         /// <summary>
         /// Required designer variable.

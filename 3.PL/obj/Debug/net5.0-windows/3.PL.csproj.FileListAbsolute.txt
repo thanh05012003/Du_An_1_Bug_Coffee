@@ -118,9 +118,6 @@ C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\2.BUS.pdb
 C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\1.DAL.pdb
 C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.AssemblyReference.cache
 C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Properties.Resources.resources
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.BanHang.resources
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.GiaoHang.resources
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.TachHD.resources
 C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmKhuyenMai.resources
 C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmLogin.resources
 C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmMain.resources
@@ -144,3 +141,6 @@ C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\refint\3.PL.
 C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.pdb
 C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.genruntimeconfig.cache
 C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\ref\3.PL.dll
+C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmGiaoHang.resources
+C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmTachHD.resources
+C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.BanHang.FrmBanHang.resources

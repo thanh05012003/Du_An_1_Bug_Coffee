@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _3.PL.Views
 {
-    public partial class BanHang : Form
+    public partial class FrmTachHD : Form
     {
-        public BanHang()
+        public FrmTachHD()
         {
             InitializeComponent();
         }

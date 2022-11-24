@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using _2.BUS.IServices;
 using _2.BUS.Services;
+using _3.PL.Views.BanHang;
 using _3.PL.Views.ThongKe;
 using Timer = System.Windows.Forms.Timer;
 
@@ -40,7 +41,7 @@ namespace _3.PL.Views
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lb_Time.Text = DateTime.Now.ToString();
+            lb_Time.Text = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss");
         }
         private void OpenChildForm(Form childForm, object btnSender)
         {
@@ -62,7 +63,7 @@ namespace _3.PL.Views
         {
             timer1.Enabled = true;
             timer1.Start();
-            lb_Time.Text = DateTime.Now.ToString();
+            lb_Time.Text = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss");
             var nv = _nhanVienService.GetAll().FirstOrDefault(c =>
                 c.Email.ToLower() == Properties.Settings.Default.Tk.Trim() &&
                 c.MatKhau.ToLower() == Properties.Settings.Default.Mk.Trim());
@@ -100,5 +101,16 @@ namespace _3.PL.Views
         {
             OpenChildForm(new FrmHoaDon(),sender);
         }
+
+        private void btn_BanHang_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmBanHang(),sender);
+        }
+
+        private void btn_NhanVien_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new NhanVien(),sender);
+        }
+
     }
 }

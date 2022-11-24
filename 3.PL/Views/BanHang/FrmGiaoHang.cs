@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _3.PL.Views
 {
-    public partial class TachHD : Form
+    public partial class FrmGiaoHang : Form
     {
-        public TachHD()
+        public FrmGiaoHang()
         {
             InitializeComponent();
         }

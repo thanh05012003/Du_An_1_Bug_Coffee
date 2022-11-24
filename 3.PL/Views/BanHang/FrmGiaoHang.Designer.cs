@@ -1,6 +1,6 @@
 ﻿namespace _3.PL.Views
 {
-    partial class GiaoHang
+    partial class FrmGiaoHang
     {
         /// <summary>
         /// Required designer variable.
