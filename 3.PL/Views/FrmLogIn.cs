@@ -27,7 +27,6 @@ namespace _3.PL.Views
             _nhanVienService = new NhanVienService();
             lb_EmailFail.Visible = false;
             lb_MatKhauFail.Visible = false;
-            txt_MatKhau.UseSystemPasswordChar = true;
         }
 
         public void Check()
@@ -69,11 +68,10 @@ namespace _3.PL.Views
                             }
                             else
                             {
-                                Properties.Settings.Default.Tk = txt_Email.Text.ToLower().Trim();
-                                Properties.Settings.Default.Mk = txt_MatKhau.Text.ToLower().Trim();
+                                Properties.Settings.Default.Tk = txt_Email.Text;
+                                Properties.Settings.Default.Mk = txt_MatKhau.Text;
                                 FrmMain main = new FrmMain();
-                                main.Show();
-                                this.Hide();
+                                main.ShowDialog();
                             }
                         }
                     }
@@ -96,31 +94,6 @@ namespace _3.PL.Views
         private void txt_MatKhau_TextChanged(object sender, EventArgs e)
         {
             lb_MatKhauFail.Visible = false;
-        }
-
-        private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult dr = MessageBox.Show("Bạn có chắc muốn thoát không ?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (dr != DialogResult.OK)
-            {
-                e.Cancel = true;
-            }
-            else
-            {
-                Application.ExitThread();
-            }
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox1.Checked == true)
-            {
-                txt_MatKhau.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                txt_MatKhau.UseSystemPasswordChar = true;
-            }
         }
     }
 }

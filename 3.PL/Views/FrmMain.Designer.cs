@@ -44,10 +44,10 @@
             this.lb_UserName = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lb_Time = new System.Windows.Forms.Label();
-            this.btn_DangXuat = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.btn_DoiMatKhau = new System.Windows.Forms.Button();
             this.btn_GiaoCa = new System.Windows.Forms.Button();
-            this.gr_CuaHang = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -113,7 +113,6 @@
             this.btn_SanPham.TabIndex = 18;
             this.btn_SanPham.Text = "Sản phẩm";
             this.btn_SanPham.UseVisualStyleBackColor = false;
-            this.btn_SanPham.Click += new System.EventHandler(this.btn_SanPham_Click);
             // 
             // btnTrangChu
             // 
@@ -136,7 +135,6 @@
             this.btn_BanHang.TabIndex = 20;
             this.btn_BanHang.Text = "Bán Hàng";
             this.btn_BanHang.UseVisualStyleBackColor = false;
-            this.btn_BanHang.Click += new System.EventHandler(this.btn_BanHang_Click);
             // 
             // btn_HoaDon
             // 
@@ -148,7 +146,6 @@
             this.btn_HoaDon.TabIndex = 19;
             this.btn_HoaDon.Text = "Hoá đơn";
             this.btn_HoaDon.UseVisualStyleBackColor = false;
-            this.btn_HoaDon.Click += new System.EventHandler(this.btn_HoaDon_Click);
             // 
             // btn_ThongKe
             // 
@@ -160,7 +157,6 @@
             this.btn_ThongKe.TabIndex = 16;
             this.btn_ThongKe.Text = "Thống kê";
             this.btn_ThongKe.UseVisualStyleBackColor = false;
-            this.btn_ThongKe.Click += new System.EventHandler(this.btn_ThongKe_Click);
             // 
             // btn_KhuyenMai
             // 
@@ -172,18 +168,16 @@
             this.btn_KhuyenMai.TabIndex = 17;
             this.btn_KhuyenMai.Text = "Khuyến mãi";
             this.btn_KhuyenMai.UseVisualStyleBackColor = false;
-            this.btn_KhuyenMai.Click += new System.EventHandler(this.btn_KhuyenMai_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.panel2.Controls.Add(this.lb_UserName);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.btn_DangXuat);
+            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.btn_DoiMatKhau);
             this.panel2.Controls.Add(this.btn_GiaoCa);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(272, 0);
+            this.panel2.Location = new System.Drawing.Point(272, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1341, 72);
             this.panel2.TabIndex = 2;
@@ -203,9 +197,9 @@
             // 
             this.panel3.Controls.Add(this.lb_Time);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(1104, 0);
+            this.panel3.Location = new System.Drawing.Point(1112, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(237, 72);
+            this.panel3.Size = new System.Drawing.Size(229, 72);
             this.panel3.TabIndex = 4;
             // 
             // lb_Time
@@ -213,21 +207,20 @@
             this.lb_Time.AutoSize = true;
             this.lb_Time.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lb_Time.ForeColor = System.Drawing.Color.White;
-            this.lb_Time.Location = new System.Drawing.Point(36, 22);
+            this.lb_Time.Location = new System.Drawing.Point(59, 20);
             this.lb_Time.Name = "lb_Time";
-            this.lb_Time.Size = new System.Drawing.Size(181, 25);
+            this.lb_Time.Size = new System.Drawing.Size(211, 25);
             this.lb_Time.TabIndex = 3;
-            this.lb_Time.Text = "22:14:00 21-01-2022";
+            this.lb_Time.Text = "22:14:00 21-01-2022 CH";
             // 
-            // btn_DangXuat
+            // button3
             // 
-            this.btn_DangXuat.Location = new System.Drawing.Point(313, 14);
-            this.btn_DangXuat.Name = "btn_DangXuat";
-            this.btn_DangXuat.Size = new System.Drawing.Size(123, 41);
-            this.btn_DangXuat.TabIndex = 2;
-            this.btn_DangXuat.Text = "Đăng xuất";
-            this.btn_DangXuat.UseVisualStyleBackColor = true;
-            this.btn_DangXuat.Click += new System.EventHandler(this.btn_DangXuat_Click);
+            this.button3.Location = new System.Drawing.Point(313, 14);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(123, 41);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Đăng xuất";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // btn_DoiMatKhau
             // 
@@ -247,16 +240,16 @@
             this.btn_GiaoCa.Text = "Giao ca";
             this.btn_GiaoCa.UseVisualStyleBackColor = true;
             // 
-            // gr_CuaHang
+            // groupBox2
             // 
-            this.gr_CuaHang.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gr_CuaHang.BackgroundImage")));
-            this.gr_CuaHang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.gr_CuaHang.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gr_CuaHang.Location = new System.Drawing.Point(272, 61);
-            this.gr_CuaHang.Name = "gr_CuaHang";
-            this.gr_CuaHang.Size = new System.Drawing.Size(1341, 906);
-            this.gr_CuaHang.TabIndex = 3;
-            this.gr_CuaHang.TabStop = false;
+            this.groupBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox2.BackgroundImage")));
+            this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox2.Location = new System.Drawing.Point(272, 73);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1341, 894);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
             // 
             // timer1
             // 
@@ -270,7 +263,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1613, 967);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.gr_CuaHang);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmMain";
             this.ShowIcon = false;
@@ -291,8 +284,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.GroupBox gr_CuaHang;
-        private System.Windows.Forms.Button btn_DangXuat;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btn_DoiMatKhau;
         private System.Windows.Forms.Button btn_GiaoCa;
         private System.Windows.Forms.Timer timer1;

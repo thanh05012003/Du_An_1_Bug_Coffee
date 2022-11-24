@@ -5720,23 +5720,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ADMIN\\.nuget\\packages\\": {},
+    "C:\\Users\\FPT\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\HocC#\\Du_An_1_Bug_Coffee\\2.BUS\\2.BUS.csproj",
+      "projectUniqueName": "E:\\Ki IV\\Du_An_1_Bug_Coffee\\2.BUS\\2.BUS.csproj",
       "projectName": "2.BUS",
-      "projectPath": "C:\\Users\\ADMIN\\Desktop\\HocC#\\Du_An_1_Bug_Coffee\\2.BUS\\2.BUS.csproj",
-      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ADMIN\\Desktop\\HocC#\\Du_An_1_Bug_Coffee\\2.BUS\\obj\\",
+      "projectPath": "E:\\Ki IV\\Du_An_1_Bug_Coffee\\2.BUS\\2.BUS.csproj",
+      "packagesPath": "C:\\Users\\FPT\\.nuget\\packages\\",
+      "outputPath": "E:\\Ki IV\\Du_An_1_Bug_Coffee\\2.BUS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\FPT\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5751,8 +5751,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\ADMIN\\Desktop\\HocC#\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj": {
-              "projectPath": "C:\\Users\\ADMIN\\Desktop\\HocC#\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj"
+            "E:\\Ki IV\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj": {
+              "projectPath": "E:\\Ki IV\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj"
             }
           }
         }
@@ -5781,7 +5781,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

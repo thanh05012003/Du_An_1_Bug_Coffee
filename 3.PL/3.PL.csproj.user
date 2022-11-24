@@ -1,32 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup />
   <ItemGroup>
-    <Compile Update="Views\FrmDT_SP.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\FrmGiaoCa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\FrmHDPhaChe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\FrmHoaDon.cs">
+    <Compile Update="Views\BanHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmKhuyenMai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\FrmLichSuHD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\FrmLogIn.cs">
+    <Compile Update="Views\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\GiaoHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\TachHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\TichDiemKH.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
