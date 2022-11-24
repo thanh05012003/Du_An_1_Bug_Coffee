@@ -42,10 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
 
-=======
->>>>>>> 4f5e87bad4aa1020790f92acfa4aaea4ec3442c1
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -55,10 +52,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
+
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
 
-=======
+
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
@@ -68,7 +65,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
->>>>>>> 4f5e87bad4aa1020790f92acfa4aaea4ec3442c1
+
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -211,10 +208,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Sản Phẩm :";
             // 
-<<<<<<< HEAD
-
-=======
->>>>>>> 4f5e87bad4aa1020790f92acfa4aaea4ec3442c1
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.DarkSeaGreen;
@@ -444,9 +437,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridView1;
-<<<<<<< HEAD
 
-=======
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.ComboBox comboBox4;
@@ -456,8 +447,5 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-=======
->>>>>>> 818f5030dc2ea390c4e739a1608b30fe500c5aeb
->>>>>>> 4f5e87bad4aa1020790f92acfa4aaea4ec3442c1
     }
 }

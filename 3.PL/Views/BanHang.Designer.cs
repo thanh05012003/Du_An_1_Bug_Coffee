@@ -138,8 +138,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.button9);
             this.splitContainer1.Panel2.Controls.Add(this.btn_ThemHD);
             this.splitContainer1.Panel2.Controls.Add(this.dtg_hdNew);
-            this.splitContainer1.Size = new System.Drawing.Size(1214, 756);
-            this.splitContainer1.SplitterDistance = 624;
+            this.splitContainer1.Size = new System.Drawing.Size(1212, 756);
+            this.splitContainer1.SplitterDistance = 625;
             this.splitContainer1.TabIndex = 0;
             // 
             // cbb_loaiSP

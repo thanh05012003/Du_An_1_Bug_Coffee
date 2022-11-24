@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmKhuyenMai));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,7 +49,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -78,20 +76,6 @@
             // 
             // label1
             // 
-<<<<<<< HEAD
-
-=======
->>>>>>> 4f5e87bad4aa1020790f92acfa4aaea4ec3442c1
-            //this.panel1.Controls.Add(this.groupBox4);
-            //this.panel1.Controls.Add(this.groupBox3);
-            //this.panel1.Controls.Add(this.groupBox1);
-            //this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            //this.panel1.Location = new System.Drawing.Point(0, 0);
-            //this.panel1.Name = "panel1";
-            //this.panel1.Size = new System.Drawing.Size(1323, 860);
-            //this.panel1.TabIndex = 0;
-<<<<<<< HEAD
-
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(16, 179);
@@ -99,16 +83,6 @@
             this.label1.Size = new System.Drawing.Size(130, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Khuyến Mãi :";
-
-=======
-            //this.label1.AutoSize = true;
-            //this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            //this.label1.Location = new System.Drawing.Point(16, 179);
-            //this.label1.Name = "label1";
-            //this.label1.Size = new System.Drawing.Size(130, 21);
-            //this.label1.TabIndex = 0;
-            //this.label1.Text = "Mã Khuyến Mãi :";
->>>>>>> 4f5e87bad4aa1020790f92acfa4aaea4ec3442c1
             // 
             // label2
             // 
@@ -305,12 +279,6 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Cập Nhật";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // groupBox3
             // 
@@ -536,7 +504,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
