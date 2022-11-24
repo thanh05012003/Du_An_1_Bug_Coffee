@@ -1,7 +1,11 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\ADMIN\\Desktop\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj": {}
+=======
+    "C:\\Users\\taibeo\\OneDrive\\Desktop\\du an 1\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj": {}
+>>>>>>> 4f5e87bad4aa1020790f92acfa4aaea4ec3442c1
   },
   "projects": {
     "C:\\Users\\ADMIN\\Desktop\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj": {
@@ -9,15 +13,25 @@
       "restore": {
         "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj",
         "projectName": "1.DAL",
+<<<<<<< HEAD
         "projectPath": "C:\\Users\\ADMIN\\Desktop\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\ADMIN\\Desktop\\Du_An_1_Bug_Coffee\\1.DAL\\obj\\",
+=======
+        "projectPath": "C:\\Users\\taibeo\\OneDrive\\Desktop\\du an 1\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj",
+        "packagesPath": "C:\\Users\\taibeo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\taibeo\\OneDrive\\Desktop\\du an 1\\Du_An_1_Bug_Coffee\\1.DAL\\obj\\",
+>>>>>>> 4f5e87bad4aa1020790f92acfa4aaea4ec3442c1
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\taibeo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 4f5e87bad4aa1020790f92acfa4aaea4ec3442c1
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -74,7 +88,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+>>>>>>> 4f5e87bad4aa1020790f92acfa4aaea4ec3442c1
         }
       }
     }

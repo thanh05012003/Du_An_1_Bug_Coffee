@@ -78,7 +78,10 @@
             // 
             // label1
             // 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4f5e87bad4aa1020790f92acfa4aaea4ec3442c1
             //this.panel1.Controls.Add(this.groupBox4);
             //this.panel1.Controls.Add(this.groupBox3);
             //this.panel1.Controls.Add(this.groupBox1);
@@ -87,6 +90,7 @@
             //this.panel1.Name = "panel1";
             //this.panel1.Size = new System.Drawing.Size(1323, 860);
             //this.panel1.TabIndex = 0;
+<<<<<<< HEAD
 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -96,6 +100,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Khuyến Mãi :";
 
+=======
+            //this.label1.AutoSize = true;
+            //this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            //this.label1.Location = new System.Drawing.Point(16, 179);
+            //this.label1.Name = "label1";
+            //this.label1.Size = new System.Drawing.Size(130, 21);
+            //this.label1.TabIndex = 0;
+            //this.label1.Text = "Mã Khuyến Mãi :";
+>>>>>>> 4f5e87bad4aa1020790f92acfa4aaea4ec3442c1
             // 
             // label2
             // 
