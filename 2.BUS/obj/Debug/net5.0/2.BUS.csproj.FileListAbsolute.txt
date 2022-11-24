@@ -73,3 +73,18 @@ C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\2.BUS\obj\Debug\net5.0\2.BUS.dll
 C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\2.BUS\obj\Debug\net5.0\refint\2.BUS.dll
 C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\2.BUS\obj\Debug\net5.0\2.BUS.pdb
 C:\Users\ADMIN\Desktop\HocC#\Du_An_1_Bug_Coffee\2.BUS\obj\Debug\net5.0\ref\2.BUS.dll
+C:\Users\taibeo\OneDrive\Desktop\du an 1\Du_An_1_Bug_Coffee\2.BUS\bin\Debug\net5.0\2.BUS.deps.json
+C:\Users\taibeo\OneDrive\Desktop\du an 1\Du_An_1_Bug_Coffee\2.BUS\bin\Debug\net5.0\2.BUS.dll
+C:\Users\taibeo\OneDrive\Desktop\du an 1\Du_An_1_Bug_Coffee\2.BUS\bin\Debug\net5.0\2.BUS.pdb
+C:\Users\taibeo\OneDrive\Desktop\du an 1\Du_An_1_Bug_Coffee\2.BUS\bin\Debug\net5.0\1.DAL.dll
+C:\Users\taibeo\OneDrive\Desktop\du an 1\Du_An_1_Bug_Coffee\2.BUS\bin\Debug\net5.0\1.DAL.pdb
+C:\Users\taibeo\OneDrive\Desktop\du an 1\Du_An_1_Bug_Coffee\2.BUS\obj\Debug\net5.0\2.BUS.csproj.AssemblyReference.cache
+C:\Users\taibeo\OneDrive\Desktop\du an 1\Du_An_1_Bug_Coffee\2.BUS\obj\Debug\net5.0\2.BUS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\taibeo\OneDrive\Desktop\du an 1\Du_An_1_Bug_Coffee\2.BUS\obj\Debug\net5.0\2.BUS.AssemblyInfoInputs.cache
+C:\Users\taibeo\OneDrive\Desktop\du an 1\Du_An_1_Bug_Coffee\2.BUS\obj\Debug\net5.0\2.BUS.AssemblyInfo.cs
+C:\Users\taibeo\OneDrive\Desktop\du an 1\Du_An_1_Bug_Coffee\2.BUS\obj\Debug\net5.0\2.BUS.csproj.CoreCompileInputs.cache
+C:\Users\taibeo\OneDrive\Desktop\du an 1\Du_An_1_Bug_Coffee\2.BUS\obj\Debug\net5.0\2.BUS.csproj.CopyComplete
+C:\Users\taibeo\OneDrive\Desktop\du an 1\Du_An_1_Bug_Coffee\2.BUS\obj\Debug\net5.0\2.BUS.dll
+C:\Users\taibeo\OneDrive\Desktop\du an 1\Du_An_1_Bug_Coffee\2.BUS\obj\Debug\net5.0\refint\2.BUS.dll
+C:\Users\taibeo\OneDrive\Desktop\du an 1\Du_An_1_Bug_Coffee\2.BUS\obj\Debug\net5.0\2.BUS.pdb
+C:\Users\taibeo\OneDrive\Desktop\du an 1\Du_An_1_Bug_Coffee\2.BUS\obj\Debug\net5.0\ref\2.BUS.dll
