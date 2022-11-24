@@ -69,6 +69,7 @@
             this.txt_TenCv.Name = "txt_TenCv";
             this.txt_TenCv.Size = new System.Drawing.Size(195, 27);
             this.txt_TenCv.TabIndex = 3;
+            this.txt_TenCv.TextChanged += new System.EventHandler(this.txt_TenCv_TextChanged);
             // 
             // btn_Them
             // 
@@ -102,8 +103,6 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmChucVu";
             this.Text = "FrmChucVu";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmChucVu_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmChucVu_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

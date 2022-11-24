@@ -20,6 +20,7 @@ namespace _3.PL.Views.NhanVien
         {
             InitializeComponent();
             _chucVuService = new ChucVuService();
+            txt_MaCv.Enabled = false;
         }
 
         private QlChucVuView GetDatafromGui()
@@ -39,13 +40,9 @@ namespace _3.PL.Views.NhanVien
             
         }
 
-        private void FrmChucVu_FormClosing(object sender, FormClosingEventArgs e)
+        private void txt_TenCv_TextChanged(object sender, EventArgs e)
         {
-          
-        }
-
-        private void FrmChucVu_FormClosed(object sender, FormClosedEventArgs e)
-        {
+            txt_MaCv.Text = "CV0" + (_chucVuService.GetAll().Count +1);
         }
     }
 }

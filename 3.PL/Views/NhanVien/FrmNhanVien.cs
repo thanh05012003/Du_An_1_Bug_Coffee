@@ -23,7 +23,7 @@ namespace _3.PL.Views
 
         public void loadDataCV()
         {
-           
+            cbb_cvNV.Items.Clear();
             foreach (var x in _chucVuService.GetAll())
             {
                 cbb_cvNV.Items.Add(x.Ten);
@@ -90,11 +90,7 @@ namespace _3.PL.Views
         {
             FrmChucVu  frm = new FrmChucVu();
             frm.ShowDialog();
-            cbb_cvNV.Items.Clear();
-            foreach (var x in _chucVuService.GetAll())
-            {
-                cbb_cvNV.Items.Add(x.Ten);
-            }
+            loadDataCV();
         }
     }
 }
