@@ -14,9 +14,9 @@ namespace _1.DAL.Configurations
         public void Configure(EntityTypeBuilder<Ban> builder)
         {
             builder.HasKey(c => c.Ma);
-            builder.Property(c => c.Ma).HasColumnType("varchar(20)").IsRequired();
-            builder.Property(c => c.Ten).HasColumnType("nvarchar(100)").IsRequired();
-            builder.Property(c => c.TrangThai).HasColumnType("int").IsRequired();
+            builder.Property(c => c.Ma).HasColumnType("varchar(20)");
+            builder.Property(c => c.Ten).HasColumnType("nvarchar(100)");
+            builder.Property(c => c.TrangThai).HasColumnType("int");
         }
     }
 }

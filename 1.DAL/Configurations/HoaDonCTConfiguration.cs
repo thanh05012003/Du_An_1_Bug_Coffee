@@ -14,11 +14,11 @@ namespace _1.DAL.Configurations
         public void Configure(EntityTypeBuilder<HoaDonCT> builder)
         {
             builder.HasKey(c => new { c.MaSP, c.MaHD });
-            builder.Property(c => c.MaHD).IsRequired();
-            builder.Property(c => c.MaSP).IsRequired();
-            builder.Property(c => c.SoLuong).HasColumnType("int").IsRequired();
-            builder.Property(c => c.DonGia).HasColumnType("money").IsRequired();
-            builder.Property(c => c.MaBan).IsRequired();
+            builder.Property(c => c.MaHD);
+            builder.Property(c => c.MaSP);
+            builder.Property(c => c.SoLuong).HasColumnType("int");
+            builder.Property(c => c.DonGia).HasColumnType("money");
+            builder.Property(c => c.MaBan);
             //tạo khoá ngoại
             builder.HasOne(c => c.HoaDon).WithMany().HasForeignKey(c => c.MaHD);
             builder.HasOne(c => c.SanPham).WithMany().HasForeignKey(c => c.MaSP);

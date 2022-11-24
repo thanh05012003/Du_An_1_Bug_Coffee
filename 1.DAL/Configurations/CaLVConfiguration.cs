@@ -15,11 +15,11 @@ namespace _1.DAL.Configurations
         public void Configure(EntityTypeBuilder<CaLV> builder)
         {
             builder.HasKey(k => k.Ma);
-            builder.Property(p => p.Ma).HasColumnType("varchar(20)").IsRequired();
-            builder.Property(p => p.Ten).HasColumnType("nvarchar(100)").IsRequired();
-            builder.Property(p => p.ThoiGianBatDau).HasColumnType("date").IsRequired();
-            builder.Property(p => p.ThoiGianKetThuc).HasColumnType("date").IsRequired();
-            builder.Property(p => p.SoTien).HasColumnType("money").IsRequired();
+            builder.Property(p => p.Ma).HasColumnType("varchar(20)");
+            builder.Property(p => p.Ten).HasColumnType("nvarchar(100)");
+            builder.Property(p => p.ThoiGianBatDau).HasColumnType("date");
+            builder.Property(p => p.ThoiGianKetThuc).HasColumnType("date");
+            builder.Property(p => p.SoTien).HasColumnType("money");
         }
     }
 }

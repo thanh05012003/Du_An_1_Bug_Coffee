@@ -14,11 +14,11 @@ namespace _1.DAL.Configurations
         public void Configure(EntityTypeBuilder<HoaDon> builder)
         {
             builder.HasKey(c => c.Ma);
-            builder.Property(c => c.Ma).HasColumnType("varchar(20)").IsRequired();
-            builder.Property(c => c.MaKH).IsRequired();
-            builder.Property(c => c.MaNV).IsRequired();
-            builder.Property(c => c.MaNV).IsRequired();
-            builder.Property(c => c.NgayTao).HasColumnType("date").IsRequired();
+            builder.Property(c => c.Ma).HasColumnType("varchar(20)");
+            builder.Property(c => c.MaKH);
+            builder.Property(c => c.MaNV);
+            builder.Property(c => c.MaNV);
+            builder.Property(c => c.NgayTao).HasColumnType("date");
             //Khoá ngoại
             builder.HasOne(c => c.KhachHang).WithMany().HasForeignKey(c => c.MaKH);
             builder.HasOne(c => c.NhanVien).WithMany().HasForeignKey(c => c.MaNV);

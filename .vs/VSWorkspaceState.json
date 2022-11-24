@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\1.DAL",
+    "\\1.DAL\\Migrations"
   ],
-  "SelectedNode": "\\Du_An_1_Bug_Coffee.sln",
+  "SelectedNode": "\\1.DAL\\Migrations\\20221124112404_TheBugCf.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace _1.DAL.Migrations
 {
-    public partial class bugcf151422 : Migration
+    public partial class TheBugCf : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,7 +12,7 @@ namespace _1.DAL.Migrations
                 columns: table => new
                 {
                     Ma = table.Column<string>(type: "varchar(20)", nullable: false),
-                    Ten = table.Column<string>(type: "nvarchar(100)", nullable: false),
+                    Ten = table.Column<string>(type: "nvarchar(100)", nullable: true),
                     TrangThai = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -25,10 +25,10 @@ namespace _1.DAL.Migrations
                 columns: table => new
                 {
                     Ma = table.Column<string>(type: "varchar(20)", nullable: false),
-                    Ten = table.Column<string>(type: "nvarchar(100)", nullable: false),
-                    ThoiGianBatDau = table.Column<DateTime>(type: "date", nullable: false),
-                    ThoiGianKetThuc = table.Column<DateTime>(type: "date", nullable: false),
-                    SoTien = table.Column<decimal>(type: "money", nullable: false)
+                    Ten = table.Column<string>(type: "nvarchar(100)", nullable: true),
+                    ThoiGianBatDau = table.Column<DateTime>(type: "date", nullable: true),
+                    ThoiGianKetThuc = table.Column<DateTime>(type: "date", nullable: true),
+                    SoTien = table.Column<decimal>(type: "money", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -40,7 +40,7 @@ namespace _1.DAL.Migrations
                 columns: table => new
                 {
                     Ma = table.Column<string>(type: "varchar(20)", nullable: false),
-                    Ten = table.Column<string>(type: "nvarchar(100)", nullable: false)
+                    Ten = table.Column<string>(type: "nvarchar(100)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -52,7 +52,7 @@ namespace _1.DAL.Migrations
                 columns: table => new
                 {
                     Ma = table.Column<string>(type: "varchar(20)", nullable: false),
-                    Ten = table.Column<string>(type: "nvarchar(100)", nullable: false)
+                    Ten = table.Column<string>(type: "nvarchar(100)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -64,7 +64,7 @@ namespace _1.DAL.Migrations
                 columns: table => new
                 {
                     Ma = table.Column<string>(type: "varchar(20)", nullable: false),
-                    Ten = table.Column<string>(type: "nvarchar(100)", nullable: false)
+                    Ten = table.Column<string>(type: "nvarchar(100)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -81,7 +81,7 @@ namespace _1.DAL.Migrations
                     NgayKetThuc = table.Column<DateTime>(type: "date", nullable: false),
                     TrangThai = table.Column<int>(type: "int", nullable: false),
                     GiamGia = table.Column<int>(type: "int", nullable: false),
-                    MoTa = table.Column<string>(type: "nvarchar(100)", nullable: false)
+                    MoTa = table.Column<string>(type: "nvarchar(100)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -94,15 +94,15 @@ namespace _1.DAL.Migrations
                 {
                     Ma = table.Column<string>(type: "varchar(20)", nullable: false),
                     Ten = table.Column<string>(type: "nvarchar(100)", nullable: false),
-                    GioiTinh = table.Column<string>(type: "nvarchar(10)", nullable: false),
+                    GioiTinh = table.Column<string>(type: "nvarchar(10)", nullable: true),
                     NgaySinh = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DiaChi = table.Column<string>(type: "nvarchar(100)", nullable: false),
+                    DiaChi = table.Column<string>(type: "nvarchar(100)", nullable: true),
                     SDT = table.Column<string>(type: "nvarchar(30)", nullable: false),
-                    Email = table.Column<string>(type: "varchar(100)", nullable: false),
+                    Email = table.Column<string>(type: "varchar(100)", nullable: true),
                     TrangThai = table.Column<int>(type: "int", nullable: false),
                     MatKhau = table.Column<string>(type: "varchar(max)", nullable: false),
-                    MaCV = table.Column<string>(type: "varchar(20)", nullable: false),
-                    MaCLV = table.Column<string>(type: "varchar(20)", nullable: false)
+                    MaCV = table.Column<string>(type: "varchar(20)", nullable: true),
+                    MaCLV = table.Column<string>(type: "varchar(20)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -112,13 +112,13 @@ namespace _1.DAL.Migrations
                         column: x => x.MaCLV,
                         principalTable: "CaLv",
                         principalColumn: "Ma",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_NhanVien_ChucVu_MaCV",
                         column: x => x.MaCV,
                         principalTable: "ChucVu",
                         principalColumn: "Ma",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -126,8 +126,8 @@ namespace _1.DAL.Migrations
                 columns: table => new
                 {
                     Ma = table.Column<string>(type: "varchar(20)", nullable: false),
-                    Ten = table.Column<string>(type: "nvarchar(100)", nullable: false),
-                    SDT = table.Column<string>(type: "varchar(30)", nullable: false),
+                    Ten = table.Column<string>(type: "nvarchar(100)", nullable: true),
+                    SDT = table.Column<string>(type: "varchar(30)", nullable: true),
                     NgaySinh = table.Column<DateTime>(type: "datetime2", nullable: true),
                     DiemTL = table.Column<int>(type: "int", nullable: false),
                     MaLKH = table.Column<string>(type: "varchar(20)", nullable: false)
@@ -151,8 +151,8 @@ namespace _1.DAL.Migrations
                     Ten = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     TrangThai = table.Column<int>(type: "int", nullable: false),
                     Gia = table.Column<decimal>(type: "money", nullable: false),
-                    MoTa = table.Column<string>(type: "nvarchar(100)", nullable: false),
-                    MaLsp = table.Column<string>(type: "varchar(20)", nullable: false)
+                    MoTa = table.Column<string>(type: "nvarchar(100)", nullable: true),
+                    MaLsp = table.Column<string>(type: "varchar(20)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -162,7 +162,7 @@ namespace _1.DAL.Migrations
                         column: x => x.MaLsp,
                         principalTable: "LoaiSanPham",
                         principalColumn: "Ma",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -170,9 +170,9 @@ namespace _1.DAL.Migrations
                 columns: table => new
                 {
                     Ma = table.Column<string>(type: "varchar(20)", nullable: false),
-                    MaKH = table.Column<string>(type: "varchar(20)", nullable: false),
-                    MaNV = table.Column<string>(type: "varchar(20)", nullable: false),
-                    NgayTao = table.Column<DateTime>(type: "date", nullable: false),
+                    MaKH = table.Column<string>(type: "varchar(20)", nullable: true),
+                    MaNV = table.Column<string>(type: "varchar(20)", nullable: true),
+                    NgayTao = table.Column<DateTime>(type: "date", nullable: true),
                     MaVC = table.Column<string>(type: "varchar(20)", nullable: true)
                 },
                 constraints: table =>
@@ -183,13 +183,13 @@ namespace _1.DAL.Migrations
                         column: x => x.MaKH,
                         principalTable: "KhachHang",
                         principalColumn: "Ma",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_HoaDon_NhanVien_MaNV",
                         column: x => x.MaNV,
                         principalTable: "NhanVien",
                         principalColumn: "Ma",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_HoaDon_Voucher_MaVC",
                         column: x => x.MaVC,
@@ -205,8 +205,8 @@ namespace _1.DAL.Migrations
                     MaHD = table.Column<string>(type: "varchar(20)", nullable: false),
                     MaSP = table.Column<string>(type: "varchar(20)", nullable: false),
                     SoLuong = table.Column<int>(type: "int", nullable: false),
-                    DonGia = table.Column<decimal>(type: "money", nullable: false),
-                    MaBan = table.Column<string>(type: "varchar(20)", nullable: false)
+                    DonGia = table.Column<decimal>(type: "money", nullable: true),
+                    MaBan = table.Column<string>(type: "varchar(20)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -216,7 +216,7 @@ namespace _1.DAL.Migrations
                         column: x => x.MaBan,
                         principalTable: "Ban",
                         principalColumn: "Ma",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_HoaDonCT_HoaDon_MaHD",
                         column: x => x.MaHD,

@@ -15,7 +15,7 @@ namespace _1.DAL.Configurations
         {
             builder.HasKey(k => k.Ma);
             builder.Property(p => p.Ma).HasColumnType("varchar(20)");
-            builder.Property(p => p.Ten).HasColumnType("nvarchar(100)").IsRequired();
+            builder.Property(p => p.Ten).HasColumnType("nvarchar(100)");
         }
     }
 }

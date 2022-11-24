@@ -4,6 +4,12 @@
     <Compile Update="Views\BanHang\BanHang.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\BanHang\GiaoHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\BanHang\TachHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\ThongKe\FrmDT_SP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -31,13 +37,7 @@
     <Compile Update="Views\FrmSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\GiaoHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Views\NhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\TachHD.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\ThongKe\FrmThongKe.cs">

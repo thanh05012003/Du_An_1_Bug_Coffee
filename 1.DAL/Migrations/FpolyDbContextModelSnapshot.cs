@@ -25,7 +25,6 @@ namespace _1.DAL.Migrations
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("Ten")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<int>("TrangThai")
@@ -42,19 +41,15 @@ namespace _1.DAL.Migrations
                         .HasColumnType("varchar(20)");
 
                     b.Property<decimal?>("SoTien")
-                        .IsRequired()
                         .HasColumnType("money");
 
                     b.Property<string>("Ten")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<DateTime?>("ThoiGianBatDau")
-                        .IsRequired()
                         .HasColumnType("date");
 
                     b.Property<DateTime?>("ThoiGianKetThuc")
-                        .IsRequired()
                         .HasColumnType("date");
 
                     b.HasKey("Ma");
@@ -68,7 +63,6 @@ namespace _1.DAL.Migrations
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("Ten")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Ma");
@@ -82,18 +76,15 @@ namespace _1.DAL.Migrations
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("MaKH")
-                        .IsRequired()
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("MaNV")
-                        .IsRequired()
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("MaVC")
                         .HasColumnType("varchar(20)");
 
                     b.Property<DateTime?>("NgayTao")
-                        .IsRequired()
                         .HasColumnType("date");
 
                     b.HasKey("Ma");
@@ -116,11 +107,9 @@ namespace _1.DAL.Migrations
                         .HasColumnType("varchar(20)");
 
                     b.Property<decimal?>("DonGia")
-                        .IsRequired()
                         .HasColumnType("money");
 
                     b.Property<string>("MaBan")
-                        .IsRequired()
                         .HasColumnType("varchar(20)");
 
                     b.Property<int>("SoLuong")
@@ -151,11 +140,9 @@ namespace _1.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("SDT")
-                        .IsRequired()
                         .HasColumnType("varchar(30)");
 
                     b.Property<string>("Ten")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Ma");
@@ -171,7 +158,6 @@ namespace _1.DAL.Migrations
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("Ten")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Ma");
@@ -185,7 +171,6 @@ namespace _1.DAL.Migrations
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("Ten")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Ma");
@@ -199,23 +184,18 @@ namespace _1.DAL.Migrations
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("DiaChi")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("varchar(100)");
 
                     b.Property<string>("GioiTinh")
-                        .IsRequired()
                         .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("MaCLV")
-                        .IsRequired()
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("MaCV")
-                        .IsRequired()
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("MatKhau")
@@ -255,11 +235,9 @@ namespace _1.DAL.Migrations
                         .HasColumnType("money");
 
                     b.Property<string>("MaLsp")
-                        .IsRequired()
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("MoTa")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Ten")
@@ -285,7 +263,6 @@ namespace _1.DAL.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("MoTa")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<DateTime?>("NgayBatDau")
@@ -312,15 +289,11 @@ namespace _1.DAL.Migrations
                 {
                     b.HasOne("_1.DAL.DomainClass.KhachHang", "KhachHang")
                         .WithMany()
-                        .HasForeignKey("MaKH")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MaKH");
 
                     b.HasOne("_1.DAL.DomainClass.NhanVien", "NhanVien")
                         .WithMany()
-                        .HasForeignKey("MaNV")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MaNV");
 
                     b.HasOne("_1.DAL.DomainClass.Voucher", "Voucher")
                         .WithMany()
@@ -337,9 +310,7 @@ namespace _1.DAL.Migrations
                 {
                     b.HasOne("_1.DAL.DomainClass.Ban", "Ban")
                         .WithMany()
-                        .HasForeignKey("MaBan")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MaBan");
 
                     b.HasOne("_1.DAL.DomainClass.HoaDon", "HoaDon")
                         .WithMany()
@@ -375,15 +346,11 @@ namespace _1.DAL.Migrations
                 {
                     b.HasOne("_1.DAL.DomainClass.CaLV", "CaLv")
                         .WithMany()
-                        .HasForeignKey("MaCLV")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MaCLV");
 
                     b.HasOne("_1.DAL.DomainClass.ChucVu", "ChucVu")
                         .WithMany()
-                        .HasForeignKey("MaCV")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MaCV");
 
                     b.Navigation("CaLv");
 
@@ -394,9 +361,7 @@ namespace _1.DAL.Migrations
                 {
                     b.HasOne("_1.DAL.DomainClass.LoaiSanPham", "LoaiSanPham")
                         .WithMany()
-                        .HasForeignKey("MaLsp")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MaLsp");
 
                     b.Navigation("LoaiSanPham");
                 });
