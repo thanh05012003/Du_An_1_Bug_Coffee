@@ -7,8 +7,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = _1.DAL
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\taibeo\OneDrive\Desktop\du an 1\Du_An_1_Bug_Coffee\1.DAL\
-=======
-build_property.ProjectDir = E:\Ki IV\Du_An_1_Bug_Coffee\1.DAL\
->>>>>>> 818f5030dc2ea390c4e739a1608b30fe500c5aeb
+build_property.ProjectDir = C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\1.DAL\

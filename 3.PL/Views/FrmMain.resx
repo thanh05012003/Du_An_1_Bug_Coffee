@@ -61,7 +61,7 @@
   <data name="groupBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAy4AAALZCAYAAABRU3W+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAAgH9JREFUeF7t3QWUZNW9tvGbEIHgHtzd/eJul8FhcAZ3gstAcHd3dw/u7oME9wAz
+        EQAACxEBf2RfkQAAgH9JREFUeF7t3QWUZNW9tvGbEIHgHtzd/eJul8FhcAZ3gstAcHd3dw/u7oME9wAz
         uHx4gEuSm+xvPXvqQE3NqS7pU1W7q5/fWnslTJecqjrV/X/Ptv8KkiRJkpQ4g4skSZKk5BlcJEmSJCXP
         4CJJkiQpeQYXSZIkSckzuEiSJElKnsFFkiRJUvIMLpIkSZKSZ3CRJEmSlDyDiyRJkqTkGVwkSZIkJc/g
         IkmSJCl5BhdJkiRJyTO4SJIkSUqewUWSJElS8gwukiRJkpJncJEkSZKUPIOLJEmSpOQZXCRJkiQlz+Ai
@@ -612,10 +612,10 @@
         kqTkGVwkSZIkJc/gIkmSJCl5BhdJkiRJiQvh/wPGvrRwxEO+uAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="groupBox2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="gr_CuaHang.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAy4AAALZCAYAAABRU3W+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAAgH9JREFUeF7t3QWUZNW9tvGbEIHgHtzd/eJul8FhcAZ3gstAcHd3dw/u7oME9wAz
+        EQAACxEBf2RfkQAAgH9JREFUeF7t3QWUZNW9tvGbEIHgHtzd/eJul8FhcAZ3gstAcHd3dw/u7oME9wAz
         uHx4gEuSm+xvPXvqQE3NqS7pU1W7q5/fWnslTJecqjrV/X/Ptv8KkiRJkpQ4g4skSZKk5BlcJEmSJCXP
         4CJJkiQpeQYXSZIkSckzuEiSJElKnsFFkiRJUvIMLpIkSZKSZ3CRJEmSlDyDiyRJkqTkGVwkSZIkJc/g
         IkmSJCl5BhdJkiRJyTO4SJIkSUqewUWSJElS8gwukiRJkpJncJEkSZKUPIOLJEmSpOQZXCRJkiQlz+Ai

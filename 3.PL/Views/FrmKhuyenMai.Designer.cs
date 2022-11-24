@@ -78,16 +78,16 @@
             // 
             // label1
             // 
-<<<<<<< HEAD
-            this.panel1.Controls.Add(this.groupBox4);
-            this.panel1.Controls.Add(this.groupBox3);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1323, 860);
-            this.panel1.TabIndex = 0;
-=======
+
+            //this.panel1.Controls.Add(this.groupBox4);
+            //this.panel1.Controls.Add(this.groupBox3);
+            //this.panel1.Controls.Add(this.groupBox1);
+            //this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            //this.panel1.Location = new System.Drawing.Point(0, 0);
+            //this.panel1.Name = "panel1";
+            //this.panel1.Size = new System.Drawing.Size(1323, 860);
+            //this.panel1.TabIndex = 0;
+
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(16, 179);
@@ -95,7 +95,7 @@
             this.label1.Size = new System.Drawing.Size(130, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Khuyến Mãi :";
->>>>>>> 818f5030dc2ea390c4e739a1608b30fe500c5aeb
+
             // 
             // label2
             // 

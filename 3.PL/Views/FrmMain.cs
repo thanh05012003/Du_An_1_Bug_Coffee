@@ -24,12 +24,6 @@ namespace _3.PL.Views
            ;
         }
 
-        private void LoadNgay()
-        {
-         
-               
-         
-        }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -48,6 +42,21 @@ namespace _3.PL.Views
         {
             lb_Time.Text = DateTime.Now.ToString();
         }
+        private void OpenChildForm(Form childForm, object btnSender)
+        {
+            if (childForm == null)
+            {
+                childForm.Close();
+            }
+
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.gr_CuaHang.Controls.Add(childForm);
+            //this.pane_HoaDon.Tag = activeForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
 
         private void Main_Load(object sender, EventArgs e)
         {
@@ -65,5 +74,9 @@ namespace _3.PL.Views
 
         }
 
+        private void btn_SanPham_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmSanPham(),sender);
+        }
     }
 }

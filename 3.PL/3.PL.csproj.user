@@ -4,7 +4,22 @@
     <Compile Update="Views\BanHang.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\FrmDT_SP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmGiaoCa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmHDPhaChe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\FrmKhuyenMai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmLichSuHD.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmLogin.cs">

@@ -42,7 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
+
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -52,8 +52,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-=======
->>>>>>> 818f5030dc2ea390c4e739a1608b30fe500c5aeb
+
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -191,7 +190,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Sản Phẩm :";
             // 
-<<<<<<< HEAD
+
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.DarkSeaGreen;
@@ -280,8 +279,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1299, 391);
             this.dataGridView1.TabIndex = 7;
             // 
-=======
->>>>>>> 818f5030dc2ea390c4e739a1608b30fe500c5aeb
             // FrmSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -313,7 +310,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-<<<<<<< HEAD
+
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -326,7 +323,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridView1;
-=======
->>>>>>> 818f5030dc2ea390c4e739a1608b30fe500c5aeb
+
     }
 }

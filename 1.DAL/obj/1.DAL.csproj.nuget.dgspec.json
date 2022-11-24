@@ -1,41 +1,23 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\taibeo\\OneDrive\\Desktop\\du an 1\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj": {}
+    "C:\\Users\\ADMIN\\Desktop\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\taibeo\\OneDrive\\Desktop\\du an 1\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj": {
+    "C:\\Users\\ADMIN\\Desktop\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\taibeo\\OneDrive\\Desktop\\du an 1\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj",
         "projectName": "1.DAL",
-        "projectPath": "C:\\Users\\taibeo\\OneDrive\\Desktop\\du an 1\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj",
-        "packagesPath": "C:\\Users\\taibeo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\taibeo\\OneDrive\\Desktop\\du an 1\\Du_An_1_Bug_Coffee\\1.DAL\\obj\\",
-=======
-    "E:\\Ki IV\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj": {}
-  },
-  "projects": {
-    "E:\\Ki IV\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "E:\\Ki IV\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj",
-        "projectName": "1.DAL",
-        "projectPath": "E:\\Ki IV\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj",
-        "packagesPath": "C:\\Users\\FPT\\.nuget\\packages\\",
-        "outputPath": "E:\\Ki IV\\Du_An_1_Bug_Coffee\\1.DAL\\obj\\",
->>>>>>> 818f5030dc2ea390c4e739a1608b30fe500c5aeb
+        "projectPath": "C:\\Users\\ADMIN\\Desktop\\Du_An_1_Bug_Coffee\\1.DAL\\1.DAL.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ADMIN\\Desktop\\Du_An_1_Bug_Coffee\\1.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
-          "C:\\Users\\taibeo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "C:\\Users\\FPT\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 818f5030dc2ea390c4e739a1608b30fe500c5aeb
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -92,11 +74,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
->>>>>>> 818f5030dc2ea390c4e739a1608b30fe500c5aeb
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
