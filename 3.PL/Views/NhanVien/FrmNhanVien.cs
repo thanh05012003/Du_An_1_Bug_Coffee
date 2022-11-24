@@ -69,6 +69,7 @@ namespace _3.PL.Views
                     Email = txt_emailNV.Text,
                     SDT = txt_sdtNV.Text,
                     MatKhau = txt_mkNV.Text,
+                    DiaChi = txt_DiaChi.Text,
                     TrangThai = rbtn_HoatDong.Checked ? 1 : 0,
                     MaCV = cv.Ma
                 };

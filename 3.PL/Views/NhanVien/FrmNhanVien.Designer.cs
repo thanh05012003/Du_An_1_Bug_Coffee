@@ -62,6 +62,8 @@
             this.cbb_searchTT = new System.Windows.Forms.ComboBox();
             this.cbb_searchCV = new System.Windows.Forms.ComboBox();
             this.btn_search = new System.Windows.Forms.Button();
+            this.txt_DiaChi = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -79,6 +81,8 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.txt_DiaChi);
+            this.splitContainer1.Panel1.Controls.Add(this.label9);
             this.splitContainer1.Panel1.Controls.Add(this.panel1);
             this.splitContainer1.Panel1.Controls.Add(this.dtpc_NgaySinh);
             this.splitContainer1.Panel1.Controls.Add(this.rb_nu);
@@ -121,7 +125,7 @@
             // 
             this.panel1.Controls.Add(this.rbtn_KhongHoatDong);
             this.panel1.Controls.Add(this.rbtn_HoatDong);
-            this.panel1.Location = new System.Drawing.Point(245, 593);
+            this.panel1.Location = new System.Drawing.Point(245, 641);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(297, 45);
             this.panel1.TabIndex = 61;
@@ -180,7 +184,7 @@
             // cbb_cvNV
             // 
             this.cbb_cvNV.FormattingEnabled = true;
-            this.cbb_cvNV.Location = new System.Drawing.Point(245, 532);
+            this.cbb_cvNV.Location = new System.Drawing.Point(245, 580);
             this.cbb_cvNV.Name = "cbb_cvNV";
             this.cbb_cvNV.Size = new System.Drawing.Size(331, 28);
             this.cbb_cvNV.TabIndex = 55;
@@ -197,7 +201,7 @@
             // 
             // txt_mkNV
             // 
-            this.txt_mkNV.Location = new System.Drawing.Point(245, 485);
+            this.txt_mkNV.Location = new System.Drawing.Point(245, 533);
             this.txt_mkNV.Name = "txt_mkNV";
             this.txt_mkNV.Size = new System.Drawing.Size(331, 27);
             this.txt_mkNV.TabIndex = 52;
@@ -234,7 +238,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(55, 536);
+            this.label5.Location = new System.Drawing.Point(55, 584);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 21);
             this.label5.TabIndex = 46;
@@ -264,7 +268,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(54, 600);
+            this.label10.Location = new System.Drawing.Point(54, 648);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(103, 21);
             this.label10.TabIndex = 45;
@@ -274,7 +278,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(55, 488);
+            this.label8.Location = new System.Drawing.Point(55, 536);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(95, 21);
             this.label8.TabIndex = 45;
@@ -324,7 +328,7 @@
             // 
             this.btn_updateNV.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btn_updateNV.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_updateNV.Location = new System.Drawing.Point(412, 644);
+            this.btn_updateNV.Location = new System.Drawing.Point(412, 692);
             this.btn_updateNV.Name = "btn_updateNV";
             this.btn_updateNV.Size = new System.Drawing.Size(164, 46);
             this.btn_updateNV.TabIndex = 42;
@@ -335,7 +339,7 @@
             // 
             this.btn_addCV.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btn_addCV.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_addCV.Location = new System.Drawing.Point(591, 531);
+            this.btn_addCV.Location = new System.Drawing.Point(591, 579);
             this.btn_addCV.Name = "btn_addCV";
             this.btn_addCV.Size = new System.Drawing.Size(34, 30);
             this.btn_addCV.TabIndex = 41;
@@ -347,7 +351,7 @@
             // 
             this.btn_addNV.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btn_addNV.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_addNV.Location = new System.Drawing.Point(245, 644);
+            this.btn_addNV.Location = new System.Drawing.Point(245, 692);
             this.btn_addNV.Name = "btn_addNV";
             this.btn_addNV.Size = new System.Drawing.Size(161, 46);
             this.btn_addNV.TabIndex = 41;
@@ -432,6 +436,23 @@
             this.btn_search.Text = "Tìm";
             this.btn_search.UseVisualStyleBackColor = false;
             // 
+            // txt_DiaChi
+            // 
+            this.txt_DiaChi.Location = new System.Drawing.Point(245, 481);
+            this.txt_DiaChi.Name = "txt_DiaChi";
+            this.txt_DiaChi.Size = new System.Drawing.Size(331, 27);
+            this.txt_DiaChi.TabIndex = 63;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(55, 484);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(69, 21);
+            this.label9.TabIndex = 62;
+            this.label9.Text = "Địa chỉ";
+            // 
             // FrmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -491,5 +512,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton rbtn_KhongHoatDong;
         private System.Windows.Forms.RadioButton rbtn_HoatDong;
+        private System.Windows.Forms.TextBox txt_DiaChi;
+        private System.Windows.Forms.Label label9;
     }
 }
