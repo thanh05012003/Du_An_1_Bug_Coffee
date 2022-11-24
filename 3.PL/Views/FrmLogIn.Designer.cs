@@ -31,11 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_MatKhau = new System.Windows.Forms.TextBox();
+            this.cb_Show = new System.Windows.Forms.CheckBox();
             this.lb_MatKhauFail = new System.Windows.Forms.Label();
             this.lb_EmailFail = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_DangNhap = new System.Windows.Forms.Button();
-            this.txt_MatKhau = new System.Windows.Forms.TextBox();
             this.txt_Email = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,11 +56,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.txt_MatKhau);
+            this.panel1.Controls.Add(this.cb_Show);
             this.panel1.Controls.Add(this.lb_MatKhauFail);
             this.panel1.Controls.Add(this.lb_EmailFail);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btn_DangNhap);
-            this.panel1.Controls.Add(this.txt_MatKhau);
             this.panel1.Controls.Add(this.txt_Email);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -68,6 +70,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(422, 483);
             this.panel1.TabIndex = 24;
+            // 
+            // txt_MatKhau
+            // 
+            this.txt_MatKhau.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_MatKhau.Location = new System.Drawing.Point(17, 276);
+            this.txt_MatKhau.Name = "txt_MatKhau";
+            this.txt_MatKhau.Size = new System.Drawing.Size(381, 38);
+            this.txt_MatKhau.TabIndex = 32;
+            this.txt_MatKhau.TextChanged += new System.EventHandler(this.txt_MatKhau_TextChanged);
+            // 
+            // cb_Show
+            // 
+            this.cb_Show.AutoSize = true;
+            this.cb_Show.Location = new System.Drawing.Point(268, 334);
+            this.cb_Show.Name = "cb_Show";
+            this.cb_Show.Size = new System.Drawing.Size(134, 24);
+            this.cb_Show.TabIndex = 31;
+            this.cb_Show.Text = "Show password";
+            this.cb_Show.UseVisualStyleBackColor = true;
+            this.cb_Show.CheckedChanged += new System.EventHandler(this.cb_Show_CheckedChanged);
             // 
             // lb_MatKhauFail
             // 
@@ -113,16 +135,6 @@
             this.btn_DangNhap.UseVisualStyleBackColor = false;
             this.btn_DangNhap.Click += new System.EventHandler(this.btn_DangNhap_Click);
             // 
-            // txt_MatKhau
-            // 
-            this.txt_MatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_MatKhau.Location = new System.Drawing.Point(12, 279);
-            this.txt_MatKhau.Multiline = true;
-            this.txt_MatKhau.Name = "txt_MatKhau";
-            this.txt_MatKhau.Size = new System.Drawing.Size(390, 45);
-            this.txt_MatKhau.TabIndex = 26;
-            this.txt_MatKhau.TextChanged += new System.EventHandler(this.txt_MatKhau_TextChanged);
-            // 
             // txt_Email
             // 
             this.txt_Email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -162,6 +174,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "FrmLogin";
             this.ShowIcon = false;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmLogin_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -174,13 +187,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_DangNhap;
-        private System.Windows.Forms.TextBox txt_MatKhau;
         private System.Windows.Forms.TextBox txt_Email;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lb_EmailFail;
         private System.Windows.Forms.Label lb_MatKhauFail;
-
+        private System.Windows.Forms.CheckBox cb_Show;
+        private System.Windows.Forms.TextBox txt_MatKhau;
     }
 
         //#endregion

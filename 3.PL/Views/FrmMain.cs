@@ -69,14 +69,21 @@ namespace _3.PL.Views
             lb_UserName.Text = nv.Ten;
         }
 
-        private void btnTrangChu_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btn_SanPham_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmSanPham(),sender);
+        }
+
+        private void btn_DangXuat_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Bạn có chắc muốn đăng xuất không ?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dr == DialogResult.OK)
+            {
+                FrmLogin frm = new FrmLogin();
+                frm.Show();
+                this.Hide();
+            }
         }
     }
 }

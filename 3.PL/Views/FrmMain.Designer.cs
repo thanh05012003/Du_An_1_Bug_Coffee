@@ -44,7 +44,7 @@
             this.lb_UserName = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lb_Time = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_DangXuat = new System.Windows.Forms.Button();
             this.btn_DoiMatKhau = new System.Windows.Forms.Button();
             this.btn_GiaoCa = new System.Windows.Forms.Button();
             this.gr_CuaHang = new System.Windows.Forms.GroupBox();
@@ -175,7 +175,7 @@
             this.panel2.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.panel2.Controls.Add(this.lb_UserName);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.btn_DangXuat);
             this.panel2.Controls.Add(this.btn_DoiMatKhau);
             this.panel2.Controls.Add(this.btn_GiaoCa);
             this.panel2.Location = new System.Drawing.Point(272, 12);
@@ -214,14 +214,15 @@
             this.lb_Time.TabIndex = 3;
             this.lb_Time.Text = "22:14:00 21-01-2022 CH";
             // 
-            // button3
+            // btn_DangXuat
             // 
-            this.button3.Location = new System.Drawing.Point(313, 14);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 41);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Đăng xuất";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_DangXuat.Location = new System.Drawing.Point(313, 14);
+            this.btn_DangXuat.Name = "btn_DangXuat";
+            this.btn_DangXuat.Size = new System.Drawing.Size(123, 41);
+            this.btn_DangXuat.TabIndex = 2;
+            this.btn_DangXuat.Text = "Đăng xuất";
+            this.btn_DangXuat.UseVisualStyleBackColor = true;
+            this.btn_DangXuat.Click += new System.EventHandler(this.btn_DangXuat_Click);
             // 
             // btn_DoiMatKhau
             // 
@@ -286,7 +287,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox gr_CuaHang;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_DangXuat;
         private System.Windows.Forms.Button btn_DoiMatKhau;
         private System.Windows.Forms.Button btn_GiaoCa;
         private System.Windows.Forms.Timer timer1;

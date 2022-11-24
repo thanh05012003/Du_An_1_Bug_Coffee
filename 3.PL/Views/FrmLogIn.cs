@@ -1,18 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.DirectoryServices.ActiveDirectory;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using _2.BUS.IServices;
 using _2.BUS.Services;
 using _3.PL.Utilities;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace _3.PL.Views
 {
@@ -27,6 +18,7 @@ namespace _3.PL.Views
             _nhanVienService = new NhanVienService();
             lb_EmailFail.Visible = false;
             lb_MatKhauFail.Visible = false;
+            txt_MatKhau.UseSystemPasswordChar = true;
         }
 
         public void Check()
@@ -71,7 +63,8 @@ namespace _3.PL.Views
                                 Properties.Settings.Default.Tk = txt_Email.Text;
                                 Properties.Settings.Default.Mk = txt_MatKhau.Text;
                                 FrmMain main = new FrmMain();
-                                main.ShowDialog();
+                                main.Show();
+                                this.Hide();
                             }
                         }
                     }
@@ -89,6 +82,33 @@ namespace _3.PL.Views
         private void txt_Email_TextChanged(object sender, EventArgs e)
         {
             lb_EmailFail.Visible = false;
+        }
+
+       
+
+        private void cb_Show_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_Show.Checked)
+            {
+                txt_MatKhau.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txt_MatKhau.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Bạn có chắc muốn thoát không ?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dr != DialogResult.OK)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                Application.ExitThread();
+            }
         }
 
         private void txt_MatKhau_TextChanged(object sender, EventArgs e)
