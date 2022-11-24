@@ -39,7 +39,6 @@
             this.txt_Email = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +55,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.lb_MatKhauFail);
             this.panel1.Controls.Add(this.lb_EmailFail);
             this.panel1.Controls.Add(this.label3);
@@ -118,21 +116,20 @@
             // txt_MatKhau
             // 
             this.txt_MatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_MatKhau.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_MatKhau.Location = new System.Drawing.Point(12, 279);
+            this.txt_MatKhau.Multiline = true;
             this.txt_MatKhau.Name = "txt_MatKhau";
-            this.txt_MatKhau.Size = new System.Drawing.Size(390, 38);
+            this.txt_MatKhau.Size = new System.Drawing.Size(390, 45);
             this.txt_MatKhau.TabIndex = 26;
             this.txt_MatKhau.TextChanged += new System.EventHandler(this.txt_MatKhau_TextChanged);
             // 
             // txt_Email
             // 
             this.txt_Email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Email.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_Email.Location = new System.Drawing.Point(12, 160);
+            this.txt_Email.Multiline = true;
             this.txt_Email.Name = "txt_Email";
-            this.txt_Email.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.txt_Email.Size = new System.Drawing.Size(390, 38);
+            this.txt_Email.Size = new System.Drawing.Size(390, 45);
             this.txt_Email.TabIndex = 25;
             this.txt_Email.TextChanged += new System.EventHandler(this.txt_Email_TextChanged);
             // 
@@ -156,18 +153,6 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Email:";
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.checkBox1.Location = new System.Drawing.Point(268, 332);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(134, 24);
-            this.checkBox1.TabIndex = 31;
-            this.checkBox1.Text = "Show password";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -177,7 +162,6 @@
             this.Controls.Add(this.panel2);
             this.Name = "FrmLogin";
             this.ShowIcon = false;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmLogin_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -196,7 +180,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lb_EmailFail;
         private System.Windows.Forms.Label lb_MatKhauFail;
-        private System.Windows.Forms.CheckBox checkBox1;
+
     }
 
         //#endregion
