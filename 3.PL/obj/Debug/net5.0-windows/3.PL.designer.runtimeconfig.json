@@ -6,13 +6,8 @@
       "version": "5.0.0"
     },
     "additionalProbingPaths": [
-<<<<<<< HEAD
       "C:\\Users\\taibeo\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\taibeo\\.nuget\\packages",
-=======
-      "C:\\Users\\FPT\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\FPT\\.nuget\\packages",
->>>>>>> 818f5030dc2ea390c4e739a1608b30fe500c5aeb
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {

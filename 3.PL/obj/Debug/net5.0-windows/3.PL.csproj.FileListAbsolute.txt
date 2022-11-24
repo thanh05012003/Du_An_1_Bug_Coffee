@@ -367,3 +367,8 @@ E:\Ki IV\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.pdb
 E:\Ki IV\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.genruntimeconfig.cache
 E:\Ki IV\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\ref\3.PL.dll
 >>>>>>> 818f5030dc2ea390c4e739a1608b30fe500c5aeb
+C:\Users\taibeo\OneDrive\Desktop\du an 1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.BanHang.resources
+C:\Users\taibeo\OneDrive\Desktop\du an 1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.GiaoHang.resources
+C:\Users\taibeo\OneDrive\Desktop\du an 1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.NhanVien.resources
+C:\Users\taibeo\OneDrive\Desktop\du an 1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.TachHD.resources
+C:\Users\taibeo\OneDrive\Desktop\du an 1\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.TichDiemKH.resources
