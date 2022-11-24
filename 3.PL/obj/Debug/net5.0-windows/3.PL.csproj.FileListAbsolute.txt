@@ -125,7 +125,6 @@ C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.
 C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmHDPhaChe.resources
 C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmHoaDon.resources
 C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmLichSuHD.resources
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.NhanVien.resources
 C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmDT_SP.resources
 C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmGiaoCa.resources
 C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.ThongKe.FrmThongKe.resources
@@ -144,3 +143,5 @@ C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\ref\3.PL.dll
 C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmGiaoHang.resources
 C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmTachHD.resources
 C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.BanHang.FrmBanHang.resources
+C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.NhanVien.FrmChucVu.resources
+C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmNhanVien.resources

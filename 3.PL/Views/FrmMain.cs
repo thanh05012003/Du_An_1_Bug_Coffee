@@ -1,18 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using _2.BUS.IServices;
 using _2.BUS.Services;
 using _3.PL.Views.BanHang;
 using _3.PL.Views.ThongKe;
-using Timer = System.Windows.Forms.Timer;
 
 namespace _3.PL.Views
 {
@@ -109,7 +101,7 @@ namespace _3.PL.Views
 
         private void btn_NhanVien_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new NhanVien(),sender);
+            OpenChildForm(new FrmNhanVien(),sender);
         }
 
     }

@@ -10,8 +10,8 @@ using _1.DAL.Context;
 namespace _1.DAL.Migrations
 {
     [DbContext(typeof(FpolyDbContext))]
-    [Migration("20221124112404_TheBugCf")]
-    partial class TheBugCf
+    [Migration("20221124140054_bugcf2100")]
+    partial class bugcf2100
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -198,6 +198,7 @@ namespace _1.DAL.Migrations
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("MaCV")
+                        .IsRequired()
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("MatKhau")
@@ -205,7 +206,7 @@ namespace _1.DAL.Migrations
                         .HasColumnType("varchar(max)");
 
                     b.Property<DateTime>("NgaySinh")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("date");
 
                     b.Property<string>("SDT")
                         .IsRequired()
@@ -352,7 +353,9 @@ namespace _1.DAL.Migrations
 
                     b.HasOne("_1.DAL.DomainClass.ChucVu", "ChucVu")
                         .WithMany()
-                        .HasForeignKey("MaCV");
+                        .HasForeignKey("MaCV")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("CaLv");
 

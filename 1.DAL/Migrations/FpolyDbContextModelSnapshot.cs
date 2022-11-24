@@ -196,6 +196,7 @@ namespace _1.DAL.Migrations
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("MaCV")
+                        .IsRequired()
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("MatKhau")
@@ -203,7 +204,7 @@ namespace _1.DAL.Migrations
                         .HasColumnType("varchar(max)");
 
                     b.Property<DateTime>("NgaySinh")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("date");
 
                     b.Property<string>("SDT")
                         .IsRequired()
@@ -350,7 +351,9 @@ namespace _1.DAL.Migrations
 
                     b.HasOne("_1.DAL.DomainClass.ChucVu", "ChucVu")
                         .WithMany()
-                        .HasForeignKey("MaCV");
+                        .HasForeignKey("MaCV")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("CaLv");
 

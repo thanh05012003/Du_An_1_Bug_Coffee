@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace _1.DAL.Migrations
 {
-    public partial class TheBugCf : Migration
+    public partial class bugcf2100 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -95,13 +95,13 @@ namespace _1.DAL.Migrations
                     Ma = table.Column<string>(type: "varchar(20)", nullable: false),
                     Ten = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     GioiTinh = table.Column<string>(type: "nvarchar(10)", nullable: true),
-                    NgaySinh = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    NgaySinh = table.Column<DateTime>(type: "date", nullable: false),
                     DiaChi = table.Column<string>(type: "nvarchar(100)", nullable: true),
                     SDT = table.Column<string>(type: "nvarchar(30)", nullable: false),
                     Email = table.Column<string>(type: "varchar(100)", nullable: true),
                     TrangThai = table.Column<int>(type: "int", nullable: false),
                     MatKhau = table.Column<string>(type: "varchar(max)", nullable: false),
-                    MaCV = table.Column<string>(type: "varchar(20)", nullable: true),
+                    MaCV = table.Column<string>(type: "varchar(20)", nullable: false),
                     MaCLV = table.Column<string>(type: "varchar(20)", nullable: true)
                 },
                 constraints: table =>
@@ -118,7 +118,7 @@ namespace _1.DAL.Migrations
                         column: x => x.MaCV,
                         principalTable: "ChucVu",
                         principalColumn: "Ma",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
