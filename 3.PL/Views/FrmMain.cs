@@ -59,7 +59,7 @@ namespace _3.PL.Views
             var nv = _nhanVienService.GetAll().FirstOrDefault(c =>
                 c.Email.ToLower() == Properties.Settings.Default.Tk.Trim() &&
                 c.MatKhau.ToLower() == Properties.Settings.Default.Mk.Trim());
-            //lb_UserName.Text = nv.Ten;
+            lb_UserName.Text = nv.Ten + " - " + nv.TenCv;
         }
 
 

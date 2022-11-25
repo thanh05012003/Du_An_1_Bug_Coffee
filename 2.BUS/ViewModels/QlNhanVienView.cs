@@ -19,5 +19,6 @@ namespace _2.BUS.ViewModels
         public string MatKhau { get; set; }
         public string MaCV { get; set; }
         public string MaCLV { get; set; }
+        public string TenCv { get; set; }
     }
 }

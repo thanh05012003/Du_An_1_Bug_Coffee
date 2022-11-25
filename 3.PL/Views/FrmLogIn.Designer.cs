@@ -37,9 +37,9 @@
             this.lb_EmailFail = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_DangNhap = new System.Windows.Forms.Button();
-            this.txt_Email = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txt_Email = new _3.PL.CustomControl.CsTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,13 +56,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.txt_Email);
             this.panel1.Controls.Add(this.txt_MatKhau);
             this.panel1.Controls.Add(this.cb_Show);
             this.panel1.Controls.Add(this.lb_MatKhauFail);
             this.panel1.Controls.Add(this.lb_EmailFail);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btn_DangNhap);
-            this.panel1.Controls.Add(this.txt_Email);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -135,16 +135,6 @@
             this.btn_DangNhap.UseVisualStyleBackColor = false;
             this.btn_DangNhap.Click += new System.EventHandler(this.btn_DangNhap_Click);
             // 
-            // txt_Email
-            // 
-            this.txt_Email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Email.Location = new System.Drawing.Point(12, 160);
-            this.txt_Email.Multiline = true;
-            this.txt_Email.Name = "txt_Email";
-            this.txt_Email.Size = new System.Drawing.Size(390, 45);
-            this.txt_Email.TabIndex = 25;
-            this.txt_Email.TextChanged += new System.EventHandler(this.txt_Email_TextChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -164,6 +154,21 @@
             this.label1.Size = new System.Drawing.Size(92, 34);
             this.label1.TabIndex = 23;
             this.label1.Text = "Email:";
+            // 
+            // txt_Email
+            // 
+            this.txt_Email.BoderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_Email.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_Email.BorderSize = 2;
+            this.txt_Email.Location = new System.Drawing.Point(21, 162);
+            this.txt_Email.Multiline = true;
+            this.txt_Email.Name = "txt_Email";
+            this.txt_Email.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_Email.PasswordChar = false;
+            this.txt_Email.Size = new System.Drawing.Size(377, 38);
+            this.txt_Email.TabIndex = 33;
+            this.txt_Email.Texts = "";
+            this.txt_Email.UnderLinedStyle = false;
             // 
             // FrmLogin
             // 
@@ -187,13 +192,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_DangNhap;
-        private System.Windows.Forms.TextBox txt_Email;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lb_EmailFail;
         private System.Windows.Forms.Label lb_MatKhauFail;
         private System.Windows.Forms.CheckBox cb_Show;
         private System.Windows.Forms.TextBox txt_MatKhau;
+        private CustomControl.CsTextBox txt_Email;
     }
 
         //#endregion

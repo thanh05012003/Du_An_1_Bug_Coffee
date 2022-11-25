@@ -93,7 +93,7 @@ namespace _3.PL.Views
             //Check();
             if (Check())
             {
-                //MessageBox.Show(_NhanVienService.add(GetDatafromGui()));
+                MessageBox.Show(_NhanVienService.add(GetDatafromGui()));
             }
         }
 
