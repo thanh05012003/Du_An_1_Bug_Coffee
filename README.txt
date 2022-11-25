@@ -1,12 +1,13 @@
 # Du_An_1_Bug_Coffee
 
 cách up code lên github
-git add .
-git pull https://github.com/thanh05012003/Du_An_1_Bug_Coffee.git
+git add .(làm phần nào thì nên add phần đấy thôi vd git add 3.PL)
+git pull 
 git status(xem lại thay đổi)
 git commit -m"update-main"
-git branch
-git push https://github.com/thanh05012003/Du_An_1_Bug_Coffee.git
+git push
+
+
 cách đặt tên Control
 Assembly                                asm
 Boolean                                 bln
