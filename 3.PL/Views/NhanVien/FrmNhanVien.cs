@@ -19,6 +19,13 @@ namespace _3.PL.Views
             _chucVuService = new ChucVuService();
             LoadDataNV();
             loadDataCV();
+            lb_MaFail.Visible = false;
+            lb_HoTenFail.Visible = false;
+            lb_NgaySinhFail.Visible = false;
+            lb_EmailFail.Visible = false;
+            lb_SDTFail.Visible = false;
+            lb_MatKauFail.Visible = false;
+            lb_VaiTroFail.Visible = false;
         }
 
         public void loadDataCV()
@@ -83,8 +90,11 @@ namespace _3.PL.Views
         }
         private void btn_addNV_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(_NhanVienService.add(GetDatafromGui()));
-            
+            //Check();
+            if (Check())
+            {
+                //MessageBox.Show(_NhanVienService.add(GetDatafromGui()));
+            }
         }
 
         private void btn_addCV_Click(object sender, EventArgs e)
@@ -92,6 +102,95 @@ namespace _3.PL.Views
             FrmChucVu  frm = new FrmChucVu();
             frm.ShowDialog();
             loadDataCV();
+        }
+
+        public bool Check()
+        {
+           
+            if (txt_nameNV.Text.Trim() == "")
+            {
+                lb_HoTenFail.Visible = true;
+                lb_HoTenFail.Text = "không được để trống tên";
+               
+            }
+            else
+            {
+                if (dtpc_NgaySinh.Text.Trim() == "")
+                {
+                    lb_NgaySinhFail.Visible = true;
+                    lb_NgaySinhFail.Text = "vui lòng chọn ngày sinh";
+                    
+                }
+                else
+                {
+                    if (txt_emailNV.Text.Trim() == "")
+                    {
+                        lb_EmailFail.Visible = true;
+                        lb_EmailFail.Text = "không được để trống email";
+                       
+                    }
+                    else
+                    {
+                        if (txt_sdtNV.Text.Trim() == "")
+                        {
+                            lb_SDTFail.Visible = true;
+                            lb_SDTFail.Text = "không được để trống SDT";
+                            
+                        }
+                        else
+                        {
+                            if (txt_mkNV.Text.Trim() == "")
+                            {
+                                lb_MatKauFail.Visible = true;
+                                lb_MatKauFail.Text = "không được để trống mật khẩu";
+                                
+                            }
+                            else
+                            {
+                                if (cbb_cvNV.Text.Trim() == "")
+                                {
+                                    lb_VaiTroFail.Visible = true;
+                                    lb_VaiTroFail.Text = "vui lòng chọn vai trò";
+                                    return false;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            return true;
+        }
+
+
+        private void txt_nameNV_TextChanged(object sender, EventArgs e)
+        {
+            lb_HoTenFail.Visible = false;
+        }
+
+        private void dtpc_NgaySinh_ValueChanged(object sender, EventArgs e)
+        {
+            lb_NgaySinhFail.Visible = false;
+        }
+
+        private void txt_emailNV_TextChanged(object sender, EventArgs e)
+        {
+            lb_EmailFail.Visible = false;
+        }
+
+        private void txt_sdtNV_TextChanged(object sender, EventArgs e)
+        {
+            lb_SDTFail.Visible = false;
+        }
+
+        private void txt_mkNV_TextChanged(object sender, EventArgs e)
+        {
+            lb_MatKauFail.Visible = false;
+        }
+
+        private void cbb_cvNV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lb_VaiTroFail.Visible = false;
         }
     }
 }

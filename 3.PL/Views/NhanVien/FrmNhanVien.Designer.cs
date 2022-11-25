@@ -29,6 +29,15 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.lb_VaiTroFail = new System.Windows.Forms.Label();
+            this.lb_MatKauFail = new System.Windows.Forms.Label();
+            this.lb_SDTFail = new System.Windows.Forms.Label();
+            this.lb_EmailFail = new System.Windows.Forms.Label();
+            this.lb_NgaySinhFail = new System.Windows.Forms.Label();
+            this.lb_HoTenFail = new System.Windows.Forms.Label();
+            this.lb_MaFail = new System.Windows.Forms.Label();
+            this.txt_DiaChi = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rbtn_KhongHoatDong = new System.Windows.Forms.RadioButton();
             this.rbtn_HoatDong = new System.Windows.Forms.RadioButton();
@@ -62,8 +71,6 @@
             this.cbb_searchTT = new System.Windows.Forms.ComboBox();
             this.cbb_searchCV = new System.Windows.Forms.ComboBox();
             this.btn_search = new System.Windows.Forms.Button();
-            this.txt_DiaChi = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -81,6 +88,13 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.lb_VaiTroFail);
+            this.splitContainer1.Panel1.Controls.Add(this.lb_MatKauFail);
+            this.splitContainer1.Panel1.Controls.Add(this.lb_SDTFail);
+            this.splitContainer1.Panel1.Controls.Add(this.lb_EmailFail);
+            this.splitContainer1.Panel1.Controls.Add(this.lb_NgaySinhFail);
+            this.splitContainer1.Panel1.Controls.Add(this.lb_HoTenFail);
+            this.splitContainer1.Panel1.Controls.Add(this.lb_MaFail);
             this.splitContainer1.Panel1.Controls.Add(this.txt_DiaChi);
             this.splitContainer1.Panel1.Controls.Add(this.label9);
             this.splitContainer1.Panel1.Controls.Add(this.panel1);
@@ -121,11 +135,105 @@
             this.splitContainer1.SplitterDistance = 652;
             this.splitContainer1.TabIndex = 0;
             // 
+            // lb_VaiTroFail
+            // 
+            this.lb_VaiTroFail.AutoSize = true;
+            this.lb_VaiTroFail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_VaiTroFail.ForeColor = System.Drawing.Color.Red;
+            this.lb_VaiTroFail.Location = new System.Drawing.Point(224, 625);
+            this.lb_VaiTroFail.Name = "lb_VaiTroFail";
+            this.lb_VaiTroFail.Size = new System.Drawing.Size(55, 23);
+            this.lb_VaiTroFail.TabIndex = 69;
+            this.lb_VaiTroFail.Text = "label4";
+            // 
+            // lb_MatKauFail
+            // 
+            this.lb_MatKauFail.AutoSize = true;
+            this.lb_MatKauFail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_MatKauFail.ForeColor = System.Drawing.Color.Red;
+            this.lb_MatKauFail.Location = new System.Drawing.Point(224, 569);
+            this.lb_MatKauFail.Name = "lb_MatKauFail";
+            this.lb_MatKauFail.Size = new System.Drawing.Size(55, 23);
+            this.lb_MatKauFail.TabIndex = 68;
+            this.lb_MatKauFail.Text = "label4";
+            // 
+            // lb_SDTFail
+            // 
+            this.lb_SDTFail.AutoSize = true;
+            this.lb_SDTFail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_SDTFail.ForeColor = System.Drawing.Color.Red;
+            this.lb_SDTFail.Location = new System.Drawing.Point(224, 457);
+            this.lb_SDTFail.Name = "lb_SDTFail";
+            this.lb_SDTFail.Size = new System.Drawing.Size(55, 23);
+            this.lb_SDTFail.TabIndex = 67;
+            this.lb_SDTFail.Text = "label4";
+            // 
+            // lb_EmailFail
+            // 
+            this.lb_EmailFail.AutoSize = true;
+            this.lb_EmailFail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_EmailFail.ForeColor = System.Drawing.Color.Red;
+            this.lb_EmailFail.Location = new System.Drawing.Point(224, 401);
+            this.lb_EmailFail.Name = "lb_EmailFail";
+            this.lb_EmailFail.Size = new System.Drawing.Size(55, 23);
+            this.lb_EmailFail.TabIndex = 66;
+            this.lb_EmailFail.Text = "label4";
+            // 
+            // lb_NgaySinhFail
+            // 
+            this.lb_NgaySinhFail.AutoSize = true;
+            this.lb_NgaySinhFail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_NgaySinhFail.ForeColor = System.Drawing.Color.Red;
+            this.lb_NgaySinhFail.Location = new System.Drawing.Point(224, 345);
+            this.lb_NgaySinhFail.Name = "lb_NgaySinhFail";
+            this.lb_NgaySinhFail.Size = new System.Drawing.Size(55, 23);
+            this.lb_NgaySinhFail.TabIndex = 65;
+            this.lb_NgaySinhFail.Text = "label4";
+            // 
+            // lb_HoTenFail
+            // 
+            this.lb_HoTenFail.AutoSize = true;
+            this.lb_HoTenFail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_HoTenFail.ForeColor = System.Drawing.Color.Red;
+            this.lb_HoTenFail.Location = new System.Drawing.Point(224, 236);
+            this.lb_HoTenFail.Name = "lb_HoTenFail";
+            this.lb_HoTenFail.Size = new System.Drawing.Size(55, 23);
+            this.lb_HoTenFail.TabIndex = 64;
+            this.lb_HoTenFail.Text = "label4";
+            // 
+            // lb_MaFail
+            // 
+            this.lb_MaFail.AutoSize = true;
+            this.lb_MaFail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_MaFail.ForeColor = System.Drawing.Color.Red;
+            this.lb_MaFail.Location = new System.Drawing.Point(224, 180);
+            this.lb_MaFail.Name = "lb_MaFail";
+            this.lb_MaFail.Size = new System.Drawing.Size(55, 23);
+            this.lb_MaFail.TabIndex = 31;
+            this.lb_MaFail.Text = "label4";
+            // 
+            // txt_DiaChi
+            // 
+            this.txt_DiaChi.Location = new System.Drawing.Point(224, 539);
+            this.txt_DiaChi.Name = "txt_DiaChi";
+            this.txt_DiaChi.Size = new System.Drawing.Size(331, 27);
+            this.txt_DiaChi.TabIndex = 63;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(68, 539);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(69, 21);
+            this.label9.TabIndex = 62;
+            this.label9.Text = "Địa chỉ";
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.rbtn_KhongHoatDong);
             this.panel1.Controls.Add(this.rbtn_HoatDong);
-            this.panel1.Location = new System.Drawing.Point(245, 641);
+            this.panel1.Location = new System.Drawing.Point(224, 708);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(297, 45);
             this.panel1.TabIndex = 61;
@@ -154,15 +262,16 @@
             // 
             // dtpc_NgaySinh
             // 
-            this.dtpc_NgaySinh.Location = new System.Drawing.Point(247, 344);
+            this.dtpc_NgaySinh.Location = new System.Drawing.Point(224, 371);
             this.dtpc_NgaySinh.Name = "dtpc_NgaySinh";
             this.dtpc_NgaySinh.Size = new System.Drawing.Size(329, 27);
             this.dtpc_NgaySinh.TabIndex = 58;
+            this.dtpc_NgaySinh.ValueChanged += new System.EventHandler(this.dtpc_NgaySinh_ValueChanged);
             // 
             // rb_nu
             // 
             this.rb_nu.AutoSize = true;
-            this.rb_nu.Location = new System.Drawing.Point(339, 300);
+            this.rb_nu.Location = new System.Drawing.Point(318, 318);
             this.rb_nu.Name = "rb_nu";
             this.rb_nu.Size = new System.Drawing.Size(50, 24);
             this.rb_nu.TabIndex = 57;
@@ -173,7 +282,7 @@
             // 
             this.rb_nam.AutoSize = true;
             this.rb_nam.Checked = true;
-            this.rb_nam.Location = new System.Drawing.Point(249, 300);
+            this.rb_nam.Location = new System.Drawing.Point(224, 318);
             this.rb_nam.Name = "rb_nam";
             this.rb_nam.Size = new System.Drawing.Size(62, 24);
             this.rb_nam.TabIndex = 56;
@@ -184,10 +293,11 @@
             // cbb_cvNV
             // 
             this.cbb_cvNV.FormattingEnabled = true;
-            this.cbb_cvNV.Location = new System.Drawing.Point(245, 580);
+            this.cbb_cvNV.Location = new System.Drawing.Point(224, 651);
             this.cbb_cvNV.Name = "cbb_cvNV";
             this.cbb_cvNV.Size = new System.Drawing.Size(331, 28);
             this.cbb_cvNV.TabIndex = 55;
+            this.cbb_cvNV.SelectedIndexChanged += new System.EventHandler(this.cbb_cvNV_SelectedIndexChanged);
             // 
             // ptb_avatar
             // 
@@ -201,35 +311,39 @@
             // 
             // txt_mkNV
             // 
-            this.txt_mkNV.Location = new System.Drawing.Point(245, 533);
+            this.txt_mkNV.Location = new System.Drawing.Point(224, 595);
             this.txt_mkNV.Name = "txt_mkNV";
             this.txt_mkNV.Size = new System.Drawing.Size(331, 27);
             this.txt_mkNV.TabIndex = 52;
+            this.txt_mkNV.TextChanged += new System.EventHandler(this.txt_mkNV_TextChanged);
             // 
             // txt_sdtNV
             // 
-            this.txt_sdtNV.Location = new System.Drawing.Point(245, 438);
+            this.txt_sdtNV.Location = new System.Drawing.Point(224, 483);
             this.txt_sdtNV.Name = "txt_sdtNV";
             this.txt_sdtNV.Size = new System.Drawing.Size(331, 27);
             this.txt_sdtNV.TabIndex = 52;
+            this.txt_sdtNV.TextChanged += new System.EventHandler(this.txt_sdtNV_TextChanged);
             // 
             // txt_emailNV
             // 
-            this.txt_emailNV.Location = new System.Drawing.Point(245, 391);
+            this.txt_emailNV.Location = new System.Drawing.Point(222, 427);
             this.txt_emailNV.Name = "txt_emailNV";
             this.txt_emailNV.Size = new System.Drawing.Size(331, 27);
             this.txt_emailNV.TabIndex = 51;
+            this.txt_emailNV.TextChanged += new System.EventHandler(this.txt_emailNV_TextChanged);
             // 
             // txt_nameNV
             // 
-            this.txt_nameNV.Location = new System.Drawing.Point(245, 253);
+            this.txt_nameNV.Location = new System.Drawing.Point(224, 262);
             this.txt_nameNV.Name = "txt_nameNV";
             this.txt_nameNV.Size = new System.Drawing.Size(331, 27);
             this.txt_nameNV.TabIndex = 50;
+            this.txt_nameNV.TextChanged += new System.EventHandler(this.txt_nameNV_TextChanged);
             // 
             // txt_maNV
             // 
-            this.txt_maNV.Location = new System.Drawing.Point(245, 206);
+            this.txt_maNV.Location = new System.Drawing.Point(224, 206);
             this.txt_maNV.Name = "txt_maNV";
             this.txt_maNV.Size = new System.Drawing.Size(331, 27);
             this.txt_maNV.TabIndex = 49;
@@ -238,7 +352,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(55, 584);
+            this.label5.Location = new System.Drawing.Point(68, 651);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 21);
             this.label5.TabIndex = 46;
@@ -248,7 +362,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(55, 347);
+            this.label3.Location = new System.Drawing.Point(68, 371);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 21);
             this.label3.TabIndex = 47;
@@ -258,7 +372,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(54, 441);
+            this.label4.Location = new System.Drawing.Point(68, 483);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 21);
             this.label4.TabIndex = 44;
@@ -268,7 +382,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(54, 648);
+            this.label10.Location = new System.Drawing.Point(68, 708);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(103, 21);
             this.label10.TabIndex = 45;
@@ -278,7 +392,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(55, 536);
+            this.label8.Location = new System.Drawing.Point(68, 595);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(95, 21);
             this.label8.TabIndex = 45;
@@ -288,7 +402,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(55, 394);
+            this.label7.Location = new System.Drawing.Point(68, 427);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 21);
             this.label7.TabIndex = 45;
@@ -298,7 +412,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(52, 302);
+            this.label6.Location = new System.Drawing.Point(68, 318);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(92, 21);
             this.label6.TabIndex = 45;
@@ -308,7 +422,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(54, 256);
+            this.label2.Location = new System.Drawing.Point(68, 262);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 21);
             this.label2.TabIndex = 45;
@@ -318,7 +432,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(54, 209);
+            this.label1.Location = new System.Drawing.Point(68, 206);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 21);
             this.label1.TabIndex = 43;
@@ -328,7 +442,7 @@
             // 
             this.btn_updateNV.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btn_updateNV.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_updateNV.Location = new System.Drawing.Point(412, 692);
+            this.btn_updateNV.Location = new System.Drawing.Point(391, 782);
             this.btn_updateNV.Name = "btn_updateNV";
             this.btn_updateNV.Size = new System.Drawing.Size(164, 46);
             this.btn_updateNV.TabIndex = 42;
@@ -339,7 +453,7 @@
             // 
             this.btn_addCV.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btn_addCV.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_addCV.Location = new System.Drawing.Point(591, 579);
+            this.btn_addCV.Location = new System.Drawing.Point(570, 650);
             this.btn_addCV.Name = "btn_addCV";
             this.btn_addCV.Size = new System.Drawing.Size(34, 30);
             this.btn_addCV.TabIndex = 41;
@@ -351,7 +465,7 @@
             // 
             this.btn_addNV.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btn_addNV.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_addNV.Location = new System.Drawing.Point(245, 692);
+            this.btn_addNV.Location = new System.Drawing.Point(224, 782);
             this.btn_addNV.Name = "btn_addNV";
             this.btn_addNV.Size = new System.Drawing.Size(161, 46);
             this.btn_addNV.TabIndex = 41;
@@ -436,23 +550,6 @@
             this.btn_search.Text = "Tìm";
             this.btn_search.UseVisualStyleBackColor = false;
             // 
-            // txt_DiaChi
-            // 
-            this.txt_DiaChi.Location = new System.Drawing.Point(245, 481);
-            this.txt_DiaChi.Name = "txt_DiaChi";
-            this.txt_DiaChi.Size = new System.Drawing.Size(331, 27);
-            this.txt_DiaChi.TabIndex = 63;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(55, 484);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(69, 21);
-            this.label9.TabIndex = 62;
-            this.label9.Text = "Địa chỉ";
-            // 
             // FrmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -514,5 +611,12 @@
         private System.Windows.Forms.RadioButton rbtn_HoatDong;
         private System.Windows.Forms.TextBox txt_DiaChi;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lb_VaiTroFail;
+        private System.Windows.Forms.Label lb_MatKauFail;
+        private System.Windows.Forms.Label lb_SDTFail;
+        private System.Windows.Forms.Label lb_EmailFail;
+        private System.Windows.Forms.Label lb_NgaySinhFail;
+        private System.Windows.Forms.Label lb_HoTenFail;
+        private System.Windows.Forms.Label lb_MaFail;
     }
 }
