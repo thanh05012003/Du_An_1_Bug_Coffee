@@ -33,13 +33,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btn_NhanVien = new System.Windows.Forms.Button();
-            this.btn_SanPham = new System.Windows.Forms.Button();
-            this.btnTrangChu = new System.Windows.Forms.Button();
-            this.btn_BanHang = new System.Windows.Forms.Button();
-            this.btn_HoaDon = new System.Windows.Forms.Button();
-            this.btn_ThongKe = new System.Windows.Forms.Button();
-            this.btn_KhuyenMai = new System.Windows.Forms.Button();
+            this.btn_NhanVien = new CustomControls.RJControls.CSButton();
+            this.btn_KhuyenMai = new CustomControls.RJControls.CSButton();
+            this.btn_ThongKe = new CustomControls.RJControls.CSButton();
+            this.btn_HoaDon = new CustomControls.RJControls.CSButton();
+            this.btn_BanHang = new CustomControls.RJControls.CSButton();
+            this.btn_SanPham = new CustomControls.RJControls.CSButton();
+            this.btn_TrangChu = new CustomControls.RJControls.CSButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lb_UserName = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -78,13 +78,14 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.Lavender;
             this.panel4.Controls.Add(this.btn_NhanVien);
-            this.panel4.Controls.Add(this.btn_SanPham);
-            this.panel4.Controls.Add(this.btnTrangChu);
-            this.panel4.Controls.Add(this.btn_BanHang);
-            this.panel4.Controls.Add(this.btn_HoaDon);
-            this.panel4.Controls.Add(this.btn_ThongKe);
             this.panel4.Controls.Add(this.btn_KhuyenMai);
+            this.panel4.Controls.Add(this.btn_ThongKe);
+            this.panel4.Controls.Add(this.btn_HoaDon);
+            this.panel4.Controls.Add(this.btn_BanHang);
+            this.panel4.Controls.Add(this.btn_SanPham);
+            this.panel4.Controls.Add(this.btn_TrangChu);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
@@ -93,86 +94,143 @@
             // 
             // btn_NhanVien
             // 
-            this.btn_NhanVien.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btn_NhanVien.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_NhanVien.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_NhanVien.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_NhanVien.BorderRadius = 15;
+            this.btn_NhanVien.BorderSize = 0;
+            this.btn_NhanVien.FlatAppearance.BorderSize = 0;
+            this.btn_NhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_NhanVien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_NhanVien.Location = new System.Drawing.Point(0, 796);
+            this.btn_NhanVien.ForeColor = System.Drawing.Color.White;
+            this.btn_NhanVien.Location = new System.Drawing.Point(3, 796);
             this.btn_NhanVien.Name = "btn_NhanVien";
-            this.btn_NhanVien.Size = new System.Drawing.Size(272, 88);
-            this.btn_NhanVien.TabIndex = 15;
+            this.btn_NhanVien.Size = new System.Drawing.Size(263, 82);
+            this.btn_NhanVien.TabIndex = 27;
             this.btn_NhanVien.Text = "Nhân viên";
+            this.btn_NhanVien.TextColor = System.Drawing.Color.White;
             this.btn_NhanVien.UseVisualStyleBackColor = false;
-            this.btn_NhanVien.Click += new System.EventHandler(this.btn_NhanVien_Click);
-            // 
-            // btn_SanPham
-            // 
-            this.btn_SanPham.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btn_SanPham.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_SanPham.Location = new System.Drawing.Point(0, 356);
-            this.btn_SanPham.Name = "btn_SanPham";
-            this.btn_SanPham.Size = new System.Drawing.Size(272, 88);
-            this.btn_SanPham.TabIndex = 18;
-            this.btn_SanPham.Text = "Sản phẩm";
-            this.btn_SanPham.UseVisualStyleBackColor = false;
-            this.btn_SanPham.Click += new System.EventHandler(this.btn_SanPham_Click);
-            // 
-            // btnTrangChu
-            // 
-            this.btnTrangChu.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btnTrangChu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnTrangChu.Location = new System.Drawing.Point(0, 268);
-            this.btnTrangChu.Name = "btnTrangChu";
-            this.btnTrangChu.Size = new System.Drawing.Size(272, 88);
-            this.btnTrangChu.TabIndex = 21;
-            this.btnTrangChu.Text = "Trang Chủ";
-            this.btnTrangChu.UseVisualStyleBackColor = false;
-            // 
-            // btn_BanHang
-            // 
-            this.btn_BanHang.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btn_BanHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_BanHang.Location = new System.Drawing.Point(0, 444);
-            this.btn_BanHang.Name = "btn_BanHang";
-            this.btn_BanHang.Size = new System.Drawing.Size(272, 88);
-            this.btn_BanHang.TabIndex = 20;
-            this.btn_BanHang.Text = "Bán Hàng";
-            this.btn_BanHang.UseVisualStyleBackColor = false;
-            this.btn_BanHang.Click += new System.EventHandler(this.btn_BanHang_Click);
-            // 
-            // btn_HoaDon
-            // 
-            this.btn_HoaDon.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btn_HoaDon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_HoaDon.Location = new System.Drawing.Point(0, 532);
-            this.btn_HoaDon.Name = "btn_HoaDon";
-            this.btn_HoaDon.Size = new System.Drawing.Size(272, 88);
-            this.btn_HoaDon.TabIndex = 19;
-            this.btn_HoaDon.Text = "Hoá đơn";
-            this.btn_HoaDon.UseVisualStyleBackColor = false;
-            this.btn_HoaDon.Click += new System.EventHandler(this.btn_HoaDon_Click);
-            // 
-            // btn_ThongKe
-            // 
-            this.btn_ThongKe.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btn_ThongKe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_ThongKe.Location = new System.Drawing.Point(0, 620);
-            this.btn_ThongKe.Name = "btn_ThongKe";
-            this.btn_ThongKe.Size = new System.Drawing.Size(272, 88);
-            this.btn_ThongKe.TabIndex = 16;
-            this.btn_ThongKe.Text = "Thống kê";
-            this.btn_ThongKe.UseVisualStyleBackColor = false;
-            this.btn_ThongKe.Click += new System.EventHandler(this.btn_ThongKe_Click);
+            this.btn_NhanVien.Click += new System.EventHandler(this.btn_NhanVien_Click_1);
             // 
             // btn_KhuyenMai
             // 
-            this.btn_KhuyenMai.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btn_KhuyenMai.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_KhuyenMai.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_KhuyenMai.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_KhuyenMai.BorderRadius = 15;
+            this.btn_KhuyenMai.BorderSize = 0;
+            this.btn_KhuyenMai.FlatAppearance.BorderSize = 0;
+            this.btn_KhuyenMai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_KhuyenMai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_KhuyenMai.Location = new System.Drawing.Point(0, 708);
+            this.btn_KhuyenMai.ForeColor = System.Drawing.Color.White;
+            this.btn_KhuyenMai.Location = new System.Drawing.Point(3, 708);
             this.btn_KhuyenMai.Name = "btn_KhuyenMai";
-            this.btn_KhuyenMai.Size = new System.Drawing.Size(272, 88);
-            this.btn_KhuyenMai.TabIndex = 17;
+            this.btn_KhuyenMai.Size = new System.Drawing.Size(263, 82);
+            this.btn_KhuyenMai.TabIndex = 26;
             this.btn_KhuyenMai.Text = "Khuyến mãi";
+            this.btn_KhuyenMai.TextColor = System.Drawing.Color.White;
             this.btn_KhuyenMai.UseVisualStyleBackColor = false;
-            this.btn_KhuyenMai.Click += new System.EventHandler(this.btn_KhuyenMai_Click);
+            this.btn_KhuyenMai.Click += new System.EventHandler(this.btn_KhuyenMai_Click_1);
+            // 
+            // btn_ThongKe
+            // 
+            this.btn_ThongKe.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_ThongKe.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_ThongKe.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_ThongKe.BorderRadius = 15;
+            this.btn_ThongKe.BorderSize = 0;
+            this.btn_ThongKe.FlatAppearance.BorderSize = 0;
+            this.btn_ThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ThongKe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_ThongKe.ForeColor = System.Drawing.Color.White;
+            this.btn_ThongKe.Location = new System.Drawing.Point(3, 620);
+            this.btn_ThongKe.Name = "btn_ThongKe";
+            this.btn_ThongKe.Size = new System.Drawing.Size(263, 82);
+            this.btn_ThongKe.TabIndex = 25;
+            this.btn_ThongKe.Text = "Thống kê";
+            this.btn_ThongKe.TextColor = System.Drawing.Color.White;
+            this.btn_ThongKe.UseVisualStyleBackColor = false;
+            this.btn_ThongKe.Click += new System.EventHandler(this.btn_ThongKe_Click_1);
+            // 
+            // btn_HoaDon
+            // 
+            this.btn_HoaDon.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_HoaDon.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_HoaDon.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_HoaDon.BorderRadius = 15;
+            this.btn_HoaDon.BorderSize = 0;
+            this.btn_HoaDon.FlatAppearance.BorderSize = 0;
+            this.btn_HoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_HoaDon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_HoaDon.ForeColor = System.Drawing.Color.White;
+            this.btn_HoaDon.Location = new System.Drawing.Point(3, 532);
+            this.btn_HoaDon.Name = "btn_HoaDon";
+            this.btn_HoaDon.Size = new System.Drawing.Size(263, 82);
+            this.btn_HoaDon.TabIndex = 24;
+            this.btn_HoaDon.Text = "Hoá đơn";
+            this.btn_HoaDon.TextColor = System.Drawing.Color.White;
+            this.btn_HoaDon.UseVisualStyleBackColor = false;
+            this.btn_HoaDon.Click += new System.EventHandler(this.btn_HoaDon_Click_1);
+            // 
+            // btn_BanHang
+            // 
+            this.btn_BanHang.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_BanHang.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_BanHang.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_BanHang.BorderRadius = 15;
+            this.btn_BanHang.BorderSize = 0;
+            this.btn_BanHang.FlatAppearance.BorderSize = 0;
+            this.btn_BanHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_BanHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_BanHang.ForeColor = System.Drawing.Color.White;
+            this.btn_BanHang.Location = new System.Drawing.Point(3, 444);
+            this.btn_BanHang.Name = "btn_BanHang";
+            this.btn_BanHang.Size = new System.Drawing.Size(263, 82);
+            this.btn_BanHang.TabIndex = 23;
+            this.btn_BanHang.Text = "Bán Hàng";
+            this.btn_BanHang.TextColor = System.Drawing.Color.White;
+            this.btn_BanHang.UseVisualStyleBackColor = false;
+            this.btn_BanHang.Click += new System.EventHandler(this.btn_BanHang_Click);
+            // 
+            // btn_SanPham
+            // 
+            this.btn_SanPham.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_SanPham.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_SanPham.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_SanPham.BorderRadius = 15;
+            this.btn_SanPham.BorderSize = 0;
+            this.btn_SanPham.FlatAppearance.BorderSize = 0;
+            this.btn_SanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SanPham.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_SanPham.ForeColor = System.Drawing.Color.White;
+            this.btn_SanPham.Location = new System.Drawing.Point(3, 356);
+            this.btn_SanPham.Name = "btn_SanPham";
+            this.btn_SanPham.Size = new System.Drawing.Size(263, 82);
+            this.btn_SanPham.TabIndex = 22;
+            this.btn_SanPham.Text = "Sản Phẩm";
+            this.btn_SanPham.TextColor = System.Drawing.Color.White;
+            this.btn_SanPham.UseVisualStyleBackColor = false;
+            this.btn_SanPham.Click += new System.EventHandler(this.btn_SanPham_Click_1);
+            // 
+            // btn_TrangChu
+            // 
+            this.btn_TrangChu.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_TrangChu.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_TrangChu.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_TrangChu.BorderRadius = 15;
+            this.btn_TrangChu.BorderSize = 0;
+            this.btn_TrangChu.FlatAppearance.BorderSize = 0;
+            this.btn_TrangChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TrangChu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_TrangChu.ForeColor = System.Drawing.Color.White;
+            this.btn_TrangChu.Location = new System.Drawing.Point(3, 268);
+            this.btn_TrangChu.Name = "btn_TrangChu";
+            this.btn_TrangChu.Size = new System.Drawing.Size(263, 82);
+            this.btn_TrangChu.TabIndex = 21;
+            this.btn_TrangChu.Text = "Trang Chủ";
+            this.btn_TrangChu.TextColor = System.Drawing.Color.White;
+            this.btn_TrangChu.UseVisualStyleBackColor = false;
+            this.btn_TrangChu.Click += new System.EventHandler(this.btn_TrangChu_Click);
             // 
             // panel2
             // 
@@ -298,13 +356,13 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lb_Time;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnTrangChu;
-        private System.Windows.Forms.Button btn_BanHang;
-        private System.Windows.Forms.Button btn_HoaDon;
-        private System.Windows.Forms.Button btn_SanPham;
-        private System.Windows.Forms.Button btn_KhuyenMai;
-        private System.Windows.Forms.Button btn_ThongKe;
-        private System.Windows.Forms.Button btn_NhanVien;
         private System.Windows.Forms.Label lb_UserName;
+        private CustomControls.RJControls.CSButton btn_NhanVien;
+        private CustomControls.RJControls.CSButton btn_KhuyenMai;
+        private CustomControls.RJControls.CSButton btn_ThongKe;
+        private CustomControls.RJControls.CSButton btn_HoaDon;
+        private CustomControls.RJControls.CSButton btn_BanHang;
+        private CustomControls.RJControls.CSButton btn_SanPham;
+        private CustomControls.RJControls.CSButton btn_TrangChu;
     }
 }

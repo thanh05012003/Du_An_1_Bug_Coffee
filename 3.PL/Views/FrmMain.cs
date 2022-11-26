@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Specialized;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using _2.BUS.IServices;
@@ -62,12 +64,6 @@ namespace _3.PL.Views
             lb_UserName.Text = nv.Ten + " - " + nv.TenCv;
         }
 
-
-        private void btn_SanPham_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FrmSanPham(),sender);
-        }
-
         private void btn_DangXuat_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Bạn có chắc muốn đăng xuất không ?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
@@ -79,30 +75,57 @@ namespace _3.PL.Views
             }
         }
 
-        private void btn_KhuyenMai_Click(object sender, EventArgs e)
+        public void setColor(object btn)
         {
-            OpenChildForm(new FrmKhuyenMai(),sender);
+            var count = 1;
+           
+            if (count == 0)
+            {
+                btn = Color.MediumSlateBlue;
+                count = 1;
+            }
+            else
+            {
+                btn = Color.MediumSpringGreen;
+                count = 0;
+            }
         }
 
-        private void btn_ThongKe_Click(object sender, EventArgs e)
+     
+
+        private void btn_SanPham_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(new FrmThongKe(),sender);
+            OpenChildForm(new FrmSanPham(), sender);
         }
 
-        private void btn_HoaDon_Click(object sender, EventArgs e)
+        private void btn_HoaDon_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(new FrmHoaDon(),sender);
+            OpenChildForm(new FrmHoaDon(), sender);
+        }
+
+        private void btn_ThongKe_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmThongKe(), sender);
+        }
+
+        private void btn_KhuyenMai_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmKhuyenMai(), sender);
+        }
+
+        private void btn_NhanVien_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmNhanVien(), sender);
+        }
+
+        private void btn_TrangChu_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btn_BanHang_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmBanHang(),sender);
         }
-
-        private void btn_NhanVien_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FrmNhanVien(),sender);
-        }
-
     }
 }
