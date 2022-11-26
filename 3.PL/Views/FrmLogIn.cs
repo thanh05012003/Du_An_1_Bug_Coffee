@@ -75,10 +75,6 @@ namespace _3.PL.Views
 
         }
 
-        private void btn_DangNhap_Click(object sender, EventArgs e)
-        {
-            Check();
-        }
 
 
         private void cb_Show_CheckedChanged(object sender, EventArgs e)
@@ -109,6 +105,11 @@ namespace _3.PL.Views
         private void txt_Email__TextChanged(object sender, EventArgs e)
         {
             //txt_Email.Texts = "";
+        }
+
+        private void btn_DangNhap_Click_1(object sender, EventArgs e)
+        {
+            Check();
         }
     }
 }

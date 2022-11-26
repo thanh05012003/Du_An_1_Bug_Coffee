@@ -4,6 +4,12 @@
     <Compile Update="CustomControl\CSTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="CustomControl\CSButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="CustomControl\RJDropdownMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="Views\BanHang\FrmBanHang.cs">
       <SubType>Form</SubType>
     </Compile>

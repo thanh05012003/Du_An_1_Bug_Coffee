@@ -35,9 +35,9 @@
             this.txt_Email = new CustomControls.RJControls.CSTextBox();
             this.cb_Show = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_DangNhap = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_DangNhap = new CustomControls.RJControls.CSButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,11 +54,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btn_DangNhap);
             this.panel1.Controls.Add(this.txt_MatKhau);
             this.panel1.Controls.Add(this.txt_Email);
             this.panel1.Controls.Add(this.cb_Show);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.btn_DangNhap);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -74,7 +74,7 @@
             this.txt_MatKhau.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txt_MatKhau.BorderRadius = 15;
             this.txt_MatKhau.BorderSize = 2;
-            this.txt_MatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_MatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_MatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_MatKhau.Location = new System.Drawing.Point(26, 263);
             this.txt_MatKhau.Margin = new System.Windows.Forms.Padding(4);
@@ -84,7 +84,7 @@
             this.txt_MatKhau.PasswordChar = false;
             this.txt_MatKhau.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txt_MatKhau.PlaceholderText = "Password";
-            this.txt_MatKhau.Size = new System.Drawing.Size(376, 35);
+            this.txt_MatKhau.Size = new System.Drawing.Size(376, 40);
             this.txt_MatKhau.TabIndex = 33;
             this.txt_MatKhau.Texts = "";
             this.txt_MatKhau.UnderlinedStyle = false;
@@ -96,7 +96,7 @@
             this.txt_Email.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txt_Email.BorderRadius = 15;
             this.txt_Email.BorderSize = 2;
-            this.txt_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_Email.Location = new System.Drawing.Point(26, 160);
             this.txt_Email.Margin = new System.Windows.Forms.Padding(4);
@@ -106,7 +106,7 @@
             this.txt_Email.PasswordChar = false;
             this.txt_Email.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txt_Email.PlaceholderText = "Email";
-            this.txt_Email.Size = new System.Drawing.Size(376, 35);
+            this.txt_Email.Size = new System.Drawing.Size(376, 40);
             this.txt_Email.TabIndex = 32;
             this.txt_Email.Texts = "";
             this.txt_Email.UnderlinedStyle = false;
@@ -133,18 +133,6 @@
             this.label3.TabIndex = 28;
             this.label3.Text = "Đăng nhập";
             // 
-            // btn_DangNhap
-            // 
-            this.btn_DangNhap.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btn_DangNhap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_DangNhap.Location = new System.Drawing.Point(64, 375);
-            this.btn_DangNhap.Name = "btn_DangNhap";
-            this.btn_DangNhap.Size = new System.Drawing.Size(272, 88);
-            this.btn_DangNhap.TabIndex = 27;
-            this.btn_DangNhap.Text = "Đăng nhập";
-            this.btn_DangNhap.UseVisualStyleBackColor = false;
-            this.btn_DangNhap.Click += new System.EventHandler(this.btn_DangNhap_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -164,6 +152,26 @@
             this.label1.Size = new System.Drawing.Size(79, 31);
             this.label1.TabIndex = 23;
             this.label1.Text = "Email:";
+            // 
+            // btn_DangNhap
+            // 
+            this.btn_DangNhap.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_DangNhap.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_DangNhap.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_DangNhap.BorderRadius = 15;
+            this.btn_DangNhap.BorderSize = 0;
+            this.btn_DangNhap.FlatAppearance.BorderSize = 0;
+            this.btn_DangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DangNhap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_DangNhap.ForeColor = System.Drawing.Color.White;
+            this.btn_DangNhap.Location = new System.Drawing.Point(95, 374);
+            this.btn_DangNhap.Name = "btn_DangNhap";
+            this.btn_DangNhap.Size = new System.Drawing.Size(208, 76);
+            this.btn_DangNhap.TabIndex = 34;
+            this.btn_DangNhap.Text = "Đăng nhập";
+            this.btn_DangNhap.TextColor = System.Drawing.Color.White;
+            this.btn_DangNhap.UseVisualStyleBackColor = false;
+            this.btn_DangNhap.Click += new System.EventHandler(this.btn_DangNhap_Click_1);
             // 
             // FrmLogin
             // 
@@ -186,12 +194,12 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_DangNhap;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox cb_Show;
         private CustomControls.RJControls.CSTextBox txt_MatKhau;
         private CustomControls.RJControls.CSTextBox txt_Email;
+        private CustomControls.RJControls.CSButton btn_DangNhap;
     }
 
         //#endregion
