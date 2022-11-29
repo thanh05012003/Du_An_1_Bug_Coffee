@@ -14,7 +14,6 @@ namespace _1.DAL.DomainClass
         public decimal? Gia { get; set; }
         public string MoTa { get; set; }
         public string MaLsp { get; set; }
-        public string URL { get; set; }
         public virtual LoaiSanPham LoaiSanPham { get; set; }
     }
 }

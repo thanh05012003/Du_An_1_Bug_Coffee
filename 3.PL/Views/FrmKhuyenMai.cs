@@ -7,17 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _2.BUS.IServices;
+using _2.BUS.Services;
+using _2.BUS.ViewModels;
 
 namespace _3.PL.Views
 {
     public partial class FrmKhuyenMai : Form
     {
+        private IVoucherService _voucherService;
         public FrmKhuyenMai()
         {
+            _voucherService = new VoucherService();
             InitializeComponent();
-        }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        }
+        public void loadDataKM()
+        {
+
+        }
+        private void btn_add_Click(object sender, EventArgs e)
         {
 
         }

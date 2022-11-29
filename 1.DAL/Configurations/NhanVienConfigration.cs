@@ -18,7 +18,6 @@ namespace _1.DAL.Configurations
             builder.Property(c => c.Email).HasColumnType("varchar(100)");
             builder.Property(c => c.TrangThai).HasColumnType("int").IsRequired();
             builder.Property(c => c.MatKhau).HasColumnType("varchar(max)").IsRequired();
-            builder.Property(c => c.URL).HasColumnType("nvarchar(max)");
             builder.Property(c => c.MaCV).IsRequired();
             builder.HasOne(c => c.ChucVu).WithMany().HasForeignKey(c => c.MaCV);
             builder.Property(c => c.MaCLV);

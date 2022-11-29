@@ -22,9 +22,6 @@
     <Compile Update="Views\BanHang\FrmTachHD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\FrmTrangChu.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Views\NhanVien\FrmChucVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,10 +61,5 @@
     <Compile Update="Views\TichDiemKH.cs">
       <SubType>Form</SubType>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="Views\BanHang\FrmKhachHang.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
   </ItemGroup>
 </Project>

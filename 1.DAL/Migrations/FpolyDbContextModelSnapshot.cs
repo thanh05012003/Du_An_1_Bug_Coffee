@@ -217,9 +217,6 @@ namespace _1.DAL.Migrations
                     b.Property<int>("TrangThai")
                         .HasColumnType("int");
 
-                    b.Property<string>("URL")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Ma");
 
                     b.HasIndex("MaCLV");
@@ -250,9 +247,6 @@ namespace _1.DAL.Migrations
 
                     b.Property<int>("TrangThai")
                         .HasColumnType("int");
-
-                    b.Property<string>("URL")
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Ma");
 
