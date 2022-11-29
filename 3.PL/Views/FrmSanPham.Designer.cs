@@ -30,12 +30,12 @@
         {
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txt_TimKiem = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.btn_TimKiem = new System.Windows.Forms.Button();
+            this.cbx_Lsp = new System.Windows.Forms.ComboBox();
+            this.cbx_TrangThai = new System.Windows.Forms.ComboBox();
+            this.dgrid_QLSanPham = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -56,13 +56,13 @@
             this.txt_GiaBan = new System.Windows.Forms.TextBox();
             this.txt_Mota = new System.Windows.Forms.TextBox();
             this.txt_TenSanPham = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rdb_DangBan = new System.Windows.Forms.RadioButton();
+            this.rdb_NgungBan = new System.Windows.Forms.RadioButton();
             this.cbx_MaLoaiSP = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.csButton2 = new CustomControls.RJControls.CSButton();
-            this.csButton1 = new CustomControls.RJControls.CSButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.btn_CapNhat = new CustomControls.RJControls.CSButton();
+            this.btn_Them = new CustomControls.RJControls.CSButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrid_QLSanPham)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -89,12 +89,12 @@
             this.label12.TabIndex = 6;
             this.label12.Text = "Loại Sản Phẩm";
             // 
-            // textBox6
+            // txt_TimKiem
             // 
-            this.textBox6.Location = new System.Drawing.Point(76, 75);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(282, 27);
-            this.textBox6.TabIndex = 8;
+            this.txt_TimKiem.Location = new System.Drawing.Point(76, 75);
+            this.txt_TimKiem.Name = "txt_TimKiem";
+            this.txt_TimKiem.Size = new System.Drawing.Size(282, 27);
+            this.txt_TimKiem.TabIndex = 8;
             // 
             // label11
             // 
@@ -106,53 +106,53 @@
             this.label11.TabIndex = 5;
             this.label11.Text = "Tìm Kiếm";
             // 
-            // button5
+            // btn_TimKiem
             // 
-            this.button5.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(383, 74);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(91, 29);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "Tìm Kiếm";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_TimKiem.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_TimKiem.Location = new System.Drawing.Point(383, 74);
+            this.btn_TimKiem.Name = "btn_TimKiem";
+            this.btn_TimKiem.Size = new System.Drawing.Size(91, 29);
+            this.btn_TimKiem.TabIndex = 9;
+            this.btn_TimKiem.Text = "Tìm Kiếm";
+            this.btn_TimKiem.UseVisualStyleBackColor = true;
             // 
-            // comboBox5
+            // cbx_Lsp
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(647, 74);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(219, 28);
-            this.comboBox5.TabIndex = 11;
+            this.cbx_Lsp.FormattingEnabled = true;
+            this.cbx_Lsp.Location = new System.Drawing.Point(647, 74);
+            this.cbx_Lsp.Name = "cbx_Lsp";
+            this.cbx_Lsp.Size = new System.Drawing.Size(219, 28);
+            this.cbx_Lsp.TabIndex = 11;
             // 
-            // comboBox4
+            // cbx_TrangThai
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(965, 74);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(219, 28);
-            this.comboBox4.TabIndex = 10;
+            this.cbx_TrangThai.FormattingEnabled = true;
+            this.cbx_TrangThai.Location = new System.Drawing.Point(965, 74);
+            this.cbx_TrangThai.Name = "cbx_TrangThai";
+            this.cbx_TrangThai.Size = new System.Drawing.Size(219, 28);
+            this.cbx_TrangThai.TabIndex = 10;
             // 
-            // dataGridView2
+            // dgrid_QLSanPham
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 121);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 29;
-            this.dataGridView2.Size = new System.Drawing.Size(1317, 339);
-            this.dataGridView2.TabIndex = 12;
+            this.dgrid_QLSanPham.BackgroundColor = System.Drawing.Color.DarkGray;
+            this.dgrid_QLSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgrid_QLSanPham.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgrid_QLSanPham.Location = new System.Drawing.Point(3, 121);
+            this.dgrid_QLSanPham.Name = "dgrid_QLSanPham";
+            this.dgrid_QLSanPham.RowHeadersWidth = 51;
+            this.dgrid_QLSanPham.RowTemplate.Height = 29;
+            this.dgrid_QLSanPham.Size = new System.Drawing.Size(1317, 339);
+            this.dgrid_QLSanPham.TabIndex = 12;
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.groupBox3.Controls.Add(this.dataGridView2);
-            this.groupBox3.Controls.Add(this.comboBox4);
-            this.groupBox3.Controls.Add(this.comboBox5);
-            this.groupBox3.Controls.Add(this.button5);
+            this.groupBox3.Controls.Add(this.dgrid_QLSanPham);
+            this.groupBox3.Controls.Add(this.cbx_TrangThai);
+            this.groupBox3.Controls.Add(this.cbx_Lsp);
+            this.groupBox3.Controls.Add(this.btn_TimKiem);
             this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.textBox6);
+            this.groupBox3.Controls.Add(this.txt_TimKiem);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -339,27 +339,27 @@
             this.txt_TenSanPham.Size = new System.Drawing.Size(318, 27);
             this.txt_TenSanPham.TabIndex = 1;
             // 
-            // radioButton1
+            // rdb_DangBan
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(167, 249);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(95, 24);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Đang Bán";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdb_DangBan.AutoSize = true;
+            this.rdb_DangBan.Location = new System.Drawing.Point(167, 249);
+            this.rdb_DangBan.Name = "rdb_DangBan";
+            this.rdb_DangBan.Size = new System.Drawing.Size(95, 24);
+            this.rdb_DangBan.TabIndex = 2;
+            this.rdb_DangBan.TabStop = true;
+            this.rdb_DangBan.Text = "Đang Bán";
+            this.rdb_DangBan.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rdb_NgungBan
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(368, 249);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(105, 24);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Ngừng Bán";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdb_NgungBan.AutoSize = true;
+            this.rdb_NgungBan.Location = new System.Drawing.Point(368, 249);
+            this.rdb_NgungBan.Name = "rdb_NgungBan";
+            this.rdb_NgungBan.Size = new System.Drawing.Size(105, 24);
+            this.rdb_NgungBan.TabIndex = 2;
+            this.rdb_NgungBan.TabStop = true;
+            this.rdb_NgungBan.Text = "Ngừng Bán";
+            this.rdb_NgungBan.UseVisualStyleBackColor = true;
             // 
             // cbx_MaLoaiSP
             // 
@@ -372,11 +372,11 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Honeydew;
-            this.groupBox1.Controls.Add(this.csButton2);
-            this.groupBox1.Controls.Add(this.csButton1);
+            this.groupBox1.Controls.Add(this.btn_CapNhat);
+            this.groupBox1.Controls.Add(this.btn_Them);
             this.groupBox1.Controls.Add(this.cbx_MaLoaiSP);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.rdb_NgungBan);
+            this.groupBox1.Controls.Add(this.rdb_DangBan);
             this.groupBox1.Controls.Add(this.txt_TenSanPham);
             this.groupBox1.Controls.Add(this.txt_Mota);
             this.groupBox1.Controls.Add(this.txt_GiaBan);
@@ -395,43 +395,43 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sản Phẩm";
             // 
-            // csButton2
+            // btn_CapNhat
             // 
-            this.csButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.csButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.csButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.csButton2.BorderRadius = 0;
-            this.csButton2.BorderSize = 0;
-            this.csButton2.FlatAppearance.BorderSize = 0;
-            this.csButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.csButton2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.csButton2.ForeColor = System.Drawing.Color.White;
-            this.csButton2.Location = new System.Drawing.Point(786, 310);
-            this.csButton2.Name = "csButton2";
-            this.csButton2.Size = new System.Drawing.Size(188, 50);
-            this.csButton2.TabIndex = 5;
-            this.csButton2.Text = "Cập Nhật";
-            this.csButton2.TextColor = System.Drawing.Color.White;
-            this.csButton2.UseVisualStyleBackColor = false;
+            this.btn_CapNhat.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_CapNhat.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_CapNhat.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_CapNhat.BorderRadius = 0;
+            this.btn_CapNhat.BorderSize = 0;
+            this.btn_CapNhat.FlatAppearance.BorderSize = 0;
+            this.btn_CapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CapNhat.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_CapNhat.ForeColor = System.Drawing.Color.White;
+            this.btn_CapNhat.Location = new System.Drawing.Point(786, 310);
+            this.btn_CapNhat.Name = "btn_CapNhat";
+            this.btn_CapNhat.Size = new System.Drawing.Size(188, 50);
+            this.btn_CapNhat.TabIndex = 5;
+            this.btn_CapNhat.Text = "Cập Nhật";
+            this.btn_CapNhat.TextColor = System.Drawing.Color.White;
+            this.btn_CapNhat.UseVisualStyleBackColor = false;
             // 
-            // csButton1
+            // btn_Them
             // 
-            this.csButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.csButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.csButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.csButton1.BorderRadius = 0;
-            this.csButton1.BorderSize = 0;
-            this.csButton1.FlatAppearance.BorderSize = 0;
-            this.csButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.csButton1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.csButton1.ForeColor = System.Drawing.Color.White;
-            this.csButton1.Location = new System.Drawing.Point(137, 310);
-            this.csButton1.Name = "csButton1";
-            this.csButton1.Size = new System.Drawing.Size(188, 50);
-            this.csButton1.TabIndex = 4;
-            this.csButton1.Text = "Thêm";
-            this.csButton1.TextColor = System.Drawing.Color.White;
-            this.csButton1.UseVisualStyleBackColor = false;
+            this.btn_Them.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_Them.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_Them.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Them.BorderRadius = 0;
+            this.btn_Them.BorderSize = 0;
+            this.btn_Them.FlatAppearance.BorderSize = 0;
+            this.btn_Them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Them.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_Them.ForeColor = System.Drawing.Color.White;
+            this.btn_Them.Location = new System.Drawing.Point(137, 310);
+            this.btn_Them.Name = "btn_Them";
+            this.btn_Them.Size = new System.Drawing.Size(188, 50);
+            this.btn_Them.TabIndex = 4;
+            this.btn_Them.Text = "Thêm";
+            this.btn_Them.TextColor = System.Drawing.Color.White;
+            this.btn_Them.UseVisualStyleBackColor = false;
             // 
             // FrmSanPham
             // 
@@ -443,7 +443,7 @@
             this.Name = "FrmSanPham";
             this.Text = "FrmSanPham";
             this.Load += new System.EventHandler(this.FrmSanPham_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrid_QLSanPham)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -462,12 +462,12 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txt_TimKiem;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button btn_TimKiem;
+        private System.Windows.Forms.ComboBox cbx_Lsp;
+        private System.Windows.Forms.ComboBox cbx_TrangThai;
+        private System.Windows.Forms.DataGridView dgrid_QLSanPham;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -488,11 +488,11 @@
         private System.Windows.Forms.TextBox txt_GiaBan;
         private System.Windows.Forms.TextBox txt_Mota;
         private System.Windows.Forms.TextBox txt_TenSanPham;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rdb_DangBan;
+        private System.Windows.Forms.RadioButton rdb_NgungBan;
         private System.Windows.Forms.ComboBox cbx_MaLoaiSP;
         private System.Windows.Forms.GroupBox groupBox1;
-        private CustomControls.RJControls.CSButton csButton1;
-        private CustomControls.RJControls.CSButton csButton2;
+        private CustomControls.RJControls.CSButton btn_Them;
+        private CustomControls.RJControls.CSButton btn_CapNhat;
     }
 }
