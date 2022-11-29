@@ -30,6 +30,7 @@ namespace _2.BUS.Services
                 TrangThai = obj.TrangThai,
                 Gia = obj.Gia,
                 MoTa = obj.MoTa,
+                URL = obj.URl,
                 MaLsp = obj.MaLsp,
             };
             if (_sanPhamRepository.Add(SanPham))
@@ -55,6 +56,7 @@ namespace _2.BUS.Services
                 TrangThai = obj.TrangThai,
                 Gia = obj.Gia,
                 MoTa = obj.MoTa,
+                URL = obj.URl,
                 MaLsp = obj.MaLsp,
             };
             if (_sanPhamRepository.Update(SanPham))
@@ -75,7 +77,8 @@ namespace _2.BUS.Services
                     TrangThai = a.TrangThai,
                     Gia = a.Gia,
                     MoTa = a.MoTa,
-                    MaLsp = a.MaLsp
+                    MaLsp = a.MaLsp,
+                    URl = a.URL,
                 };
             return lstSanPham.ToList();
         }

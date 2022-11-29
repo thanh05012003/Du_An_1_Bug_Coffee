@@ -125,7 +125,7 @@
             this.txt_TaiKhoan.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txt_TaiKhoan.PasswordChar = false;
             this.txt_TaiKhoan.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_TaiKhoan.PlaceholderText = "Email hoặc số điện thoại";
+            this.txt_TaiKhoan.PlaceholderText = "Số điện thoại";
             this.txt_TaiKhoan.Size = new System.Drawing.Size(376, 40);
             this.txt_TaiKhoan.TabIndex = 32;
             this.txt_TaiKhoan.Texts = "";
@@ -168,9 +168,9 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(26, 125);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 31);
+            this.label1.Size = new System.Drawing.Size(123, 31);
             this.label1.TabIndex = 23;
-            this.label1.Text = "Tài khoản";
+            this.label1.Text = "Tài khoản:";
             // 
             // FrmLogin
             // 

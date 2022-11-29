@@ -35,6 +35,7 @@ namespace _2.BUS.Services
                 Email = obj.Email,
                 TrangThai = obj.TrangThai,
                 MatKhau = obj.MatKhau,
+                URL = obj.URl,
                 MaCV = obj.MaCV,
                 MaCLV = obj.MaCLV,
             };
@@ -65,6 +66,7 @@ namespace _2.BUS.Services
                 Email = obj.Email,
                 TrangThai = obj.TrangThai,
                 MatKhau = obj.MatKhau,
+                URL = obj.URl,
                 MaCV = obj.MaCV,
                 MaCLV = obj.MaCLV,
             };
@@ -91,6 +93,7 @@ namespace _2.BUS.Services
                     Email = a.Email,
                     TrangThai = a.TrangThai,
                     MatKhau = a.MatKhau,
+                    URl = a.URL,
                     MaCV = a.MaCV,
                     MaCLV = a.MaCLV,
                     TenCv = b.Ten
