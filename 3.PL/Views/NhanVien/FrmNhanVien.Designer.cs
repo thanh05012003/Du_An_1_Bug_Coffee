@@ -88,6 +88,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.splitContainer1.Panel1.Controls.Add(this.lb_VaiTroFail);
             this.splitContainer1.Panel1.Controls.Add(this.lb_MatKauFail);
             this.splitContainer1.Panel1.Controls.Add(this.lb_SDTFail);
@@ -123,6 +124,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.splitContainer1.Panel2.Controls.Add(this.dgrid_DtNhanVien);
             this.splitContainer1.Panel2.Controls.Add(this.tbt_searchNV);
             this.splitContainer1.Panel2.Controls.Add(this.label13);
@@ -483,6 +485,7 @@
             this.dgrid_DtNhanVien.RowTemplate.Height = 29;
             this.dgrid_DtNhanVien.Size = new System.Drawing.Size(602, 586);
             this.dgrid_DtNhanVien.TabIndex = 56;
+            this.dgrid_DtNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_DtNhanVien_CellClick);
             // 
             // tbt_searchNV
             // 

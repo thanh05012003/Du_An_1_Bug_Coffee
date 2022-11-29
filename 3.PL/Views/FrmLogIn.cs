@@ -23,12 +23,12 @@ namespace _3.PL.Views
         public void Check()
         {
             var login = _nhanVienService.GetAll().FirstOrDefault(c =>
-                c.Email.ToLower() == txt_Email.Texts.ToLower().Trim() &&
+                c.SDT.ToLower() == txt_TaiKhoan.Texts.ToLower().Trim() &&
                 c.MatKhau.ToLower() == txt_MatKhau.Texts.ToLower().Trim());
-            if (txt_Email.Texts.Trim() == "")
+            if (txt_TaiKhoan.Texts.Trim() == "")
             {
-                txt_Email.PlaceholderColor = Color.Red;
-                txt_Email.PlaceholderText = "Không được để trống";
+                txt_TaiKhoan.PlaceholderColor = Color.Red;
+                txt_TaiKhoan.PlaceholderText = "Không được để trống";
             }
             else
             {
@@ -39,34 +39,25 @@ namespace _3.PL.Views
                 }
                 else
                 {
-                    if (!_utility.IsValidEmail(txt_Email.Texts))
+                    if (txt_MatKhau.Texts.Length < 8)
                     {
-                        txt_Email.Texts = "";
-                        txt_Email.PlaceholderColor = Color.Red;
-                        txt_Email.PlaceholderText = "Email sai định dạng";
+                        txt_MatKhau.Texts = "";
+                        txt_MatKhau.PlaceholderColor = Color.Red;
+                        txt_MatKhau.PlaceholderText = "mật khẩu phải nhiều hơn 8 kí tự";
                     }
                     else
                     {
-                        if (txt_MatKhau.Texts.Length < 8)
+                        if (login == null)
                         {
-                            txt_MatKhau.Texts = "";
-                            txt_MatKhau.PlaceholderColor = Color.Red;
-                            txt_MatKhau.PlaceholderText = "mật khẩu phải nhiều hơn 8 kí tự";
+                            MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
                         }
                         else
                         {
-                            if (login == null)
-                            {
-                                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
-                            }
-                            else
-                            {
-                                Properties.Settings.Default.Tk = txt_Email.Texts;
-                                Properties.Settings.Default.Mk = txt_MatKhau.Texts;
-                                FrmMain main = new FrmMain();
-                                main.Show();
-                                this.Hide();
-                            }
+                            Properties.Settings.Default.Tk = txt_TaiKhoan.Texts;
+                            Properties.Settings.Default.Mk = txt_MatKhau.Texts;
+                            FrmMain main = new FrmMain();
+                            main.Show();
+                            this.Hide();
                         }
                     }
                 }
@@ -102,10 +93,6 @@ namespace _3.PL.Views
             }
         }
 
-        private void txt_Email__TextChanged(object sender, EventArgs e)
-        {
-            //txt_Email.Texts = "";
-        }
 
         private void btn_DangNhap_Click_1(object sender, EventArgs e)
         {
