@@ -16,9 +16,9 @@ namespace _1.DAL.Configurations
             builder.ToTable("KhachHang");
             builder.HasKey(c => c.Ma);//set khoá chính
             builder.Property(p => p.Ma).HasColumnType("varchar(20)");
-            builder.Property(p => p.Ten).HasColumnType("nvarchar(100)").IsRequired(); // IsRequired: bắt buộc
-            builder.Property(p => p.DiemTL).HasColumnType("int").IsRequired();
-            builder.Property(p => p.SDT).HasColumnType("varchar(30)").IsRequired();
+            builder.Property(p => p.Ten).HasColumnType("nvarchar(100)"); // IsRequired: bắt buộc
+            builder.Property(p => p.DiemTL).HasColumnType("int");
+            builder.Property(p => p.SDT).HasColumnType("varchar(30)");
             builder.Property(p => p.MaLKH).IsRequired();
 
             //set khoá ngoại

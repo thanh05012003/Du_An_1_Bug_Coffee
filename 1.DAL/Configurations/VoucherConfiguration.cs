@@ -20,7 +20,7 @@ namespace _1.DAL.Configurations
             builder.Property(p => p.NgayKetThuc).HasColumnType("date").IsRequired();
             builder.Property(p => p.TrangThai).HasColumnType("int").IsRequired();
             builder.Property(p => p.GiamGia).HasColumnType("int").IsRequired();
-            builder.Property(p => p.MoTa).HasColumnType("nvarchar(100)").IsRequired();
+            builder.Property(p => p.MoTa).HasColumnType("nvarchar(100)");
         }
     }
 }

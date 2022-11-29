@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\1.DAL",
+    "\\1.DAL\\Configurations"
   ],
-  "SelectedNode": "\\Du_An_1_Bug_Coffee.sln",
+  "SelectedNode": "\\1.DAL\\Configurations\\SanPhamConfiguration.cs",
   "PreviewInSolutionExplorer": false
 }

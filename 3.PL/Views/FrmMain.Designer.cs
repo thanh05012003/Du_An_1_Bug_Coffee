@@ -78,6 +78,7 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.btn_NhanVien);
             this.panel4.Controls.Add(this.btn_SanPham);
             this.panel4.Controls.Add(this.btnTrangChu);
@@ -94,20 +95,20 @@
             // btn_NhanVien
             // 
             this.btn_NhanVien.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btn_NhanVien.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btn_NhanVien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_NhanVien.Location = new System.Drawing.Point(0, 879);
+            this.btn_NhanVien.Location = new System.Drawing.Point(0, 796);
             this.btn_NhanVien.Name = "btn_NhanVien";
             this.btn_NhanVien.Size = new System.Drawing.Size(272, 88);
             this.btn_NhanVien.TabIndex = 15;
             this.btn_NhanVien.Text = "Nhân viên";
             this.btn_NhanVien.UseVisualStyleBackColor = false;
+            this.btn_NhanVien.Click += new System.EventHandler(this.btn_NhanVien_Click);
             // 
             // btn_SanPham
             // 
             this.btn_SanPham.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_SanPham.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_SanPham.Location = new System.Drawing.Point(0, 369);
+            this.btn_SanPham.Location = new System.Drawing.Point(0, 356);
             this.btn_SanPham.Name = "btn_SanPham";
             this.btn_SanPham.Size = new System.Drawing.Size(272, 88);
             this.btn_SanPham.TabIndex = 18;
@@ -130,18 +131,19 @@
             // 
             this.btn_BanHang.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_BanHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_BanHang.Location = new System.Drawing.Point(0, 470);
+            this.btn_BanHang.Location = new System.Drawing.Point(0, 444);
             this.btn_BanHang.Name = "btn_BanHang";
             this.btn_BanHang.Size = new System.Drawing.Size(272, 88);
             this.btn_BanHang.TabIndex = 20;
             this.btn_BanHang.Text = "Bán Hàng";
             this.btn_BanHang.UseVisualStyleBackColor = false;
+            this.btn_BanHang.Click += new System.EventHandler(this.btn_BanHang_Click);
             // 
             // btn_HoaDon
             // 
             this.btn_HoaDon.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_HoaDon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_HoaDon.Location = new System.Drawing.Point(0, 571);
+            this.btn_HoaDon.Location = new System.Drawing.Point(0, 532);
             this.btn_HoaDon.Name = "btn_HoaDon";
             this.btn_HoaDon.Size = new System.Drawing.Size(272, 88);
             this.btn_HoaDon.TabIndex = 19;
@@ -153,7 +155,7 @@
             // 
             this.btn_ThongKe.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_ThongKe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_ThongKe.Location = new System.Drawing.Point(0, 672);
+            this.btn_ThongKe.Location = new System.Drawing.Point(0, 620);
             this.btn_ThongKe.Name = "btn_ThongKe";
             this.btn_ThongKe.Size = new System.Drawing.Size(272, 88);
             this.btn_ThongKe.TabIndex = 16;
@@ -165,7 +167,7 @@
             // 
             this.btn_KhuyenMai.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_KhuyenMai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_KhuyenMai.Location = new System.Drawing.Point(0, 773);
+            this.btn_KhuyenMai.Location = new System.Drawing.Point(0, 708);
             this.btn_KhuyenMai.Name = "btn_KhuyenMai";
             this.btn_KhuyenMai.Size = new System.Drawing.Size(272, 88);
             this.btn_KhuyenMai.TabIndex = 17;
@@ -211,7 +213,7 @@
             this.lb_Time.AutoSize = true;
             this.lb_Time.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lb_Time.ForeColor = System.Drawing.Color.White;
-            this.lb_Time.Location = new System.Drawing.Point(59, 20);
+            this.lb_Time.Location = new System.Drawing.Point(39, 22);
             this.lb_Time.Name = "lb_Time";
             this.lb_Time.Size = new System.Drawing.Size(211, 25);
             this.lb_Time.TabIndex = 3;
