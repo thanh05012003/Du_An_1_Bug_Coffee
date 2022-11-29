@@ -60,6 +60,8 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.csButton1 = new CustomControls.RJControls.CSButton();
+            this.csButton2 = new CustomControls.RJControls.CSButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -370,6 +372,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Honeydew;
+            this.groupBox1.Controls.Add(this.csButton2);
+            this.groupBox1.Controls.Add(this.csButton1);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
@@ -390,6 +394,42 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sản Phẩm";
+            // 
+            // csButton1
+            // 
+            this.csButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.csButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.csButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.csButton1.BorderRadius = 0;
+            this.csButton1.BorderSize = 0;
+            this.csButton1.FlatAppearance.BorderSize = 0;
+            this.csButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.csButton1.ForeColor = System.Drawing.Color.White;
+            this.csButton1.Location = new System.Drawing.Point(137, 310);
+            this.csButton1.Name = "csButton1";
+            this.csButton1.Size = new System.Drawing.Size(188, 50);
+            this.csButton1.TabIndex = 4;
+            this.csButton1.Text = "csButton1";
+            this.csButton1.TextColor = System.Drawing.Color.White;
+            this.csButton1.UseVisualStyleBackColor = false;
+            // 
+            // csButton2
+            // 
+            this.csButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.csButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.csButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.csButton2.BorderRadius = 0;
+            this.csButton2.BorderSize = 0;
+            this.csButton2.FlatAppearance.BorderSize = 0;
+            this.csButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.csButton2.ForeColor = System.Drawing.Color.White;
+            this.csButton2.Location = new System.Drawing.Point(786, 310);
+            this.csButton2.Name = "csButton2";
+            this.csButton2.Size = new System.Drawing.Size(188, 50);
+            this.csButton2.TabIndex = 5;
+            this.csButton2.Text = "csButton2";
+            this.csButton2.TextColor = System.Drawing.Color.White;
+            this.csButton2.UseVisualStyleBackColor = false;
             // 
             // FrmSanPham
             // 
@@ -450,5 +490,7 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private CustomControls.RJControls.CSButton csButton1;
+        private CustomControls.RJControls.CSButton csButton2;
     }
 }
