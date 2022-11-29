@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="CustomControl\CSTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustomControl\CSButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="CustomControl\RJDropdownMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Views\BanHang\FrmBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\BanHang\FrmGiaoHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\BanHang\FrmKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\BanHang\FrmTachHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\NhanVien\FrmChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\ThongKe\FrmDT_SP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\ThongKe\FrmGiaoCa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\HoaDon\FrmHDPhaChe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\HoaDon\FrmHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmKhuyenMai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\HoaDon\FrmLichSuHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\NhanVien\FrmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\ThongKe\FrmThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\TichDiemKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
