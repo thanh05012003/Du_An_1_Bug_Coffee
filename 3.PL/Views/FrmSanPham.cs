@@ -22,6 +22,7 @@ namespace _3.PL.Views
         {
             InitializeComponent();
             _iSanPhamServices = new SanPhamService();
+            LoadDataSP();
         }
 
         private void FrmSanPham_Load(object sender, EventArgs e)
