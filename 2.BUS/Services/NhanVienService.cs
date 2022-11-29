@@ -14,10 +14,12 @@ namespace _2.BUS.Services
     public class NhanVienService:INhanVienService
     {
         private INhanVienRepository _nhanVienRepository;
+        private IChucVuRepository _chucVuRepository;
 
         public NhanVienService()
         {
             _nhanVienRepository = new NhanVienRepository();
+            _chucVuRepository = new ChucVuRepository();
         }
         public string add(QlNhanVienView obj)
         {
@@ -33,6 +35,7 @@ namespace _2.BUS.Services
                 Email = obj.Email,
                 TrangThai = obj.TrangThai,
                 MatKhau = obj.MatKhau,
+                URL = obj.URl,
                 MaCV = obj.MaCV,
                 MaCLV = obj.MaCLV,
             };
@@ -63,6 +66,7 @@ namespace _2.BUS.Services
                 Email = obj.Email,
                 TrangThai = obj.TrangThai,
                 MatKhau = obj.MatKhau,
+                URL = obj.URl,
                 MaCV = obj.MaCV,
                 MaCLV = obj.MaCLV,
             };
@@ -77,6 +81,7 @@ namespace _2.BUS.Services
         public List<QlNhanVienView> GetAll()
         {
             var lstNhanVien = from a in _nhanVienRepository.GetAll()
+                join b in _chucVuRepository.GetAll() on a.MaCV equals b.Ma 
                 select new QlNhanVienView()
                 {
                     Ma = a.Ma,
@@ -88,8 +93,10 @@ namespace _2.BUS.Services
                     Email = a.Email,
                     TrangThai = a.TrangThai,
                     MatKhau = a.MatKhau,
+                    URl = a.URL,
                     MaCV = a.MaCV,
                     MaCLV = a.MaCLV,
+                    TenCv = b.Ten
                 };
             return lstNhanVien.ToList();
         }

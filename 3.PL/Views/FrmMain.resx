@@ -67,7 +67,11 @@
   <data name="groupBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAy4AAALZCAYAAABRU3W+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+<<<<<<< HEAD
         DQAACw0B7QfALAAAju5JREFUeF7t3Qd0XNXdrvH7hS+FNAJJSAghEEiAJBBayqUltCTk0nuH0Fvovffe
+=======
+        DAAACwwBP0AiyAAAju5JREFUeF7t3Qd0XNXdrvH7hS+FNAJJSAghEEiAJBBayqUltCTk0nuH0Fvovffe
+>>>>>>> 1fff07ceffbd26f6c31ab999b357db1829241eb5
         ewdjcMMU22AbjG3cG80YTDEYF8AFsOmdZF+erRl7NDrSzEgz0pb0/NbaCyzNnDlTJP3fs9v/CZIkSZKU
         OIOLJEmSpOQZXCRJkiQlz+AiSZIkKXkGF0mSJEnJM7hIkiRJSp7BRZIkSVLyDC6SJEmSkmdwkSRJkpQ8
         g4skSZKk5BlcJEmSJCXP4CJJkiQpeQYXSZIkSckzuEiSJElKnsFFkiRJUvIMLpIkSZKSZ3CRJEmSlDyD
@@ -731,7 +735,11 @@
   <data name="gr_CuaHang.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAy4AAALZCAYAAABRU3W+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+<<<<<<< HEAD
         DQAACw0B7QfALAAAju5JREFUeF7t3Qd0XNXdrvH7hS+FNAJJSAghEEiAJBBayqUltCTk0nuH0Fvovffe
+=======
+        DAAACwwBP0AiyAAAju5JREFUeF7t3Qd0XNXdrvH7hS+FNAJJSAghEEiAJBBayqUltCTk0nuH0Fvovffe
+>>>>>>> 1fff07ceffbd26f6c31ab999b357db1829241eb5
         ewdjcMMU22AbjG3cG80YTDEYF8AFsOmdZF+erRl7NDrSzEgz0pb0/NbaCyzNnDlTJP3fs9v/CZIkSZKU
         OIOLJEmSpOQZXCRJkiQlz+AiSZIkKXkGF0mSJEnJM7hIkiRJSp7BRZIkSVLyDC6SJEmSkmdwkSRJkpQ8
         g4skSZKk5BlcJEmSJCXP4CJJkiQpeQYXSZIkSckzuEiSJElKnsFFkiRJUvIMLpIkSZKSZ3CRJEmSlDyD

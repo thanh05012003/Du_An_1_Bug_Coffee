@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using _2.BUS.IServices;
@@ -16,56 +17,47 @@ namespace _3.PL.Views
             InitializeComponent();
             _utility = new Utility();
             _nhanVienService = new NhanVienService();
-            lb_EmailFail.Visible = false;
-            lb_MatKhauFail.Visible = false;
-            txt_MatKhau.UseSystemPasswordChar = true;
+            txt_MatKhau.PasswordChar = true;
         }
 
         public void Check()
         {
             var login = _nhanVienService.GetAll().FirstOrDefault(c =>
-                c.Email.ToLower() == txt_Email.Text.ToLower().Trim() &&
-                c.MatKhau.ToLower() == txt_MatKhau.Text.ToLower().Trim());
-            if (txt_Email.Text.Trim() == "")
+                c.SDT.ToLower() == txt_TaiKhoan.Texts.ToLower().Trim() &&
+                c.MatKhau.ToLower() == txt_MatKhau.Texts.ToLower().Trim());
+            if (txt_TaiKhoan.Texts.Trim() == "")
             {
-                lb_EmailFail.Visible = true;
-                lb_EmailFail.Text = "Không được để trống email";
+                txt_TaiKhoan.PlaceholderColor = Color.Red;
+                txt_TaiKhoan.PlaceholderText = "Không được để trống";
             }
             else
             {
-                if (txt_MatKhau.Text.Trim() == "")
+                if (txt_MatKhau.Texts.Trim() == "")
                 {
-                    lb_MatKhauFail.Visible = true;
-                    lb_MatKhauFail.Text = "Không được để trống mật khẩu";
+                    txt_MatKhau.PlaceholderColor = Color.Red;
+                    txt_MatKhau.PlaceholderText = "Không được để trống";
                 }
                 else
                 {
-                    if (!_utility.IsValidEmail(txt_Email.Text))
+                    if (txt_MatKhau.Texts.Length < 8)
                     {
-                        lb_EmailFail.Visible = true;
-                        lb_EmailFail.Text = "Email sai định dạng";
+                        txt_MatKhau.Texts = "";
+                        txt_MatKhau.PlaceholderColor = Color.Red;
+                        txt_MatKhau.PlaceholderText = "mật khẩu phải nhiều hơn 8 kí tự";
                     }
                     else
                     {
-                        if (txt_MatKhau.Text.Length < 8)
+                        if (login == null)
                         {
-                            lb_MatKhauFail.Visible = true;
-                            lb_MatKhauFail.Text = "Mật khẩu phải nhiều hơn 8 kí tự";
+                            MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
                         }
                         else
                         {
-                            if (login == null)
-                            {
-                                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
-                            }
-                            else
-                            {
-                                Properties.Settings.Default.Tk = txt_Email.Text;
-                                Properties.Settings.Default.Mk = txt_MatKhau.Text;
-                                FrmMain main = new FrmMain();
-                                main.Show();
-                                this.Hide();
-                            }
+                            Properties.Settings.Default.Tk = txt_TaiKhoan.Texts;
+                            Properties.Settings.Default.Mk = txt_MatKhau.Texts;
+                            FrmMain main = new FrmMain();
+                            main.Show();
+                            this.Hide();
                         }
                     }
                 }
@@ -74,27 +66,17 @@ namespace _3.PL.Views
 
         }
 
-        private void btn_DangNhap_Click(object sender, EventArgs e)
-        {
-            Check();
-        }
 
-        private void txt_Email_TextChanged(object sender, EventArgs e)
-        {
-            lb_EmailFail.Visible = false;
-        }
-
-       
 
         private void cb_Show_CheckedChanged(object sender, EventArgs e)
         {
             if (cb_Show.Checked)
             {
-                txt_MatKhau.UseSystemPasswordChar = false;
+                txt_MatKhau.PasswordChar = false;
             }
             else
             {
-                txt_MatKhau.UseSystemPasswordChar = true;
+                txt_MatKhau.PasswordChar = true;
             }
         }
 
@@ -111,9 +93,10 @@ namespace _3.PL.Views
             }
         }
 
-        private void txt_MatKhau_TextChanged(object sender, EventArgs e)
+
+        private void btn_DangNhap_Click_1(object sender, EventArgs e)
         {
-            lb_MatKhauFail.Visible = false;
+            Check();
         }
     }
 }

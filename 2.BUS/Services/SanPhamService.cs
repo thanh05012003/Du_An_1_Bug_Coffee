@@ -14,10 +14,12 @@ namespace _2.BUS.Services
     public class SanPhamService:ISanPhamService
     {
         private ISanPhamRepository _sanPhamRepository;
+        private ILoaiSanPhamRepository _loaisanPhamRepository;
 
         public SanPhamService()
         {
             _sanPhamRepository = new SanPhamRepository();
+            _loaisanPhamRepository = new LoaiSanPhamRepository();
         }
 
         public string add(QlSanPhamView obj)
@@ -30,6 +32,7 @@ namespace _2.BUS.Services
                 TrangThai = obj.TrangThai,
                 Gia = obj.Gia,
                 MoTa = obj.MoTa,
+                URL = obj.URl,
                 MaLsp = obj.MaLsp,
             };
             if (_sanPhamRepository.Add(SanPham))
@@ -55,6 +58,7 @@ namespace _2.BUS.Services
                 TrangThai = obj.TrangThai,
                 Gia = obj.Gia,
                 MoTa = obj.MoTa,
+                URL = obj.URl,
                 MaLsp = obj.MaLsp,
             };
             if (_sanPhamRepository.Update(SanPham))
@@ -68,14 +72,16 @@ namespace _2.BUS.Services
         public List<QlSanPhamView> GetAll()
         {
             var lstSanPham = from a in _sanPhamRepository.GetAll()
-                select new QlSanPhamView
+                             join b in _loaisanPhamRepository.GetAll() on a.MaLsp equals b.Ma
+                             select new QlSanPhamView
                 {
                     Ma = a.Ma,
                     Ten = a.Ten,
                     TrangThai = a.TrangThai,
                     Gia = a.Gia,
                     MoTa = a.MoTa,
-                    MaLsp = a.MaLsp
+                    MaLsp = a.MaLsp,
+                    URl = a.URL,
                 };
             return lstSanPham.ToList();
         }

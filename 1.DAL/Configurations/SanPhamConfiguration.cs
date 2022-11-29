@@ -19,6 +19,10 @@ namespace _1.DAL.Configurations
             builder.Property(p => p.TrangThai).HasColumnType("int").IsRequired();
             builder.Property(p => p.Gia).HasColumnType("money").IsRequired();
             builder.Property(p => p.MoTa).HasColumnType("nvarchar(100)");
+<<<<<<< HEAD
+=======
+            builder.Property(p => p.URL).HasColumnType("nvarchar(max)");
+>>>>>>> 1fff07ceffbd26f6c31ab999b357db1829241eb5
             builder.Property(p => p.MaLsp);
             builder.HasOne(c => c.LoaiSanPham).WithMany().HasForeignKey(c => c.MaLsp);
         }

@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System.Collections.Specialized;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using _2.BUS.IServices;
 using _2.BUS.Services;
+using _3.PL.Views.BanHang;
 using _3.PL.Views.ThongKe;
-using Timer = System.Windows.Forms.Timer;
 
 namespace _3.PL.Views
 {
@@ -64,15 +59,9 @@ namespace _3.PL.Views
             timer1.Start();
             lb_Time.Text = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss");
             var nv = _nhanVienService.GetAll().FirstOrDefault(c =>
-                c.Email.ToLower() == Properties.Settings.Default.Tk.Trim() &&
+                c.SDT.ToLower() == Properties.Settings.Default.Tk.Trim() &&
                 c.MatKhau.ToLower() == Properties.Settings.Default.Mk.Trim());
-            //lb_UserName.Text = nv.Ten;
-        }
-
-
-        private void btn_SanPham_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FrmSanPham(),sender);
+            lb_UserName.Text = nv.Ten + " - " + nv.TenCv;
         }
 
         private void btn_DangXuat_Click(object sender, EventArgs e)
@@ -86,19 +75,62 @@ namespace _3.PL.Views
             }
         }
 
-        private void btn_KhuyenMai_Click(object sender, EventArgs e)
+        public void setColor(object btn)
         {
-            OpenChildForm(new FrmKhuyenMai(),sender);
+            var count = 1;
+           
+            if (count == 0)
+            {
+                btn = Color.MediumSlateBlue;
+                count = 1;
+            }
+            else
+            {
+                btn = Color.MediumSpringGreen;
+                count = 0;
+            }
         }
 
-        private void btn_ThongKe_Click(object sender, EventArgs e)
+     
+
+        private void btn_SanPham_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(new FrmThongKe(),sender);
+            OpenChildForm(new FrmSanPham(), sender);
         }
 
-        private void btn_HoaDon_Click(object sender, EventArgs e)
+        private void btn_HoaDon_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(new FrmHoaDon(),sender);
+            OpenChildForm(new FrmHoaDon(), sender);
+        }
+
+        private void btn_ThongKe_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmThongKe(), sender);
+        }
+
+        private void btn_KhuyenMai_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmKhuyenMai(), sender);
+        }
+
+        private void btn_NhanVien_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmNhanVien(), sender);
+        }
+
+        private void btn_TrangChu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_BanHang_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmBanHang(),sender);
+        }
+
+        private void btn_DoiMatKhau_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btn_NhanVien_Click(object sender, EventArgs e)

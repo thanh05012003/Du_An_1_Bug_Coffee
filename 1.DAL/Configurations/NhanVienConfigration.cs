@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using _1.DAL.DomainClass;
+﻿using _1.DAL.DomainClass;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -19,10 +14,19 @@ namespace _1.DAL.Configurations
             builder.Property(c => c.GioiTinh).HasColumnType("nvarchar(10)");
             builder.Property(c => c.DiaChi).HasColumnType("nvarchar(100)");
             builder.Property(c => c.SDT).HasColumnType("nvarchar(30)").IsRequired();
+<<<<<<< HEAD
             builder.Property(c => c.Email).HasColumnType("varchar(100)");
             builder.Property(c => c.TrangThai).HasColumnType("int").IsRequired();
             builder.Property(c => c.MatKhau).HasColumnType("varchar(max)").IsRequired();
             builder.Property(c => c.MaCV);
+=======
+            builder.Property(c => c.NgaySinh).HasColumnType("date");
+            builder.Property(c => c.Email).HasColumnType("varchar(100)");
+            builder.Property(c => c.TrangThai).HasColumnType("int").IsRequired();
+            builder.Property(c => c.MatKhau).HasColumnType("varchar(max)").IsRequired();
+            builder.Property(c => c.URL).HasColumnType("nvarchar(max)");
+            builder.Property(c => c.MaCV).IsRequired();
+>>>>>>> 1fff07ceffbd26f6c31ab999b357db1829241eb5
             builder.HasOne(c => c.ChucVu).WithMany().HasForeignKey(c => c.MaCV);
             builder.Property(c => c.MaCLV);
             builder.HasOne(c => c.CaLv).WithMany().HasForeignKey(c => c.MaCLV);
