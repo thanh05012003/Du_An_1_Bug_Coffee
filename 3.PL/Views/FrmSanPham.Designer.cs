@@ -400,7 +400,7 @@
             this.btn_CapNhat.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btn_CapNhat.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.btn_CapNhat.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_CapNhat.BorderRadius = 0;
+            this.btn_CapNhat.BorderRadius = 15;
             this.btn_CapNhat.BorderSize = 0;
             this.btn_CapNhat.FlatAppearance.BorderSize = 0;
             this.btn_CapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -419,7 +419,7 @@
             this.btn_Them.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btn_Them.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.btn_Them.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_Them.BorderRadius = 0;
+            this.btn_Them.BorderRadius = 15;
             this.btn_Them.BorderSize = 0;
             this.btn_Them.FlatAppearance.BorderSize = 0;
             this.btn_Them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

@@ -37,7 +37,7 @@ namespace _3.PL.Views
         {
             foreach (var x in _iloaiSanPhamServices.GetAll())
             {
-                cbx_Lsp.Items.Add(x.Ten);
+                cbx_MaLoaiSP.Items.Add(x.Ten);
             }
         }
 

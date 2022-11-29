@@ -14,6 +14,6 @@ namespace _1.DAL.DomainClass
         public DateTime? NgaySinh { get; set; }
         public int DiemTL { get; set; }
         public string MaLKH { get; set; }
-        public virtual LoaiKhachHang? LoaiKhachHang { get; set; }
+      
     }
 }

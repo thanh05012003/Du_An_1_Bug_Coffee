@@ -10,8 +10,8 @@ using _1.DAL.Context;
 namespace _1.DAL.Migrations
 {
     [DbContext(typeof(FpolyDbContext))]
-    [Migration("20221124140054_bugcf2100")]
-    partial class bugcf2100
+    [Migration("20221129155119_bugcf225122")]
+    partial class bugcf225122
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -136,7 +136,7 @@ namespace _1.DAL.Migrations
 
                     b.Property<string>("MaLKH")
                         .IsRequired()
-                        .HasColumnType("varchar(20)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("NgaySinh")
                         .HasColumnType("datetime2");
@@ -149,22 +149,7 @@ namespace _1.DAL.Migrations
 
                     b.HasKey("Ma");
 
-                    b.HasIndex("MaLKH");
-
                     b.ToTable("KhachHang");
-                });
-
-            modelBuilder.Entity("_1.DAL.DomainClass.LoaiKhachHang", b =>
-                {
-                    b.Property<string>("Ma")
-                        .HasColumnType("varchar(20)");
-
-                    b.Property<string>("Ten")
-                        .HasColumnType("nvarchar(100)");
-
-                    b.HasKey("Ma");
-
-                    b.ToTable("LoaiKhachHang");
                 });
 
             modelBuilder.Entity("_1.DAL.DomainClass.LoaiSanPham", b =>
@@ -332,17 +317,6 @@ namespace _1.DAL.Migrations
                     b.Navigation("HoaDon");
 
                     b.Navigation("SanPham");
-                });
-
-            modelBuilder.Entity("_1.DAL.DomainClass.KhachHang", b =>
-                {
-                    b.HasOne("_1.DAL.DomainClass.LoaiKhachHang", "LoaiKhachHang")
-                        .WithMany()
-                        .HasForeignKey("MaLKH")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("LoaiKhachHang");
                 });
 
             modelBuilder.Entity("_1.DAL.DomainClass.NhanVien", b =>

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace _1.DAL.Migrations
 {
-    public partial class bugcf2100 : Migration
+    public partial class bugcf225122 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -48,15 +48,19 @@ namespace _1.DAL.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "LoaiKhachHang",
+                name: "KhachHang",
                 columns: table => new
                 {
                     Ma = table.Column<string>(type: "varchar(20)", nullable: false),
-                    Ten = table.Column<string>(type: "nvarchar(100)", nullable: true)
+                    Ten = table.Column<string>(type: "nvarchar(100)", nullable: true),
+                    SDT = table.Column<string>(type: "varchar(30)", nullable: true),
+                    NgaySinh = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    DiemTL = table.Column<int>(type: "int", nullable: false),
+                    MaLKH = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_LoaiKhachHang", x => x.Ma);
+                    table.PrimaryKey("PK_KhachHang", x => x.Ma);
                 });
 
             migrationBuilder.CreateTable(
@@ -117,28 +121,6 @@ namespace _1.DAL.Migrations
                         name: "FK_NhanVien_ChucVu_MaCV",
                         column: x => x.MaCV,
                         principalTable: "ChucVu",
-                        principalColumn: "Ma",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "KhachHang",
-                columns: table => new
-                {
-                    Ma = table.Column<string>(type: "varchar(20)", nullable: false),
-                    Ten = table.Column<string>(type: "nvarchar(100)", nullable: true),
-                    SDT = table.Column<string>(type: "varchar(30)", nullable: true),
-                    NgaySinh = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DiemTL = table.Column<int>(type: "int", nullable: false),
-                    MaLKH = table.Column<string>(type: "varchar(20)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_KhachHang", x => x.Ma);
-                    table.ForeignKey(
-                        name: "FK_KhachHang_LoaiKhachHang_MaLKH",
-                        column: x => x.MaLKH,
-                        principalTable: "LoaiKhachHang",
                         principalColumn: "Ma",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -257,11 +239,6 @@ namespace _1.DAL.Migrations
                 column: "MaHD");
 
             migrationBuilder.CreateIndex(
-                name: "IX_KhachHang_MaLKH",
-                table: "KhachHang",
-                column: "MaLKH");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_NhanVien_MaCLV",
                 table: "NhanVien",
                 column: "MaCLV");
@@ -302,9 +279,6 @@ namespace _1.DAL.Migrations
 
             migrationBuilder.DropTable(
                 name: "LoaiSanPham");
-
-            migrationBuilder.DropTable(
-                name: "LoaiKhachHang");
 
             migrationBuilder.DropTable(
                 name: "CaLv");

@@ -21,8 +21,6 @@ namespace _1.DAL.Configurations
             builder.Property(p => p.SDT).HasColumnType("varchar(30)");
             builder.Property(p => p.MaLKH).IsRequired();
 
-            //set khoá ngoại
-            builder.HasOne(c => c.LoaiKhachHang).WithMany().HasForeignKey(c => c.MaLKH);
 
         }
     }

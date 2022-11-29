@@ -43,7 +43,6 @@ namespace _1.DAL.Context
         public DbSet<HoaDon> HoaDon { get; set; }
         public DbSet<HoaDonCT> HoaDonCT { get; set; }
         public DbSet<KhachHang> KhachHang { get; set; }
-        public DbSet<LoaiKhachHang> LoaiKhachHang { get; set; }
         public DbSet<LoaiSanPham> LoaiSanPham { get; set; }
         public DbSet<NhanVien> NhanVien { get; set; }
         public DbSet<SanPham> SanPham { get; set; }
