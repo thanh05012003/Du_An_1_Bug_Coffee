@@ -52,16 +52,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_MaSanPham = new System.Windows.Forms.TextBox();
+            this.txt_GiaBan = new System.Windows.Forms.TextBox();
+            this.txt_Mota = new System.Windows.Forms.TextBox();
+            this.txt_TenSanPham = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbx_MaLoaiSP = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.csButton1 = new CustomControls.RJControls.CSButton();
             this.csButton2 = new CustomControls.RJControls.CSButton();
+            this.csButton1 = new CustomControls.RJControls.CSButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -311,33 +311,33 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Trạng Thái :";
             // 
-            // textBox1
+            // txt_MaSanPham
             // 
-            this.textBox1.Location = new System.Drawing.Point(167, 73);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(318, 27);
-            this.textBox1.TabIndex = 1;
+            this.txt_MaSanPham.Location = new System.Drawing.Point(167, 73);
+            this.txt_MaSanPham.Name = "txt_MaSanPham";
+            this.txt_MaSanPham.Size = new System.Drawing.Size(318, 27);
+            this.txt_MaSanPham.TabIndex = 1;
             // 
-            // textBox3
+            // txt_GiaBan
             // 
-            this.textBox3.Location = new System.Drawing.Point(786, 73);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(318, 27);
-            this.textBox3.TabIndex = 1;
+            this.txt_GiaBan.Location = new System.Drawing.Point(786, 73);
+            this.txt_GiaBan.Name = "txt_GiaBan";
+            this.txt_GiaBan.Size = new System.Drawing.Size(318, 27);
+            this.txt_GiaBan.TabIndex = 1;
             // 
-            // textBox4
+            // txt_Mota
             // 
-            this.textBox4.Location = new System.Drawing.Point(786, 160);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(318, 27);
-            this.textBox4.TabIndex = 1;
+            this.txt_Mota.Location = new System.Drawing.Point(786, 160);
+            this.txt_Mota.Name = "txt_Mota";
+            this.txt_Mota.Size = new System.Drawing.Size(318, 27);
+            this.txt_Mota.TabIndex = 1;
             // 
-            // textBox2
+            // txt_TenSanPham
             // 
-            this.textBox2.Location = new System.Drawing.Point(167, 160);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(318, 27);
-            this.textBox2.TabIndex = 1;
+            this.txt_TenSanPham.Location = new System.Drawing.Point(167, 160);
+            this.txt_TenSanPham.Name = "txt_TenSanPham";
+            this.txt_TenSanPham.Size = new System.Drawing.Size(318, 27);
+            this.txt_TenSanPham.TabIndex = 1;
             // 
             // radioButton1
             // 
@@ -361,26 +361,26 @@
             this.radioButton2.Text = "Ngừng Bán";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbx_MaLoaiSP
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(786, 247);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(306, 28);
-            this.comboBox1.TabIndex = 3;
+            this.cbx_MaLoaiSP.FormattingEnabled = true;
+            this.cbx_MaLoaiSP.Location = new System.Drawing.Point(786, 247);
+            this.cbx_MaLoaiSP.Name = "cbx_MaLoaiSP";
+            this.cbx_MaLoaiSP.Size = new System.Drawing.Size(306, 28);
+            this.cbx_MaLoaiSP.TabIndex = 3;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Honeydew;
             this.groupBox1.Controls.Add(this.csButton2);
             this.groupBox1.Controls.Add(this.csButton1);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbx_MaLoaiSP);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txt_TenSanPham);
+            this.groupBox1.Controls.Add(this.txt_Mota);
+            this.groupBox1.Controls.Add(this.txt_GiaBan);
+            this.groupBox1.Controls.Add(this.txt_MaSanPham);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label6);
@@ -395,24 +395,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sản Phẩm";
             // 
-            // csButton1
-            // 
-            this.csButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.csButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.csButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.csButton1.BorderRadius = 0;
-            this.csButton1.BorderSize = 0;
-            this.csButton1.FlatAppearance.BorderSize = 0;
-            this.csButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.csButton1.ForeColor = System.Drawing.Color.White;
-            this.csButton1.Location = new System.Drawing.Point(137, 310);
-            this.csButton1.Name = "csButton1";
-            this.csButton1.Size = new System.Drawing.Size(188, 50);
-            this.csButton1.TabIndex = 4;
-            this.csButton1.Text = "csButton1";
-            this.csButton1.TextColor = System.Drawing.Color.White;
-            this.csButton1.UseVisualStyleBackColor = false;
-            // 
             // csButton2
             // 
             this.csButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
@@ -422,14 +404,34 @@
             this.csButton2.BorderSize = 0;
             this.csButton2.FlatAppearance.BorderSize = 0;
             this.csButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.csButton2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.csButton2.ForeColor = System.Drawing.Color.White;
             this.csButton2.Location = new System.Drawing.Point(786, 310);
             this.csButton2.Name = "csButton2";
             this.csButton2.Size = new System.Drawing.Size(188, 50);
             this.csButton2.TabIndex = 5;
-            this.csButton2.Text = "csButton2";
+            this.csButton2.Text = "Cập Nhật";
             this.csButton2.TextColor = System.Drawing.Color.White;
             this.csButton2.UseVisualStyleBackColor = false;
+            // 
+            // csButton1
+            // 
+            this.csButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.csButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.csButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.csButton1.BorderRadius = 0;
+            this.csButton1.BorderSize = 0;
+            this.csButton1.FlatAppearance.BorderSize = 0;
+            this.csButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.csButton1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.csButton1.ForeColor = System.Drawing.Color.White;
+            this.csButton1.Location = new System.Drawing.Point(137, 310);
+            this.csButton1.Name = "csButton1";
+            this.csButton1.Size = new System.Drawing.Size(188, 50);
+            this.csButton1.TabIndex = 4;
+            this.csButton1.Text = "Thêm";
+            this.csButton1.TextColor = System.Drawing.Color.White;
+            this.csButton1.UseVisualStyleBackColor = false;
             // 
             // FrmSanPham
             // 
@@ -482,13 +484,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_MaSanPham;
+        private System.Windows.Forms.TextBox txt_GiaBan;
+        private System.Windows.Forms.TextBox txt_Mota;
+        private System.Windows.Forms.TextBox txt_TenSanPham;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbx_MaLoaiSP;
         private System.Windows.Forms.GroupBox groupBox1;
         private CustomControls.RJControls.CSButton csButton1;
         private CustomControls.RJControls.CSButton csButton2;
