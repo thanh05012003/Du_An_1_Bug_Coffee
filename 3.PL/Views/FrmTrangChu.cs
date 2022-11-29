@@ -16,5 +16,10 @@ namespace _3.PL.Views
         {
             InitializeComponent();
         }
+
+        private void FrmTrangChu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
