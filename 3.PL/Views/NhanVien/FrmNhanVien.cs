@@ -12,6 +12,7 @@ namespace _3.PL.Views
     {
         private INhanVienService _NhanVienService;
         private IChucVuService _chucVuService;
+        private string _maWhenClick;
         public FrmNhanVien()
         {
             InitializeComponent();
@@ -43,21 +44,21 @@ namespace _3.PL.Views
             dgrid_DtNhanVien.ColumnCount = 12;
             dgrid_DtNhanVien.Columns[0].Name = "STT";
             dgrid_DtNhanVien.Columns[1].Name = "MaNV";
-            dgrid_DtNhanVien.Columns[2].Name = "Ho va ten";
-            dgrid_DtNhanVien.Columns[3].Name = "Gioi tinh";
-            dgrid_DtNhanVien.Columns[4].Name = "Ngay Sinh";
-            dgrid_DtNhanVien.Columns[5].Name = "Dia chi";
-            dgrid_DtNhanVien.Columns[6].Name = "SDT";
+            dgrid_DtNhanVien.Columns[2].Name = "Họ Và Tên";
+            dgrid_DtNhanVien.Columns[3].Name = "Giới Tính";
+            dgrid_DtNhanVien.Columns[4].Name = "Ngày Sinh";
+            dgrid_DtNhanVien.Columns[5].Name = "Địa Chỉ";
+            dgrid_DtNhanVien.Columns[6].Name = "SĐT";
             dgrid_DtNhanVien.Columns[7].Name = "Email";
-            dgrid_DtNhanVien.Columns[8].Name = "Trang Thai";
-            dgrid_DtNhanVien.Columns[9].Name = "Mat khau";
-            dgrid_DtNhanVien.Columns[10].Name = "Chuc vu";
-            dgrid_DtNhanVien.Columns[11].Name = "Ca lam viec";
+            dgrid_DtNhanVien.Columns[8].Name = "Trạng Thái";
+            dgrid_DtNhanVien.Columns[9].Name = "Mật Khẩu";
+            dgrid_DtNhanVien.Columns[10].Name = "Chức Vụ";
+            dgrid_DtNhanVien.Columns[11].Name = "Ca Làm Việc";
             dgrid_DtNhanVien.Rows.Clear();
             foreach (var x in _NhanVienService.GetAll())
             {
                 dgrid_DtNhanVien.Rows.Add(stt++, x.Ma, x.Ten, x.GioiTinh, x.NgaySinh, x.DiaChi, x.SDT, x.Email,
-                    x.TrangThai, x.MatKhau);
+                    x.TrangThai == 1 ? "Hoạt Động" : "Không Hoạt Động", x.MatKhau);
             }
         }
 
@@ -93,6 +94,16 @@ namespace _3.PL.Views
             //Check();
             if (Check())
             {
+                DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn thêm nhân viên này không ? ", "Thông Báo", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    MessageBox.Show(_NhanVienService.add(GetDatafromGui()));
+                    LoadDataNV();
+                }
+                if (dialogResult == DialogResult.No)
+                {
+                    return;
+                }
                 MessageBox.Show(_NhanVienService.add(GetDatafromGui()));
             }
         }
@@ -191,6 +202,23 @@ namespace _3.PL.Views
         private void cbb_cvNV_SelectedIndexChanged(object sender, EventArgs e)
         {
             lb_VaiTroFail.Visible = false;
+        }
+
+        private void dgrid_DtNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //int rowIndex = e.RowIndex;
+            //if (rowIndex == _NhanVienService.GetAll().Count)
+            //{
+            //    return;
+            //}
+            //_maWhenClick = dgrid_DtNhanVien.Rows[rowIndex].Cells[1].Value.ToString());
+            //var _nhanVienVew = _NhanVienService.GetAll().FirstOrDefault(c => c.Ma == _maWhenClick);
+            //txt_maNV.Text = _nhanVienVew.Ma;
+            //txt_nameNV.Text = _nhanVienVew.Ten;
+            //dtpc_NgaySinh.Text = 
+            //txt_mkNV.Text = _nhanVienVew.MatKhau;
+            //txt_DiaChi.Text = _nhanVienVew.DiaChi;
+           
         }
     }
 }

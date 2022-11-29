@@ -16,18 +16,29 @@ namespace _3.PL.Views
     public partial class FrmSanPham : Form
     {
         private ISanPhamService _iSanPhamServices;
+        private ILoaiSanPhamService _iloaiSanPhamServices;
         private string _maWhenClick;
         private QlSanPhamView _qlSanPhamView;
         public FrmSanPham()
         {
             InitializeComponent();
             _iSanPhamServices = new SanPhamService();
+            _iloaiSanPhamServices = new LoaiSanPhamService();
             LoadDataSP();
+            LoadDataLSP();
         }
 
         private void FrmSanPham_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public void LoadDataLSP()
+        {
+            foreach (var x in _iloaiSanPhamServices.GetAll())
+            {
+                cbx_Lsp.Items.Add(x.Ten);
+            }
         }
 
         private void LoadDataSP()
@@ -44,7 +55,7 @@ namespace _3.PL.Views
             dgrid_QLSanPham.Rows.Clear();
             foreach (var x in _iSanPhamServices.GetAll())
             {
-                dgrid_QLSanPham.Rows.Add(stt++, x.Ma, x.Ten, x.Gia, x.MoTa, x.MaLsp, x.TrangThai);
+                dgrid_QLSanPham.Rows.Add(stt++, x.Ma, x.Ten, x.Gia, x.MoTa, x.MaLsp, x.TrangThai == 1 ? "Đang Bán" : "Ngưng Bán");
             }
         }
 

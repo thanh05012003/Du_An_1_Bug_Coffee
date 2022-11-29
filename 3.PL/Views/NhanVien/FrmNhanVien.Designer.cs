@@ -485,6 +485,7 @@
             this.dgrid_DtNhanVien.RowTemplate.Height = 29;
             this.dgrid_DtNhanVien.Size = new System.Drawing.Size(602, 586);
             this.dgrid_DtNhanVien.TabIndex = 56;
+            this.dgrid_DtNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_DtNhanVien_CellClick);
             // 
             // tbt_searchNV
             // 
