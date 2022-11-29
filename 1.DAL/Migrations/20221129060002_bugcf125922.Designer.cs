@@ -10,8 +10,8 @@ using _1.DAL.Context;
 namespace _1.DAL.Migrations
 {
     [DbContext(typeof(FpolyDbContext))]
-    [Migration("20221124140054_bugcf2100")]
-    partial class bugcf2100
+    [Migration("20221129060002_bugcf125922")]
+    partial class bugcf125922
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -219,6 +219,9 @@ namespace _1.DAL.Migrations
                     b.Property<int>("TrangThai")
                         .HasColumnType("int");
 
+                    b.Property<string>("URL")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Ma");
 
                     b.HasIndex("MaCLV");
@@ -249,6 +252,9 @@ namespace _1.DAL.Migrations
 
                     b.Property<int>("TrangThai")
                         .HasColumnType("int");
+
+                    b.Property<string>("URL")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Ma");
 

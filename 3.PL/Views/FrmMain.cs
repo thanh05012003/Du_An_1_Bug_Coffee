@@ -59,7 +59,7 @@ namespace _3.PL.Views
             timer1.Start();
             lb_Time.Text = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss");
             var nv = _nhanVienService.GetAll().FirstOrDefault(c =>
-                c.Email.ToLower() == Properties.Settings.Default.Tk.Trim() &&
+                c.SDT.ToLower() == Properties.Settings.Default.Tk.Trim() &&
                 c.MatKhau.ToLower() == Properties.Settings.Default.Mk.Trim());
             lb_UserName.Text = nv.Ten + " - " + nv.TenCv;
         }
@@ -126,6 +126,11 @@ namespace _3.PL.Views
         private void btn_BanHang_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmBanHang(),sender);
+        }
+
+        private void btn_DoiMatKhau_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

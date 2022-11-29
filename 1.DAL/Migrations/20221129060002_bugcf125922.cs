@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace _1.DAL.Migrations
 {
-    public partial class bugcf2100 : Migration
+    public partial class bugcf125922 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -102,7 +102,8 @@ namespace _1.DAL.Migrations
                     TrangThai = table.Column<int>(type: "int", nullable: false),
                     MatKhau = table.Column<string>(type: "varchar(max)", nullable: false),
                     MaCV = table.Column<string>(type: "varchar(20)", nullable: false),
-                    MaCLV = table.Column<string>(type: "varchar(20)", nullable: true)
+                    MaCLV = table.Column<string>(type: "varchar(20)", nullable: true),
+                    URL = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -152,7 +153,8 @@ namespace _1.DAL.Migrations
                     TrangThai = table.Column<int>(type: "int", nullable: false),
                     Gia = table.Column<decimal>(type: "money", nullable: false),
                     MoTa = table.Column<string>(type: "nvarchar(100)", nullable: true),
-                    MaLsp = table.Column<string>(type: "varchar(20)", nullable: true)
+                    MaLsp = table.Column<string>(type: "varchar(20)", nullable: true),
+                    URL = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

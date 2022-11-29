@@ -88,6 +88,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.splitContainer1.Panel1.Controls.Add(this.lb_VaiTroFail);
             this.splitContainer1.Panel1.Controls.Add(this.lb_MatKauFail);
             this.splitContainer1.Panel1.Controls.Add(this.lb_SDTFail);
@@ -123,6 +124,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.splitContainer1.Panel2.Controls.Add(this.dgrid_DtNhanVien);
             this.splitContainer1.Panel2.Controls.Add(this.tbt_searchNV);
             this.splitContainer1.Panel2.Controls.Add(this.label13);
