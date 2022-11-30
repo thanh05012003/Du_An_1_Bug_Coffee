@@ -215,7 +215,7 @@ namespace _3.PL.Views
             var _nhanVienVew = _NhanVienService.GetAll().FirstOrDefault(c => c.Ma == _maWhenClick);
             txt_maNV.Text = _nhanVienVew.Ma;
             txt_nameNV.Text = _nhanVienVew.Ten;
-            dtpc_NgaySinh.Text =
+            dtpc_NgaySinh.Value = _nhanVienVew.NgaySinh;
             txt_mkNV.Text = _nhanVienVew.MatKhau;
             txt_DiaChi.Text = _nhanVienVew.DiaChi;
 
