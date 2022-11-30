@@ -206,19 +206,19 @@ namespace _3.PL.Views
 
         private void dgrid_DtNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //int rowIndex = e.RowIndex;
-            //if (rowIndex == _NhanVienService.GetAll().Count)
-            //{
-            //    return;
-            //}
-            //_maWhenClick = dgrid_DtNhanVien.Rows[rowIndex].Cells[1].Value.ToString());
-            //var _nhanVienVew = _NhanVienService.GetAll().FirstOrDefault(c => c.Ma == _maWhenClick);
-            //txt_maNV.Text = _nhanVienVew.Ma;
-            //txt_nameNV.Text = _nhanVienVew.Ten;
-            //dtpc_NgaySinh.Text = 
-            //txt_mkNV.Text = _nhanVienVew.MatKhau;
-            //txt_DiaChi.Text = _nhanVienVew.DiaChi;
-           
+            int rowIndex = e.RowIndex;
+            if (rowIndex == _NhanVienService.GetAll().Count)
+            {
+                return;
+            }
+            _maWhenClick = dgrid_DtNhanVien.Rows[rowIndex].Cells[1].Value.ToString();
+            var _nhanVienVew = _NhanVienService.GetAll().FirstOrDefault(c => c.Ma == _maWhenClick);
+            txt_maNV.Text = _nhanVienVew.Ma;
+            txt_nameNV.Text = _nhanVienVew.Ten;
+            dtpc_NgaySinh.Text =
+            txt_mkNV.Text = _nhanVienVew.MatKhau;
+            txt_DiaChi.Text = _nhanVienVew.DiaChi;
+
         }
     }
 }
