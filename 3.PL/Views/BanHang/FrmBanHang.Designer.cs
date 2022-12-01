@@ -28,19 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBanHang));
             this.cbb_loaiSP = new System.Windows.Forms.ComboBox();
-            this.ptb_mh4 = new System.Windows.Forms.PictureBox();
-            this.ptb_mh3 = new System.Windows.Forms.PictureBox();
-            this.ptb_mh8 = new System.Windows.Forms.PictureBox();
-            this.ptb_mh7 = new System.Windows.Forms.PictureBox();
-            this.ptb_mh6 = new System.Windows.Forms.PictureBox();
-            this.ptb_mh5 = new System.Windows.Forms.PictureBox();
-            this.ptb_mh2 = new System.Windows.Forms.PictureBox();
-            this.ptb_mh1 = new System.Windows.Forms.PictureBox();
             this.dtg_hdGiao = new System.Windows.Forms.DataGridView();
             this.dtg_hdCho = new System.Windows.Forms.DataGridView();
-            this.dtg_matHang = new System.Windows.Forms.DataGridView();
             this.tbt_check = new System.Windows.Forms.Button();
             this.tbt_tenSP = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,8 +38,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button9 = new System.Windows.Forms.Button();
             this.btn_ThemHD = new System.Windows.Forms.Button();
             this.dtg_hdNew = new System.Windows.Forms.DataGridView();
@@ -84,20 +74,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_mh4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_mh3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_mh8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_mh7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_mh6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_mh5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_mh2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_mh1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_hdGiao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_hdCho)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_matHang)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_hdNew)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,89 +92,6 @@
             this.cbb_loaiSP.Size = new System.Drawing.Size(166, 28);
             this.cbb_loaiSP.TabIndex = 66;
             this.cbb_loaiSP.Text = "Tất cả";
-            // 
-            // ptb_mh4
-            // 
-            this.ptb_mh4.Image = global::_3.PL.Properties.Resources.nghe;
-            this.ptb_mh4.Location = new System.Drawing.Point(472, 121);
-            this.ptb_mh4.Name = "ptb_mh4";
-            this.ptb_mh4.Size = new System.Drawing.Size(125, 142);
-            this.ptb_mh4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptb_mh4.TabIndex = 67;
-            this.ptb_mh4.TabStop = false;
-            // 
-            // ptb_mh3
-            // 
-            this.ptb_mh3.Image = global::_3.PL.Properties.Resources.nghe;
-            this.ptb_mh3.Location = new System.Drawing.Point(327, 121);
-            this.ptb_mh3.Name = "ptb_mh3";
-            this.ptb_mh3.Size = new System.Drawing.Size(125, 142);
-            this.ptb_mh3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptb_mh3.TabIndex = 65;
-            this.ptb_mh3.TabStop = false;
-            // 
-            // ptb_mh8
-            // 
-            this.ptb_mh8.Image = global::_3.PL.Properties.Resources.nghe;
-            this.ptb_mh8.Location = new System.Drawing.Point(472, 269);
-            this.ptb_mh8.Name = "ptb_mh8";
-            this.ptb_mh8.Size = new System.Drawing.Size(125, 142);
-            this.ptb_mh8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptb_mh8.TabIndex = 64;
-            this.ptb_mh8.TabStop = false;
-            // 
-            // ptb_mh7
-            // 
-            this.ptb_mh7.Image = global::_3.PL.Properties.Resources.nghe;
-            this.ptb_mh7.Location = new System.Drawing.Point(327, 269);
-            this.ptb_mh7.Name = "ptb_mh7";
-            this.ptb_mh7.Size = new System.Drawing.Size(125, 142);
-            this.ptb_mh7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptb_mh7.TabIndex = 63;
-            this.ptb_mh7.TabStop = false;
-            // 
-            // ptb_mh6
-            // 
-            this.ptb_mh6.Image = global::_3.PL.Properties.Resources.nghe;
-            this.ptb_mh6.Location = new System.Drawing.Point(186, 269);
-            this.ptb_mh6.Name = "ptb_mh6";
-            this.ptb_mh6.Size = new System.Drawing.Size(125, 142);
-            this.ptb_mh6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptb_mh6.TabIndex = 62;
-            this.ptb_mh6.TabStop = false;
-            // 
-            // ptb_mh5
-            // 
-            this.ptb_mh5.Image = global::_3.PL.Properties.Resources.nghe;
-            this.ptb_mh5.Location = new System.Drawing.Point(46, 269);
-            this.ptb_mh5.Name = "ptb_mh5";
-            this.ptb_mh5.Size = new System.Drawing.Size(125, 142);
-            this.ptb_mh5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptb_mh5.TabIndex = 61;
-            this.ptb_mh5.TabStop = false;
-            // 
-            // ptb_mh2
-            // 
-            this.ptb_mh2.Image = global::_3.PL.Properties.Resources.nghe;
-            this.ptb_mh2.Location = new System.Drawing.Point(186, 121);
-            this.ptb_mh2.Name = "ptb_mh2";
-            this.ptb_mh2.Size = new System.Drawing.Size(125, 142);
-            this.ptb_mh2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptb_mh2.TabIndex = 60;
-            this.ptb_mh2.TabStop = false;
-            // 
-            // ptb_mh1
-            // 
-            this.ptb_mh1.BackgroundImage = global::_3.PL.Properties.Resources.cafe1;
-            this.ptb_mh1.ErrorImage = null;
-            this.ptb_mh1.Image = ((System.Drawing.Image)(resources.GetObject("ptb_mh1.Image")));
-            this.ptb_mh1.InitialImage = null;
-            this.ptb_mh1.Location = new System.Drawing.Point(46, 121);
-            this.ptb_mh1.Name = "ptb_mh1";
-            this.ptb_mh1.Size = new System.Drawing.Size(125, 142);
-            this.ptb_mh1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptb_mh1.TabIndex = 59;
-            this.ptb_mh1.TabStop = false;
             // 
             // dtg_hdGiao
             // 
@@ -217,17 +114,6 @@
             this.dtg_hdCho.RowTemplate.Height = 29;
             this.dtg_hdCho.Size = new System.Drawing.Size(591, 152);
             this.dtg_hdCho.TabIndex = 57;
-            // 
-            // dtg_matHang
-            // 
-            this.dtg_matHang.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dtg_matHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg_matHang.Location = new System.Drawing.Point(29, 105);
-            this.dtg_matHang.Name = "dtg_matHang";
-            this.dtg_matHang.RowHeadersWidth = 51;
-            this.dtg_matHang.RowTemplate.Height = 29;
-            this.dtg_matHang.Size = new System.Drawing.Size(591, 318);
-            this.dtg_matHang.TabIndex = 56;
             // 
             // tbt_check
             // 
@@ -288,51 +174,41 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.dtg_hdGiao);
             this.panel1.Controls.Add(this.cbb_loaiSP);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.ptb_mh4);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.ptb_mh3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.ptb_mh8);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.ptb_mh7);
             this.panel1.Controls.Add(this.tbt_tenSP);
-            this.panel1.Controls.Add(this.ptb_mh6);
             this.panel1.Controls.Add(this.tbt_check);
-            this.panel1.Controls.Add(this.ptb_mh5);
-            this.panel1.Controls.Add(this.dtg_matHang);
-            this.panel1.Controls.Add(this.ptb_mh2);
             this.panel1.Controls.Add(this.dtg_hdCho);
-            this.panel1.Controls.Add(this.ptb_mh1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(654, 847);
             this.panel1.TabIndex = 68;
             // 
-            // pictureBox2
+            // panel2
             // 
-            this.pictureBox2.Image = global::_3.PL.Properties.Resources.nghe;
-            this.pictureBox2.Location = new System.Drawing.Point(46, 121);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(125, 142);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 69;
-            this.pictureBox2.TabStop = false;
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.flowLayoutPanel1);
+            this.panel2.Location = new System.Drawing.Point(12, 92);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(624, 340);
+            this.panel2.TabIndex = 67;
             // 
-            // pictureBox1
+            // flowLayoutPanel1
             // 
-            this.pictureBox1.Image = global::_3.PL.Properties.Resources.nghe;
-            this.pictureBox1.Location = new System.Drawing.Point(186, 121);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 142);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 68;
-            this.pictureBox1.TabStop = false;
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(622, 338);
+            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // button9
             // 
@@ -355,6 +231,7 @@
             this.btn_ThemHD.TabIndex = 70;
             this.btn_ThemHD.Text = "+";
             this.btn_ThemHD.UseVisualStyleBackColor = false;
+            this.btn_ThemHD.Click += new System.EventHandler(this.btn_ThemHD_Click);
             // 
             // dtg_hdNew
             // 
@@ -705,21 +582,12 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmBanHang";
             this.Text = "FrmBan";
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_mh4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_mh3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_mh8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_mh7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_mh6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_mh5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_mh2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_mh1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_hdGiao)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_hdCho)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_matHang)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_hdNew)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -729,17 +597,8 @@
         #endregion
 
         private System.Windows.Forms.ComboBox cbb_loaiSP;
-        private System.Windows.Forms.PictureBox ptb_mh4;
-        private System.Windows.Forms.PictureBox ptb_mh3;
-        private System.Windows.Forms.PictureBox ptb_mh8;
-        private System.Windows.Forms.PictureBox ptb_mh7;
-        private System.Windows.Forms.PictureBox ptb_mh6;
-        private System.Windows.Forms.PictureBox ptb_mh5;
-        private System.Windows.Forms.PictureBox ptb_mh2;
-        private System.Windows.Forms.PictureBox ptb_mh1;
         private System.Windows.Forms.DataGridView dtg_hdGiao;
         private System.Windows.Forms.DataGridView dtg_hdCho;
-        private System.Windows.Forms.DataGridView dtg_matHang;
         private System.Windows.Forms.Button tbt_check;
         private System.Windows.Forms.TextBox tbt_tenSP;
         private System.Windows.Forms.Label label1;
@@ -747,8 +606,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button btn_ThemHD;
         private System.Windows.Forms.DataGridView dtg_hdNew;
@@ -783,5 +640,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

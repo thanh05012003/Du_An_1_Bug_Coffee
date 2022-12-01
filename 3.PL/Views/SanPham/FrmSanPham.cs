@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _3.PL.Views.SanPham;
 
 namespace _3.PL.Views
 {
@@ -91,7 +92,8 @@ namespace _3.PL.Views
                     Gia = decimal.Parse(txt_GiaBan.Text),
                     MoTa = txt_Mota.Text,
                     MaLsp = lsp.Ma,
-                    TrangThai = rdb_DangBan.Checked ? 1 : 0,    
+                    TrangThai = rdb_DangBan.Checked ? 1 : 0,
+                    URL = pbx_ImgSanPham.ImageLocation
                 };
             }
             else
@@ -159,6 +161,30 @@ namespace _3.PL.Views
             {
                 dgrid_QLSanPham.Rows.Add(stt++, x.Ma, x.Ten, x.Gia, x.MoTa, x.MaLsp, x.TrangThai == 1 ? "Đang Bán" : "Ngưng Bán", x.TenLoaiSp);
             }
+        }
+
+        private void btn_ThemAnh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+
+            dlg.Filter = "Image File (*.jpg;*.jpeg;*.bmp;*.gif;*.png)|*.jpg;*.jpeg;*.bmp;*.gif;*.png";
+            dlg.Title = "Chọn Hình";
+
+            DialogResult dlgRes = dlg.ShowDialog();
+            if (dlgRes != DialogResult.Cancel)
+            {
+                //Gán hình vào Picture box
+                pbx_ImgSanPham.ImageLocation = dlg.FileName;
+                pbx_ImgSanPham.SizeMode = PictureBoxSizeMode.StretchImage;
+                //Gán đường dẫn ảnh vào lbimgpath
+                pbx_ImgSanPham.Text = dlg.FileName;
+            }
+        }
+
+        private void csButton1_Click(object sender, EventArgs e)
+        {
+            FrmLoaiSP frm = new FrmLoaiSP();
+            frm.ShowDialog();
         }
     }
 }

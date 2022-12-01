@@ -33,6 +33,7 @@ namespace _2.BUS.Services
                 Gia = obj.Gia,
                 MoTa = obj.MoTa,
                 MaLsp = obj.MaLsp,
+                URL = obj.URL
             };
             if (_sanPhamRepository.Add(SanPham))
             {
@@ -58,6 +59,7 @@ namespace _2.BUS.Services
                 Gia = obj.Gia,
                 MoTa = obj.MoTa,
                 MaLsp = obj.MaLsp,
+                URL = obj.URL
             };
             if (_sanPhamRepository.Update(SanPham))
             {
@@ -79,8 +81,8 @@ namespace _2.BUS.Services
                     Gia = a.Gia,
                     MoTa = a.MoTa,
                     MaLsp = a.MaLsp,
-                    TenLoaiSp = b.Ten
-                    
+                    TenLoaiSp = b.Ten,
+                    URL = a.URL
                 };
             return lstSanPham.ToList();
         }

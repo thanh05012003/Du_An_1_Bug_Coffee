@@ -7,6 +7,9 @@
     <Compile Update="CustomControl\CSButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="CustomControl\Products.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="CustomControl\RJDropdownMenu.cs">
       <SubType>Component</SubType>
     </Compile>

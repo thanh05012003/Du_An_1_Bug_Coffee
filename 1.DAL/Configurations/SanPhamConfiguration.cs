@@ -20,6 +20,7 @@ namespace _1.DAL.Configurations
             builder.Property(p => p.Gia).HasColumnType("money").IsRequired();
             builder.Property(p => p.MoTa).HasColumnType("nvarchar(100)");
             builder.Property(p => p.MaLsp);
+            builder.Property(p => p.URL).HasColumnType("nvarchar(max)");
             builder.HasOne(c => c.LoaiSanPham).WithMany().HasForeignKey(c => c.MaLsp);
         }
     }
