@@ -21,6 +21,7 @@ namespace _3.PL.Views
         private ILoaiSanPhamService _iloaiSanPhamServices;
         private string _maWhenClick;
         private QlSanPhamView _qlSanPhamView;
+
         public FrmSanPham()
         {
             InitializeComponent();
@@ -40,16 +41,20 @@ namespace _3.PL.Views
 
         public void LoadDataLSP()
         {
+            cbx_MaLoaiSP.Items.Clear();
             foreach (var x in _iloaiSanPhamServices.GetAll())
             {
-                cbx_MaLoaiSP.Items.Add(x.Ma+ "-" + x.Ten);
+                
+                cbx_MaLoaiSP.Items.Add(x.Ma + "-" + x.Ten);
             }
         }
 
         public void LoadDataLoaiSP()
         {
+           
             foreach (var x in _iloaiSanPhamServices.GetAll())
             {
+                cbx_Lsp.Items.Clear();
                 cbx_Lsp.Items.Add(x.Ten);
             }
         }
@@ -76,14 +81,16 @@ namespace _3.PL.Views
             dgrid_QLSanPham.Rows.Clear();
             foreach (var x in _iSanPhamServices.GetAll())
             {
-                dgrid_QLSanPham.Rows.Add(stt++, x.Ma, x.Ten, x.Gia, x.MoTa, x.MaLsp, x.TrangThai == 1 ? "Đang Bán" : "Ngưng Bán",x.TenLoaiSp);
+                dgrid_QLSanPham.Rows.Add(stt++, x.Ma, x.Ten, x.Gia, x.MoTa, x.MaLsp,
+                    x.TrangThai == 1 ? "Đang Bán" : "Ngưng Bán", x.TenLoaiSp);
             }
         }
 
         private QlSanPhamView GetDatafromGui()
         {
             QlSanPhamView sp = new QlSanPhamView();
-            var lsp = _iloaiSanPhamServices.GetAll().FirstOrDefault(c => c.Ma.ToLower() + "-" + c.Ten.ToLower() == cbx_MaLoaiSP.Text.ToLower());
+            var lsp = _iloaiSanPhamServices.GetAll()
+                .FirstOrDefault(c => c.Ma.ToLower() + "-" + c.Ten.ToLower() == cbx_MaLoaiSP.Text.ToLower());
             if (lsp != null)
             {
                 sp = new QlSanPhamView()
@@ -107,17 +114,19 @@ namespace _3.PL.Views
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn cập nhật sản phẩm này không ? ", "Thông Báo", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn cập nhật sản phẩm này không ? ", "Thông Báo",
+                MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 MessageBox.Show(_iSanPhamServices.add(GetDatafromGui()));
                 LoadDataSP();
             }
+
             if (dialogResult == DialogResult.No)
             {
                 return;
             }
-            
+
         }
 
         private void dgrid_QLSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -127,6 +136,7 @@ namespace _3.PL.Views
             {
                 return;
             }
+
             _maWhenClick = dgrid_QLSanPham.Rows[rowIndex].Cells[1].Value.ToString();
             var _sanphamView = _iSanPhamServices.GetAll().FirstOrDefault(c => c.Ma == _maWhenClick);
             txt_MaSanPham.Text = _sanphamView.Ma;
@@ -134,7 +144,7 @@ namespace _3.PL.Views
             txt_GiaBan.Text = _sanphamView.Gia.ToString();
             txt_Mota.Text = _sanphamView.MoTa;
             cbx_MaLoaiSP.Text = _sanphamView.MaLsp + "-" + _sanphamView.TenLoaiSp;
-            if(_sanphamView.TrangThai == 1)
+            if (_sanphamView.TrangThai == 1)
             {
                 rdb_DangBan.Checked = true;
             }
@@ -149,12 +159,14 @@ namespace _3.PL.Views
         {
             var temp = GetDatafromGui();
             temp.Ma = _maWhenClick;
-            DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn cập nhật sản phẩm này không ? ", "Thông Báo", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn cập nhật sản phẩm này không ? ", "Thông Báo",
+                MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 MessageBox.Show(_iSanPhamServices.update(temp));
                 LoadDataSP();
             }
+
             if (dialogResult == DialogResult.No)
             {
                 return;
@@ -174,14 +186,16 @@ namespace _3.PL.Views
             dgrid_QLSanPham.Columns[6].Name = "Trạng Thái";
             dgrid_QLSanPham.Rows.Clear();
             var sanpham = _iSanPhamServices.GetAll()
-                .Where(c => c.Ma.ToLower().StartsWith(txt_TimKiem.Text.ToLower()) || c.Ten.ToLower().StartsWith(txt_TimKiem.Text.ToLower()));
+                .Where(c => c.Ma.ToLower().StartsWith(txt_TimKiem.Text.ToLower()) ||
+                            c.Ten.ToLower().StartsWith(txt_TimKiem.Text.ToLower()));
             foreach (var x in sanpham)
             {
-                dgrid_QLSanPham.Rows.Add(stt++, x.Ma, x.Ten, x.Gia, x.MoTa, x.MaLsp, x.TrangThai == 1 ? "Đang Bán" : "Ngưng Bán", x.TenLoaiSp);
+                dgrid_QLSanPham.Rows.Add(stt++, x.Ma, x.Ten, x.Gia, x.MoTa, x.MaLsp,
+                    x.TrangThai == 1 ? "Đang Bán" : "Ngưng Bán", x.TenLoaiSp);
             }
         }
 
-<<<<<<< HEAD
+
         private void btn_ThemAnh_Click(object sender, EventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
@@ -204,13 +218,7 @@ namespace _3.PL.Views
         {
             FrmLoaiSP frm = new FrmLoaiSP();
             frm.ShowDialog();
-=======
-        private void btn_AddLSP_Click(object sender, EventArgs e)
-        {
-            FrmLoaiSP frm = new FrmLoaiSP();
-            frm.ShowDialog();
             LoadDataLSP();
->>>>>>> c5b957dec0a63453036056d68f372fe745ea4985
         }
     }
 }

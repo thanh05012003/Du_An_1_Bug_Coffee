@@ -59,13 +59,9 @@
             this.rdb_DangBan = new System.Windows.Forms.RadioButton();
             this.rdb_NgungBan = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-<<<<<<< HEAD
             this.btn_ThemAnh = new CustomControls.RJControls.CSButton();
             this.pbx_ImgSanPham = new System.Windows.Forms.PictureBox();
             this.csButton1 = new CustomControls.RJControls.CSButton();
-=======
-            this.btn_AddLSP = new CustomControls.RJControls.CSButton();
->>>>>>> c5b957dec0a63453036056d68f372fe745ea4985
             this.btn_CapNhat = new CustomControls.RJControls.CSButton();
             this.btn_Them = new CustomControls.RJControls.CSButton();
             this.cbx_MaLoaiSP = new System.Windows.Forms.ComboBox();
@@ -374,13 +370,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Honeydew;
-<<<<<<< HEAD
             this.groupBox1.Controls.Add(this.btn_ThemAnh);
             this.groupBox1.Controls.Add(this.pbx_ImgSanPham);
             this.groupBox1.Controls.Add(this.csButton1);
-=======
-            this.groupBox1.Controls.Add(this.btn_AddLSP);
->>>>>>> c5b957dec0a63453036056d68f372fe745ea4985
             this.groupBox1.Controls.Add(this.btn_CapNhat);
             this.groupBox1.Controls.Add(this.btn_Them);
             this.groupBox1.Controls.Add(this.cbx_MaLoaiSP);
@@ -404,7 +396,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sản Phẩm";
             // 
-<<<<<<< HEAD
             // btn_ThemAnh
             // 
             this.btn_ThemAnh.BackColor = System.Drawing.Color.MediumSlateBlue;
@@ -450,26 +441,6 @@
             this.csButton1.TextColor = System.Drawing.Color.White;
             this.csButton1.UseVisualStyleBackColor = false;
             this.csButton1.Click += new System.EventHandler(this.csButton1_Click);
-=======
-            // btn_AddLSP
-            // 
-            this.btn_AddLSP.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_AddLSP.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_AddLSP.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_AddLSP.BorderRadius = 0;
-            this.btn_AddLSP.BorderSize = 0;
-            this.btn_AddLSP.FlatAppearance.BorderSize = 0;
-            this.btn_AddLSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AddLSP.ForeColor = System.Drawing.Color.White;
-            this.btn_AddLSP.Location = new System.Drawing.Point(1109, 245);
-            this.btn_AddLSP.Name = "btn_AddLSP";
-            this.btn_AddLSP.Size = new System.Drawing.Size(38, 30);
-            this.btn_AddLSP.TabIndex = 6;
-            this.btn_AddLSP.Text = "+";
-            this.btn_AddLSP.TextColor = System.Drawing.Color.White;
-            this.btn_AddLSP.UseVisualStyleBackColor = false;
-            this.btn_AddLSP.Click += new System.EventHandler(this.btn_AddLSP_Click);
->>>>>>> c5b957dec0a63453036056d68f372fe745ea4985
             // 
             // btn_CapNhat
             // 
@@ -581,12 +552,10 @@
         private CustomControls.RJControls.CSButton btn_Them;
         private CustomControls.RJControls.CSButton btn_CapNhat;
         private System.Windows.Forms.ComboBox cbx_MaLoaiSP;
-<<<<<<< HEAD
+
         private CustomControls.RJControls.CSButton csButton1;
         private System.Windows.Forms.PictureBox pbx_ImgSanPham;
         private CustomControls.RJControls.CSButton btn_ThemAnh;
-=======
-        private CustomControls.RJControls.CSButton btn_AddLSP;
->>>>>>> c5b957dec0a63453036056d68f372fe745ea4985
+
     }
 }
