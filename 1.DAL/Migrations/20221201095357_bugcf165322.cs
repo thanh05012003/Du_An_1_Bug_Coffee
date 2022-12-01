@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace _1.DAL.Migrations
 {
-    public partial class bugcf225122 : Migration
+    public partial class bugcf165322 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -55,8 +55,8 @@ namespace _1.DAL.Migrations
                     Ten = table.Column<string>(type: "nvarchar(100)", nullable: true),
                     SDT = table.Column<string>(type: "varchar(30)", nullable: true),
                     NgaySinh = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DiemTL = table.Column<int>(type: "int", nullable: false),
-                    MaLKH = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    DiaChi = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DiemTL = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

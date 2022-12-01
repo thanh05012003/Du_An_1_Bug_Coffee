@@ -12,8 +12,9 @@ namespace _1.DAL.DomainClass
         public string Ten { get; set; }
         public string SDT { get; set; }
         public DateTime? NgaySinh { get; set; }
+        public string DiaChi { get; set; }
         public int DiemTL { get; set; }
-        public string MaLKH { get; set; }
+       
       
     }
 }

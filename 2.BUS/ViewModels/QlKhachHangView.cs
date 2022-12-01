@@ -13,6 +13,6 @@ namespace _2.BUS.ViewModels
         public string SDT { get; set; }
         public DateTime? NgaySinh { get; set; }
         public int DiemTL { get; set; }
-        public string MaLKH { get; set; }
+        public string DiaChi { get; set; }
     }
 }
