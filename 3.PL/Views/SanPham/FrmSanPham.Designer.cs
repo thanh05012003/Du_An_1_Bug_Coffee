@@ -62,6 +62,7 @@
             this.btn_CapNhat = new CustomControls.RJControls.CSButton();
             this.btn_Them = new CustomControls.RJControls.CSButton();
             this.cbx_MaLoaiSP = new System.Windows.Forms.ComboBox();
+            this.csButton1 = new CustomControls.RJControls.CSButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_QLSanPham)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -366,6 +367,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Honeydew;
+            this.groupBox1.Controls.Add(this.csButton1);
             this.groupBox1.Controls.Add(this.btn_CapNhat);
             this.groupBox1.Controls.Add(this.btn_Them);
             this.groupBox1.Controls.Add(this.cbx_MaLoaiSP);
@@ -437,6 +439,24 @@
             this.cbx_MaLoaiSP.Size = new System.Drawing.Size(306, 28);
             this.cbx_MaLoaiSP.TabIndex = 3;
             // 
+            // csButton1
+            // 
+            this.csButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.csButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.csButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.csButton1.BorderRadius = 0;
+            this.csButton1.BorderSize = 0;
+            this.csButton1.FlatAppearance.BorderSize = 0;
+            this.csButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.csButton1.ForeColor = System.Drawing.Color.White;
+            this.csButton1.Location = new System.Drawing.Point(1109, 245);
+            this.csButton1.Name = "csButton1";
+            this.csButton1.Size = new System.Drawing.Size(38, 30);
+            this.csButton1.TabIndex = 6;
+            this.csButton1.Text = "+";
+            this.csButton1.TextColor = System.Drawing.Color.White;
+            this.csButton1.UseVisualStyleBackColor = false;
+            // 
             // FrmSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -498,5 +518,6 @@
         private CustomControls.RJControls.CSButton btn_Them;
         private CustomControls.RJControls.CSButton btn_CapNhat;
         private System.Windows.Forms.ComboBox cbx_MaLoaiSP;
+        private CustomControls.RJControls.CSButton csButton1;
     }
 }
