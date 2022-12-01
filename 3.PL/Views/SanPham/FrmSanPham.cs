@@ -1,6 +1,7 @@
 ﻿using _2.BUS.IServices;
 using _2.BUS.Services;
 using _2.BUS.ViewModels;
+using _3.PL.Views.SanPham;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -89,7 +90,7 @@ namespace _3.PL.Views
                 {
                     Ma = txt_MaSanPham.Text,
                     Ten = txt_TenSanPham.Text,
-                    Gia = decimal.Parse(txt_GiaBan.Text),
+                    Gia = Convert.ToDecimal(txt_GiaBan.Text),
                     MoTa = txt_Mota.Text,
                     MaLsp = lsp.Ma,
                     TrangThai = rdb_DangBan.Checked ? 1 : 0,
@@ -106,8 +107,17 @@ namespace _3.PL.Views
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(_iSanPhamServices.add(GetDatafromGui()));
-            LoadDataSP();
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn cập nhật sản phẩm này không ? ", "Thông Báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                MessageBox.Show(_iSanPhamServices.add(GetDatafromGui()));
+                LoadDataSP();
+            }
+            if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
+            
         }
 
         private void dgrid_QLSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -137,10 +147,18 @@ namespace _3.PL.Views
 
         private void btn_CapNhat_Click(object sender, EventArgs e)
         {
-            var sp = GetDatafromGui();
-            sp.Ma = _maWhenClick;
-            MessageBox.Show(_iSanPhamServices.update(sp));
-            LoadDataSP();
+            var temp = GetDatafromGui();
+            temp.Ma = _maWhenClick;
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn cập nhật sản phẩm này không ? ", "Thông Báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                MessageBox.Show(_iSanPhamServices.update(temp));
+                LoadDataSP();
+            }
+            if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
         }
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
@@ -163,6 +181,7 @@ namespace _3.PL.Views
             }
         }
 
+<<<<<<< HEAD
         private void btn_ThemAnh_Click(object sender, EventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
@@ -185,6 +204,13 @@ namespace _3.PL.Views
         {
             FrmLoaiSP frm = new FrmLoaiSP();
             frm.ShowDialog();
+=======
+        private void btn_AddLSP_Click(object sender, EventArgs e)
+        {
+            FrmLoaiSP frm = new FrmLoaiSP();
+            frm.ShowDialog();
+            LoadDataLSP();
+>>>>>>> c5b957dec0a63453036056d68f372fe745ea4985
         }
     }
 }
