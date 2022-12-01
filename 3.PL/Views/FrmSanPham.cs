@@ -26,6 +26,8 @@ namespace _3.PL.Views
             _iloaiSanPhamServices = new LoaiSanPhamService();
             LoadDataSP();
             LoadDataLSP();
+            LoadDataLoaiSP();
+            LoadDataTrangThai();
             rdb_DangBan.Checked = true;
         }
 
@@ -39,6 +41,22 @@ namespace _3.PL.Views
             foreach (var x in _iloaiSanPhamServices.GetAll())
             {
                 cbx_MaLoaiSP.Items.Add(x.Ma+ "-" + x.Ten);
+            }
+        }
+
+        public void LoadDataLoaiSP()
+        {
+            foreach (var x in _iloaiSanPhamServices.GetAll())
+            {
+                cbx_Lsp.Items.Add(x.Ten);
+            }
+        }
+
+        public void LoadDataTrangThai()
+        {
+            foreach (var x in _iSanPhamServices.GetAll())
+            {
+                cbx_TrangThai.Items.Add(x.TrangThai);
             }
         }
 
