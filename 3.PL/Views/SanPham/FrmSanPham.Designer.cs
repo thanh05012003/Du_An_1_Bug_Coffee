@@ -59,10 +59,10 @@
             this.rdb_DangBan = new System.Windows.Forms.RadioButton();
             this.rdb_NgungBan = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_AddLSP = new CustomControls.RJControls.CSButton();
             this.btn_CapNhat = new CustomControls.RJControls.CSButton();
             this.btn_Them = new CustomControls.RJControls.CSButton();
             this.cbx_MaLoaiSP = new System.Windows.Forms.ComboBox();
-            this.csButton1 = new CustomControls.RJControls.CSButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_QLSanPham)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -367,7 +367,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Honeydew;
-            this.groupBox1.Controls.Add(this.csButton1);
+            this.groupBox1.Controls.Add(this.btn_AddLSP);
             this.groupBox1.Controls.Add(this.btn_CapNhat);
             this.groupBox1.Controls.Add(this.btn_Them);
             this.groupBox1.Controls.Add(this.cbx_MaLoaiSP);
@@ -390,6 +390,25 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sản Phẩm";
+            // 
+            // btn_AddLSP
+            // 
+            this.btn_AddLSP.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_AddLSP.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_AddLSP.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_AddLSP.BorderRadius = 0;
+            this.btn_AddLSP.BorderSize = 0;
+            this.btn_AddLSP.FlatAppearance.BorderSize = 0;
+            this.btn_AddLSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddLSP.ForeColor = System.Drawing.Color.White;
+            this.btn_AddLSP.Location = new System.Drawing.Point(1109, 245);
+            this.btn_AddLSP.Name = "btn_AddLSP";
+            this.btn_AddLSP.Size = new System.Drawing.Size(38, 30);
+            this.btn_AddLSP.TabIndex = 6;
+            this.btn_AddLSP.Text = "+";
+            this.btn_AddLSP.TextColor = System.Drawing.Color.White;
+            this.btn_AddLSP.UseVisualStyleBackColor = false;
+            this.btn_AddLSP.Click += new System.EventHandler(this.btn_AddLSP_Click);
             // 
             // btn_CapNhat
             // 
@@ -438,24 +457,6 @@
             this.cbx_MaLoaiSP.Name = "cbx_MaLoaiSP";
             this.cbx_MaLoaiSP.Size = new System.Drawing.Size(306, 28);
             this.cbx_MaLoaiSP.TabIndex = 3;
-            // 
-            // csButton1
-            // 
-            this.csButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.csButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.csButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.csButton1.BorderRadius = 0;
-            this.csButton1.BorderSize = 0;
-            this.csButton1.FlatAppearance.BorderSize = 0;
-            this.csButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.csButton1.ForeColor = System.Drawing.Color.White;
-            this.csButton1.Location = new System.Drawing.Point(1109, 245);
-            this.csButton1.Name = "csButton1";
-            this.csButton1.Size = new System.Drawing.Size(38, 30);
-            this.csButton1.TabIndex = 6;
-            this.csButton1.Text = "+";
-            this.csButton1.TextColor = System.Drawing.Color.White;
-            this.csButton1.UseVisualStyleBackColor = false;
             // 
             // FrmSanPham
             // 
@@ -518,6 +519,6 @@
         private CustomControls.RJControls.CSButton btn_Them;
         private CustomControls.RJControls.CSButton btn_CapNhat;
         private System.Windows.Forms.ComboBox cbx_MaLoaiSP;
-        private CustomControls.RJControls.CSButton csButton1;
+        private CustomControls.RJControls.CSButton btn_AddLSP;
     }
 }
