@@ -58,7 +58,7 @@ namespace _3.PL.Views
             foreach (var x in _NhanVienService.GetAll())
             {
                 dgrid_DtNhanVien.Rows.Add(stt++, x.Ma, x.Ten, x.GioiTinh, x.NgaySinh, x.DiaChi, x.SDT, x.Email,
-                    x.TrangThai == 1 ? "Hoạt Động" : "Không Hoạt Động", x.MatKhau);
+                    x.TrangThai == 1 ? "Hoạt Động" : "Không Hoạt Động", x.MatKhau,x.TenCv);
             }
         }
 

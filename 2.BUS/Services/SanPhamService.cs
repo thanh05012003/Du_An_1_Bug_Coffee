@@ -14,10 +14,12 @@ namespace _2.BUS.Services
     public class SanPhamService:ISanPhamService
     {
         private ISanPhamRepository _sanPhamRepository;
+        private ILoaiSanPhamRepository _loaiSanPhamRepository;
 
         public SanPhamService()
         {
             _sanPhamRepository = new SanPhamRepository();
+            _loaiSanPhamRepository = new LoaiSanPhamRepository();
         }
 
         public string add(QlSanPhamView obj)
@@ -68,6 +70,7 @@ namespace _2.BUS.Services
         public List<QlSanPhamView> GetAll()
         {
             var lstSanPham = from a in _sanPhamRepository.GetAll()
+                             join b in _loaiSanPhamRepository.GetAll() on a.MaLsp equals b.Ma
                 select new QlSanPhamView
                 {
                     Ma = a.Ma,
@@ -75,7 +78,9 @@ namespace _2.BUS.Services
                     TrangThai = a.TrangThai,
                     Gia = a.Gia,
                     MoTa = a.MoTa,
-                    MaLsp = a.MaLsp
+                    MaLsp = a.MaLsp,
+                    TenLoaiSp = b.Ten
+                    
                 };
             return lstSanPham.ToList();
         }

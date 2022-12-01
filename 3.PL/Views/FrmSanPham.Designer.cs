@@ -58,10 +58,10 @@
             this.txt_TenSanPham = new System.Windows.Forms.TextBox();
             this.rdb_DangBan = new System.Windows.Forms.RadioButton();
             this.rdb_NgungBan = new System.Windows.Forms.RadioButton();
-            this.cbx_MaLoaiSP = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_CapNhat = new CustomControls.RJControls.CSButton();
             this.btn_Them = new CustomControls.RJControls.CSButton();
+            this.cbx_MaLoaiSP = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_QLSanPham)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -115,6 +115,7 @@
             this.btn_TimKiem.TabIndex = 9;
             this.btn_TimKiem.Text = "Tìm Kiếm";
             this.btn_TimKiem.UseVisualStyleBackColor = true;
+            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
             // 
             // cbx_Lsp
             // 
@@ -143,6 +144,7 @@
             this.dgrid_QLSanPham.RowTemplate.Height = 29;
             this.dgrid_QLSanPham.Size = new System.Drawing.Size(1317, 339);
             this.dgrid_QLSanPham.TabIndex = 12;
+            this.dgrid_QLSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_QLSanPham_CellClick);
             // 
             // groupBox3
             // 
@@ -361,14 +363,6 @@
             this.rdb_NgungBan.Text = "Ngừng Bán";
             this.rdb_NgungBan.UseVisualStyleBackColor = true;
             // 
-            // cbx_MaLoaiSP
-            // 
-            this.cbx_MaLoaiSP.FormattingEnabled = true;
-            this.cbx_MaLoaiSP.Location = new System.Drawing.Point(786, 247);
-            this.cbx_MaLoaiSP.Name = "cbx_MaLoaiSP";
-            this.cbx_MaLoaiSP.Size = new System.Drawing.Size(306, 28);
-            this.cbx_MaLoaiSP.TabIndex = 3;
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Honeydew;
@@ -413,6 +407,7 @@
             this.btn_CapNhat.Text = "Cập Nhật";
             this.btn_CapNhat.TextColor = System.Drawing.Color.White;
             this.btn_CapNhat.UseVisualStyleBackColor = false;
+            this.btn_CapNhat.Click += new System.EventHandler(this.btn_CapNhat_Click);
             // 
             // btn_Them
             // 
@@ -432,6 +427,15 @@
             this.btn_Them.Text = "Thêm";
             this.btn_Them.TextColor = System.Drawing.Color.White;
             this.btn_Them.UseVisualStyleBackColor = false;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
+            // 
+            // cbx_MaLoaiSP
+            // 
+            this.cbx_MaLoaiSP.FormattingEnabled = true;
+            this.cbx_MaLoaiSP.Location = new System.Drawing.Point(786, 247);
+            this.cbx_MaLoaiSP.Name = "cbx_MaLoaiSP";
+            this.cbx_MaLoaiSP.Size = new System.Drawing.Size(306, 28);
+            this.cbx_MaLoaiSP.TabIndex = 3;
             // 
             // FrmSanPham
             // 
@@ -490,9 +494,9 @@
         private System.Windows.Forms.TextBox txt_TenSanPham;
         private System.Windows.Forms.RadioButton rdb_DangBan;
         private System.Windows.Forms.RadioButton rdb_NgungBan;
-        private System.Windows.Forms.ComboBox cbx_MaLoaiSP;
         private System.Windows.Forms.GroupBox groupBox1;
         private CustomControls.RJControls.CSButton btn_Them;
         private CustomControls.RJControls.CSButton btn_CapNhat;
+        private System.Windows.Forms.ComboBox cbx_MaLoaiSP;
     }
 }
