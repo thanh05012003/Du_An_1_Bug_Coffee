@@ -104,7 +104,6 @@ namespace _3.PL.Views
                 {
                     return;
                 }
-                MessageBox.Show(_NhanVienService.add(GetDatafromGui()));
             }
         }
 
@@ -218,7 +217,41 @@ namespace _3.PL.Views
             dtpc_NgaySinh.Value = _nhanVienVew.NgaySinh;
             txt_mkNV.Text = _nhanVienVew.MatKhau;
             txt_DiaChi.Text = _nhanVienVew.DiaChi;
+            txt_emailNV.Text = _nhanVienVew.Email;
+            cbb_cvNV.Text = _nhanVienVew.TenCv;
+            txt_sdtNV.Text = _nhanVienVew.SDT;
+            if (_nhanVienVew.GioiTinh == "Nam")
+            {
+                rb_nam.Checked = true;
+            }
+            else
+            {
+                rb_nu.Checked = true;
+            }
+            
+            if (_nhanVienVew.TrangThai == 1)
+            {
+                rbtn_HoatDong.Checked = true;
+            }
+        }
 
+        private void btn_updateNV_Click(object sender, EventArgs e)
+        {
+            var temp = GetDatafromGui();
+            temp.Ma = _maWhenClick;
+            if (Check())
+            {
+                DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn cập nhật nhân viên này không ? ", "Thông Báo", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    MessageBox.Show(_NhanVienService.update(temp));
+                    LoadDataNV();
+                }
+                if (dialogResult == DialogResult.No)
+                {
+                    return;
+                }
+            }
         }
     }
 }
