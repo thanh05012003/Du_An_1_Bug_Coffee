@@ -1,7 +1,4 @@
-﻿using _2.BUS.IServices;
-using _2.BUS.Services;
-using _2.BUS.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,17 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _2.BUS.IServices;
+using _2.BUS.Services;
+using _2.BUS.ViewModels;
 
 namespace _3.PL.Views.BanHang
 {
     public partial class FrmKhachHang : Form
     {
-        private IKhachHangService _KhachHangService;
-        private string _maWhenClick;
+        private IKhachHangService _khachHangService;
         public FrmKhachHang()
         {
             InitializeComponent();
-            _KhachHangService = new KhachHangService();
+            _khachHangService = new KhachHangService();
+            LoadDataKH();
         }
         public void LoadDataKH()
         {
@@ -32,9 +32,9 @@ namespace _3.PL.Views.BanHang
             dgrid_TTKhachHang.Columns[3].Name = "Điểm TL";
             dgrid_TTKhachHang.Columns[4].Name = "Địa Chỉ";
             dgrid_TTKhachHang.Rows.Clear();
-            foreach (var x in _KhachHangService.GetAll())
+            foreach (var x in _khachHangService.GetAll())
             {
-                dgrid_TTKhachHang.Rows.Add(x.Ma, x.Ten, x.SDT, x.DiemTL/*,x.DiaChi*/);
+                dgrid_TTKhachHang.Rows.Add(x.Ma, x.Ten, x.SDT, x.DiemTL, x.DiaChi);
             }
         }
 
@@ -47,11 +47,28 @@ namespace _3.PL.Views.BanHang
                 Ten = txt_HoTen.Texts,
                 SDT = txt_SDT.Texts,
                 DiemTL = int.Parse(txt_DiemTl.Texts),
-                //DiaChi = txt_DiaChi.Texts
+                DiaChi = txt_DiaChi.Texts
             };
         }
 
-        private void btn_Them_Click(object sender, EventArgs e)
+
+        private void dgrid_TTKhachHang_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            var rowindex = e.RowIndex;
+            if (rowindex ==_khachHangService.GetAll().Count)
+            {
+                return;
+            }
+            var _maWhenClick = dgrid_TTKhachHang.Rows[rowindex].Cells[0].Value.ToString();
+            var rd = _khachHangService.GetAll().FirstOrDefault(c => c.Ma.ToLower() == _maWhenClick.ToLower());
+            txt_MaKH.Texts = rd.Ma;
+            txt_HoTen.Texts = rd.Ten;
+            txt_SDT.Texts = rd.SDT;
+            txt_DiemTl.Texts = rd.DiemTL.ToString();
+            txt_DiaChi.Texts = rd.DiaChi;
+        }
+
+        private void btn_Them_Click_1(object sender, EventArgs e)
         {
             DialogResult dialog = MessageBox.Show("Bạn có muốn thêm khách hàng này không?", "Thông Báo", MessageBoxButtons.YesNo);
             if (dialog == DialogResult.Yes)
@@ -74,31 +91,10 @@ namespace _3.PL.Views.BanHang
                 }
                 else
                 {
-                    MessageBox.Show(_KhachHangService.add(GetDataFromGui()));
+                    MessageBox.Show(_khachHangService.add(GetDataFromGui()));
                     LoadDataKH();
                 }
             }
-        }
-
-        private void dgrid_TTKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int rowIndex = e.RowIndex;
-            if (rowIndex == _KhachHangService.GetAll().Count)
-            {
-                return;
-            }
-            _maWhenClick = dgrid_TTKhachHang.Rows[rowIndex].Cells[1].Value.ToString();
-            var KhachHangView = _KhachHangService.GetAll().FirstOrDefault(c => c.Ma == _maWhenClick);
-            txt_MaKH.Texts = KhachHangView.Ma;
-            txt_HoTen.Texts = KhachHangView.Ten;
-            txt_SDT.Texts = KhachHangView.SDT;
-            txt_DiemTl.Texts = KhachHangView.DiemTL.ToString();
-            //txt_DiaChi.Text = KhachHangView.DiaChi;
-        }
-
-        private void btn_CapNhat_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

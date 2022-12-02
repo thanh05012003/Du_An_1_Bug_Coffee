@@ -129,12 +129,11 @@ namespace _1.DAL.Migrations
                     b.Property<string>("Ma")
                         .HasColumnType("varchar(20)");
 
+                    b.Property<string>("DiaChi")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("DiemTL")
                         .HasColumnType("int");
-
-                    b.Property<string>("MaLKH")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("NgaySinh")
                         .HasColumnType("datetime2");
@@ -216,8 +215,7 @@ namespace _1.DAL.Migrations
                     b.Property<string>("Ma")
                         .HasColumnType("varchar(20)");
 
-                    b.Property<decimal?>("Gia")
-                        .IsRequired()
+                    b.Property<decimal>("Gia")
                         .HasColumnType("money");
 
                     b.Property<string>("MaLsp")
@@ -232,6 +230,9 @@ namespace _1.DAL.Migrations
 
                     b.Property<int>("TrangThai")
                         .HasColumnType("int");
+
+                    b.Property<string>("URL")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Ma");
 

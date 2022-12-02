@@ -41,7 +41,18 @@ namespace _1.DAL.Repositories
         public bool Update(NhanVien obj)
         {
             if (obj == null) return false;
-            _DbContext.Update(obj);
+            var tempobj = _DbContext.NhanVien.FirstOrDefault(c => c.Ma == obj.Ma);
+            tempobj.Ma = obj.Ma;
+            tempobj.Ten = obj.Ten;
+            tempobj.GioiTinh = obj.GioiTinh;
+            tempobj.NgaySinh = obj.NgaySinh;
+            tempobj.Email = obj.Email;
+            tempobj.SDT = obj.SDT;
+            tempobj.DiaChi = obj.DiaChi;
+            tempobj.MatKhau = obj.MatKhau;
+            tempobj.MaCV = obj.MaCV;
+            tempobj.TrangThai = obj.TrangThai;
+            _DbContext.Update(tempobj);
             _DbContext.SaveChanges();
             return true;
         }

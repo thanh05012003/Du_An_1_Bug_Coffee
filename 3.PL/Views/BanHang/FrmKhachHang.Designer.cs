@@ -86,7 +86,6 @@
             this.btn_CapNhat.Text = "Cập nhật";
             this.btn_CapNhat.TextColor = System.Drawing.Color.White;
             this.btn_CapNhat.UseVisualStyleBackColor = false;
-            this.btn_CapNhat.Click += new System.EventHandler(this.btn_CapNhat_Click);
             // 
             // btn_Them
             // 
@@ -106,6 +105,7 @@
             this.btn_Them.Text = "Thêm";
             this.btn_Them.TextColor = System.Drawing.Color.White;
             this.btn_Them.UseVisualStyleBackColor = false;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click_1);
             // 
             // txt_DiaChi
             // 
@@ -278,6 +278,7 @@
             // 
             // dgrid_TTKhachHang
             // 
+            this.dgrid_TTKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgrid_TTKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrid_TTKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgrid_TTKhachHang.Location = new System.Drawing.Point(0, 0);
@@ -286,7 +287,7 @@
             this.dgrid_TTKhachHang.RowTemplate.Height = 29;
             this.dgrid_TTKhachHang.Size = new System.Drawing.Size(477, 665);
             this.dgrid_TTKhachHang.TabIndex = 0;
-            this.dgrid_TTKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_TTKhachHang_CellClick);
+            this.dgrid_TTKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_TTKhachHang_CellClick_1);
             // 
             // FrmKhachHang
             // 

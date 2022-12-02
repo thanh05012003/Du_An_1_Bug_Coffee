@@ -19,7 +19,7 @@ namespace _1.DAL.Configurations
             builder.Property(p => p.Ten).HasColumnType("nvarchar(100)"); // IsRequired: bắt buộc
             builder.Property(p => p.DiemTL).HasColumnType("int");
             builder.Property(p => p.SDT).HasColumnType("varchar(30)");
-            builder.Property(p => p.MaLKH).IsRequired();
+            builder.Property(p => p.DiaChi).HasColumnType("nvarchar(max)");
 
 
         }

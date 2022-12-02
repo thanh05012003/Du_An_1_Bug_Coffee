@@ -10,8 +10,8 @@ using _1.DAL.Context;
 namespace _1.DAL.Migrations
 {
     [DbContext(typeof(FpolyDbContext))]
-    [Migration("20221129155119_bugcf225122")]
-    partial class bugcf225122
+    [Migration("20221201150841_bugcf2200722")]
+    partial class bugcf2200722
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -131,12 +131,11 @@ namespace _1.DAL.Migrations
                     b.Property<string>("Ma")
                         .HasColumnType("varchar(20)");
 
+                    b.Property<string>("DiaChi")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("DiemTL")
                         .HasColumnType("int");
-
-                    b.Property<string>("MaLKH")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("NgaySinh")
                         .HasColumnType("datetime2");
@@ -218,8 +217,7 @@ namespace _1.DAL.Migrations
                     b.Property<string>("Ma")
                         .HasColumnType("varchar(20)");
 
-                    b.Property<decimal?>("Gia")
-                        .IsRequired()
+                    b.Property<decimal>("Gia")
                         .HasColumnType("money");
 
                     b.Property<string>("MaLsp")
@@ -234,6 +232,9 @@ namespace _1.DAL.Migrations
 
                     b.Property<int>("TrangThai")
                         .HasColumnType("int");
+
+                    b.Property<string>("URL")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Ma");
 

@@ -29,7 +29,7 @@ namespace _2.BUS.Services
                 SDT = obj.SDT,
                 NgaySinh = obj.NgaySinh,
                 DiemTL = obj.DiemTL,
-                MaLKH = obj.MaLKH,
+                DiaChi = obj.DiaChi,
             };
             if (_khachHangRepository.Add(KhachHang))
             {
@@ -54,7 +54,7 @@ namespace _2.BUS.Services
                 SDT = obj.SDT,
                 NgaySinh = obj.NgaySinh,
                 DiemTL = obj.DiemTL,
-                MaLKH = obj.MaLKH,
+                DiaChi = obj.DiaChi,
             };
             if (_khachHangRepository.Update(KhachHang))
             {
@@ -74,7 +74,7 @@ namespace _2.BUS.Services
                     SDT = a.SDT,
                     NgaySinh = a.NgaySinh,
                     DiemTL = a.DiemTL,
-                    MaLKH = a.MaLKH
+                    DiaChi = a.DiaChi
                 };
             return lstKhachHang.ToList();
         }

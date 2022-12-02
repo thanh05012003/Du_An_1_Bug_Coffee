@@ -1,6 +1,7 @@
 ﻿using _2.BUS.IServices;
 using _2.BUS.Services;
 using _2.BUS.ViewModels;
+using _3.PL.Views.SanPham;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _3.PL.Views.SanPham;
 
 namespace _3.PL.Views
 {
@@ -19,6 +21,7 @@ namespace _3.PL.Views
         private ILoaiSanPhamService _iloaiSanPhamServices;
         private string _maWhenClick;
         private QlSanPhamView _qlSanPhamView;
+
         public FrmSanPham()
         {
             InitializeComponent();
@@ -38,16 +41,20 @@ namespace _3.PL.Views
 
         public void LoadDataLSP()
         {
+            cbx_MaLoaiSP.Items.Clear();
             foreach (var x in _iloaiSanPhamServices.GetAll())
             {
-                cbx_MaLoaiSP.Items.Add(x.Ma+ "-" + x.Ten);
+                
+                cbx_MaLoaiSP.Items.Add(x.Ma + "-" + x.Ten);
             }
         }
 
         public void LoadDataLoaiSP()
         {
+           
             foreach (var x in _iloaiSanPhamServices.GetAll())
             {
+                cbx_Lsp.Items.Clear();
                 cbx_Lsp.Items.Add(x.Ten);
             }
         }
@@ -69,29 +76,32 @@ namespace _3.PL.Views
             dgrid_QLSanPham.Columns[2].Name = "Tên Sản Phẩm";
             dgrid_QLSanPham.Columns[3].Name = "Giá bán";
             dgrid_QLSanPham.Columns[4].Name = "Mô Tả";
-            dgrid_QLSanPham.Columns[5].Name = "Mã Loại Sản Phẩm";
+            dgrid_QLSanPham.Columns[5].Name = "Loại Sản Phẩm";
             dgrid_QLSanPham.Columns[6].Name = "Trạng Thái";
             dgrid_QLSanPham.Rows.Clear();
             foreach (var x in _iSanPhamServices.GetAll())
             {
-                dgrid_QLSanPham.Rows.Add(stt++, x.Ma, x.Ten, x.Gia, x.MoTa, x.MaLsp, x.TrangThai == 1 ? "Đang Bán" : "Ngưng Bán",x.TenLoaiSp);
+                dgrid_QLSanPham.Rows.Add(stt++, x.Ma, x.Ten, Math.Round(x.Gia,0), x.MoTa, x.TenLoaiSp,
+                    x.TrangThai == 1 ? "Đang Bán" : "Ngưng Bán");
             }
         }
 
         private QlSanPhamView GetDatafromGui()
         {
             QlSanPhamView sp = new QlSanPhamView();
-            var lsp = _iloaiSanPhamServices.GetAll().FirstOrDefault(c => c.Ma.ToLower() + "-" + c.Ten.ToLower() == cbx_MaLoaiSP.Text.ToLower());
+            var lsp = _iloaiSanPhamServices.GetAll()
+                .FirstOrDefault(c => c.Ma.ToLower() + "-" + c.Ten.ToLower() == cbx_MaLoaiSP.Text.ToLower());
             if (lsp != null)
             {
                 sp = new QlSanPhamView()
                 {
                     Ma = txt_MaSanPham.Text,
                     Ten = txt_TenSanPham.Text,
-                    Gia = decimal.Parse(txt_GiaBan.Text),
+                    Gia = Convert.ToDecimal(txt_GiaBan.Text),
                     MoTa = txt_Mota.Text,
                     MaLsp = lsp.Ma,
-                    TrangThai = rdb_DangBan.Checked ? 1 : 0,    
+                    TrangThai = rdb_DangBan.Checked ? 1 : 0,
+                    URL = pbx_ImgSanPham.ImageLocation
                 };
             }
             else
@@ -104,8 +114,19 @@ namespace _3.PL.Views
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(_iSanPhamServices.add(GetDatafromGui()));
-            LoadDataSP();
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn thêm sản phẩm này không ? ", "Thông Báo",
+                MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                MessageBox.Show(_iSanPhamServices.add(GetDatafromGui()));
+                LoadDataSP();
+            }
+
+            if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
+
         }
 
         private void dgrid_QLSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -115,14 +136,15 @@ namespace _3.PL.Views
             {
                 return;
             }
+
             _maWhenClick = dgrid_QLSanPham.Rows[rowIndex].Cells[1].Value.ToString();
             var _sanphamView = _iSanPhamServices.GetAll().FirstOrDefault(c => c.Ma == _maWhenClick);
             txt_MaSanPham.Text = _sanphamView.Ma;
             txt_TenSanPham.Text = _sanphamView.Ten;
-            txt_GiaBan.Text = _sanphamView.Gia.ToString();
+            txt_GiaBan.Text = Math.Round(_sanphamView.Gia,0).ToString();
             txt_Mota.Text = _sanphamView.MoTa;
             cbx_MaLoaiSP.Text = _sanphamView.MaLsp + "-" + _sanphamView.TenLoaiSp;
-            if(_sanphamView.TrangThai == 1)
+            if (_sanphamView.TrangThai == 1)
             {
                 rdb_DangBan.Checked = true;
             }
@@ -131,14 +153,26 @@ namespace _3.PL.Views
                 rdb_NgungBan.Checked = true;
             }
 
+            pbx_ImgSanPham.ImageLocation = _sanphamView.URL;
+
         }
 
         private void btn_CapNhat_Click(object sender, EventArgs e)
         {
-            var sp = GetDatafromGui();
-            sp.Ma = _maWhenClick;
-            MessageBox.Show(_iSanPhamServices.update(sp));
-            LoadDataSP();
+            var temp = GetDatafromGui();
+            temp.Ma = _maWhenClick;
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn cập nhật sản phẩm này không ? ", "Thông Báo",
+                MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                MessageBox.Show(_iSanPhamServices.update(temp));
+                LoadDataSP();
+            }
+
+            if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
         }
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
@@ -154,11 +188,39 @@ namespace _3.PL.Views
             dgrid_QLSanPham.Columns[6].Name = "Trạng Thái";
             dgrid_QLSanPham.Rows.Clear();
             var sanpham = _iSanPhamServices.GetAll()
-                .Where(c => c.Ma.ToLower().StartsWith(txt_TimKiem.Text.ToLower()) || c.Ten.ToLower().StartsWith(txt_TimKiem.Text.ToLower()));
+                .Where(c => c.Ma.ToLower().StartsWith(txt_TimKiem.Text.ToLower()) ||
+                            c.Ten.ToLower().StartsWith(txt_TimKiem.Text.ToLower()));
             foreach (var x in sanpham)
             {
-                dgrid_QLSanPham.Rows.Add(stt++, x.Ma, x.Ten, x.Gia, x.MoTa, x.MaLsp, x.TrangThai == 1 ? "Đang Bán" : "Ngưng Bán", x.TenLoaiSp);
+                dgrid_QLSanPham.Rows.Add(stt++, x.Ma, x.Ten, x.Gia, x.MoTa, x.MaLsp,
+                    x.TrangThai == 1 ? "Đang Bán" : "Ngưng Bán", x.TenLoaiSp);
             }
+        }
+
+
+        private void btn_ThemAnh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+
+            dlg.Filter = "Image File (*.jpg;*.jpeg;*.bmp;*.gif;*.png)|*.jpg;*.jpeg;*.bmp;*.gif;*.png";
+            dlg.Title = "Chọn Hình";
+
+            DialogResult dlgRes = dlg.ShowDialog();
+            if (dlgRes != DialogResult.Cancel)
+            {
+                //Gán hình vào Picture box
+                pbx_ImgSanPham.ImageLocation = dlg.FileName;
+                pbx_ImgSanPham.SizeMode = PictureBoxSizeMode.StretchImage;
+                //Gán đường dẫn ảnh vào lbimgpath
+                pbx_ImgSanPham.Text = dlg.FileName;
+            }
+        }
+
+        private void csButton1_Click(object sender, EventArgs e)
+        {
+            FrmLoaiSP frm = new FrmLoaiSP();
+            frm.ShowDialog();
+            LoadDataLSP();
         }
     }
 }

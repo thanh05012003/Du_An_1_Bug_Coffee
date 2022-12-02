@@ -450,6 +450,7 @@
             this.btn_updateNV.TabIndex = 42;
             this.btn_updateNV.Text = "Cập nhật";
             this.btn_updateNV.UseVisualStyleBackColor = false;
+            this.btn_updateNV.Click += new System.EventHandler(this.btn_updateNV_Click);
             // 
             // btn_addCV
             // 
