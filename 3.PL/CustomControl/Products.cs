@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using _1.DAL.DomainClass;
+using _2.BUS.IServices;
+using _2.BUS.Services;
+using _2.BUS.ViewModels;
 
 namespace customs
 {
@@ -15,17 +16,18 @@ namespace customs
         private Image _icon;
         private string _title;
         private string _cost;
-
+        public event EventHandler onSelct = null;
+        public event EventHandler Click = null;
+        private ISanPhamService _sanPhamService;
+        public SanPham sp;
         public Products()
         {
             InitializeComponent();
-          Size = new System.Drawing.Size(142, 187);
+            _sanPhamService = new SanPhamService();
+            Size = new System.Drawing.Size(142, 187);
+        
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-           
-        }
 
         public string Title
         {
@@ -45,5 +47,28 @@ namespace customs
             set => pbx_Icon.Image = value;
         }
 
+        private void pbx_Icon_Click(object sender, EventArgs e)
+        {
+            onSelct?.Invoke(this, e);
+            var spv = _sanPhamService.GetAll().FirstOrDefault(c => c.Ten == lb_Title.Text);
+             sp = new SanPham()
+            {
+                Ten = spv.Ten,
+                Gia = spv.Gia,
+                Ma = spv.Ma,
+                MaLsp = spv.MaLsp,
+                MoTa = spv.MoTa
+            };
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            onSelct?.Invoke(this, e);
+        }
+
+        private void panel1_Leave(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
