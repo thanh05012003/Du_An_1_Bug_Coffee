@@ -58,3 +58,18 @@ C:\Users\taibeo\OneDrive\Desktop\Du An One\2.BUS\obj\Debug\net5.0\2.BUS.dll
 C:\Users\taibeo\OneDrive\Desktop\Du An One\2.BUS\obj\Debug\net5.0\refint\2.BUS.dll
 C:\Users\taibeo\OneDrive\Desktop\Du An One\2.BUS\obj\Debug\net5.0\2.BUS.pdb
 C:\Users\taibeo\OneDrive\Desktop\Du An One\2.BUS\obj\Debug\net5.0\ref\2.BUS.dll
+C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\New folder\2.BUS\bin\Debug\net5.0\2.BUS.deps.json
+C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\New folder\2.BUS\bin\Debug\net5.0\2.BUS.dll
+C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\New folder\2.BUS\bin\Debug\net5.0\2.BUS.pdb
+C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\New folder\2.BUS\bin\Debug\net5.0\1.DAL.dll
+C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\New folder\2.BUS\bin\Debug\net5.0\1.DAL.pdb
+C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\New folder\2.BUS\obj\Debug\net5.0\2.BUS.csproj.AssemblyReference.cache
+C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\New folder\2.BUS\obj\Debug\net5.0\2.BUS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\New folder\2.BUS\obj\Debug\net5.0\2.BUS.AssemblyInfoInputs.cache
+C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\New folder\2.BUS\obj\Debug\net5.0\2.BUS.AssemblyInfo.cs
+C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\New folder\2.BUS\obj\Debug\net5.0\2.BUS.csproj.CoreCompileInputs.cache
+C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\New folder\2.BUS\obj\Debug\net5.0\2.BUS.csproj.CopyComplete
+C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\New folder\2.BUS\obj\Debug\net5.0\2.BUS.dll
+C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\New folder\2.BUS\obj\Debug\net5.0\refint\2.BUS.dll
+C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\New folder\2.BUS\obj\Debug\net5.0\2.BUS.pdb
+C:\Users\Dong Xuan Huy\OneDrive - Đại học FPT- FPT University\Desktop\New folder\2.BUS\obj\Debug\net5.0\ref\2.BUS.dll
