@@ -278,6 +278,7 @@
             // 
             // dgrid_TTKhachHang
             // 
+            this.dgrid_TTKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgrid_TTKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrid_TTKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgrid_TTKhachHang.Location = new System.Drawing.Point(0, 0);

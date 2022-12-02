@@ -7,43 +7,63 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _1.DAL.IRepositories;
+using _2.BUS.IServices;
+using _2.BUS.Services;
 using customs;
 
 namespace _3.PL.Views.BanHang
 {
     public partial class FrmBanHang : Form
     {
+        private ISanPhamService _sanPhamService;
+        private Products pr;
         public FrmBanHang()
         {
             InitializeComponent();
+            _sanPhamService = new SanPhamService();
+            pane_HDCho.Visible = false;
+            loadSp();
         }
 
 
-        private void btn_Tach_Click(object sender, EventArgs e)
+        //private void btn_Tach_Click(object sender, EventArgs e)
+        //{
+        //    FrmTachHD frm = new FrmTachHD();
+        //    frm.ShowDialog();
+        //}
+
+        //private void btn_giaoHang_Click(object sender, EventArgs e)
+        //{
+        //    FrmGiaoHang frm = new FrmGiaoHang();
+        //    frm.ShowDialog();
+        //}
+
+
+
+        public void loadSp()
         {
-            FrmTachHD frm = new FrmTachHD();
-            frm.ShowDialog();
-        }
 
-        private void btn_giaoHang_Click(object sender, EventArgs e)
-        {
-            FrmGiaoHang frm = new FrmGiaoHang();
-            frm.ShowDialog();
-        }
-
-        private void btn_ThemKH_Click(object sender, EventArgs e)
-        {
+            foreach (var x in _sanPhamService.GetAll())
+            {
+                flowLayoutPanel1.Controls.Add( pr = new Products()
+                {
+                    Title = x.Ten,
+                    Cost = Math.Round(x.Gia, 0).ToString(),
+                    Icon = Image.FromFile(x.URL)
+                });
+            }
 
         }
-        private string path = @"C:\Users\ADMIN\Downloads\icons8-name-48.png";
+
         private void btn_ThemHD_Click(object sender, EventArgs e)
         {
-            flowLayoutPanel1.Controls.Add(new Products()
-            {
-                Title = "Cafe",
-                Cost = "1000",
-                Icon = Image.FromFile(path)
-            });
+            pane_HDCho.Visible = true;
+            dtg_hdCho.ColumnCount = 1;
+            dtg_hdCho.Columns[0].Name = "Ten";
+            dtg_hdCho.Rows.Add(pr.sp.Ten);
         }
+      
+
     }
 }

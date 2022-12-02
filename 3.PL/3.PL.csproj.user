@@ -25,6 +25,9 @@
     <Compile Update="Views\BanHang\FrmTachHD.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\BanHang\Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\FrmDoiPass.cs">
       <SubType>Form</SubType>
     </Compile>
