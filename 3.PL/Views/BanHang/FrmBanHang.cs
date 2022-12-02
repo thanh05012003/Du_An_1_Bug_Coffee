@@ -59,9 +59,6 @@ namespace _3.PL.Views.BanHang
         private void btn_ThemHD_Click(object sender, EventArgs e)
         {
             pane_HDCho.Visible = true;
-            dtg_hdCho.ColumnCount = 1;
-            dtg_hdCho.Columns[0].Name = "Ten";
-            dtg_hdCho.Rows.Add(pr.sp.Ten);
         }
       
 
