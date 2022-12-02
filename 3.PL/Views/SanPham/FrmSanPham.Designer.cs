@@ -139,6 +139,7 @@
             // 
             // dgrid_QLSanPham
             // 
+            this.dgrid_QLSanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgrid_QLSanPham.BackgroundColor = System.Drawing.Color.DarkGray;
             this.dgrid_QLSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrid_QLSanPham.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -420,6 +421,7 @@
             this.pbx_ImgSanPham.Location = new System.Drawing.Point(1084, 76);
             this.pbx_ImgSanPham.Name = "pbx_ImgSanPham";
             this.pbx_ImgSanPham.Size = new System.Drawing.Size(199, 165);
+            this.pbx_ImgSanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx_ImgSanPham.TabIndex = 7;
             this.pbx_ImgSanPham.TabStop = false;
             // 

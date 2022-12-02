@@ -76,13 +76,13 @@ namespace _3.PL.Views
             dgrid_QLSanPham.Columns[2].Name = "Tên Sản Phẩm";
             dgrid_QLSanPham.Columns[3].Name = "Giá bán";
             dgrid_QLSanPham.Columns[4].Name = "Mô Tả";
-            dgrid_QLSanPham.Columns[5].Name = "Mã Loại Sản Phẩm";
+            dgrid_QLSanPham.Columns[5].Name = "Loại Sản Phẩm";
             dgrid_QLSanPham.Columns[6].Name = "Trạng Thái";
             dgrid_QLSanPham.Rows.Clear();
             foreach (var x in _iSanPhamServices.GetAll())
             {
-                dgrid_QLSanPham.Rows.Add(stt++, x.Ma, x.Ten, x.Gia, x.MoTa, x.MaLsp,
-                    x.TrangThai == 1 ? "Đang Bán" : "Ngưng Bán", x.TenLoaiSp);
+                dgrid_QLSanPham.Rows.Add(stt++, x.Ma, x.Ten, Math.Round(x.Gia,0), x.MoTa, x.TenLoaiSp,
+                    x.TrangThai == 1 ? "Đang Bán" : "Ngưng Bán");
             }
         }
 
@@ -114,7 +114,7 @@ namespace _3.PL.Views
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn cập nhật sản phẩm này không ? ", "Thông Báo",
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn thêm sản phẩm này không ? ", "Thông Báo",
                 MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
@@ -141,7 +141,7 @@ namespace _3.PL.Views
             var _sanphamView = _iSanPhamServices.GetAll().FirstOrDefault(c => c.Ma == _maWhenClick);
             txt_MaSanPham.Text = _sanphamView.Ma;
             txt_TenSanPham.Text = _sanphamView.Ten;
-            txt_GiaBan.Text = _sanphamView.Gia.ToString();
+            txt_GiaBan.Text = Math.Round(_sanphamView.Gia,0).ToString();
             txt_Mota.Text = _sanphamView.MoTa;
             cbx_MaLoaiSP.Text = _sanphamView.MaLsp + "-" + _sanphamView.TenLoaiSp;
             if (_sanphamView.TrangThai == 1)
@@ -152,6 +152,8 @@ namespace _3.PL.Views
             {
                 rdb_NgungBan.Checked = true;
             }
+
+            pbx_ImgSanPham.ImageLocation = _sanphamView.URL;
 
         }
 
