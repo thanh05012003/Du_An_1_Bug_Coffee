@@ -59,7 +59,9 @@
             this.rdb_DangBan = new System.Windows.Forms.RadioButton();
             this.rdb_NgungBan = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_AddLSP = new CustomControls.RJControls.CSButton();
+            this.btn_ThemAnh = new CustomControls.RJControls.CSButton();
+            this.pbx_ImgSanPham = new System.Windows.Forms.PictureBox();
+            this.csButton1 = new CustomControls.RJControls.CSButton();
             this.btn_CapNhat = new CustomControls.RJControls.CSButton();
             this.btn_Them = new CustomControls.RJControls.CSButton();
             this.cbx_MaLoaiSP = new System.Windows.Forms.ComboBox();
@@ -68,6 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_ImgSanPham)).BeginInit();
             this.SuspendLayout();
             // 
             // label13
@@ -136,6 +139,7 @@
             // 
             // dgrid_QLSanPham
             // 
+            this.dgrid_QLSanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgrid_QLSanPham.BackgroundColor = System.Drawing.Color.DarkGray;
             this.dgrid_QLSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrid_QLSanPham.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -268,7 +272,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(676, 76);
+            this.label4.Location = new System.Drawing.Point(537, 76);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 23);
             this.label4.TabIndex = 0;
@@ -278,7 +282,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(676, 163);
+            this.label5.Location = new System.Drawing.Point(537, 163);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 23);
             this.label5.TabIndex = 0;
@@ -288,7 +292,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(676, 251);
+            this.label6.Location = new System.Drawing.Point(537, 251);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(108, 23);
             this.label6.TabIndex = 0;
@@ -323,14 +327,14 @@
             // 
             // txt_GiaBan
             // 
-            this.txt_GiaBan.Location = new System.Drawing.Point(786, 73);
+            this.txt_GiaBan.Location = new System.Drawing.Point(647, 73);
             this.txt_GiaBan.Name = "txt_GiaBan";
             this.txt_GiaBan.Size = new System.Drawing.Size(318, 27);
             this.txt_GiaBan.TabIndex = 1;
             // 
             // txt_Mota
             // 
-            this.txt_Mota.Location = new System.Drawing.Point(786, 160);
+            this.txt_Mota.Location = new System.Drawing.Point(647, 160);
             this.txt_Mota.Name = "txt_Mota";
             this.txt_Mota.Size = new System.Drawing.Size(318, 27);
             this.txt_Mota.TabIndex = 1;
@@ -367,7 +371,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Honeydew;
-            this.groupBox1.Controls.Add(this.btn_AddLSP);
+            this.groupBox1.Controls.Add(this.btn_ThemAnh);
+            this.groupBox1.Controls.Add(this.pbx_ImgSanPham);
+            this.groupBox1.Controls.Add(this.csButton1);
             this.groupBox1.Controls.Add(this.btn_CapNhat);
             this.groupBox1.Controls.Add(this.btn_Them);
             this.groupBox1.Controls.Add(this.cbx_MaLoaiSP);
@@ -391,24 +397,52 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sản Phẩm";
             // 
-            // btn_AddLSP
+            // btn_ThemAnh
             // 
-            this.btn_AddLSP.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_AddLSP.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_AddLSP.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_AddLSP.BorderRadius = 0;
-            this.btn_AddLSP.BorderSize = 0;
-            this.btn_AddLSP.FlatAppearance.BorderSize = 0;
-            this.btn_AddLSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AddLSP.ForeColor = System.Drawing.Color.White;
-            this.btn_AddLSP.Location = new System.Drawing.Point(1109, 245);
-            this.btn_AddLSP.Name = "btn_AddLSP";
-            this.btn_AddLSP.Size = new System.Drawing.Size(38, 30);
-            this.btn_AddLSP.TabIndex = 6;
-            this.btn_AddLSP.Text = "+";
-            this.btn_AddLSP.TextColor = System.Drawing.Color.White;
-            this.btn_AddLSP.UseVisualStyleBackColor = false;
-            this.btn_AddLSP.Click += new System.EventHandler(this.btn_AddLSP_Click);
+            this.btn_ThemAnh.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_ThemAnh.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_ThemAnh.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_ThemAnh.BorderRadius = 0;
+            this.btn_ThemAnh.BorderSize = 0;
+            this.btn_ThemAnh.FlatAppearance.BorderSize = 0;
+            this.btn_ThemAnh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ThemAnh.ForeColor = System.Drawing.Color.White;
+            this.btn_ThemAnh.Location = new System.Drawing.Point(1135, 263);
+            this.btn_ThemAnh.Name = "btn_ThemAnh";
+            this.btn_ThemAnh.Size = new System.Drawing.Size(96, 39);
+            this.btn_ThemAnh.TabIndex = 8;
+            this.btn_ThemAnh.Text = "Thêm ảnh";
+            this.btn_ThemAnh.TextColor = System.Drawing.Color.White;
+            this.btn_ThemAnh.UseVisualStyleBackColor = false;
+            this.btn_ThemAnh.Click += new System.EventHandler(this.btn_ThemAnh_Click);
+            // 
+            // pbx_ImgSanPham
+            // 
+            this.pbx_ImgSanPham.Location = new System.Drawing.Point(1084, 76);
+            this.pbx_ImgSanPham.Name = "pbx_ImgSanPham";
+            this.pbx_ImgSanPham.Size = new System.Drawing.Size(199, 165);
+            this.pbx_ImgSanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_ImgSanPham.TabIndex = 7;
+            this.pbx_ImgSanPham.TabStop = false;
+            // 
+            // csButton1
+            // 
+            this.csButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.csButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.csButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.csButton1.BorderRadius = 0;
+            this.csButton1.BorderSize = 0;
+            this.csButton1.FlatAppearance.BorderSize = 0;
+            this.csButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.csButton1.ForeColor = System.Drawing.Color.White;
+            this.csButton1.Location = new System.Drawing.Point(970, 245);
+            this.csButton1.Name = "csButton1";
+            this.csButton1.Size = new System.Drawing.Size(38, 30);
+            this.csButton1.TabIndex = 6;
+            this.csButton1.Text = "+";
+            this.csButton1.TextColor = System.Drawing.Color.White;
+            this.csButton1.UseVisualStyleBackColor = false;
+            this.csButton1.Click += new System.EventHandler(this.csButton1_Click);
             // 
             // btn_CapNhat
             // 
@@ -421,7 +455,7 @@
             this.btn_CapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_CapNhat.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_CapNhat.ForeColor = System.Drawing.Color.White;
-            this.btn_CapNhat.Location = new System.Drawing.Point(786, 310);
+            this.btn_CapNhat.Location = new System.Drawing.Point(647, 310);
             this.btn_CapNhat.Name = "btn_CapNhat";
             this.btn_CapNhat.Size = new System.Drawing.Size(188, 50);
             this.btn_CapNhat.TabIndex = 5;
@@ -453,7 +487,7 @@
             // cbx_MaLoaiSP
             // 
             this.cbx_MaLoaiSP.FormattingEnabled = true;
-            this.cbx_MaLoaiSP.Location = new System.Drawing.Point(786, 247);
+            this.cbx_MaLoaiSP.Location = new System.Drawing.Point(647, 247);
             this.cbx_MaLoaiSP.Name = "cbx_MaLoaiSP";
             this.cbx_MaLoaiSP.Size = new System.Drawing.Size(306, 28);
             this.cbx_MaLoaiSP.TabIndex = 3;
@@ -476,6 +510,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_ImgSanPham)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -519,6 +554,10 @@
         private CustomControls.RJControls.CSButton btn_Them;
         private CustomControls.RJControls.CSButton btn_CapNhat;
         private System.Windows.Forms.ComboBox cbx_MaLoaiSP;
-        private CustomControls.RJControls.CSButton btn_AddLSP;
+
+        private CustomControls.RJControls.CSButton csButton1;
+        private System.Windows.Forms.PictureBox pbx_ImgSanPham;
+        private CustomControls.RJControls.CSButton btn_ThemAnh;
+
     }
 }

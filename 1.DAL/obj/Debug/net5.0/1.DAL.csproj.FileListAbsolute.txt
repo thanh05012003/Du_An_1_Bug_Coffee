@@ -1,33 +1,3 @@
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\1.DAL\bin\Debug\net5.0\1.DAL.deps.json
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\1.DAL\bin\Debug\net5.0\1.DAL.runtimeconfig.json
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\1.DAL\bin\Debug\net5.0\1.DAL.runtimeconfig.dev.json
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\1.DAL\bin\Debug\net5.0\1.DAL.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\1.DAL\bin\Debug\net5.0\1.DAL.pdb
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\1.DAL\obj\Debug\net5.0\1.DAL.csproj.AssemblyReference.cache
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\1.DAL\obj\Debug\net5.0\1.DAL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\1.DAL\obj\Debug\net5.0\1.DAL.AssemblyInfoInputs.cache
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\1.DAL\obj\Debug\net5.0\1.DAL.AssemblyInfo.cs
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\1.DAL\obj\Debug\net5.0\1.DAL.csproj.CoreCompileInputs.cache
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\1.DAL\obj\Debug\net5.0\1.DAL.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\1.DAL\obj\Debug\net5.0\refint\1.DAL.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\1.DAL\obj\Debug\net5.0\1.DAL.pdb
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\1.DAL\obj\Debug\net5.0\1.DAL.genruntimeconfig.cache
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\1.DAL\obj\Debug\net5.0\ref\1.DAL.dll
-E:\New folder (2)\1.DAL\bin\Debug\net5.0\1.DAL.deps.json
-E:\New folder (2)\1.DAL\bin\Debug\net5.0\1.DAL.runtimeconfig.json
-E:\New folder (2)\1.DAL\bin\Debug\net5.0\1.DAL.runtimeconfig.dev.json
-E:\New folder (2)\1.DAL\bin\Debug\net5.0\1.DAL.dll
-E:\New folder (2)\1.DAL\bin\Debug\net5.0\1.DAL.pdb
-E:\New folder (2)\1.DAL\obj\Debug\net5.0\1.DAL.csproj.AssemblyReference.cache
-E:\New folder (2)\1.DAL\obj\Debug\net5.0\1.DAL.GeneratedMSBuildEditorConfig.editorconfig
-E:\New folder (2)\1.DAL\obj\Debug\net5.0\1.DAL.AssemblyInfoInputs.cache
-E:\New folder (2)\1.DAL\obj\Debug\net5.0\1.DAL.AssemblyInfo.cs
-E:\New folder (2)\1.DAL\obj\Debug\net5.0\1.DAL.csproj.CoreCompileInputs.cache
-E:\New folder (2)\1.DAL\obj\Debug\net5.0\1.DAL.dll
-E:\New folder (2)\1.DAL\obj\Debug\net5.0\refint\1.DAL.dll
-E:\New folder (2)\1.DAL\obj\Debug\net5.0\1.DAL.pdb
-E:\New folder (2)\1.DAL\obj\Debug\net5.0\1.DAL.genruntimeconfig.cache
-E:\New folder (2)\1.DAL\obj\Debug\net5.0\ref\1.DAL.dll
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\1.DAL\bin\Debug\net5.0\1.DAL.deps.json
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\1.DAL\bin\Debug\net5.0\1.DAL.runtimeconfig.json
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\1.DAL\bin\Debug\net5.0\1.DAL.runtimeconfig.dev.json

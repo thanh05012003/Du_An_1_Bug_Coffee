@@ -1,155 +1,3 @@
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.exe
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.deps.json
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.runtimeconfig.json
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.runtimeconfig.dev.json
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.pdb
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Options.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\System.Diagnostics.DiagnosticSource.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\1.DAL.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\2.BUS.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\2.BUS.pdb
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\1.DAL.pdb
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.AssemblyReference.cache
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Properties.Resources.resources
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.BanHang.FrmBanHang.resources
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmGiaoHang.resources
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmTachHD.resources
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmKhuyenMai.resources
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmLogin.resources
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmMain.resources
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmSanPham.resources
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmHDPhaChe.resources
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmHoaDon.resources
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmLichSuHD.resources
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.NhanVien.FrmChucVu.resources
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmNhanVien.resources
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmDT_SP.resources
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmGiaoCa.resources
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.ThongKe.FrmThongKe.resources
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.TichDiemKH.resources
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.GenerateResource.cache
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.AssemblyInfoInputs.cache
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.AssemblyInfo.cs
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.CoreCompileInputs.cache
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.CopyComplete
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\refint\3.PL.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.pdb
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.genruntimeconfig.cache
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\ref\3.PL.dll
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.BanHang.FrmKhachHang.resources
-C:\Users\ADMIN\Desktop\The_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\CustomControls.RJControls.CSTextBox.resources
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\3.PL.exe
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\3.PL.deps.json
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\3.PL.runtimeconfig.json
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\3.PL.runtimeconfig.dev.json
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\3.PL.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\3.PL.pdb
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Memory.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Options.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\System.Diagnostics.DiagnosticSource.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\1.DAL.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\2.BUS.dll
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\2.BUS.pdb
-E:\New folder (2)\3.PL\bin\Debug\net5.0-windows\1.DAL.pdb
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.AssemblyReference.cache
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\CustomControls.RJControls.CSTextBox.resources
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\_3.PL.Properties.Resources.resources
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.BanHang.FrmBanHang.resources
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmGiaoHang.resources
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.BanHang.FrmKhachHang.resources
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmTachHD.resources
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmKhuyenMai.resources
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmLogin.resources
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmMain.resources
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmSanPham.resources
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmHDPhaChe.resources
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmHoaDon.resources
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmLichSuHD.resources
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.NhanVien.FrmChucVu.resources
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmNhanVien.resources
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmDT_SP.resources
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmGiaoCa.resources
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.ThongKe.FrmThongKe.resources
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.TichDiemKH.resources
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.GenerateResource.cache
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\3.PL.GeneratedMSBuildEditorConfig.editorconfig
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\3.PL.AssemblyInfoInputs.cache
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\3.PL.AssemblyInfo.cs
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.CoreCompileInputs.cache
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.CopyComplete
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\3.PL.dll
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\refint\3.PL.dll
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\3.PL.pdb
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\3.PL.genruntimeconfig.cache
-E:\New folder (2)\3.PL\obj\Debug\net5.0-windows\ref\3.PL.dll
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.exe
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.deps.json
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\3.PL.runtimeconfig.json
@@ -197,20 +45,23 @@ C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\2.BUS.pd
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\bin\Debug\net5.0-windows\1.DAL.pdb
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.AssemblyReference.cache
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\CustomControls.RJControls.CSTextBox.resources
+C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\customs.Products.resources
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Properties.Resources.resources
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.BanHang.FrmBanHang.resources
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmGiaoHang.resources
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.BanHang.FrmKhachHang.resources
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmTachHD.resources
+C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmDoiPass.resources
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmKhuyenMai.resources
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmLogin.resources
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmMain.resources
-C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmSanPham.resources
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmHDPhaChe.resources
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmHoaDon.resources
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmLichSuHD.resources
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.NhanVien.FrmChucVu.resources
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmNhanVien.resources
+C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.SanPham.FrmLoaiSP.resources
+C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmSanPham.resources
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmDT_SP.resources
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmGiaoCa.resources
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.ThongKe.FrmThongKe.resources
@@ -273,20 +124,23 @@ C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\bin\Debug\net5.0-windows\2.BUS.p
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\bin\Debug\net5.0-windows\1.DAL.pdb
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\3.PL.csproj.AssemblyReference.cache
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\CustomControls.RJControls.CSTextBox.resources
+C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\customs.Products.resources
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Properties.Resources.resources
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.BanHang.FrmBanHang.resources
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmGiaoHang.resources
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.BanHang.FrmKhachHang.resources
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmTachHD.resources
+C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmDoiPass.resources
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmKhuyenMai.resources
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmLogin.resources
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmMain.resources
-C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmSanPham.resources
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmHDPhaChe.resources
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmHoaDon.resources
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmLichSuHD.resources
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.NhanVien.FrmChucVu.resources
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmNhanVien.resources
+C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.SanPham.FrmLoaiSP.resources
+C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmSanPham.resources
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmDT_SP.resources
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmGiaoCa.resources
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.ThongKe.FrmThongKe.resources
@@ -302,7 +156,3 @@ C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\refint\
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\3.PL.pdb
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\3.PL.genruntimeconfig.cache
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\ref\3.PL.dll
-C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmDoiPass.resources
-C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmDoiPass.resources
-C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.SanPham.FrmLoaiSP.resources
-C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.SanPham.FrmLoaiSP.resources
