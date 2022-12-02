@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using _1.DAL.IRepositories;
 using _2.BUS.IServices;
 using _2.BUS.Services;
 using customs;
@@ -45,13 +44,23 @@ namespace _3.PL.Views.BanHang
         {
 
             foreach (var x in _sanPhamService.GetAll())
-            {
-                flowLayoutPanel1.Controls.Add( pr = new Products()
+            
+            { 
+                if (x.URL != null) {
+                    flowLayoutPanel1.Controls.Add(pr = new Products()
+                    {
+                        Title = x.Ten,
+                        Cost = Math.Round(x.Gia, 0).ToString(),
+                        Icon = Image.FromFile(x.URL)
+                    });
+                }else
                 {
-                    Title = x.Ten,
-                    Cost = Math.Round(x.Gia, 0).ToString(),
-                    Icon = Image.FromFile(x.URL)
-                });
+                    flowLayoutPanel1.Controls.Add(pr = new Products()
+                    {
+                        Title = x.Ten,
+                        Cost = Math.Round(x.Gia, 0).ToString(),
+                    });
+                }
             }
 
         }

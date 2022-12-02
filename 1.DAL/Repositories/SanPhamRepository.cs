@@ -41,7 +41,15 @@ namespace _1.DAL.Repositories
         public bool Update(SanPham obj)
         {
             if (obj == null) return false;
-            _DbContext.Update(obj);
+            var tempobj = _DbContext.SanPham.FirstOrDefault(c => c.Ma == obj.Ma);
+            tempobj.Ma = obj.Ma;
+            tempobj.Ten = obj.Ten;
+            tempobj.Gia = obj.Gia;
+            tempobj.MoTa = obj.MoTa;
+            tempobj.MaLsp = obj.MaLsp;
+            tempobj.URL = obj.URL;
+            tempobj.TrangThai = obj.TrangThai;
+            _DbContext.Update(tempobj);
             _DbContext.SaveChanges();
             return true;
         }
