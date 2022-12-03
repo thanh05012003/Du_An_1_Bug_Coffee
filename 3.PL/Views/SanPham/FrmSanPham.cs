@@ -120,22 +120,30 @@ namespace _3.PL.Views
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            var p = _iSanPhamServices.GetAll().FirstOrDefault(x => x.Ma == txt_MaSanPham.Text);
+            var masp = _iSanPhamServices.GetAll().FirstOrDefault(x => x.Ma == txt_MaSanPham.Text);
+            var tensp = _iSanPhamServices.GetAll().FirstOrDefault(x => x.Ten == txt_TenSanPham.Text);
             if (checknhap() == false)
             {
                 MessageBox.Show("Không được để trống các trường", "Chú ý");
+                return;
             }
-            else if (p != null)
+            else if (masp != null)
             {
                 MessageBox.Show("Mã sản phẩm đã tồn tại");
+                return;
             }
-            else if (txt_TenSanPham.Text.Trim() == "")
+            else if (tensp != null)
             {
-                MessageBox.Show("Không được bỏ trống họ tên");
+                MessageBox.Show("Sản phẩm này đã tồn tại");
+                return;
+            }
+            else if (txt_GiaBan.Text.Trim() == "")
+            {
+                MessageBox.Show("Không được bỏ trống giá");
             }
             else if (txt_Mota.Text.Trim() == "")
             {
-                MessageBox.Show("Không được bỏ trống sđt");
+                MessageBox.Show("Không được bỏ trống mô tả");
             }
             
 

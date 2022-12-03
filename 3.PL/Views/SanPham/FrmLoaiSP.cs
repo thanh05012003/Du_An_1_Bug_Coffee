@@ -20,6 +20,7 @@ namespace _3.PL.Views.SanPham
         {
             InitializeComponent();
             _iloaiSanPhamServices = new LoaiSanPhamService();
+            txt_MaLSP.Enabled = false;
         }
 
 

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chk_Save = new System.Windows.Forms.CheckBox();
             this.btn_DangNhap = new CustomControls.RJControls.CSButton();
             this.txt_MatKhau = new CustomControls.RJControls.CSTextBox();
             this.txt_TaiKhoan = new CustomControls.RJControls.CSTextBox();
@@ -54,6 +55,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.chk_Save);
             this.panel1.Controls.Add(this.btn_DangNhap);
             this.panel1.Controls.Add(this.txt_MatKhau);
             this.panel1.Controls.Add(this.txt_TaiKhoan);
@@ -66,6 +68,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(422, 483);
             this.panel1.TabIndex = 24;
+            // 
+            // chk_Save
+            // 
+            this.chk_Save.AutoSize = true;
+            this.chk_Save.Location = new System.Drawing.Point(26, 334);
+            this.chk_Save.Name = "chk_Save";
+            this.chk_Save.Size = new System.Drawing.Size(205, 24);
+            this.chk_Save.TabIndex = 35;
+            this.chk_Save.Text = "Lưu Thông Tin Đăng Nhập";
+            this.chk_Save.UseVisualStyleBackColor = true;
+            this.chk_Save.CheckedChanged += new System.EventHandler(this.chk_Save_CheckedChanged);
             // 
             // btn_DangNhap
             // 
@@ -199,6 +212,7 @@
         private CustomControls.RJControls.CSTextBox txt_MatKhau;
         private CustomControls.RJControls.CSTextBox txt_TaiKhoan;
         private CustomControls.RJControls.CSButton btn_DangNhap;
+        private System.Windows.Forms.CheckBox chk_Save;
     }
 
         //#endregion

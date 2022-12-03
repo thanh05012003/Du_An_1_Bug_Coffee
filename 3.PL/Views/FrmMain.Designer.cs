@@ -41,14 +41,14 @@
             this.btn_SanPham = new CustomControls.RJControls.CSButton();
             this.btn_TrangChu = new CustomControls.RJControls.CSButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_DoiMatKhau = new CustomControls.RJControls.CSButton();
+            this.btn_GiaoCa = new CustomControls.RJControls.CSButton();
             this.lb_UserName = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lb_Time = new System.Windows.Forms.Label();
             this.btn_DangXuat = new System.Windows.Forms.Button();
             this.gr_CuaHang = new System.Windows.Forms.GroupBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btn_GiaoCa = new CustomControls.RJControls.CSButton();
-            this.btn_DoiMatKhau = new CustomControls.RJControls.CSButton();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -103,6 +103,8 @@
             this.btn_NhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_NhanVien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_NhanVien.ForeColor = System.Drawing.Color.White;
+            this.btn_NhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btn_NhanVien.Image")));
+            this.btn_NhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_NhanVien.Location = new System.Drawing.Point(3, 796);
             this.btn_NhanVien.Name = "btn_NhanVien";
             this.btn_NhanVien.Size = new System.Drawing.Size(263, 82);
@@ -123,6 +125,8 @@
             this.btn_KhuyenMai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_KhuyenMai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_KhuyenMai.ForeColor = System.Drawing.Color.White;
+            this.btn_KhuyenMai.Image = ((System.Drawing.Image)(resources.GetObject("btn_KhuyenMai.Image")));
+            this.btn_KhuyenMai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_KhuyenMai.Location = new System.Drawing.Point(3, 708);
             this.btn_KhuyenMai.Name = "btn_KhuyenMai";
             this.btn_KhuyenMai.Size = new System.Drawing.Size(263, 82);
@@ -143,6 +147,8 @@
             this.btn_ThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ThongKe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_ThongKe.ForeColor = System.Drawing.Color.White;
+            this.btn_ThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btn_ThongKe.Image")));
+            this.btn_ThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_ThongKe.Location = new System.Drawing.Point(3, 620);
             this.btn_ThongKe.Name = "btn_ThongKe";
             this.btn_ThongKe.Size = new System.Drawing.Size(263, 82);
@@ -163,6 +169,8 @@
             this.btn_HoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_HoaDon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_HoaDon.ForeColor = System.Drawing.Color.White;
+            this.btn_HoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btn_HoaDon.Image")));
+            this.btn_HoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_HoaDon.Location = new System.Drawing.Point(3, 532);
             this.btn_HoaDon.Name = "btn_HoaDon";
             this.btn_HoaDon.Size = new System.Drawing.Size(263, 82);
@@ -183,6 +191,8 @@
             this.btn_BanHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_BanHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_BanHang.ForeColor = System.Drawing.Color.White;
+            this.btn_BanHang.Image = ((System.Drawing.Image)(resources.GetObject("btn_BanHang.Image")));
+            this.btn_BanHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_BanHang.Location = new System.Drawing.Point(3, 444);
             this.btn_BanHang.Name = "btn_BanHang";
             this.btn_BanHang.Size = new System.Drawing.Size(263, 82);
@@ -203,6 +213,8 @@
             this.btn_SanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SanPham.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_SanPham.ForeColor = System.Drawing.Color.White;
+            this.btn_SanPham.Image = ((System.Drawing.Image)(resources.GetObject("btn_SanPham.Image")));
+            this.btn_SanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_SanPham.Location = new System.Drawing.Point(3, 356);
             this.btn_SanPham.Name = "btn_SanPham";
             this.btn_SanPham.Size = new System.Drawing.Size(263, 82);
@@ -244,6 +256,43 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1341, 72);
             this.panel2.TabIndex = 2;
+            // 
+            // btn_DoiMatKhau
+            // 
+            this.btn_DoiMatKhau.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_DoiMatKhau.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_DoiMatKhau.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_DoiMatKhau.BorderRadius = 5;
+            this.btn_DoiMatKhau.BorderSize = 0;
+            this.btn_DoiMatKhau.FlatAppearance.BorderSize = 0;
+            this.btn_DoiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DoiMatKhau.ForeColor = System.Drawing.Color.Black;
+            this.btn_DoiMatKhau.Location = new System.Drawing.Point(165, 14);
+            this.btn_DoiMatKhau.Name = "btn_DoiMatKhau";
+            this.btn_DoiMatKhau.Size = new System.Drawing.Size(129, 42);
+            this.btn_DoiMatKhau.TabIndex = 7;
+            this.btn_DoiMatKhau.Text = "Đổi mật khẩu";
+            this.btn_DoiMatKhau.TextColor = System.Drawing.Color.Black;
+            this.btn_DoiMatKhau.UseVisualStyleBackColor = false;
+            this.btn_DoiMatKhau.Click += new System.EventHandler(this.btn_DoiMatKhau_Click);
+            // 
+            // btn_GiaoCa
+            // 
+            this.btn_GiaoCa.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_GiaoCa.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_GiaoCa.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_GiaoCa.BorderRadius = 5;
+            this.btn_GiaoCa.BorderSize = 0;
+            this.btn_GiaoCa.FlatAppearance.BorderSize = 0;
+            this.btn_GiaoCa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_GiaoCa.ForeColor = System.Drawing.Color.Black;
+            this.btn_GiaoCa.Location = new System.Drawing.Point(18, 13);
+            this.btn_GiaoCa.Name = "btn_GiaoCa";
+            this.btn_GiaoCa.Size = new System.Drawing.Size(129, 42);
+            this.btn_GiaoCa.TabIndex = 6;
+            this.btn_GiaoCa.Text = "Giao Ca";
+            this.btn_GiaoCa.TextColor = System.Drawing.Color.Black;
+            this.btn_GiaoCa.UseVisualStyleBackColor = false;
             // 
             // lb_UserName
             // 
@@ -301,43 +350,6 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btn_GiaoCa
-            // 
-            this.btn_GiaoCa.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_GiaoCa.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_GiaoCa.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_GiaoCa.BorderRadius = 5;
-            this.btn_GiaoCa.BorderSize = 0;
-            this.btn_GiaoCa.FlatAppearance.BorderSize = 0;
-            this.btn_GiaoCa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_GiaoCa.ForeColor = System.Drawing.Color.Black;
-            this.btn_GiaoCa.Location = new System.Drawing.Point(18, 13);
-            this.btn_GiaoCa.Name = "btn_GiaoCa";
-            this.btn_GiaoCa.Size = new System.Drawing.Size(129, 42);
-            this.btn_GiaoCa.TabIndex = 6;
-            this.btn_GiaoCa.Text = "Giao Ca";
-            this.btn_GiaoCa.TextColor = System.Drawing.Color.Black;
-            this.btn_GiaoCa.UseVisualStyleBackColor = false;
-            // 
-            // btn_DoiMatKhau
-            // 
-            this.btn_DoiMatKhau.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_DoiMatKhau.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_DoiMatKhau.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_DoiMatKhau.BorderRadius = 5;
-            this.btn_DoiMatKhau.BorderSize = 0;
-            this.btn_DoiMatKhau.FlatAppearance.BorderSize = 0;
-            this.btn_DoiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DoiMatKhau.ForeColor = System.Drawing.Color.Black;
-            this.btn_DoiMatKhau.Location = new System.Drawing.Point(165, 14);
-            this.btn_DoiMatKhau.Name = "btn_DoiMatKhau";
-            this.btn_DoiMatKhau.Size = new System.Drawing.Size(129, 42);
-            this.btn_DoiMatKhau.TabIndex = 7;
-            this.btn_DoiMatKhau.Text = "Đổi mật khẩu";
-            this.btn_DoiMatKhau.TextColor = System.Drawing.Color.Black;
-            this.btn_DoiMatKhau.UseVisualStyleBackColor = false;
-            this.btn_DoiMatKhau.Click += new System.EventHandler(this.btn_DoiMatKhau_Click);
             // 
             // FrmMain
             // 
