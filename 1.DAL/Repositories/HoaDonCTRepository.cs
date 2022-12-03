@@ -35,7 +35,8 @@ namespace _1.DAL.Repositories
 
         public List<HoaDonCT> GetAll()
         {
-            return _DbContext.HoaDonCT.ToList();
+            var lstHdct = _DbContext.HoaDonCT.ToList();
+            return lstHdct;
         }
 
         public bool Update(HoaDonCT obj)

@@ -75,13 +75,12 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.dtg_hdNew = new System.Windows.Forms.DataGridView();
+            this.lv_Hd = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_hdGiao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_hdCho)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pane_HDCho.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_hdNew)).BeginInit();
             this.SuspendLayout();
             // 
             // cbb_loaiSP
@@ -202,6 +201,7 @@
             this.btn_ThemVaoHD.TabIndex = 68;
             this.btn_ThemVaoHD.Text = "Thêm vào hoá đơn";
             this.btn_ThemVaoHD.UseVisualStyleBackColor = true;
+            this.btn_ThemVaoHD.Click += new System.EventHandler(this.btn_ThemVaoHD_Click);
             // 
             // panel2
             // 
@@ -248,6 +248,7 @@
             // 
             // pane_HDCho
             // 
+            this.pane_HDCho.Controls.Add(this.lv_Hd);
             this.pane_HDCho.Controls.Add(this.btn_giaoHang);
             this.pane_HDCho.Controls.Add(this.btn_Tach);
             this.pane_HDCho.Controls.Add(this.btn_Huy);
@@ -279,7 +280,6 @@
             this.pane_HDCho.Controls.Add(this.label12);
             this.pane_HDCho.Controls.Add(this.label13);
             this.pane_HDCho.Controls.Add(this.label14);
-            this.pane_HDCho.Controls.Add(this.dtg_hdNew);
             this.pane_HDCho.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pane_HDCho.Location = new System.Drawing.Point(654, 69);
             this.pane_HDCho.Name = "pane_HDCho";
@@ -579,16 +579,15 @@
             this.label14.TabIndex = 105;
             this.label14.Text = "Tổng tiền sản phảm:";
             // 
-            // dtg_hdNew
+            // lv_Hd
             // 
-            this.dtg_hdNew.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dtg_hdNew.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg_hdNew.Location = new System.Drawing.Point(23, 6);
-            this.dtg_hdNew.Name = "dtg_hdNew";
-            this.dtg_hdNew.RowHeadersWidth = 51;
-            this.dtg_hdNew.RowTemplate.Height = 29;
-            this.dtg_hdNew.Size = new System.Drawing.Size(622, 194);
-            this.dtg_hdNew.TabIndex = 103;
+            this.lv_Hd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lv_Hd.HideSelection = false;
+            this.lv_Hd.Location = new System.Drawing.Point(0, 0);
+            this.lv_Hd.Name = "lv_Hd";
+            this.lv_Hd.Size = new System.Drawing.Size(669, 194);
+            this.lv_Hd.TabIndex = 135;
+            this.lv_Hd.UseCompatibleStateImageBehavior = false;
             // 
             // FrmBanHang
             // 
@@ -609,7 +608,6 @@
             this.panel2.PerformLayout();
             this.pane_HDCho.ResumeLayout(false);
             this.pane_HDCho.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_hdNew)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -662,7 +660,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridView dtg_hdNew;
         private System.Windows.Forms.Button btn_ThemVaoHD;
+        private System.Windows.Forms.ListView lv_Hd;
     }
 }

@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using _1.DAL.IRepositories;
 using _2.BUS.IServices;
 using _2.BUS.Services;
 using customs;
@@ -22,10 +15,11 @@ namespace _3.PL.Views.BanHang
         {
             InitializeComponent();
             _sanPhamService = new SanPhamService();
+            pr= new Products();
             pane_HDCho.Visible = false;
             loadSp();
+           
         }
-
 
         //private void btn_Tach_Click(object sender, EventArgs e)
         //{
@@ -39,28 +33,35 @@ namespace _3.PL.Views.BanHang
         //    frm.ShowDialog();
         //}
 
-
-
         public void loadSp()
         {
 
             foreach (var x in _sanPhamService.GetAll())
             {
-                flowLayoutPanel1.Controls.Add( pr = new Products()
+                flowLayoutPanel1.Controls.Add(new Products()
                 {
                     Title = x.Ten,
                     Cost = Math.Round(x.Gia, 0).ToString(),
                     Icon = Image.FromFile(x.URL)
                 });
             }
+        }
 
+        public void loadHD()
+        {
+            //dtg_hdNew.ColumnCount = 1;
+            //dtg_hdNew.Columns[0].Name = "Ten";
+            //dtg_hdNew.Rows.Add();
         }
 
         private void btn_ThemHD_Click(object sender, EventArgs e)
         {
             pane_HDCho.Visible = true;
         }
-      
 
+        private void btn_ThemVaoHD_Click(object sender, EventArgs e)
+        {
+            loadHD();
+        }
     }
 }

@@ -17,7 +17,6 @@ namespace _1.DAL.Configurations
             builder.Property(c => c.Ma).HasColumnType("varchar(20)");
             builder.Property(c => c.MaKH);
             builder.Property(c => c.MaNV);
-            builder.Property(c => c.MaNV);
             builder.Property(c => c.NgayTao).HasColumnType("date");
             //Khoá ngoại
             builder.HasOne(c => c.KhachHang).WithMany().HasForeignKey(c => c.MaKH);

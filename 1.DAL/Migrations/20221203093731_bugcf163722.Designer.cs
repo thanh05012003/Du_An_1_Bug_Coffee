@@ -10,8 +10,8 @@ using _1.DAL.Context;
 namespace _1.DAL.Migrations
 {
     [DbContext(typeof(FpolyDbContext))]
-    [Migration("20221201150841_bugcf2200722")]
-    partial class bugcf2200722
+    [Migration("20221203093731_bugcf163722")]
+    partial class bugcf163722
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

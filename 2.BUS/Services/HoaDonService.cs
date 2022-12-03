@@ -14,10 +14,15 @@ namespace _2.BUS.Services
     public class HoaDonService:IHoaDonService
     {
         private IHoaDonRepository _hoaDonRepository;
-
+        private IKhachHangService _khachHangService;
+        private INhanVienService _nhanVienService;
+        private IVoucherService _voucherService;
         public HoaDonService()
         {
             _hoaDonRepository = new HoaDonRepository();
+            _khachHangService =  new KhachHangService();
+            _nhanVienService = new NhanVienService();
+            _voucherService = new VoucherService();
         }
         public string add(QlHoaDonView obj)
         {
@@ -65,13 +70,19 @@ namespace _2.BUS.Services
         public List<QlHoaDonView> GetAll()
         {
             var lstHoaDon = from a in _hoaDonRepository.GetAll()
+                join b in _nhanVienService.GetAll() on a.MaNV equals b.Ma
+                join c in _khachHangService.GetAll() on a.MaKH equals c.Ma
+                join d in _voucherService.GetAll() on a.MaVC equals d.Ma
                 select new QlHoaDonView()
                 {
                     Ma = a.Ma,
                     MaKH = a.MaKH,
                     MaNV = a.MaNV,
                     NgayTao = a.NgayTao,
-                    MaVC = a.MaVC
+                    MaVC = a.MaVC,
+                    TenKH = c.Ten,
+                    TenNV = b.Ten,
+                    TenVoucher = d.Ten
                 };
             return lstHoaDon.ToList();
         }
