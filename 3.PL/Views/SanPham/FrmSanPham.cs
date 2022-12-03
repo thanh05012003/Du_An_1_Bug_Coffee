@@ -112,8 +112,33 @@ namespace _3.PL.Views
             return sp;
         }
 
+        public bool checknhap()
+        {
+            if (txt_MaSanPham.Text == "" || txt_TenSanPham.Text == "" || txt_GiaBan.Text == "" || txt_Mota.Text == "" ) return false;
+            return true;
+        }
+
         private void btn_Them_Click(object sender, EventArgs e)
         {
+            var p = _iSanPhamServices.GetAll().FirstOrDefault(x => x.Ma == txt_MaSanPham.Text);
+            if (checknhap() == false)
+            {
+                MessageBox.Show("Không được để trống các trường", "Chú ý");
+            }
+            else if (p != null)
+            {
+                MessageBox.Show("Mã sản phẩm đã tồn tại");
+            }
+            else if (txt_TenSanPham.Text.Trim() == "")
+            {
+                MessageBox.Show("Không được bỏ trống họ tên");
+            }
+            else if (txt_Mota.Text.Trim() == "")
+            {
+                MessageBox.Show("Không được bỏ trống sđt");
+            }
+            
+
             DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn thêm sản phẩm này không ? ", "Thông Báo",
                 MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
