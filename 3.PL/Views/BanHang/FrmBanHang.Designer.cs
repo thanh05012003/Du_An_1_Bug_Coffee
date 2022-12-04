@@ -247,6 +247,7 @@
             this.btn_ThemKH.TabIndex = 143;
             this.btn_ThemKH.Text = "+";
             this.btn_ThemKH.UseVisualStyleBackColor = false;
+            this.btn_ThemKH.Click += new System.EventHandler(this.btn_ThemKH_Click);
             // 
             // btn_search
             // 

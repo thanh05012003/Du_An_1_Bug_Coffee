@@ -49,8 +49,8 @@ namespace _3.PL.Views
                     _inhanVienServices.update(mkmoi);
                     MessageBox.Show("Đổi mật khẩu thành công. Vui lòng đăng nhập lại");
                 }
-                //this.Hide();
-                //Application.Exit();
+                this.Hide();
+                Application.Exit();
                 FrmMain m = new FrmMain();
                 this.Close();
 
