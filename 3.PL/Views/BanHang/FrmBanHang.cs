@@ -36,6 +36,26 @@ namespace _3.PL.Views.BanHang
             showBtnHdcho();
         }
 
+
+
+        #region Method
+        public QlHoaDonView HoaDonCho()
+        {
+            QlHoaDonView lstHdView = new QlHoaDonView();
+            var NV = _nhanVienService.GetAll().FirstOrDefault(c => c.SDT == Properties.Settings.Default.Tk);
+            if (NV != null)
+            {
+                lstHdView = new QlHoaDonView()
+                {
+                    Ma = "HD00" + (_hoaDonService.GetAll().Count + 1),
+                    MaNV = NV.Ma,
+                    TrangThai = "Chờ order",
+                    NgayTao = DateTime.Now
+                };
+            }
+
+            return lstHdView;
+        }
         public void LoadBan()
         {
             cbb_Ban.Items.Clear();
@@ -79,7 +99,7 @@ namespace _3.PL.Views.BanHang
                     Size = new Size(139, 52),
                     Font = new Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point),
                     ForeColor = Color.Black,
-                    Location = new Point(3,105),
+                    Location = new Point(3, 105),
                     Text = x.Ten
                 };
                 products.Controls.Add(lb);
@@ -88,9 +108,9 @@ namespace _3.PL.Views.BanHang
                     Font = new Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold,
                         System.Drawing.GraphicsUnit.Point),
                     ForeColor = Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0))))),
-                Location = new Point(17, 157),
+                    Location = new Point(17, 157),
                     Size = new Size(107, 23),
-                    Text = Math.Round(x.Gia,0).ToString(),
+                    Text = Math.Round(x.Gia, 0).ToString(),
                 };
                 products.Controls.Add(lb_Cost);
                 products.Tag = x;
@@ -98,17 +118,9 @@ namespace _3.PL.Views.BanHang
                 flowLayoutPanel1.Controls.Add(products);
             }
         }
-
-        //lấy ra mã sản phẩm khi click vào ảnh
-        void btn_Click_1(object sender, EventArgs e)
-        {
-            _maWhenClick = ((sender as Panel).Tag as QlSanPhamView).Ma;
-            ShowBill(_maWhenClick);
-        }
-
         public void ShowBill(string ma)
         {
-            
+
             List<QlSanPhamView> listBillInfo = _sanPhamService.GetAll(ma);
             dgrid_HoaDon.Rows.Clear();
             foreach (var item in listBillInfo)
@@ -123,47 +135,10 @@ namespace _3.PL.Views.BanHang
                 dgrid_HoaDon.Rows.Clear();
                 foreach (var x in listBillInfo)
                 {
-                    dgrid_HoaDon.Rows.Add(x.Ma,x.Ten,Math.Round(x.Gia,0));
+                    dgrid_HoaDon.Rows.Add(x.Ma, x.Ten, Math.Round(x.Gia, 0));
                 }
             }
         }
-
-        public QlHoaDonView HoaDonCho()
-        {
-            QlHoaDonView lstHdView = new QlHoaDonView();
-            var NV = _nhanVienService.GetAll().FirstOrDefault(c => c.SDT == Properties.Settings.Default.Tk);
-            if (NV != null)
-            {
-                lstHdView = new QlHoaDonView()
-                {
-                    Ma = "HD00" + (_hoaDonService.GetAll().Count + 1),
-                    MaNV = NV.Ma,
-                    TrangThai = "Chờ order",
-                    NgayTao = DateTime.Now
-                };
-            }
-            
-            return lstHdView;
-        }
-
-        private void btn_GiaoHang_Click(object sender, EventArgs e)
-        {
-            FrmGiaoHang frm = new FrmGiaoHang();
-            frm.ShowDialog();
-        }
-
-        private void btn_ThemHD_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(_hoaDonService.add(HoaDonCho()));
-            ShowHdCho();
-            showBtnHdcho();
-        }
-
-        public void btn_Click_Hd(object sender, EventArgs e)
-        {
-            var maHd = ((sender as Button).Tag as QlHoaDonView).Ma;
-        }
-
         public void showBtnHdcho()
         {
             foreach (var x in _hoaDonService.GetAll())
@@ -194,10 +169,38 @@ namespace _3.PL.Views.BanHang
             {
                 if (x.TrangThai == "Chờ order")
                 {
-                    dtg_hdCho.Rows.Add(x.Ma, x.TenNV, x.NgayTao, x.TrangThai,x.GhiChu);
+                    dtg_hdCho.Rows.Add(x.Ma, x.TenNV, x.NgayTao, x.TrangThai, x.GhiChu);
                 }
             }
         }
 
+
+        #endregion
+
+        #region Event
+        //lấy ra mã sản phẩm khi click vào ảnh
+        void btn_Click_1(object sender, EventArgs e)
+        {
+            _maWhenClick = ((sender as Panel).Tag as QlSanPhamView).Ma;
+            ShowBill(_maWhenClick);
+        }
+        public void btn_Click_Hd(object sender, EventArgs e)
+        {
+            var maHd = ((sender as Button).Tag as QlHoaDonView).Ma;
+        }
+        private void btn_GiaoHang_Click(object sender, EventArgs e)
+        {
+            FrmGiaoHang frm = new FrmGiaoHang();
+            frm.ShowDialog();
+        }
+
+        private void btn_ThemHD_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(_hoaDonService.add(HoaDonCho()));
+            ShowHdCho();
+            showBtnHdcho();
+        }
+
+        #endregion
     }
 }
