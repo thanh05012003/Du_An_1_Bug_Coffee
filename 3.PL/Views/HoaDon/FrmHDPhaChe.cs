@@ -16,17 +16,20 @@ namespace _3.PL.Views
     {
         private IHoaDonService _hoaDonService;
         private IHoaDonCTService _hoaDonCTService;
+        private IVoucherService _voucherService;
+        private string _maWhenClick;
         public FrmHDPhaChe()
         {
             InitializeComponent();
             _hoaDonService = new HoaDonService();
             _hoaDonCTService = new HoaDonCTService();
+            _voucherService = new VoucherService();
             loadHoaDon();
-            LoadHdCT();
         }
 
         public void loadHoaDon()
         {
+            
             dgrid_HoaDon.ColumnCount = 5;
             dgrid_HoaDon.Columns[0].Name = "Mã HD";
             dgrid_HoaDon.Columns[1].Name = "Tên KH";
@@ -36,26 +39,37 @@ namespace _3.PL.Views
             dgrid_HoaDon.Rows.Clear();
             foreach (var x in _hoaDonService.GetAll())
             {
-                dgrid_HoaDon.Rows.Add(x.Ma);
+                dgrid_HoaDon.Rows.Add(x.Ma, x.TenKH, x.TenNV, x.NgayTao/*, tenVoucher.Ten*/);
             }
         }
 
-        public void LoadHdCT()
+        public void LoadHdCT(string Ma)
         {
             dgrid_HoaDonCT.ColumnCount = 3;
             dgrid_HoaDonCT.Columns[0].Name = "Tên";
             dgrid_HoaDonCT.Columns[1].Name = "Số lượng";
             dgrid_HoaDonCT.Columns[2].Name = "Đơn giá";
             dgrid_HoaDonCT.Rows.Clear();
-            foreach (var x in _hoaDonCTService.GetAll())
+            foreach (var x in _hoaDonCTService.GetAll(Ma))
             {
-                dgrid_HoaDonCT.Rows.Add(x.TenSp,x.SoLuong,x.DonGia);
+                dgrid_HoaDonCT.Rows.Add(x.TenSp, x.SoLuong, x.DonGia);
             }
         }
 
         private void btn_XacNhan_Click(object sender, EventArgs e)
         {
-            LoadHdCT();
+            
+        }
+
+        private void dgrid_HoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            if (rowIndex == _hoaDonService.GetAll().Count)
+            {
+                return;
+            }
+            _maWhenClick =  dgrid_HoaDon.Rows[rowIndex].Cells[0].Value.ToString();
+            LoadHdCT(_maWhenClick);
         }
     }
 }

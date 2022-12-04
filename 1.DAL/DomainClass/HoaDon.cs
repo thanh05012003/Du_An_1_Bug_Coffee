@@ -13,6 +13,8 @@ namespace _1.DAL.DomainClass
         public string MaNV { get; set; }
         public DateTime? NgayTao { get; set; }
         public string MaVC { get; set; }
+        public string TrangThai { get; set; }
+        public string GhiChu { get; set; }
         public virtual KhachHang KhachHang { get; set; }
         public virtual NhanVien NhanVien { get; set; }
         public virtual Voucher Voucher { get; set; }

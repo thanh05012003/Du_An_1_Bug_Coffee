@@ -92,7 +92,7 @@ namespace _2.BUS.Services
                     MaBan = a.MaBan,
                     TenSp = b.Ten
                 };
-            return lstHoaDonCT.Where(c =>c.MaBan == ma).ToList();
+            return lstHoaDonCT.Where(c =>c.MaHD == ma || c.MaBan == ma).ToList();
         }
     }
 }

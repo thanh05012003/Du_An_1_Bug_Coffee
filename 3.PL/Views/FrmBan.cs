@@ -62,7 +62,7 @@ namespace _3.PL.Views
                 dgrid_TTSp.Rows.Clear();
                 foreach (var x in listBillInfo)
                 {
-                    dgrid_TTSp.Rows.Add(x.TenSp, x.SoLuong, x.DonGia,0);
+                    dgrid_TTSp.Rows.Add(x.TenSp, x.SoLuong);
                 }
             }
         }

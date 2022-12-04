@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace _1.DAL.Migrations
 {
-    public partial class bugcf163722 : Migration
+    public partial class bugcf155122 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -156,7 +156,9 @@ namespace _1.DAL.Migrations
                     MaKH = table.Column<string>(type: "varchar(20)", nullable: true),
                     MaNV = table.Column<string>(type: "varchar(20)", nullable: true),
                     NgayTao = table.Column<DateTime>(type: "date", nullable: true),
-                    MaVC = table.Column<string>(type: "varchar(20)", nullable: true)
+                    MaVC = table.Column<string>(type: "varchar(20)", nullable: true),
+                    TrangThai = table.Column<string>(type: "nvarchar(100)", nullable: true),
+                    GhiChu = table.Column<string>(type: "nvarchar(100)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -188,8 +190,9 @@ namespace _1.DAL.Migrations
                     MaHD = table.Column<string>(type: "varchar(20)", nullable: false),
                     MaSP = table.Column<string>(type: "varchar(20)", nullable: false),
                     SoLuong = table.Column<int>(type: "int", nullable: false),
-                    DonGia = table.Column<decimal>(type: "money", nullable: true),
-                    MaBan = table.Column<string>(type: "varchar(20)", nullable: true)
+                    DonGia = table.Column<decimal>(type: "money", nullable: false),
+                    MaBan = table.Column<string>(type: "varchar(20)", nullable: true),
+                    TrangThai = table.Column<string>(type: "nvarchar(100)", nullable: true)
                 },
                 constraints: table =>
                 {

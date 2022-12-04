@@ -11,6 +11,7 @@ namespace _2.BUS.ViewModels
         public string MaVC { get; set; }
         public string TenKH { get; set; }
         public string TenNV { get; set; }
-        public string TenVoucher { get; set; }
+        public string GhiChu { get; set; }
+        public string TrangThai { get; set; }
     }
 }

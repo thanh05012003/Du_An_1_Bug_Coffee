@@ -18,6 +18,8 @@ namespace _1.DAL.Configurations
             builder.Property(c => c.MaKH);
             builder.Property(c => c.MaNV);
             builder.Property(c => c.NgayTao).HasColumnType("date");
+            builder.Property(c => c.TrangThai).HasColumnType("nvarchar(100)");
+            builder.Property(c => c.GhiChu).HasColumnType("nvarchar(100)");
             //Khoá ngoại
             builder.HasOne(c => c.KhachHang).WithMany().HasForeignKey(c => c.MaKH);
             builder.HasOne(c => c.NhanVien).WithMany().HasForeignKey(c => c.MaNV);

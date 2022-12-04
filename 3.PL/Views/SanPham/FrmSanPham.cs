@@ -114,7 +114,7 @@ namespace _3.PL.Views
 
         public bool checknhap()
         {
-            if (txt_MaSanPham.Text == "" || txt_TenSanPham.Text == "" || txt_GiaBan.Text == "" || txt_Mota.Text == "" ) return false;
+            if (txt_MaSanPham.Text.Trim() == "" || txt_TenSanPham.Text.Trim() == "" || txt_GiaBan.Text.Trim() == "" ) return false;
             return true;
         }
 

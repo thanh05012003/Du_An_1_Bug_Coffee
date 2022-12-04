@@ -18,6 +18,7 @@ namespace _1.DAL.Configurations
             builder.Property(c => c.MaSP);
             builder.Property(c => c.SoLuong).HasColumnType("int");
             builder.Property(c => c.DonGia).HasColumnType("money");
+            builder.Property(c => c.TrangThai).HasColumnType("nvarchar(100)");
             builder.Property(c => c.MaBan);
             //tạo khoá ngoại
             builder.HasOne(c => c.HoaDon).WithMany().HasForeignKey(c => c.MaHD);
