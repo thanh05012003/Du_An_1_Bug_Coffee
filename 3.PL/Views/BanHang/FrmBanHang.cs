@@ -33,6 +33,7 @@ namespace _3.PL.Views.BanHang
             loadSp();
             LoadLoaiSP();
             LoadBan();
+            LoadHoTenKH();
             ShowHdCho();
             showBtnHdcho();
         }
@@ -61,6 +62,14 @@ namespace _3.PL.Views.BanHang
             foreach (var x in _banService.GetAll())
             {
                 cbb_Ban.Items.Add(x.Ten);
+            }
+        }
+
+        public void LoadHoTenKH()
+        {
+            foreach (var x in _khachHangService.GetAll())
+            {
+                cbb_TenKH.Items.Add(x.Ten);
             }
         }
 
@@ -199,5 +208,12 @@ namespace _3.PL.Views.BanHang
         }
 
         #endregion
+
+        private void btn_ThemKH_Click(object sender, EventArgs e)
+        {
+            FrmKhachHang frm = new FrmKhachHang();
+            frm.ShowDialog();
+           
+        }
     }
 }
