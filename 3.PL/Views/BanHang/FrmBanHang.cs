@@ -17,8 +17,9 @@ namespace _3.PL.Views.BanHang
         private IKhachHangService _khachHangService;
         private INhanVienService _nhanVienService;
         private ILoaiSanPhamService _loaiSanPhamService;
-        private string _maWhenClick;
-    
+        private string _maSPWhenClick;
+        private string _maHDWhenClick;
+
 
         public FrmBanHang()
         {
@@ -35,8 +36,6 @@ namespace _3.PL.Views.BanHang
             ShowHdCho();
             showBtnHdcho();
         }
-
-
 
         #region Method
         public QlHoaDonView HoaDonCho()
@@ -120,7 +119,6 @@ namespace _3.PL.Views.BanHang
         }
         public void ShowBill(string ma)
         {
-
             List<QlSanPhamView> listBillInfo = _sanPhamService.GetAll(ma);
             dgrid_HoaDon.Rows.Clear();
             foreach (var item in listBillInfo)
@@ -174,26 +172,24 @@ namespace _3.PL.Views.BanHang
             }
         }
 
-
         #endregion
 
         #region Event
         //lấy ra mã sản phẩm khi click vào ảnh
         void btn_Click_1(object sender, EventArgs e)
         {
-            _maWhenClick = ((sender as Panel).Tag as QlSanPhamView).Ma;
-            ShowBill(_maWhenClick);
+            _maSPWhenClick = ((sender as Panel).Tag as QlSanPhamView).Ma;
+            ShowBill(_maSPWhenClick);
         }
         public void btn_Click_Hd(object sender, EventArgs e)
         {
-            var maHd = ((sender as Button).Tag as QlHoaDonView).Ma;
+            _maHDWhenClick = ((sender as Button).Tag as QlHoaDonView).Ma;
         }
         private void btn_GiaoHang_Click(object sender, EventArgs e)
         {
             FrmGiaoHang frm = new FrmGiaoHang();
             frm.ShowDialog();
         }
-
         private void btn_ThemHD_Click(object sender, EventArgs e)
         {
             MessageBox.Show(_hoaDonService.add(HoaDonCho()));

@@ -49,15 +49,6 @@
             this.tbt_TenKM = new System.Windows.Forms.TextBox();
             this.tbt_MaKM = new System.Windows.Forms.TextBox();
             this.btn_update = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cbb_tThaiSP = new System.Windows.Forms.ComboBox();
-            this.cbb_loaiSP = new System.Windows.Forms.ComboBox();
-            this.btn_searchSP = new System.Windows.Forms.Button();
-            this.tbt_searchSP = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dtg_showSP = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.cbb_tThaiKM = new System.Windows.Forms.ComboBox();
             this.cbb_loaiKM = new System.Windows.Forms.ComboBox();
@@ -68,8 +59,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_showSP)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_showKM)).BeginInit();
             this.SuspendLayout();
@@ -280,96 +269,6 @@
             this.btn_update.Text = "Cập Nhật";
             this.btn_update.UseVisualStyleBackColor = true;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.cbb_tThaiSP);
-            this.groupBox3.Controls.Add(this.cbb_loaiSP);
-            this.groupBox3.Controls.Add(this.btn_searchSP);
-            this.groupBox3.Controls.Add(this.tbt_searchSP);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.dtg_showSP);
-            this.groupBox3.Location = new System.Drawing.Point(607, 1);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(704, 414);
-            this.groupBox3.TabIndex = 4;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Sản Phẩm";
-            // 
-            // cbb_tThaiSP
-            // 
-            this.cbb_tThaiSP.FormattingEnabled = true;
-            this.cbb_tThaiSP.Location = new System.Drawing.Point(454, 53);
-            this.cbb_tThaiSP.Name = "cbb_tThaiSP";
-            this.cbb_tThaiSP.Size = new System.Drawing.Size(170, 28);
-            this.cbb_tThaiSP.TabIndex = 4;
-            // 
-            // cbb_loaiSP
-            // 
-            this.cbb_loaiSP.FormattingEnabled = true;
-            this.cbb_loaiSP.Location = new System.Drawing.Point(323, 53);
-            this.cbb_loaiSP.Name = "cbb_loaiSP";
-            this.cbb_loaiSP.Size = new System.Drawing.Size(106, 28);
-            this.cbb_loaiSP.TabIndex = 4;
-            // 
-            // btn_searchSP
-            // 
-            this.btn_searchSP.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_searchSP.Location = new System.Drawing.Point(210, 53);
-            this.btn_searchSP.Name = "btn_searchSP";
-            this.btn_searchSP.Size = new System.Drawing.Size(91, 29);
-            this.btn_searchSP.TabIndex = 3;
-            this.btn_searchSP.Text = "Tìm Kiếm";
-            this.btn_searchSP.UseVisualStyleBackColor = true;
-            // 
-            // tbt_searchSP
-            // 
-            this.tbt_searchSP.Location = new System.Drawing.Point(9, 54);
-            this.tbt_searchSP.Name = "tbt_searchSP";
-            this.tbt_searchSP.Size = new System.Drawing.Size(181, 27);
-            this.tbt_searchSP.TabIndex = 2;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(454, 23);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(81, 21);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Trạng Thái";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(323, 23);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(111, 21);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Loại Sản Phẩm";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(9, 26);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 21);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Tìm Kiếm";
-            // 
-            // dtg_showSP
-            // 
-            this.dtg_showSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg_showSP.Location = new System.Drawing.Point(9, 120);
-            this.dtg_showSP.Name = "dtg_showSP";
-            this.dtg_showSP.RowHeadersWidth = 51;
-            this.dtg_showSP.RowTemplate.Height = 29;
-            this.dtg_showSP.Size = new System.Drawing.Size(689, 288);
-            this.dtg_showSP.TabIndex = 0;
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.cbb_tThaiKM);
@@ -380,9 +279,9 @@
             this.groupBox4.Controls.Add(this.tbt_searchKM);
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Location = new System.Drawing.Point(607, 421);
+            this.groupBox4.Location = new System.Drawing.Point(607, 12);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(704, 414);
+            this.groupBox4.Size = new System.Drawing.Size(704, 823);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Khuyến Mãi";
@@ -410,8 +309,9 @@
             this.dtg_showKM.Name = "dtg_showKM";
             this.dtg_showKM.RowHeadersWidth = 51;
             this.dtg_showKM.RowTemplate.Height = 29;
-            this.dtg_showKM.Size = new System.Drawing.Size(689, 313);
+            this.dtg_showKM.Size = new System.Drawing.Size(689, 558);
             this.dtg_showKM.TabIndex = 1;
+            this.dtg_showKM.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_showKM_CellClick);
             // 
             // btn_searchKM
             // 
@@ -467,14 +367,10 @@
             this.ClientSize = new System.Drawing.Size(1323, 847);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
             this.Name = "FrmKhuyenMai";
             this.Text = "FrmKhuyenMai";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_showSP)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_showKM)).EndInit();
@@ -504,15 +400,6 @@
         private System.Windows.Forms.TextBox tbt_sale;
         private System.Windows.Forms.TextBox tbt_TenKM;
         private System.Windows.Forms.TextBox tbt_MaKM;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox cbb_tThaiSP;
-        private System.Windows.Forms.ComboBox cbb_loaiSP;
-        private System.Windows.Forms.Button btn_searchSP;
-        private System.Windows.Forms.TextBox tbt_searchSP;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dtg_showSP;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ComboBox cbb_tThaiKM;
         private System.Windows.Forms.ComboBox cbb_loaiKM;
