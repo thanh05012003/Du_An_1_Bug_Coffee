@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using _2.BUS.IServices;
@@ -70,7 +71,7 @@ namespace _3.PL.Views
             {
                 nv = new QlNhanVienView()
                 {
-                    Ma = txt_maNV.Text,
+                    Ma = "NV00"+ (_NhanVienService.GetAll().Count + 1),
                     Ten = txt_nameNV.Text,
                     GioiTinh = rb_nam.Checked ? "Nam" : "Nữ",
                     NgaySinh = dtpc_NgaySinh.Value,
@@ -79,7 +80,8 @@ namespace _3.PL.Views
                     MatKhau = txt_mkNV.Text,
                     DiaChi = txt_DiaChi.Text,
                     TrangThai = rbtn_HoatDong.Checked ? 1 : 0,
-                    MaCV = cv.Ma
+                    MaCV = cv.Ma,
+                    URL = ptb_avatar.ImageLocation
                 };
             }
             else
@@ -176,6 +178,7 @@ namespace _3.PL.Views
         private void txt_nameNV_TextChanged(object sender, EventArgs e)
         {
             lb_HoTenFail.Visible = false;
+            txt_maNV.Text ="NV00" + (_NhanVienService.GetAll().Count + 1);
         }
 
         private void dtpc_NgaySinh_ValueChanged(object sender, EventArgs e)
@@ -233,6 +236,9 @@ namespace _3.PL.Views
             {
                 rbtn_HoatDong.Checked = true;
             }
+
+            ptb_avatar.SizeMode = PictureBoxSizeMode.Zoom;
+            ptb_avatar.ImageLocation = _nhanVienVew.URL;
         }
 
         private void btn_updateNV_Click(object sender, EventArgs e)
@@ -251,6 +257,25 @@ namespace _3.PL.Views
                 {
                     return;
                 }
+            }
+        }
+
+
+        private void btn_ThemAnh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+
+            dlg.Filter = "Image File (*.jpg;*.jpeg;*.bmp;*.gif;*.png)|*.jpg;*.jpeg;*.bmp;*.gif;*.png";
+            dlg.Title = "Chọn Hình";
+
+            DialogResult dlgRes = dlg.ShowDialog();
+            if (dlgRes != DialogResult.Cancel)
+            {
+                //Gán hình vào Picture box
+                ptb_avatar.ImageLocation = dlg.FileName;
+                ptb_avatar.SizeMode = PictureBoxSizeMode.StretchImage;
+                //Gán đường dẫn ảnh vào lbimgpath
+                ptb_avatar.Text = dlg.FileName;
             }
         }
     }

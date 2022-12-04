@@ -20,5 +20,6 @@ namespace _2.BUS.ViewModels
         public string MaCV { get; set; }
         public string MaCLV { get; set; }
         public string TenCv { get; set; }
+        public string URL { get; set; }
     }
 }

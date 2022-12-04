@@ -49,6 +49,7 @@ namespace _1.DAL.Repositories
             tempobj.MatKhau = obj.MatKhau;
             tempobj.MaCV = obj.MaCV;
             tempobj.TrangThai = obj.TrangThai;
+            tempobj.URL = obj.URL;
             _DbContext.Update(tempobj);
             _DbContext.SaveChanges();
             return true;
