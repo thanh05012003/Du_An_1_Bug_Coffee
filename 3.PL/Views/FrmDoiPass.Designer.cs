@@ -54,9 +54,9 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(433, 0);
+            this.panel1.Location = new System.Drawing.Point(479, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(611, 592);
+            this.panel1.Size = new System.Drawing.Size(565, 592);
             this.panel1.TabIndex = 26;
             // 
             // btn_DoiMK
@@ -192,7 +192,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(433, 592);
+            this.panel2.Size = new System.Drawing.Size(479, 592);
             this.panel2.TabIndex = 25;
             // 
             // FrmDoiPass

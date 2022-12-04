@@ -137,7 +137,9 @@ namespace _3.PL.Views
 
         private void btn_DoiMatKhau_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FrmDoiPass(), sender);
+            FrmDoiPass frm = new FrmDoiPass();
+            frm.ShowDialog();
+            
         }
     }
 }
