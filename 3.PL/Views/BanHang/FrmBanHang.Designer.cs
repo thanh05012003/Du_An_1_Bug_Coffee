@@ -49,7 +49,7 @@
             this.txt_SDT = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.btn_ThanhToan = new CustomControls.RJControls.CSButton();
+            this.btn_XacNhan = new CustomControls.RJControls.CSButton();
             this.btn_GiaoHang = new CustomControls.RJControls.CSButton();
             this.dgrid_HoaDon = new System.Windows.Forms.DataGridView();
             this.cbb_Ban = new System.Windows.Forms.ComboBox();
@@ -220,7 +220,7 @@
             this.pane_HDCho.Controls.Add(this.txt_SDT);
             this.pane_HDCho.Controls.Add(this.label6);
             this.pane_HDCho.Controls.Add(this.label7);
-            this.pane_HDCho.Controls.Add(this.btn_ThanhToan);
+            this.pane_HDCho.Controls.Add(this.btn_XacNhan);
             this.pane_HDCho.Controls.Add(this.btn_GiaoHang);
             this.pane_HDCho.Controls.Add(this.dgrid_HoaDon);
             this.pane_HDCho.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -259,6 +259,7 @@
             this.btn_search.TabIndex = 142;
             this.btn_search.Text = "search";
             this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // txt_SDT
             // 
@@ -287,23 +288,23 @@
             this.label7.TabIndex = 138;
             this.label7.Text = "SĐT:";
             // 
-            // btn_ThanhToan
+            // btn_XacNhan
             // 
-            this.btn_ThanhToan.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_ThanhToan.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_ThanhToan.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_ThanhToan.BorderRadius = 15;
-            this.btn_ThanhToan.BorderSize = 0;
-            this.btn_ThanhToan.FlatAppearance.BorderSize = 0;
-            this.btn_ThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ThanhToan.ForeColor = System.Drawing.Color.White;
-            this.btn_ThanhToan.Location = new System.Drawing.Point(449, 635);
-            this.btn_ThanhToan.Name = "btn_ThanhToan";
-            this.btn_ThanhToan.Size = new System.Drawing.Size(188, 50);
-            this.btn_ThanhToan.TabIndex = 137;
-            this.btn_ThanhToan.Text = "Thanh Toán";
-            this.btn_ThanhToan.TextColor = System.Drawing.Color.White;
-            this.btn_ThanhToan.UseVisualStyleBackColor = false;
+            this.btn_XacNhan.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_XacNhan.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_XacNhan.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_XacNhan.BorderRadius = 15;
+            this.btn_XacNhan.BorderSize = 0;
+            this.btn_XacNhan.FlatAppearance.BorderSize = 0;
+            this.btn_XacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_XacNhan.ForeColor = System.Drawing.Color.White;
+            this.btn_XacNhan.Location = new System.Drawing.Point(449, 635);
+            this.btn_XacNhan.Name = "btn_XacNhan";
+            this.btn_XacNhan.Size = new System.Drawing.Size(188, 50);
+            this.btn_XacNhan.TabIndex = 137;
+            this.btn_XacNhan.Text = "Xác nhận";
+            this.btn_XacNhan.TextColor = System.Drawing.Color.White;
+            this.btn_XacNhan.UseVisualStyleBackColor = false;
             // 
             // btn_GiaoHang
             // 
@@ -409,7 +410,7 @@
         private System.Windows.Forms.DataGridView dgrid_HoaDon;
         private System.Windows.Forms.ComboBox cbb_Ban;
         private System.Windows.Forms.Label label5;
-        private CustomControls.RJControls.CSButton btn_ThanhToan;
+        private CustomControls.RJControls.CSButton btn_XacNhan;
         private CustomControls.RJControls.CSButton btn_GiaoHang;
         private System.Windows.Forms.FlowLayoutPanel flp_HoaDon;
         private System.Windows.Forms.ComboBox cbb_TenKH;

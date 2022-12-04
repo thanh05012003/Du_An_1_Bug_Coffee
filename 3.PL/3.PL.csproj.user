@@ -70,8 +70,5 @@
     <Compile Update="Views\ThongKe\FrmThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\TichDiemKH.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>
