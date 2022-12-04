@@ -99,7 +99,7 @@ namespace _3.PL.Views.BanHang
             }
         }
 
-
+        //lấy ra mã sản phẩm khi click vào ảnh
         void btn_Click_1(object sender, EventArgs e)
         {
             _maWhenClick = ((sender as Panel).Tag as QlSanPhamView).Ma;
