@@ -51,12 +51,7 @@
             this.btn_update = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.cbb_tThaiKM = new System.Windows.Forms.ComboBox();
-            this.cbb_loaiKM = new System.Windows.Forms.ComboBox();
             this.dtg_showKM = new System.Windows.Forms.DataGridView();
-            this.btn_searchKM = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.tbt_searchKM = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -272,12 +267,7 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.cbb_tThaiKM);
-            this.groupBox4.Controls.Add(this.cbb_loaiKM);
             this.groupBox4.Controls.Add(this.dtg_showKM);
-            this.groupBox4.Controls.Add(this.btn_searchKM);
-            this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Controls.Add(this.tbt_searchKM);
-            this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Location = new System.Drawing.Point(607, 12);
             this.groupBox4.Name = "groupBox4";
@@ -289,18 +279,10 @@
             // cbb_tThaiKM
             // 
             this.cbb_tThaiKM.FormattingEnabled = true;
-            this.cbb_tThaiKM.Location = new System.Drawing.Point(454, 47);
+            this.cbb_tThaiKM.Location = new System.Drawing.Point(25, 52);
             this.cbb_tThaiKM.Name = "cbb_tThaiKM";
             this.cbb_tThaiKM.Size = new System.Drawing.Size(152, 28);
             this.cbb_tThaiKM.TabIndex = 4;
-            // 
-            // cbb_loaiKM
-            // 
-            this.cbb_loaiKM.FormattingEnabled = true;
-            this.cbb_loaiKM.Location = new System.Drawing.Point(305, 47);
-            this.cbb_loaiKM.Name = "cbb_loaiKM";
-            this.cbb_loaiKM.Size = new System.Drawing.Size(118, 28);
-            this.cbb_loaiKM.TabIndex = 4;
             // 
             // dtg_showKM
             // 
@@ -313,48 +295,11 @@
             this.dtg_showKM.TabIndex = 1;
             this.dtg_showKM.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_showKM_CellClick);
             // 
-            // btn_searchKM
-            // 
-            this.btn_searchKM.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_searchKM.Location = new System.Drawing.Point(192, 47);
-            this.btn_searchKM.Name = "btn_searchKM";
-            this.btn_searchKM.Size = new System.Drawing.Size(91, 29);
-            this.btn_searchKM.TabIndex = 3;
-            this.btn_searchKM.Text = "Tìm Kiếm";
-            this.btn_searchKM.UseVisualStyleBackColor = true;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(9, 21);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 21);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Tìm Kiếm";
-            // 
-            // tbt_searchKM
-            // 
-            this.tbt_searchKM.Location = new System.Drawing.Point(9, 49);
-            this.tbt_searchKM.Name = "tbt_searchKM";
-            this.tbt_searchKM.Size = new System.Drawing.Size(163, 27);
-            this.tbt_searchKM.TabIndex = 2;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(305, 18);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(126, 21);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Loại Khuyến Mãi";
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(454, 18);
+            this.label13.Location = new System.Drawing.Point(25, 23);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(81, 21);
             this.label13.TabIndex = 1;
@@ -402,12 +347,7 @@
         private System.Windows.Forms.TextBox tbt_MaKM;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ComboBox cbb_tThaiKM;
-        private System.Windows.Forms.ComboBox cbb_loaiKM;
         private System.Windows.Forms.DataGridView dtg_showKM;
-        private System.Windows.Forms.Button btn_searchKM;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox tbt_searchKM;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
     }
 }
