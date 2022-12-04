@@ -41,7 +41,10 @@ namespace _1.DAL.Repositories
         public bool Update(LoaiSanPham obj)
         {
             if (obj == null) return false;
-            _DbContext.Update(obj);
+            var tempobj = _DbContext.LoaiSanPham.FirstOrDefault(c => c.Ma == obj.Ma);
+            tempobj.Ma = obj.Ma;
+            tempobj.Ten = obj.Ten;
+            _DbContext.Update(tempobj);
             _DbContext.SaveChanges();
             return true;
         }

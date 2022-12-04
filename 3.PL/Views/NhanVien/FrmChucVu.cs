@@ -16,11 +16,13 @@ namespace _3.PL.Views.NhanVien
     public partial class FrmChucVu : Form
     {
         private IChucVuService _chucVuService;
+        private string _maWhenClick;
         public FrmChucVu()
         {
             InitializeComponent();
             _chucVuService = new ChucVuService();
             txt_MaCv.Enabled = false;
+            LoadDataCV();
         }
 
         private QlChucVuView GetDatafromGui()
@@ -52,6 +54,42 @@ namespace _3.PL.Views.NhanVien
         private void txt_TenCv_TextChanged(object sender, EventArgs e)
         {
             txt_MaCv.Text = "CV0" + (_chucVuService.GetAll().Count +1);
+        }
+
+        public void LoadDataCV()
+        {
+            int stt = 1;
+            dtgrid_ChucVu.ColumnCount = 3;
+            dtgrid_ChucVu.Columns[0].Name = "STT";
+            dtgrid_ChucVu.Columns[1].Name = "Mã Chức Vụ";
+            dtgrid_ChucVu.Columns[2].Name = "Tên Chức Vụ";
+            dtgrid_ChucVu.Rows.Clear();
+            foreach (var x in _chucVuService.GetAll())
+            {
+                dtgrid_ChucVu.Rows.Add(stt++, x.Ma, x.Ten);
+            }
+        }
+
+        private void btn_Sua_Click(object sender, EventArgs e)
+        {
+            var temp = GetDatafromGui();
+            temp.Ma = _maWhenClick;
+            MessageBox.Show(_chucVuService.update(temp));
+            LoadDataCV();
+        }
+
+        private void dtgrid_ChucVu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            if (rowIndex == _chucVuService.GetAll().Count) return;
+            _maWhenClick = dtgrid_ChucVu.Rows[rowIndex].Cells[1].Value.ToString();
+            var cv = _chucVuService.GetAll().First(c => c.Ma == _maWhenClick);
+            if (cv == null)
+            {
+                return;
+            }
+            txt_MaCv.Text = cv.Ma;
+            txt_TenCv.Text = cv.Ten;
         }
     }
 }
