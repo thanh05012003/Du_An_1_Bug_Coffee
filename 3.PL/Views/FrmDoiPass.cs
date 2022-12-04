@@ -24,18 +24,18 @@ namespace _3.PL.Views
 
         private void btn_DoiMK_Click(object sender, EventArgs e)
         {
-            var mk = _inhanVienServices.GetAll().FirstOrDefault(c => c.MatKhau == txt_MatKhauCu.Text && c.SDT.ToLower() == Properties.Settings.Default.Tk);
+            var mk = _inhanVienServices.GetAll().FirstOrDefault(c => c.MatKhau == txt_MatKhauCu.Texts && c.SDT.ToLower() == Properties.Settings.Default.Tk);
             if (mk == null)
             {
                 MessageBox.Show("Mật khẩu cũ không chính xác");
 
             }
-            else if (txt_MatKhauMoi.Text.Length < 6)
+            else if (txt_MatKhauMoi.Texts.Length < 6)
             {
                 MessageBox.Show("Mật khẩu phải có ít nhất 6 kí tự");
 
             }
-            else if (txt_NhapLaiMk.Text != txt_NhapLaiMk.Text)
+            else if (txt_NhapLaiMk.Texts != txt_NhapLaiMk.Texts)
             {
                 MessageBox.Show("Nhập lại mật khẩu không chính xác");
             }
@@ -45,7 +45,7 @@ namespace _3.PL.Views
                 if (dialogResult == DialogResult.Yes)
                 {
                     var mkmoi = _inhanVienServices.GetAll().FirstOrDefault();
-                    mkmoi.MatKhau = txt_MatKhauMoi.Text;
+                    mkmoi.MatKhau = txt_MatKhauMoi.Texts;
                     _inhanVienServices.update(mkmoi);
                     MessageBox.Show("Đổi mật khẩu thành công. Vui lòng đăng nhập lại");
                 }
