@@ -78,5 +78,19 @@ namespace _2.BUS.Services
                 };
             return lstKhachHang.ToList();
         }
+        public List<QlKhachHangView> GetAll(string sdt)
+        {
+            var lstKhachHang = from a in _khachHangRepository.GetAll()
+                select new QlKhachHangView()
+                {
+                    Ma = a.Ma,
+                    Ten = a.Ten,
+                    SDT = a.SDT,
+                    NgaySinh = a.NgaySinh,
+                    DiemTL = a.DiemTL,
+                    DiaChi = a.DiaChi
+                };
+            return lstKhachHang.Where(c =>c.SDT == sdt).ToList();
+        }
     }
 }

@@ -13,5 +13,6 @@ namespace _2.BUS.IServices
         string delete(QlKhachHangView obj);
         string update(QlKhachHangView obj);
         List<QlKhachHangView> GetAll();
+        List<QlKhachHangView> GetAll(string sdt);
     }
 }

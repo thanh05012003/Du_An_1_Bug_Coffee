@@ -67,6 +67,7 @@ namespace _3.PL.Views.BanHang
 
         public void LoadHoTenKH()
         {
+            cbb_TenKH.Items.Clear();
             foreach (var x in _khachHangService.GetAll())
             {
                 cbb_TenKH.Items.Add(x.Ten);
@@ -206,14 +207,27 @@ namespace _3.PL.Views.BanHang
             ShowHdCho();
             showBtnHdcho();
         }
-
-        #endregion
-
         private void btn_ThemKH_Click(object sender, EventArgs e)
         {
             FrmKhachHang frm = new FrmKhachHang();
             frm.ShowDialog();
-           
+
         }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            var nv = _khachHangService.GetAll().FirstOrDefault(c =>c.SDT == txt_SDT.Text.Trim());
+            if (nv!=null)
+            {
+                cbb_TenKH.Text = nv.Ten;
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy khách hàng này");
+            }
+        }
+
+        #endregion
+
     }
 }
