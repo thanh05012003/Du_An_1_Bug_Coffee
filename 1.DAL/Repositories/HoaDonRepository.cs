@@ -35,7 +35,8 @@ namespace _1.DAL.Repositories
 
         public List<HoaDon> GetAll()
         {
-            return _DbContext.HoaDon.ToList();
+            var lstht = _DbContext.HoaDon.ToList();
+            return lstht;
         }
 
         public bool Update(HoaDon obj)

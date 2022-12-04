@@ -120,7 +120,7 @@ namespace _3.PL.Views
 
         private void btn_TrangChu_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new FrmBan(),sender);
         }
 
         private void btn_BanHang_Click(object sender, EventArgs e)
@@ -130,7 +130,7 @@ namespace _3.PL.Views
 
         private void btn_DoiMatKhau_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new FrmDoiPass(), sender);
         }
     }
 }

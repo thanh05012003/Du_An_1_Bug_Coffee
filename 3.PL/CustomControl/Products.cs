@@ -18,16 +18,11 @@ namespace customs
         private string _cost;
         public event EventHandler onSelct = null;
         public event EventHandler Click = null;
-        private ISanPhamService _sanPhamService;
-        public SanPham sp;
+       
         public Products()
         {
             InitializeComponent();
-            _sanPhamService = new SanPhamService();
-            Size = new System.Drawing.Size(142, 187);
-        
         }
-
 
         public string Title
         {
@@ -50,15 +45,6 @@ namespace customs
         private void pbx_Icon_Click(object sender, EventArgs e)
         {
             onSelct?.Invoke(this, e);
-            var spv = _sanPhamService.GetAll().FirstOrDefault(c => c.Ten == lb_Title.Text);
-             sp = new SanPham()
-            {
-                Ten = spv.Ten,
-                Gia = spv.Gia,
-                Ma = spv.Ma,
-                MaLsp = spv.MaLsp,
-                MoTa = spv.MoTa
-            };
         }
 
         private void panel1_Click(object sender, EventArgs e)

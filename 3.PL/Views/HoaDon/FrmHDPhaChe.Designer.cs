@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pane_HDPC = new System.Windows.Forms.Panel();
+            this.dgrid_HoaDon = new System.Windows.Forms.DataGridView();
             this.txt_DiaChi = new System.Windows.Forms.TextBox();
             this.txt_GhiChu = new System.Windows.Forms.TextBox();
             this.lbl_TrangThai = new System.Windows.Forms.Label();
@@ -55,17 +56,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btn_XacNhan = new System.Windows.Forms.Button();
             this.dgrid_HoaDonCT = new System.Windows.Forms.DataGridView();
-            this.dgrid_HoaDon = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pane_HDPC.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgrid_HoaDonCT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_HoaDon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrid_HoaDonCT)).BeginInit();
             this.SuspendLayout();
             // 
             // pane_HDPC
             // 
             this.pane_HDPC.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.pane_HDPC.Controls.Add(this.dgrid_HoaDon);
             this.pane_HDPC.Controls.Add(this.txt_DiaChi);
             this.pane_HDPC.Controls.Add(this.txt_GhiChu);
             this.pane_HDPC.Controls.Add(this.lbl_TrangThai);
@@ -92,7 +93,6 @@
             this.pane_HDPC.Controls.Add(this.label3);
             this.pane_HDPC.Controls.Add(this.btn_XacNhan);
             this.pane_HDPC.Controls.Add(this.dgrid_HoaDonCT);
-            this.pane_HDPC.Controls.Add(this.dgrid_HoaDon);
             this.pane_HDPC.Controls.Add(this.label2);
             this.pane_HDPC.Controls.Add(this.label1);
             this.pane_HDPC.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -100,6 +100,18 @@
             this.pane_HDPC.Name = "pane_HDPC";
             this.pane_HDPC.Size = new System.Drawing.Size(1305, 770);
             this.pane_HDPC.TabIndex = 8;
+            // 
+            // dgrid_HoaDon
+            // 
+            this.dgrid_HoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgrid_HoaDon.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dgrid_HoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgrid_HoaDon.Location = new System.Drawing.Point(33, 127);
+            this.dgrid_HoaDon.Name = "dgrid_HoaDon";
+            this.dgrid_HoaDon.RowHeadersWidth = 51;
+            this.dgrid_HoaDon.RowTemplate.Height = 29;
+            this.dgrid_HoaDon.Size = new System.Drawing.Size(559, 440);
+            this.dgrid_HoaDon.TabIndex = 29;
             // 
             // txt_DiaChi
             // 
@@ -348,6 +360,7 @@
             this.btn_XacNhan.TabIndex = 4;
             this.btn_XacNhan.Text = "Xác Nhận";
             this.btn_XacNhan.UseVisualStyleBackColor = false;
+            this.btn_XacNhan.Click += new System.EventHandler(this.btn_XacNhan_Click);
             // 
             // dgrid_HoaDonCT
             // 
@@ -359,17 +372,6 @@
             this.dgrid_HoaDonCT.RowTemplate.Height = 29;
             this.dgrid_HoaDonCT.Size = new System.Drawing.Size(559, 144);
             this.dgrid_HoaDonCT.TabIndex = 3;
-            // 
-            // dgrid_HoaDon
-            // 
-            this.dgrid_HoaDon.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.dgrid_HoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrid_HoaDon.Location = new System.Drawing.Point(31, 127);
-            this.dgrid_HoaDon.Name = "dgrid_HoaDon";
-            this.dgrid_HoaDon.RowHeadersWidth = 51;
-            this.dgrid_HoaDon.RowTemplate.Height = 29;
-            this.dgrid_HoaDon.Size = new System.Drawing.Size(603, 440);
-            this.dgrid_HoaDon.TabIndex = 2;
             // 
             // label2
             // 
@@ -401,8 +403,8 @@
             this.Text = "HD Pha chế";
             this.pane_HDPC.ResumeLayout(false);
             this.pane_HDPC.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgrid_HoaDonCT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_HoaDon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrid_HoaDonCT)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -436,8 +438,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_XacNhan;
         private System.Windows.Forms.DataGridView dgrid_HoaDonCT;
-        private System.Windows.Forms.DataGridView dgrid_HoaDon;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgrid_HoaDon;
     }
 }

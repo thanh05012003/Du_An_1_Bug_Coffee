@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using _1.DAL.DomainClass;
+using _1.DAL.IRepositories;
 using _1.DAL.Repositories;
 using _2.BUS.IServices;
 using _2.BUS.ViewModels;
@@ -12,11 +13,12 @@ namespace _2.BUS.Services
 {
     public class HoaDonCTService:IHoaDonCTService
     {
-        private HoaDonCTRepository _hoaDonCTRepository;
-
+        private IHoaDonCTRepository _hoaDonCTRepository;
+        private ISanPhamRepository _sanPhamRepository;
         public HoaDonCTService()
         {
             _hoaDonCTRepository = new HoaDonCTRepository();
+            _sanPhamRepository = new SanPhamRepository();
         }
 
         public string add(QlHoaDonCTView obj)
@@ -65,15 +67,32 @@ namespace _2.BUS.Services
         public List<QlHoaDonCTView> GetAll()
         {
             var lstHoaDonCT = from a in _hoaDonCTRepository.GetAll()
+                join b in _sanPhamRepository.GetAll() on a.MaSP equals b.Ma 
                 select new QlHoaDonCTView()
                 {
                     MaHD = a.MaHD,
                     MaSP = a.MaSP,
                     SoLuong = a.SoLuong,
                     DonGia = a.DonGia,
-                    MaBan = a.MaBan
+                    MaBan = a.MaBan,
+                    TenSp = b.Ten
                 };
             return lstHoaDonCT.ToList();
+        }
+        public List<QlHoaDonCTView> GetAll(string ma)
+        {
+            var lstHoaDonCT = from a in _hoaDonCTRepository.GetAll()
+                join b in _sanPhamRepository.GetAll() on a.MaSP equals b.Ma
+                select new QlHoaDonCTView()
+                {
+                    MaHD = a.MaHD,
+                    MaSP = a.MaSP,
+                    SoLuong = a.SoLuong,
+                    DonGia = a.DonGia,
+                    MaBan = a.MaBan,
+                    TenSp = b.Ten
+                };
+            return lstHoaDonCT.Where(c =>c.MaBan == ma).ToList();
         }
     }
 }

@@ -77,6 +77,7 @@ C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\refint\3
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.pdb
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\3.PL.genruntimeconfig.cache
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\ref\3.PL.dll
+C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmBan.resources
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\bin\Debug\net5.0-windows\3.PL.exe
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\bin\Debug\net5.0-windows\3.PL.deps.json
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\bin\Debug\net5.0-windows\3.PL.runtimeconfig.json
@@ -130,6 +131,7 @@ C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.V
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmGiaoHang.resources
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.BanHang.FrmKhachHang.resources
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmTachHD.resources
+C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmBan.resources
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmDoiPass.resources
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmKhuyenMai.resources
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmLogin.resources
@@ -156,4 +158,3 @@ C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\refint\
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\3.PL.pdb
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\3.PL.genruntimeconfig.cache
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\ref\3.PL.dll
-C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.BanHang.Product.resources
