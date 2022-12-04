@@ -67,6 +67,7 @@ namespace _3.PL.Views.BanHang
 
         public void LoadHoTenKH()
         {
+            cbb_TenKH.Items.Clear();
             foreach (var x in _khachHangService.GetAll())
             {
                 cbb_TenKH.Items.Add(x.Ten);
