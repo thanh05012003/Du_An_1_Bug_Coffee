@@ -148,6 +148,7 @@ namespace _3.PL.Views.BanHang
         }
         public void showBtnHdcho()
         {
+            flp_HoaDon.Controls.Clear();
             foreach (var x in _hoaDonService.GetAll())
             {
                 if (x.TrangThai == "Chờ order")
