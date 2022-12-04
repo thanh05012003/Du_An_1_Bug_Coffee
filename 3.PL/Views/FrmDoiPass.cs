@@ -24,7 +24,7 @@ namespace _3.PL.Views
 
         private void btn_DoiMK_Click(object sender, EventArgs e)
         {
-            var mk = _inhanVienServices.GetAll().FirstOrDefault(c => c.MatKhau == txt_MatKhauCu.Text);
+            var mk = _inhanVienServices.GetAll().FirstOrDefault(c => c.MatKhau == txt_MatKhauCu.Text && c.SDT.ToLower() == Properties.Settings.Default.Tk);
             if (mk == null)
             {
                 MessageBox.Show("Mật khẩu cũ không chính xác");
