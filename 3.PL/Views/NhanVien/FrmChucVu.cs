@@ -36,7 +36,16 @@ namespace _3.PL.Views.NhanVien
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(_chucVuService.add(GetDatafromGui()));
+            var cv = _chucVuService.GetAll().FirstOrDefault(c => c.Ten.ToLower() == txt_TenCv.Text.ToLower().Trim());
+            if (cv != null)
+            {
+                MessageBox.Show("Chức vụ này đã tồn tại");
+            }
+            else
+            {
+                MessageBox.Show(_chucVuService.add(GetDatafromGui()));
+            }
+            
             
         }
 

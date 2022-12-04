@@ -112,6 +112,7 @@
             this.dgrid_HoaDon.RowTemplate.Height = 29;
             this.dgrid_HoaDon.Size = new System.Drawing.Size(559, 440);
             this.dgrid_HoaDon.TabIndex = 29;
+            this.dgrid_HoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_HoaDon_CellClick);
             // 
             // txt_DiaChi
             // 

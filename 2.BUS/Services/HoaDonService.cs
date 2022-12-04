@@ -17,12 +17,16 @@ namespace _2.BUS.Services
         private IKhachHangService _khachHangService;
         private INhanVienService _nhanVienService;
         private IVoucherService _voucherService;
+        private ISanPhamService _sanPhamService;
+        IHoaDonCTService _hoaDonCTService;
         public HoaDonService()
         {
             _hoaDonRepository = new HoaDonRepository();
             _khachHangService =  new KhachHangService();
             _nhanVienService = new NhanVienService();
             _voucherService = new VoucherService();
+            _sanPhamService = new SanPhamService();
+            _hoaDonCTService = new HoaDonCTService();
         }
         public string add(QlHoaDonView obj)
         {
@@ -33,7 +37,9 @@ namespace _2.BUS.Services
                 MaKH = obj.MaKH,
                 MaNV = obj.MaNV,
                 NgayTao = obj.NgayTao,
-                MaVC = obj.MaVC
+                MaVC = obj.MaVC,
+                TrangThai = obj.TrangThai,
+                
             };
             if (_hoaDonRepository.Add(hoaDon))
             {
@@ -57,7 +63,8 @@ namespace _2.BUS.Services
                 MaKH = obj.MaKH,
                 MaNV = obj.MaNV,
                 NgayTao = obj.NgayTao,
-                MaVC = obj.MaVC
+                MaVC = obj.MaVC,
+                TrangThai = obj.TrangThai
             };
             if (_hoaDonRepository.Update(hoaDon))
             {
@@ -71,8 +78,26 @@ namespace _2.BUS.Services
         {
             var lstHoaDon = from a in _hoaDonRepository.GetAll()
                 join b in _nhanVienService.GetAll() on a.MaNV equals b.Ma
+                //join c in _khachHangService.GetAll() on a.MaKH equals c.Ma
+                select new QlHoaDonView()
+                {
+                    Ma = a.Ma,
+                    MaKH = a.MaKH,
+                    MaNV = a.MaNV,
+                    NgayTao = a.NgayTao,
+                    MaVC = a.MaVC,
+                    //TenKH = c.Ten,
+                    TenNV = b.Ten,
+                    GhiChu = a.GhiChu,
+                    TrangThai = a.TrangThai,
+                };
+            return lstHoaDon.ToList();
+        }
+        public List<QlHoaDonView> GetAllF()
+        {
+            var lstHoaDon = from a in _hoaDonRepository.GetAll()
+                join b in _nhanVienService.GetAll() on a.MaNV equals b.Ma
                 join c in _khachHangService.GetAll() on a.MaKH equals c.Ma
-                join d in _voucherService.GetAll() on a.MaVC equals d.Ma
                 select new QlHoaDonView()
                 {
                     Ma = a.Ma,
@@ -82,7 +107,8 @@ namespace _2.BUS.Services
                     MaVC = a.MaVC,
                     TenKH = c.Ten,
                     TenNV = b.Ten,
-                    TenVoucher = d.Ten
+                    GhiChu = a.GhiChu,
+                    TrangThai = a.TrangThai,
                 };
             return lstHoaDon.ToList();
         }

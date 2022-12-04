@@ -76,10 +76,11 @@
             // 
             // pbx_Icon
             // 
+            this.pbx_Icon.Dock = System.Windows.Forms.DockStyle.Top;
             this.pbx_Icon.Image = ((System.Drawing.Image)(resources.GetObject("pbx_Icon.Image")));
-            this.pbx_Icon.Location = new System.Drawing.Point(19, 7);
+            this.pbx_Icon.Location = new System.Drawing.Point(0, 0);
             this.pbx_Icon.Name = "pbx_Icon";
-            this.pbx_Icon.Size = new System.Drawing.Size(105, 97);
+            this.pbx_Icon.Size = new System.Drawing.Size(142, 97);
             this.pbx_Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbx_Icon.TabIndex = 3;
             this.pbx_Icon.TabStop = false;
@@ -93,6 +94,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Products";
             this.Size = new System.Drawing.Size(142, 187);
+            this.Click += new System.EventHandler(this.Products_Click);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbx_Icon)).EndInit();
             this.ResumeLayout(false);

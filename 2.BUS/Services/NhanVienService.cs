@@ -37,6 +37,7 @@ namespace _2.BUS.Services
                 MatKhau = obj.MatKhau,
                 MaCV = obj.MaCV,
                 MaCLV = obj.MaCLV,
+                URL = obj.URL
             };
             if (_nhanVienRepository.Add(NhanVien))
             {
@@ -67,6 +68,7 @@ namespace _2.BUS.Services
                 MatKhau = obj.MatKhau,
                 MaCV = obj.MaCV,
                 MaCLV = obj.MaCLV,
+                URL = obj.URL
             };
             if (_nhanVienRepository.Update(NhanVien))
             {
@@ -93,7 +95,8 @@ namespace _2.BUS.Services
                     MatKhau = a.MatKhau,
                     MaCV = a.MaCV,
                     MaCLV = a.MaCLV,
-                    TenCv = b.Ten
+                    TenCv = b.Ten,
+                    URL = a.URL,
                 };
             return lstNhanVien.ToList();
         }

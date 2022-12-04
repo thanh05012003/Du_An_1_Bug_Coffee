@@ -16,8 +16,7 @@ namespace customs
         private Image _icon;
         private string _title;
         private string _cost;
-        public event EventHandler onSelct = null;
-        public event EventHandler Click = null;
+ 
        
         public Products()
         {
@@ -42,19 +41,23 @@ namespace customs
             set => pbx_Icon.Image = value;
         }
 
-        private void pbx_Icon_Click(object sender, EventArgs e)
+        public void pbx_Icon_Click(object sender, EventArgs e)
         {
-            onSelct?.Invoke(this, e);
         }
 
         private void panel1_Click(object sender, EventArgs e)
         {
-            onSelct?.Invoke(this, e);
+           
         }
 
         private void panel1_Leave(object sender, EventArgs e)
         {
            
+        }
+
+        private void Products_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

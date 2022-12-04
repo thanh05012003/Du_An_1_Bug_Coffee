@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNhanVien));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btn_ThemAnh = new System.Windows.Forms.Button();
+            this.ptb_avatar = new System.Windows.Forms.PictureBox();
             this.lb_VaiTroFail = new System.Windows.Forms.Label();
             this.lb_MatKauFail = new System.Windows.Forms.Label();
             this.lb_SDTFail = new System.Windows.Forms.Label();
@@ -45,7 +48,6 @@
             this.rb_nu = new System.Windows.Forms.RadioButton();
             this.rb_nam = new System.Windows.Forms.RadioButton();
             this.cbb_cvNV = new System.Windows.Forms.ComboBox();
-            this.ptb_avatar = new System.Windows.Forms.PictureBox();
             this.txt_mkNV = new System.Windows.Forms.TextBox();
             this.txt_sdtNV = new System.Windows.Forms.TextBox();
             this.txt_emailNV = new System.Windows.Forms.TextBox();
@@ -75,8 +77,8 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_avatar)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_DtNhanVien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,6 +91,8 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.splitContainer1.Panel1.Controls.Add(this.btn_ThemAnh);
+            this.splitContainer1.Panel1.Controls.Add(this.ptb_avatar);
             this.splitContainer1.Panel1.Controls.Add(this.lb_VaiTroFail);
             this.splitContainer1.Panel1.Controls.Add(this.lb_MatKauFail);
             this.splitContainer1.Panel1.Controls.Add(this.lb_SDTFail);
@@ -103,7 +107,6 @@
             this.splitContainer1.Panel1.Controls.Add(this.rb_nu);
             this.splitContainer1.Panel1.Controls.Add(this.rb_nam);
             this.splitContainer1.Panel1.Controls.Add(this.cbb_cvNV);
-            this.splitContainer1.Panel1.Controls.Add(this.ptb_avatar);
             this.splitContainer1.Panel1.Controls.Add(this.txt_mkNV);
             this.splitContainer1.Panel1.Controls.Add(this.txt_sdtNV);
             this.splitContainer1.Panel1.Controls.Add(this.txt_emailNV);
@@ -136,6 +139,28 @@
             this.splitContainer1.Size = new System.Drawing.Size(1323, 847);
             this.splitContainer1.SplitterDistance = 652;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // btn_ThemAnh
+            // 
+            this.btn_ThemAnh.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btn_ThemAnh.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_ThemAnh.Location = new System.Drawing.Point(427, 123);
+            this.btn_ThemAnh.Name = "btn_ThemAnh";
+            this.btn_ThemAnh.Size = new System.Drawing.Size(94, 31);
+            this.btn_ThemAnh.TabIndex = 71;
+            this.btn_ThemAnh.Text = "Thêm ảnh";
+            this.btn_ThemAnh.UseVisualStyleBackColor = false;
+            this.btn_ThemAnh.Click += new System.EventHandler(this.btn_ThemAnh_Click);
+            // 
+            // ptb_avatar
+            // 
+            this.ptb_avatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ptb_avatar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("ptb_avatar.ErrorImage")));
+            this.ptb_avatar.Location = new System.Drawing.Point(252, 31);
+            this.ptb_avatar.Name = "ptb_avatar";
+            this.ptb_avatar.Size = new System.Drawing.Size(158, 123);
+            this.ptb_avatar.TabIndex = 70;
+            this.ptb_avatar.TabStop = false;
             // 
             // lb_VaiTroFail
             // 
@@ -300,16 +325,6 @@
             this.cbb_cvNV.Size = new System.Drawing.Size(331, 28);
             this.cbb_cvNV.TabIndex = 55;
             this.cbb_cvNV.SelectedIndexChanged += new System.EventHandler(this.cbb_cvNV_SelectedIndexChanged);
-            // 
-            // ptb_avatar
-            // 
-            this.ptb_avatar.Image = global::_3.PL.Properties.Resources.avatar;
-            this.ptb_avatar.Location = new System.Drawing.Point(312, 28);
-            this.ptb_avatar.Name = "ptb_avatar";
-            this.ptb_avatar.Size = new System.Drawing.Size(125, 126);
-            this.ptb_avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptb_avatar.TabIndex = 54;
-            this.ptb_avatar.TabStop = false;
             // 
             // txt_mkNV
             // 
@@ -569,9 +584,9 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_avatar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_avatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_DtNhanVien)).EndInit();
             this.ResumeLayout(false);
 
@@ -591,7 +606,6 @@
         private System.Windows.Forms.RadioButton rb_nu;
         private System.Windows.Forms.RadioButton rb_nam;
         private System.Windows.Forms.ComboBox cbb_cvNV;
-        private System.Windows.Forms.PictureBox ptb_avatar;
         private System.Windows.Forms.TextBox txt_mkNV;
         private System.Windows.Forms.TextBox txt_sdtNV;
         private System.Windows.Forms.TextBox txt_emailNV;
@@ -622,5 +636,7 @@
         private System.Windows.Forms.Label lb_NgaySinhFail;
         private System.Windows.Forms.Label lb_HoTenFail;
         private System.Windows.Forms.Label lb_MaFail;
+        private System.Windows.Forms.PictureBox ptb_avatar;
+        private System.Windows.Forms.Button btn_ThemAnh;
     }
 }

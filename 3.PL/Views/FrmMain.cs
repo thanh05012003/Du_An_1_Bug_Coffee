@@ -61,7 +61,14 @@ namespace _3.PL.Views
             var nv = _nhanVienService.GetAll().FirstOrDefault(c =>
                 c.SDT.ToLower() == Properties.Settings.Default.Tk.Trim() &&
                 c.MatKhau.ToLower() == Properties.Settings.Default.Mk.Trim());
-            lb_UserName.Text = nv.Ten + " - " + nv.TenCv;
+            if (Properties.Settings.Default.Tk == "admin")
+            {
+                lb_UserName.Text = "admin";
+            }else if (nv!=null)
+            {
+                lb_UserName.Text = nv.Ten + " - " + nv.TenCv;
+            }
+            
         }
 
         private void btn_DangXuat_Click(object sender, EventArgs e)

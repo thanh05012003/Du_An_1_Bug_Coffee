@@ -47,17 +47,28 @@ namespace _3.PL.Views
                     }
                     else
                     {
-                        if (login == null)
-                        {
-                            MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
-                        }
-                        else
+                        if (txt_TaiKhoan.Texts == "admin" && txt_MatKhau.Texts == "012345678")
                         {
                             Properties.Settings.Default.Tk = txt_TaiKhoan.Texts;
-                            Properties.Settings.Default.Mk = txt_MatKhau.Texts;
+                            //Properties.Settings.Default.Mk = txt_MatKhau.Texts;
                             FrmMain main = new FrmMain();
                             main.Show();
                             this.Hide();
+                        }
+                        else
+                        {
+                            if (login == null)
+                            {
+                                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
+                            }
+                            else
+                            {
+                                Properties.Settings.Default.Tk = txt_TaiKhoan.Texts;
+                                Properties.Settings.Default.Mk = txt_MatKhau.Texts;
+                                FrmMain main = new FrmMain();
+                                main.Show();
+                                this.Hide();
+                            }
                         }
                     }
                 }

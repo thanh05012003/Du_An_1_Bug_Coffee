@@ -33,7 +33,7 @@ namespace _2.BUS.Services
                 Gia = obj.Gia,
                 MoTa = obj.MoTa,
                 MaLsp = obj.MaLsp,
-                URL = obj.URL
+                URL = obj.URL,
             };
             if (_sanPhamRepository.Add(SanPham))
             {
@@ -85,6 +85,23 @@ namespace _2.BUS.Services
                     URL = a.URL
                 };
             return lstSanPham.ToList();
+        }
+        public List<QlSanPhamView> GetAll(string ma)
+        {
+            var lstSanPham = from a in _sanPhamRepository.GetAll()
+                join b in _loaiSanPhamRepository.GetAll() on a.MaLsp equals b.Ma
+                select new QlSanPhamView
+                {
+                    Ma = a.Ma,
+                    Ten = a.Ten,
+                    TrangThai = a.TrangThai,
+                    Gia = a.Gia,
+                    MoTa = a.MoTa,
+                    MaLsp = a.MaLsp,
+                    TenLoaiSp = b.Ten,
+                    URL = a.URL
+                };
+            return lstSanPham.Where(c =>c.Ma == ma).ToList();
         }
     }
 }
