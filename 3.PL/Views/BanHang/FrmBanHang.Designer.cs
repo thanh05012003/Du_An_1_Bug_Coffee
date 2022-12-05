@@ -53,6 +53,8 @@
             this.btn_GiaoHang = new CustomControls.RJControls.CSButton();
             this.flp_HoaDon = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_XoaSp = new System.Windows.Forms.Button();
+            this.btn_ThemSp = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.txt_GhiChu = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -313,6 +315,7 @@
             this.btn_XacNhan.Text = "Xác nhận";
             this.btn_XacNhan.TextColor = System.Drawing.Color.White;
             this.btn_XacNhan.UseVisualStyleBackColor = false;
+            this.btn_XacNhan.Click += new System.EventHandler(this.btn_XacNhan_Click);
             // 
             // btn_GiaoHang
             // 
@@ -342,6 +345,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btn_XoaSp);
+            this.groupBox2.Controls.Add(this.btn_ThemSp);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.flp_HoaDon);
             this.groupBox2.Controls.Add(this.txt_GhiChu);
@@ -363,7 +368,29 @@
             this.groupBox2.TabIndex = 147;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chọn thực đơn";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // btn_XoaSp
+            // 
+            this.btn_XoaSp.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btn_XoaSp.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_XoaSp.Location = new System.Drawing.Point(401, 150);
+            this.btn_XoaSp.Name = "btn_XoaSp";
+            this.btn_XoaSp.Size = new System.Drawing.Size(68, 29);
+            this.btn_XoaSp.TabIndex = 159;
+            this.btn_XoaSp.Text = "Xoá";
+            this.btn_XoaSp.UseVisualStyleBackColor = false;
+            // 
+            // btn_ThemSp
+            // 
+            this.btn_ThemSp.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btn_ThemSp.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_ThemSp.Location = new System.Drawing.Point(327, 150);
+            this.btn_ThemSp.Name = "btn_ThemSp";
+            this.btn_ThemSp.Size = new System.Drawing.Size(68, 29);
+            this.btn_ThemSp.TabIndex = 146;
+            this.btn_ThemSp.Text = "Thêm";
+            this.btn_ThemSp.UseVisualStyleBackColor = false;
+            this.btn_ThemSp.Click += new System.EventHandler(this.btn_ThemSp_Click);
             // 
             // label11
             // 
@@ -472,6 +499,7 @@
             this.btn_ThemHD.TabIndex = 148;
             this.btn_ThemHD.Text = "+";
             this.btn_ThemHD.UseVisualStyleBackColor = false;
+            this.btn_ThemHD.Click += new System.EventHandler(this.btn_ThemHD_Click_1);
             // 
             // FrmBanHang
             // 
@@ -538,5 +566,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.NumericUpDown nud_SoLuong;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btn_ThemSp;
+        private System.Windows.Forms.Button btn_XoaSp;
     }
 }

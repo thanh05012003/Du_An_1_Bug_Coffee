@@ -4,8 +4,10 @@ using _1.DAL.IRepositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading.Tasks.Sources;
 
 namespace _1.DAL.Repositories
 {
@@ -42,7 +44,15 @@ namespace _1.DAL.Repositories
         public bool Update(HoaDon obj)
         {
             if (obj == null) return false;
-            _DbContext.Update(obj);
+            var tempobj = _DbContext.HoaDon.FirstOrDefault(x => x.Ma == obj.Ma);
+            tempobj.Ma = obj.Ma;
+            tempobj.MaKH = obj.MaKH;
+            tempobj.MaNV = obj.MaNV;
+            tempobj.NgayTao = obj.NgayTao;
+            tempobj.MaVC = obj.MaVC;
+            tempobj.TrangThai = obj.TrangThai;
+            tempobj.GhiChu = obj.GhiChu;
+            _DbContext.Update(tempobj);
             _DbContext.SaveChanges();
             return true;
         }
