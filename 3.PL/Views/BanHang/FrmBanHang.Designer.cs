@@ -40,8 +40,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.btn_ThemHD = new System.Windows.Forms.Button();
             this.pane_HDCho = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flp_HdChoCt = new System.Windows.Forms.FlowLayoutPanel();
@@ -53,15 +51,28 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btn_XacNhan = new CustomControls.RJControls.CSButton();
             this.btn_GiaoHang = new CustomControls.RJControls.CSButton();
-            this.cbb_Ban = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.flp_HoaDon = new System.Windows.Forms.FlowLayoutPanel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txt_GhiChu = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.nud_SoLuong = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txt_DonGiaSP = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txt_TenSP = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbb_Ban = new System.Windows.Forms.ComboBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.btn_ThemHD = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_hdGiao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_hdCho)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pane_HDCho.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_SoLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // cbb_loaiSP
@@ -190,29 +201,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(606, 380);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button9.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button9.Location = new System.Drawing.Point(1229, 30);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(62, 39);
-            this.button9.TabIndex = 71;
-            this.button9.Text = "-";
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // btn_ThemHD
-            // 
-            this.btn_ThemHD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btn_ThemHD.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_ThemHD.Location = new System.Drawing.Point(1152, 30);
-            this.btn_ThemHD.Name = "btn_ThemHD";
-            this.btn_ThemHD.Size = new System.Drawing.Size(61, 39);
-            this.btn_ThemHD.TabIndex = 70;
-            this.btn_ThemHD.Text = "+";
-            this.btn_ThemHD.UseVisualStyleBackColor = false;
-            this.btn_ThemHD.Click += new System.EventHandler(this.btn_ThemHD_Click);
-            // 
             // pane_HDCho
             // 
             this.pane_HDCho.Controls.Add(this.groupBox1);
@@ -225,9 +213,9 @@
             this.pane_HDCho.Controls.Add(this.btn_XacNhan);
             this.pane_HDCho.Controls.Add(this.btn_GiaoHang);
             this.pane_HDCho.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pane_HDCho.Location = new System.Drawing.Point(654, 117);
+            this.pane_HDCho.Location = new System.Drawing.Point(654, 230);
             this.pane_HDCho.Name = "pane_HDCho";
-            this.pane_HDCho.Size = new System.Drawing.Size(669, 730);
+            this.pane_HDCho.Size = new System.Drawing.Size(669, 617);
             this.pane_HDCho.TabIndex = 103;
             // 
             // groupBox1
@@ -239,7 +227,6 @@
             this.groupBox1.Size = new System.Drawing.Size(669, 261);
             this.groupBox1.TabIndex = 145;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // flp_HdChoCt
             // 
@@ -319,7 +306,7 @@
             this.btn_XacNhan.FlatAppearance.BorderSize = 0;
             this.btn_XacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_XacNhan.ForeColor = System.Drawing.Color.White;
-            this.btn_XacNhan.Location = new System.Drawing.Point(449, 635);
+            this.btn_XacNhan.Location = new System.Drawing.Point(437, 498);
             this.btn_XacNhan.Name = "btn_XacNhan";
             this.btn_XacNhan.Size = new System.Drawing.Size(188, 50);
             this.btn_XacNhan.TabIndex = 137;
@@ -337,7 +324,7 @@
             this.btn_GiaoHang.FlatAppearance.BorderSize = 0;
             this.btn_GiaoHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_GiaoHang.ForeColor = System.Drawing.Color.White;
-            this.btn_GiaoHang.Location = new System.Drawing.Point(41, 635);
+            this.btn_GiaoHang.Location = new System.Drawing.Point(31, 498);
             this.btn_GiaoHang.Name = "btn_GiaoHang";
             this.btn_GiaoHang.Size = new System.Drawing.Size(188, 50);
             this.btn_GiaoHang.TabIndex = 136;
@@ -346,42 +333,153 @@
             this.btn_GiaoHang.UseVisualStyleBackColor = false;
             this.btn_GiaoHang.Click += new System.EventHandler(this.btn_GiaoHang_Click);
             // 
-            // cbb_Ban
+            // flp_HoaDon
             // 
-            this.cbb_Ban.FormattingEnabled = true;
-            this.cbb_Ban.Location = new System.Drawing.Point(660, 41);
-            this.cbb_Ban.Name = "cbb_Ban";
-            this.cbb_Ban.Size = new System.Drawing.Size(167, 28);
-            this.cbb_Ban.TabIndex = 104;
+            this.flp_HoaDon.Location = new System.Drawing.Point(6, 207);
+            this.flp_HoaDon.Name = "flp_HoaDon";
+            this.flp_HoaDon.Size = new System.Drawing.Size(478, 34);
+            this.flp_HoaDon.TabIndex = 105;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.flp_HoaDon);
+            this.groupBox2.Controls.Add(this.txt_GhiChu);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.nud_SoLuong);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.txt_DonGiaSP);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.txt_TenSP);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.cbb_Ban);
+            this.groupBox2.Controls.Add(this.button9);
+            this.groupBox2.Controls.Add(this.btn_ThemHD);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox2.Location = new System.Drawing.Point(654, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(669, 241);
+            this.groupBox2.TabIndex = 147;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Chọn thực đơn";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(26, 154);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(91, 20);
+            this.label11.TabIndex = 158;
+            this.label11.Text = "Chọn bàn:";
+            // 
+            // txt_GhiChu
+            // 
+            this.txt_GhiChu.Location = new System.Drawing.Point(454, 97);
+            this.txt_GhiChu.Name = "txt_GhiChu";
+            this.txt_GhiChu.Size = new System.Drawing.Size(125, 27);
+            this.txt_GhiChu.TabIndex = 157;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(347, 100);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(76, 20);
+            this.label10.TabIndex = 156;
+            this.label10.Text = "Ghi chú:";
+            // 
+            // nud_SoLuong
+            // 
+            this.nud_SoLuong.Location = new System.Drawing.Point(454, 51);
+            this.nud_SoLuong.Name = "nud_SoLuong";
+            this.nud_SoLuong.Size = new System.Drawing.Size(120, 27);
+            this.nud_SoLuong.TabIndex = 155;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(347, 54);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 20);
+            this.label9.TabIndex = 154;
+            this.label9.Text = "Số lượng:";
+            // 
+            // txt_DonGiaSP
+            // 
+            this.txt_DonGiaSP.Location = new System.Drawing.Point(132, 94);
+            this.txt_DonGiaSP.Name = "txt_DonGiaSP";
+            this.txt_DonGiaSP.Size = new System.Drawing.Size(125, 27);
+            this.txt_DonGiaSP.TabIndex = 153;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(25, 97);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 20);
+            this.label8.TabIndex = 152;
+            this.label8.Text = "Đơn giá:";
+            // 
+            // txt_TenSP
+            // 
+            this.txt_TenSP.Location = new System.Drawing.Point(132, 48);
+            this.txt_TenSP.Name = "txt_TenSP";
+            this.txt_TenSP.Size = new System.Drawing.Size(125, 27);
+            this.txt_TenSP.TabIndex = 151;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(660, 10);
+            this.label5.Location = new System.Drawing.Point(25, 51);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 20);
-            this.label5.TabIndex = 69;
-            this.label5.Text = "Chọn bàn";
+            this.label5.Size = new System.Drawing.Size(82, 20);
+            this.label5.TabIndex = 147;
+            this.label5.Text = "Tên món:";
             // 
-            // flp_HoaDon
+            // cbb_Ban
             // 
-            this.flp_HoaDon.Location = new System.Drawing.Point(660, 77);
-            this.flp_HoaDon.Name = "flp_HoaDon";
-            this.flp_HoaDon.Size = new System.Drawing.Size(573, 34);
-            this.flp_HoaDon.TabIndex = 105;
+            this.cbb_Ban.FormattingEnabled = true;
+            this.cbb_Ban.Location = new System.Drawing.Point(136, 150);
+            this.cbb_Ban.Name = "cbb_Ban";
+            this.cbb_Ban.Size = new System.Drawing.Size(167, 28);
+            this.cbb_Ban.TabIndex = 150;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button9.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button9.Location = new System.Drawing.Point(595, 199);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(62, 39);
+            this.button9.TabIndex = 149;
+            this.button9.Text = "-";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // btn_ThemHD
+            // 
+            this.btn_ThemHD.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btn_ThemHD.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_ThemHD.Location = new System.Drawing.Point(518, 199);
+            this.btn_ThemHD.Name = "btn_ThemHD";
+            this.btn_ThemHD.Size = new System.Drawing.Size(61, 39);
+            this.btn_ThemHD.TabIndex = 148;
+            this.btn_ThemHD.Text = "+";
+            this.btn_ThemHD.UseVisualStyleBackColor = false;
             // 
             // FrmBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1323, 847);
-            this.Controls.Add(this.flp_HoaDon);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.cbb_Ban);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.pane_HDCho);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.btn_ThemHD);
             this.Controls.Add(this.panel1);
             this.Name = "FrmBanHang";
             this.Text = "Bán hàng";
@@ -394,8 +492,10 @@
             this.pane_HDCho.ResumeLayout(false);
             this.pane_HDCho.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_SoLuong)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -411,13 +511,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button btn_ThemHD;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel pane_HDCho;
-        private System.Windows.Forms.ComboBox cbb_Ban;
-        private System.Windows.Forms.Label label5;
         private CustomControls.RJControls.CSButton btn_XacNhan;
         private CustomControls.RJControls.CSButton btn_GiaoHang;
         private System.Windows.Forms.FlowLayoutPanel flp_HoaDon;
@@ -429,5 +525,18 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.FlowLayoutPanel flp_HdChoCt;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txt_DonGiaSP;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txt_TenSP;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbb_Ban;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btn_ThemHD;
+        private System.Windows.Forms.TextBox txt_GhiChu;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.NumericUpDown nud_SoLuong;
+        private System.Windows.Forms.Label label11;
     }
 }
