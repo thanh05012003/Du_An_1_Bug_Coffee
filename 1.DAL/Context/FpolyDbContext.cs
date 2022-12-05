@@ -27,7 +27,7 @@ namespace _1.DAL.Context
             //Nơi cấu hình đường dẫn
             optionsBuilder.UseSqlServer(
 
-                @"Data Source=DESKTOP-C378UQD\SQLEXPRESS;Initial Catalog=Bug_Coffee;Persist Security Info=True;User ID=tainq27;Password=123456");
+                @"Data Source=MSI;Initial Catalog=Bug_Coffee;Persist Security Info=True;User ID=thanhnxph20424;Password=05012003");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

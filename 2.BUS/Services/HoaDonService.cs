@@ -112,5 +112,25 @@ namespace _2.BUS.Services
                 };
             return lstHoaDon.ToList();
         }
+
+        public List<QlHoaDonView> GetAll(string ma)
+        {
+            var lstHoaDon = from a in _hoaDonRepository.GetAll()
+                join b in _nhanVienService.GetAll() on a.MaNV equals b.Ma
+                join c in _khachHangService.GetAll() on a.MaKH equals c.Ma
+                select new QlHoaDonView()
+                {
+                    Ma = a.Ma,
+                    MaKH = a.MaKH,
+                    MaNV = a.MaNV,
+                    NgayTao = a.NgayTao,
+                    MaVC = a.MaVC,
+                    TenKH = c.Ten,
+                    TenNV = b.Ten,
+                    GhiChu = a.GhiChu,
+                    TrangThai = a.TrangThai,
+                };
+            return lstHoaDon.Where(c =>c.Ma == ma).ToList();
+        }
     }
 }

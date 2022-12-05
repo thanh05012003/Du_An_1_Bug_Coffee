@@ -157,3 +157,4 @@ C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\refint\
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\3.PL.pdb
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\3.PL.genruntimeconfig.cache
 C:\Users\taibeo\OneDrive\Desktop\Du An One\3.PL\obj\Debug\net5.0-windows\ref\3.PL.dll
+C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.BanHang.test.resources

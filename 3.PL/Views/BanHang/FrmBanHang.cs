@@ -19,6 +19,7 @@ namespace _3.PL.Views.BanHang
         private ILoaiSanPhamService _loaiSanPhamService;
         private string _maSPWhenClick;
         private string _maHDWhenClick;
+        private int i = 0;
 
 
         public FrmBanHang()
@@ -127,26 +128,108 @@ namespace _3.PL.Views.BanHang
                 flowLayoutPanel1.Controls.Add(products);
             }
         }
+        //public void ShowBill(string ma)
+        //{
+        //    List<QlSanPhamView> listBillInfo = _sanPhamService.GetAll(ma);
+        //    dgrid_HoaDon.Rows.Clear();
+        //    foreach (var item in listBillInfo)
+        //    {
+        //        dgrid_HoaDon.ColumnCount = 6;
+        //        dgrid_HoaDon.Columns[0].Name = "Mã Sản phẩm";
+        //        dgrid_HoaDon.Columns[1].Name = "Tên sản phẩm";
+        //        dgrid_HoaDon.Columns[2].Name = "Đơn giá";
+        //        dgrid_HoaDon.Columns[3].Name = "Số lượng";
+        //        dgrid_HoaDon.Columns[4].Name = "Thành tiền";
+        //        dgrid_HoaDon.Columns[5].Name = "Ghi chú";
+        //        dgrid_HoaDon.Rows.Clear();
+        //        foreach (var x in listBillInfo)
+        //        {
+        //            dgrid_HoaDon.Rows.Add(x.Ma, x.Ten, Math.Round(x.Gia, 0));
+        //        }
+        //    }
+        //}
+        private Panel pane;
         public void ShowBill(string ma)
         {
-            List<QlSanPhamView> listBillInfo = _sanPhamService.GetAll(ma);
-            dgrid_HoaDon.Rows.Clear();
-            foreach (var item in listBillInfo)
+            foreach (var x in _sanPhamService.GetAll(ma))
             {
-                dgrid_HoaDon.ColumnCount = 6;
-                dgrid_HoaDon.Columns[0].Name = "Mã Sản phẩm";
-                dgrid_HoaDon.Columns[1].Name = "Tên sản phẩm";
-                dgrid_HoaDon.Columns[2].Name = "Đơn giá";
-                dgrid_HoaDon.Columns[3].Name = "Số lượng";
-                dgrid_HoaDon.Columns[4].Name = "Thành tiền";
-                dgrid_HoaDon.Columns[5].Name = "Ghi chú";
-                dgrid_HoaDon.Rows.Clear();
-                foreach (var x in listBillInfo)
+                pane = new Panel()
                 {
-                    dgrid_HoaDon.Rows.Add(x.Ma, x.Ten, Math.Round(x.Gia, 0));
-                }
+                    Dock = DockStyle.Top,
+                    Location = new Point(3, 3),
+                    Size = new Size(666, 46),
+                    Name = "pane_Hdct"
+                };
+                Label lb = new Label()
+                {
+                    AutoSize = true,
+                    Text = x.Ma,
+                    Location = new Point(11, 9),
+                    Size = new Size(50, 20),
+                };
+                pane.Controls.Add(lb);
+                Label lb2 = new Label()
+                {
+                    //AutoSize = true,
+                    Text = x.Ten,
+                    Location = new Point(67, 9),
+                    Size = new Size(123, 26),
+
+                };
+                pane.Controls.Add(lb2);
+                Label lb3 = new Label()
+                {
+                    AutoSize = true,
+                    Text = Math.Round(x.Gia, 0).ToString("C0"),
+                    Location = new Point(193, 9),
+                    Size = new Size(50, 20),
+                };
+                pane.Controls.Add(lb3);
+                NumericUpDown nb = new NumericUpDown()
+                {
+                    Location = new Point(271, 6),
+                    Size = new Size(86, 27),
+                    Text = "1",
+                };
+                pane.Controls.Add(nb);
+                Label lb4 = new Label()
+                {
+                    AutoSize = true,
+                    Location = new System.Drawing.Point(376, 9),
+                    Size = new System.Drawing.Size(50, 20),
+                    Text = (int.Parse(nb.Text) * x.Gia).ToString("C0"),
+                };
+                pane.Controls.Add(lb4);
+                TextBox tb = new TextBox()
+                {
+                    Location = new System.Drawing.Point(471, 6),
+                    Size = new System.Drawing.Size(88, 27),
+                };
+                pane.Controls.Add(tb);
+                Button btn = new Button()
+                {
+                    Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point),
+                    Location = new System.Drawing.Point(584, 5),
+                    Size = new System.Drawing.Size(76, 29),
+                    Text = "X",
+                };
+                pane.Controls.Add(btn);
+                pane.Tag = x;
+                btn.Tag = x;
+                btn.Click += Btn_Click;
+                flp_HdChoCt.Tag = x;
+                //flp_HdChoCt.Click += btn_Click_1;
+                flp_HdChoCt.Controls.Add(pane);
             }
         }
+
+
+        private void Btn_Click(object? sender, EventArgs e)
+        {
+            //_maSPWhenClick = ((sender as Button).Tag as QlSanPhamView).Ma;
+            //flp_HdChoCt.Controls.Remove(pane);
+        }
+
         public void showBtnHdcho()
         {
             flp_HoaDon.Controls.Clear();
@@ -189,6 +272,7 @@ namespace _3.PL.Views.BanHang
         //lấy ra mã sản phẩm khi click vào ảnh
         void btn_Click_1(object sender, EventArgs e)
         {
+            i += 1;
             _maSPWhenClick = ((sender as Panel).Tag as QlSanPhamView).Ma;
             ShowBill(_maSPWhenClick);
         }
