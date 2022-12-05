@@ -50,7 +50,7 @@ namespace _3.PL.Views.BanHang
                     Ma = "HD00" + (_hoaDonService.GetAll().Count + 1),
                     MaNV = NV.Ma,
                     TrangThai = "Chờ order",
-                    NgayTao = DateTime.Now
+                    NgayTao = DateTime.Now,
                 };
             }
 
