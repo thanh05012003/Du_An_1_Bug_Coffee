@@ -459,6 +459,7 @@
             this.btn_TimKiem.TabIndex = 13;
             this.btn_TimKiem.Text = "Tìm";
             this.btn_TimKiem.UseVisualStyleBackColor = false;
+            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
             // 
             // btn_Loc
             // 
@@ -541,7 +542,7 @@
             this.ClientSize = new System.Drawing.Size(1305, 770);
             this.Controls.Add(this.pane_LSHD);
             this.Name = "FrmLichSuHD";
-            this.Text = "Lịch sử HD";
+            this.Text = "*";
             this.pane_LSHD.ResumeLayout(false);
             this.pane_LSHD.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_HoaDonCT)).EndInit();
