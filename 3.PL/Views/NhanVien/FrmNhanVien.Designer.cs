@@ -244,7 +244,7 @@
             this.txt_DiaChi.Location = new System.Drawing.Point(224, 539);
             this.txt_DiaChi.Name = "txt_DiaChi";
             this.txt_DiaChi.Size = new System.Drawing.Size(331, 27);
-            this.txt_DiaChi.TabIndex = 63;
+            this.txt_DiaChi.TabIndex = 53;
             // 
             // label9
             // 
@@ -331,7 +331,7 @@
             this.txt_mkNV.Location = new System.Drawing.Point(224, 595);
             this.txt_mkNV.Name = "txt_mkNV";
             this.txt_mkNV.Size = new System.Drawing.Size(331, 27);
-            this.txt_mkNV.TabIndex = 52;
+            this.txt_mkNV.TabIndex = 54;
             this.txt_mkNV.TextChanged += new System.EventHandler(this.txt_mkNV_TextChanged);
             // 
             // txt_sdtNV
@@ -462,7 +462,7 @@
             this.btn_updateNV.Location = new System.Drawing.Point(391, 782);
             this.btn_updateNV.Name = "btn_updateNV";
             this.btn_updateNV.Size = new System.Drawing.Size(164, 46);
-            this.btn_updateNV.TabIndex = 42;
+            this.btn_updateNV.TabIndex = 57;
             this.btn_updateNV.Text = "Cập nhật";
             this.btn_updateNV.UseVisualStyleBackColor = false;
             this.btn_updateNV.Click += new System.EventHandler(this.btn_updateNV_Click);
@@ -486,7 +486,7 @@
             this.btn_addNV.Location = new System.Drawing.Point(224, 782);
             this.btn_addNV.Name = "btn_addNV";
             this.btn_addNV.Size = new System.Drawing.Size(161, 46);
-            this.btn_addNV.TabIndex = 41;
+            this.btn_addNV.TabIndex = 56;
             this.btn_addNV.Text = "Thêm";
             this.btn_addNV.UseVisualStyleBackColor = false;
             this.btn_addNV.Click += new System.EventHandler(this.btn_addNV_Click);
