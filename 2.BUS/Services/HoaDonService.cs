@@ -15,18 +15,20 @@ namespace _2.BUS.Services
     {
         private IHoaDonRepository _hoaDonRepository;
         private IKhachHangService _khachHangService;
-        private INhanVienService _nhanVienService;
+        private INhanVienRepository _nhanVienRepository;
         private IVoucherService _voucherService;
-        private ISanPhamService _sanPhamService;
-        IHoaDonCTService _hoaDonCTService;
+        private ISanPhamRepository _sanPhamRepository;
+        private IHoaDonCTRepository _hoaDonCtRepository;
+        private IBanRepository _banRepository;
         public HoaDonService()
         {
             _hoaDonRepository = new HoaDonRepository();
             _khachHangService =  new KhachHangService();
-            _nhanVienService = new NhanVienService();
+            _nhanVienRepository = new NhanVienRepository();
             _voucherService = new VoucherService();
-            _sanPhamService = new SanPhamService();
-            _hoaDonCTService = new HoaDonCTService();
+            _sanPhamRepository = new SanPhamRepository();
+            _hoaDonCtRepository = new HoaDonCTRepository();
+            _banRepository = new BanRepository();
         }
         public string add(QlHoaDonView obj)
         {
@@ -40,7 +42,6 @@ namespace _2.BUS.Services
                 MaVC = obj.MaVC,
                 TrangThai = obj.TrangThai,
                 MaBan = obj.MaBan
-                
             };
             if (_hoaDonRepository.Add(hoaDon))
             {
@@ -65,7 +66,8 @@ namespace _2.BUS.Services
                 MaNV = obj.MaNV,
                 NgayTao = obj.NgayTao,
                 MaVC = obj.MaVC,
-                TrangThai = obj.TrangThai
+                TrangThai = obj.TrangThai,
+                MaBan = obj.MaBan
             };
             if (_hoaDonRepository.Update(hoaDon))
             {
@@ -78,8 +80,7 @@ namespace _2.BUS.Services
         public List<QlHoaDonView> GetAll()
         {
             var lstHoaDon = from a in _hoaDonRepository.GetAll()
-                join b in _nhanVienService.GetAll() on a.MaNV equals b.Ma
-                //join c in _khachHangService.GetAll() on a.MaKH equals c.Ma
+                join b in _nhanVienRepository.GetAll() on a.MaNV equals b.Ma
                 select new QlHoaDonView()
                 {
                     Ma = a.Ma,
@@ -87,26 +88,6 @@ namespace _2.BUS.Services
                     MaNV = a.MaNV,
                     NgayTao = a.NgayTao,
                     MaVC = a.MaVC,
-                    //TenKH = c.Ten,
-                    TenNV = b.Ten,
-                    GhiChu = a.GhiChu,
-                    TrangThai = a.TrangThai,
-                };
-            return lstHoaDon.ToList();
-        }
-        public List<QlHoaDonView> GetAllF()
-        {
-            var lstHoaDon = from a in _hoaDonRepository.GetAll()
-                join b in _nhanVienService.GetAll() on a.MaNV equals b.Ma
-                join c in _khachHangService.GetAll() on a.MaKH equals c.Ma
-                select new QlHoaDonView()
-                {
-                    Ma = a.Ma,
-                    MaKH = a.MaKH,
-                    MaNV = a.MaNV,
-                    NgayTao = a.NgayTao,
-                    MaVC = a.MaVC,
-                    TenKH = c.Ten,
                     TenNV = b.Ten,
                     GhiChu = a.GhiChu,
                     TrangThai = a.TrangThai,
@@ -114,11 +95,17 @@ namespace _2.BUS.Services
             return lstHoaDon.ToList();
         }
 
-        public List<QlHoaDonView> GetAll(string ma)
+        public List<QlHoaDonView> GetAll(string input)
         {
+            if (input == null)
+            {
+                return GetAll();
+            }
             var lstHoaDon = from a in _hoaDonRepository.GetAll()
-                join b in _nhanVienService.GetAll() on a.MaNV equals b.Ma
-                join c in _khachHangService.GetAll() on a.MaKH equals c.Ma
+                join b in _nhanVienRepository.GetAll() on a.MaNV equals b.Ma
+                join d in _hoaDonCtRepository.GetAll() on a.Ma equals d.MaHD
+                join e in _sanPhamRepository.GetAll() on d.MaSP equals e.Ma
+                join g in _banRepository.GetAll() on a.MaBan equals g.Ma 
                 select new QlHoaDonView()
                 {
                     Ma = a.Ma,
@@ -126,12 +113,15 @@ namespace _2.BUS.Services
                     MaNV = a.MaNV,
                     NgayTao = a.NgayTao,
                     MaVC = a.MaVC,
-                    TenKH = c.Ten,
                     TenNV = b.Ten,
                     GhiChu = a.GhiChu,
                     TrangThai = a.TrangThai,
+                    TenSP = e.Ten,
+                    Soluong = d.SoLuong,
+                    MaBan = g.Ma,
+                    DonGia = d.DonGia,
                 };
-            return lstHoaDon.Where(c =>c.Ma == ma).ToList();
+            return lstHoaDon.Where(c =>c.MaBan == input).ToList();
         }
     }
 }

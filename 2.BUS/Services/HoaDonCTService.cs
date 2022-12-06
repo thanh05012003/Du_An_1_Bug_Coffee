@@ -76,19 +76,13 @@ namespace _2.BUS.Services
                 };
             return lstHoaDonCT.ToList();
         }
-        public List<QlHoaDonCTView> GetAll(string ma)
+        public List<QlHoaDonCTView> GetAll(string input)
         {
-            var lstHoaDonCT = from a in _hoaDonCTRepository.GetAll()
-                join b in _sanPhamRepository.GetAll() on a.MaSP equals b.Ma
-                select new QlHoaDonCTView()
-                {
-                    MaHD = a.MaHD,
-                    MaSP = a.MaSP,
-                    SoLuong = a.SoLuong,
-                    DonGia = a.DonGia,
-                    TenSp = b.Ten
-                };
-            return lstHoaDonCT.Where(c =>c.MaHD == ma ).ToList();
+            if (input == null)
+            {
+                return GetAll();
+            }
+            return GetAll().Where(c =>c.MaHD == input ).ToList();
         }
     }
 }

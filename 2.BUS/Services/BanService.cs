@@ -14,6 +14,9 @@ namespace _2.BUS.Services
     public class BanService:IBanService
     {
         private IBanRepository _banRepository;
+        private IHoaDonRepository _hoaDonRepository;
+        private IHoaDonCTRepository _hoaDonCtRepository;
+        private ISanPhamRepository _sanPhamRepository;
 
         public BanService()
         {
@@ -62,9 +65,19 @@ namespace _2.BUS.Services
                 {
                     Ma = a.Ma,
                     Ten = a.Ten,
-                    TrangThai = a.TrangThai
+                    TrangThai = a.TrangThai,
                 };
             return lstBan.ToList();
+        }
+
+        public List<QlBanView> GetAll(string input)
+        {
+            if (input == null)
+            {
+                return GetAll();
+            }
+          
+            return GetAll().Where(c =>c.Ma == input).ToList();
         }
     }
 }

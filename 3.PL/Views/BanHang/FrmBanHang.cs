@@ -21,9 +21,7 @@ namespace _3.PL.Views.BanHang
         private IHoaDonCTService _hoaDonCTService;
         private string _maSPWhenClick = "";
         private string _maHDWhenClick = "";
-    
-
-
+        
         public FrmBanHang()
         {
             InitializeComponent();
@@ -59,7 +57,7 @@ namespace _3.PL.Views.BanHang
             {
                 foreach (var a in _hoaDonService.GetAll().Where(c =>c.Ma == x.MaHD))
                 {
-                    if (a.TrangThai.ToLower() == "chờ order")
+                    if (a.TrangThai == "Chờ order")
                     {
                         dgrid_HdChoCT.Rows.Add(x.MaSP, x.TenSp, x.DonGia, x.SoLuong, (x.SoLuong * x.DonGia));
                     }
@@ -83,7 +81,7 @@ namespace _3.PL.Views.BanHang
         {
             QlHoaDonView lstHdView = new QlHoaDonView();
             var NV = _nhanVienService.GetAll().FirstOrDefault(c => c.SDT == Properties.Settings.Default.Tk);
-            var table = _banService.GetAll().FirstOrDefault(c => c.Ten == cbb_Ban.Text);
+            //var table = _banService.GetAll().FirstOrDefault(c => c.Ten == cbb_Ban.Text);
             if (NV != null)
             {
                 lstHdView = new QlHoaDonView()
@@ -92,7 +90,7 @@ namespace _3.PL.Views.BanHang
                     MaNV = NV.Ma,
                     TrangThai = "Chờ order",
                     NgayTao = DateTime.Now,
-                    MaBan = table.Ma,
+                    //MaBan = table.Ma,
                 };
             }
 
@@ -196,7 +194,7 @@ namespace _3.PL.Views.BanHang
             flp_HoaDon.Controls.Clear();
             foreach (var x in _hoaDonService.GetAll())
             {
-                if (x.TrangThai == "Chờ order")
+                if (x.TrangThai == "Chờ chờ order")
                 {
                     Button btn = new Button()
                     {
@@ -274,8 +272,10 @@ namespace _3.PL.Views.BanHang
             }
             else
             {
+                var ban = _banService.GetAll().FirstOrDefault(c => c.Ten == cbb_Ban.Text);
                 var temp = HoaDonCho();
                 _maHDWhenClick = temp.Ma;
+                temp.MaBan = ban.Ma;
                 MessageBox.Show(_hoaDonService.add(temp));
                 showBtnHdcho();
                 ShowHdCho();
@@ -314,7 +314,7 @@ namespace _3.PL.Views.BanHang
         {
             var temp = HoaDonCho();
             temp.Ma = _maHDWhenClick;
-            temp.TrangThai = "đã order";
+            temp.TrangThai = "Chờ pha chế";
             MessageBox.Show(_hoaDonService.update(temp));
             ShowHdCho();
             LoadHdChoCT();

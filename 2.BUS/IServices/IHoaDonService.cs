@@ -13,7 +13,6 @@ namespace _2.BUS.IServices
         string delete(QlHoaDonView obj);
         string update(QlHoaDonView obj);
         List<QlHoaDonView> GetAll();
-        List<QlHoaDonView> GetAllF();
-        List<QlHoaDonView> GetAll(string ma);
+        List<QlHoaDonView> GetAll(string input);
     }
 }

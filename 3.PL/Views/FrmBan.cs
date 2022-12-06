@@ -1,30 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using _1.DAL.DomainClass;
 using _2.BUS.IServices;
 using _2.BUS.Services;
 using _2.BUS.ViewModels;
 using CustomControls.RJControls;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace _3.PL.Views
 {
     public partial class FrmBan : Form
     {
         private IBanService _banService;
-        IHoaDonCTService _hoaDonCtService;
+        private IHoaDonCTService _hoaDonCtService;
+        private IHoaDonService _hoaDonService;
         public FrmBan()
         {
             InitializeComponent();
             _banService = new BanService();
             _hoaDonCtService = new HoaDonCTService();
+            _hoaDonService = new HoaDonService();
             loadTable();
         }
 
@@ -33,10 +28,15 @@ namespace _3.PL.Views
             List <QlBanView> listtable = _banService.GetAll();
             foreach (var x in listtable)
             {
-                Button btn = new Button() {Size = new System.Drawing.Size(280, 280), };
+                CSButton btn = new CSButton()
+                {
+                    Size = new System.Drawing.Size(280, 280),
+                    BorderRadius = 50,
+                    ForeColor = Color.Black
+                };
                 btn.Text = x.Ten + "  " + (x.TrangThai == 1 ? "Còn trống" : "Có người");
-                btn.Click += btn_Click;
                 btn.Tag = x;
+                btn.Click += btn_Click;
                 switch (x.TrangThai)
                 {
                     case 1:
@@ -51,24 +51,21 @@ namespace _3.PL.Views
         }
         void ShowBill(string ma)
         {
-            List<QlHoaDonCTView> listBillInfo = _hoaDonCtService.GetAll(ma);
             dgrid_TTSp.Rows.Clear();
-            foreach (var item in listBillInfo)
+            dgrid_TTSp.ColumnCount = 3;
+            dgrid_TTSp.Columns[0].Name = "Tên";
+            dgrid_TTSp.Columns[1].Name = "Số lượng";
+            dgrid_TTSp.Columns[2].Name = "Đơn giá";
+            dgrid_TTSp.Rows.Clear();
+            foreach (var x in _hoaDonService.GetAll(ma))
             {
-                dgrid_TTSp.ColumnCount = 3;
-                dgrid_TTSp.Columns[0].Name = "Ten";
-                dgrid_TTSp.Columns[1].Name = "Số lượng";
-                dgrid_TTSp.Columns[2].Name = "Đơn giá";
-                dgrid_TTSp.Rows.Clear();
-                foreach (var x in listBillInfo)
-                {
-                    dgrid_TTSp.Rows.Add(x.TenSp, x.SoLuong);
-                }
+                dgrid_TTSp.Rows.Add(x.TenSP,x.Soluong,Math.Round(x.DonGia,0));
             }
         }
-        void btn_Click(object sender, EventArgs e)
+
+        public void btn_Click(object sender, EventArgs e)
         {
-            string MaBan = ((sender as Button).Tag as QlBanView).Ma;
+            string MaBan = ((sender as CSButton).Tag as QlBanView).Ma;
             ShowBill(MaBan);
         }
     }

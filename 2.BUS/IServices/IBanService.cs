@@ -12,5 +12,6 @@ namespace _2.BUS.IServices
         string add(QlBanView obj);
         string update(QlBanView obj);
         List<QlBanView> GetAll();
+        List<QlBanView> GetAll(string input);
     }
 }

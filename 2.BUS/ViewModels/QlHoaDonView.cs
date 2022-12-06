@@ -14,5 +14,8 @@ namespace _2.BUS.ViewModels
         public string TenNV { get; set; }
         public string GhiChu { get; set; }
         public string TrangThai { get; set; }
+        public string TenSP { get; set; }
+        public int Soluong { get; set; }
+        public decimal DonGia { get; set; }
     }
 }

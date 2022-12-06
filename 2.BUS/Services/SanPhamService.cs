@@ -86,22 +86,14 @@ namespace _2.BUS.Services
                 };
             return lstSanPham.ToList();
         }
-        public List<QlSanPhamView> GetAll(string ma)
+        public List<QlSanPhamView> GetAll(string input)
         {
-            var lstSanPham = from a in _sanPhamRepository.GetAll()
-                join b in _loaiSanPhamRepository.GetAll() on a.MaLsp equals b.Ma
-                select new QlSanPhamView
-                {
-                    Ma = a.Ma,
-                    Ten = a.Ten,
-                    TrangThai = a.TrangThai,
-                    Gia = a.Gia,
-                    MoTa = a.MoTa,
-                    MaLsp = a.MaLsp,
-                    TenLoaiSp = b.Ten,
-                    URL = a.URL
-                };
-            return lstSanPham.Where(c =>c.Ma == ma).ToList();
+            if (input == null) 
+            {
+                return GetAll();
+            }
+           
+            return GetAll().Where(c =>c.Ma == input).ToList();
         }
     }
 }
