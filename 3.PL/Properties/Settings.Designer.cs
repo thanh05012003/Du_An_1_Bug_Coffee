@@ -70,5 +70,17 @@ namespace _3.PL.Properties {
                 this["MkDaLogin"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string MaBan {
+            get {
+                return ((string)(this["MaBan"]));
+            }
+            set {
+                this["MaBan"] = value;
+            }
+        }
     }
 }

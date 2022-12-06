@@ -101,6 +101,10 @@ namespace _3.PL.Views.BanHang
             cbb_Ban.Items.Clear();
             foreach (var x in _banService.GetAll())
             {
+                if (x.TrangThai == 1)
+                {
+                    cbb_Ban.ForeColor = Color.Red;
+                }
                 cbb_Ban.Items.Add(x.Ten);
             }
             //cbb_Ban.SelectedIndex = 0;
@@ -277,9 +281,9 @@ namespace _3.PL.Views.BanHang
                 _maHDWhenClick = temp.Ma;
                 temp.MaBan = ban.Ma;
                 MessageBox.Show(_hoaDonService.add(temp));
-                //var tempban = updateTrangThaiBan();
-                //tempban.TrangThai = 0;
-                //_banService.update(tempban);
+                var tempban = updateTrangThaiBan();
+                tempban.TrangThai = 0;
+                _banService.update(tempban);
                 showBtnHdcho();
                 ShowHdCho();
             }
@@ -333,10 +337,10 @@ namespace _3.PL.Views.BanHang
             temp.MaBan = ban.Ma;
             temp.TrangThai = "Chờ pha chế";
             MessageBox.Show(_hoaDonService.update(temp));
-            
             ShowHdCho();
             LoadHdChoCT();
             showBtnHdcho();
+            _maHDWhenClick = "";
         }
 
         private void FrmBanHang_Load(object sender, EventArgs e)

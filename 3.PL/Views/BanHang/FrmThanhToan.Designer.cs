@@ -33,7 +33,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_TienKhachDua = new CustomControls.RJControls.CSTextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lb_TongTien = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_ThemKH = new CustomControls.RJControls.CSButton();
             this.cmb_Voucher = new CustomControls.RJControls.CSComboBox();
@@ -41,11 +41,11 @@
             this.btn_ThanhToan = new CustomControls.RJControls.CSButton();
             this.lb_DiaChi = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lb_TenKH = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_SearchKH = new CustomControls.RJControls.CSButton();
             this.txt_SDT = new CustomControls.RJControls.CSTextBox();
+            this.cmb_TenKh = new CustomControls.RJControls.CSComboBox();
             this.SuspendLayout();
             // 
             // Lb_TienTraLai
@@ -72,7 +72,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(30, 317);
+            this.label7.Location = new System.Drawing.Point(30, 38);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(137, 23);
             this.label7.TabIndex = 32;
@@ -87,7 +87,7 @@
             this.txt_TienKhachDua.BorderSize = 2;
             this.txt_TienKhachDua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_TienKhachDua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_TienKhachDua.Location = new System.Drawing.Point(261, 311);
+            this.txt_TienKhachDua.Location = new System.Drawing.Point(261, 32);
             this.txt_TienKhachDua.Margin = new System.Windows.Forms.Padding(4);
             this.txt_TienKhachDua.Multiline = false;
             this.txt_TienKhachDua.Name = "txt_TienKhachDua";
@@ -99,22 +99,27 @@
             this.txt_TienKhachDua.TabIndex = 31;
             this.txt_TienKhachDua.Texts = "";
             this.txt_TienKhachDua.UnderlinedStyle = false;
+            this.txt_TienKhachDua._TextChanged += new System.EventHandler(this.txt_TienKhachDua__TextChanged);
+            this.txt_TienKhachDua.Enter += new System.EventHandler(this.txt_TienKhachDua_Enter);
+            this.txt_TienKhachDua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_TienKhachDua_KeyPress);
+            this.txt_TienKhachDua.Leave += new System.EventHandler(this.txt_TienKhachDua_Leave);
+            this.txt_TienKhachDua.MouseLeave += new System.EventHandler(this.txt_TienKhachDua_MouseLeave);
             // 
-            // label6
+            // lb_TongTien
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(261, 259);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 23);
-            this.label6.TabIndex = 30;
-            this.label6.Text = "********** đ";
+            this.lb_TongTien.AutoSize = true;
+            this.lb_TongTien.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_TongTien.Location = new System.Drawing.Point(261, 327);
+            this.lb_TongTien.Name = "lb_TongTien";
+            this.lb_TongTien.Size = new System.Drawing.Size(106, 23);
+            this.lb_TongTien.TabIndex = 30;
+            this.lb_TongTien.Text = "********** đ";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(30, 259);
+            this.label5.Location = new System.Drawing.Point(30, 327);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 23);
             this.label5.TabIndex = 29;
@@ -132,7 +137,7 @@
             this.btn_ThemKH.FlatAppearance.BorderSize = 0;
             this.btn_ThemKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ThemKH.ForeColor = System.Drawing.Color.White;
-            this.btn_ThemKH.Location = new System.Drawing.Point(554, 78);
+            this.btn_ThemKH.Location = new System.Drawing.Point(554, 146);
             this.btn_ThemKH.Name = "btn_ThemKH";
             this.btn_ThemKH.Size = new System.Drawing.Size(60, 36);
             this.btn_ThemKH.TabIndex = 28;
@@ -151,7 +156,7 @@
             this.cmb_Voucher.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.cmb_Voucher.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmb_Voucher.ListTextColor = System.Drawing.Color.Black;
-            this.cmb_Voucher.Location = new System.Drawing.Point(261, 195);
+            this.cmb_Voucher.Location = new System.Drawing.Point(261, 263);
             this.cmb_Voucher.MinimumSize = new System.Drawing.Size(200, 30);
             this.cmb_Voucher.Name = "cmb_Voucher";
             this.cmb_Voucher.Padding = new System.Windows.Forms.Padding(2);
@@ -163,7 +168,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(30, 201);
+            this.label4.Location = new System.Drawing.Point(30, 269);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 23);
             this.label4.TabIndex = 26;
@@ -192,7 +197,7 @@
             // lb_DiaChi
             // 
             this.lb_DiaChi.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_DiaChi.Location = new System.Drawing.Point(261, 140);
+            this.lb_DiaChi.Location = new System.Drawing.Point(261, 208);
             this.lb_DiaChi.Name = "lb_DiaChi";
             this.lb_DiaChi.Size = new System.Drawing.Size(357, 29);
             this.lb_DiaChi.TabIndex = 24;
@@ -202,27 +207,17 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(30, 143);
+            this.label3.Location = new System.Drawing.Point(30, 211);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 23);
             this.label3.TabIndex = 23;
             this.label3.Text = "Địa chỉ:";
             // 
-            // lb_TenKH
-            // 
-            this.lb_TenKH.AutoSize = true;
-            this.lb_TenKH.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_TenKH.Location = new System.Drawing.Point(261, 85);
-            this.lb_TenKH.Name = "lb_TenKH";
-            this.lb_TenKH.Size = new System.Drawing.Size(21, 23);
-            this.lb_TenKH.TabIndex = 22;
-            this.lb_TenKH.Text = "X";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(30, 85);
+            this.label2.Location = new System.Drawing.Point(30, 153);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(139, 23);
             this.label2.TabIndex = 21;
@@ -232,7 +227,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(30, 27);
+            this.label1.Location = new System.Drawing.Point(30, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 23);
             this.label1.TabIndex = 20;
@@ -250,7 +245,7 @@
             this.btn_SearchKH.FlatAppearance.BorderSize = 0;
             this.btn_SearchKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SearchKH.ForeColor = System.Drawing.Color.White;
-            this.btn_SearchKH.Location = new System.Drawing.Point(554, 20);
+            this.btn_SearchKH.Location = new System.Drawing.Point(554, 88);
             this.btn_SearchKH.Name = "btn_SearchKH";
             this.btn_SearchKH.Size = new System.Drawing.Size(60, 36);
             this.btn_SearchKH.TabIndex = 19;
@@ -267,7 +262,7 @@
             this.txt_SDT.BorderSize = 2;
             this.txt_SDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_SDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_SDT.Location = new System.Drawing.Point(261, 21);
+            this.txt_SDT.Location = new System.Drawing.Point(261, 89);
             this.txt_SDT.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SDT.Multiline = false;
             this.txt_SDT.Name = "txt_SDT";
@@ -281,16 +276,36 @@
             this.txt_SDT.UnderlinedStyle = false;
             this.txt_SDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_SDT_KeyPress);
             // 
+            // cmb_TenKh
+            // 
+            this.cmb_TenKh.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmb_TenKh.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmb_TenKh.BorderSize = 2;
+            this.cmb_TenKh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmb_TenKh.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmb_TenKh.ForeColor = System.Drawing.Color.DimGray;
+            this.cmb_TenKh.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmb_TenKh.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmb_TenKh.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmb_TenKh.Location = new System.Drawing.Point(261, 145);
+            this.cmb_TenKh.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmb_TenKh.Name = "cmb_TenKh";
+            this.cmb_TenKh.Padding = new System.Windows.Forms.Padding(2);
+            this.cmb_TenKh.Size = new System.Drawing.Size(224, 34);
+            this.cmb_TenKh.TabIndex = 35;
+            this.cmb_TenKh.Texts = "";
+            // 
             // FrmThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 535);
+            this.Controls.Add(this.cmb_TenKh);
             this.Controls.Add(this.Lb_TienTraLai);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txt_TienKhachDua);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lb_TongTien);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_ThemKH);
             this.Controls.Add(this.cmb_Voucher);
@@ -298,7 +313,6 @@
             this.Controls.Add(this.btn_ThanhToan);
             this.Controls.Add(this.lb_DiaChi);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.lb_TenKH);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_SearchKH);
@@ -317,7 +331,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private CustomControls.RJControls.CSTextBox txt_TienKhachDua;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lb_TongTien;
         private System.Windows.Forms.Label label5;
         private CustomControls.RJControls.CSButton btn_ThemKH;
         private CustomControls.RJControls.CSComboBox cmb_Voucher;
@@ -325,10 +339,10 @@
         private CustomControls.RJControls.CSButton btn_ThanhToan;
         private System.Windows.Forms.Label lb_DiaChi;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lb_TenKH;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private CustomControls.RJControls.CSButton btn_SearchKH;
         private CustomControls.RJControls.CSTextBox txt_SDT;
+        private CustomControls.RJControls.CSComboBox cmb_TenKh;
     }
 }

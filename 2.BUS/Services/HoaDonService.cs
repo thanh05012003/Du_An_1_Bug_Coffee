@@ -91,6 +91,7 @@ namespace _2.BUS.Services
                     TenNV = b.Ten,
                     GhiChu = a.GhiChu,
                     TrangThai = a.TrangThai,
+                    MaBan = a.MaBan,
                 };
             return lstHoaDon.ToList();
         }

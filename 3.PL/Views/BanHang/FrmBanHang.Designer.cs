@@ -487,6 +487,7 @@
             // 
             // cbb_Ban
             // 
+            this.cbb_Ban.ForeColor = System.Drawing.SystemColors.MenuText;
             this.cbb_Ban.FormattingEnabled = true;
             this.cbb_Ban.Location = new System.Drawing.Point(136, 150);
             this.cbb_Ban.Name = "cbb_Ban";
