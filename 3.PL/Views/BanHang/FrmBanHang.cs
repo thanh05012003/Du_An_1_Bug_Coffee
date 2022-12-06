@@ -326,9 +326,11 @@ namespace _3.PL.Views.BanHang
             LoadHdChoCT();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
+        private void txt_DonGiaSP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

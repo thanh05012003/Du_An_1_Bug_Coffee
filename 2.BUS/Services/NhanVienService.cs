@@ -100,5 +100,19 @@ namespace _2.BUS.Services
                 };
             return lstNhanVien.ToList();
         }
+
+        public List<QlNhanVienView> GetAll(string input)
+        {
+            var lstNhanVien = GetAll();
+            if (input == null)
+            {
+                GetAll();
+            }
+            else
+            {
+               return lstNhanVien.Where(c => c.Ten.ToLower().Contains(input.ToLower()) || c.MaCV == input).ToList();
+            }
+            return lstNhanVien.ToList();
+        }
     }
 }

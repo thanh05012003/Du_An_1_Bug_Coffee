@@ -13,5 +13,6 @@ namespace _2.BUS.IServices
         string delete(QlNhanVienView obj);
         string update(QlNhanVienView obj);
         List<QlNhanVienView> GetAll();
+        List<QlNhanVienView> GetAll(string Ten);
     }
 }

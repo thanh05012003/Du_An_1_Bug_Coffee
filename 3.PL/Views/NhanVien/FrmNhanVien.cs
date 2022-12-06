@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using _2.BUS.IServices;
 using _2.BUS.Services;
 using _2.BUS.ViewModels;
+using _3.PL.Utilities;
 using _3.PL.Views.NhanVien;
 
 namespace _3.PL.Views
@@ -13,14 +14,17 @@ namespace _3.PL.Views
     {
         private INhanVienService _NhanVienService;
         private IChucVuService _chucVuService;
+        private Utility _utility;
         private string _maWhenClick;
         public FrmNhanVien()
         {
             InitializeComponent();
             _NhanVienService = new NhanVienService();
             _chucVuService = new ChucVuService();
-            LoadDataNV();
+            _utility = new Utility();
+            LoadDataNV(null);
             loadDataCV();
+            LocCv();
             lb_MaFail.Visible = false;
             lb_HoTenFail.Visible = false;
             lb_NgaySinhFail.Visible = false;
@@ -37,9 +41,18 @@ namespace _3.PL.Views
             {
                 cbb_cvNV.Items.Add(x.Ten);
             }
-
         }
-        public void LoadDataNV()
+
+        public void LocCv()
+        {
+            cbb_searchCV.Items.Clear();
+            foreach (var x in _chucVuService.GetAll())
+            {
+                cbb_searchCV.Items.Add(x.Ten);
+            }
+        }
+
+        public void LoadDataNV(string input)
         {
             int stt = 1;
             dgrid_DtNhanVien.ColumnCount = 12;
@@ -56,7 +69,7 @@ namespace _3.PL.Views
             dgrid_DtNhanVien.Columns[10].Name = "Chức Vụ";
             dgrid_DtNhanVien.Columns[11].Name = "Ca Làm Việc";
             dgrid_DtNhanVien.Rows.Clear();
-            foreach (var x in _NhanVienService.GetAll())
+            foreach (var x in _NhanVienService.GetAll(input))
             {
                 dgrid_DtNhanVien.Rows.Add(stt++, x.Ma, x.Ten, x.GioiTinh, x.NgaySinh, x.DiaChi, x.SDT, x.Email,
                     x.TrangThai == 1 ? "Hoạt Động" : "Không Hoạt Động", x.MatKhau,x.TenCv);
@@ -100,7 +113,7 @@ namespace _3.PL.Views
                 if (dialogResult == DialogResult.Yes)
                 {
                     MessageBox.Show(_NhanVienService.add(GetDatafromGui()));
-                    LoadDataNV();
+                    LoadDataNV(null);
                 }
                 if (dialogResult == DialogResult.No)
                 {
@@ -163,7 +176,24 @@ namespace _3.PL.Views
                                 {
                                     lb_VaiTroFail.Visible = true;
                                     lb_VaiTroFail.Text = "vui lòng chọn vai trò";
-                                    return false;
+                                }
+                                else
+                                {
+                                    var nv = _NhanVienService.GetAll()
+                                        .FirstOrDefault(c => c.SDT == txt_sdtNV.Text.Trim());
+                                    if (nv!=null)
+                                    {
+                                        MessageBox.Show("số điện thoại này đã tồn tại");
+                                        
+                                    }
+                                    else
+                                    {
+                                        if (!_utility.IsValidEmail(txt_emailNV.Text))
+                                        {
+                                            MessageBox.Show("Email sai định dạng");
+                                            return false;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -245,19 +275,19 @@ namespace _3.PL.Views
         {
             var temp = GetDatafromGui();
             temp.Ma = _maWhenClick;
-            if (Check())
-            {
+            //if (Check())
+            //{
                 DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn cập nhật nhân viên này không ? ", "Thông Báo", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     MessageBox.Show(_NhanVienService.update(temp));
-                    LoadDataNV();
+                    LoadDataNV(null);
                 }
                 if (dialogResult == DialogResult.No)
                 {
                     return;
                 }
-            }
+            //}
         }
 
 
@@ -267,7 +297,6 @@ namespace _3.PL.Views
 
             dlg.Filter = "Image File (*.jpg;*.jpeg;*.bmp;*.gif;*.png)|*.jpg;*.jpeg;*.bmp;*.gif;*.png";
             dlg.Title = "Chọn Hình";
-
             DialogResult dlgRes = dlg.ShowDialog();
             if (dlgRes != DialogResult.Cancel)
             {
@@ -278,5 +307,53 @@ namespace _3.PL.Views
                 ptb_avatar.Text = dlg.FileName;
             }
         }
+
+        private void txt_sdtNV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            int stt = 1;
+            dgrid_DtNhanVien.ColumnCount = 12;
+            dgrid_DtNhanVien.Columns[0].Name = "STT";
+            dgrid_DtNhanVien.Columns[1].Name = "MaNV";
+            dgrid_DtNhanVien.Columns[2].Name = "Họ Và Tên";
+            dgrid_DtNhanVien.Columns[3].Name = "Giới Tính";
+            dgrid_DtNhanVien.Columns[4].Name = "Ngày Sinh";
+            dgrid_DtNhanVien.Columns[5].Name = "Địa Chỉ";
+            dgrid_DtNhanVien.Columns[6].Name = "SĐT";
+            dgrid_DtNhanVien.Columns[7].Name = "Email";
+            dgrid_DtNhanVien.Columns[8].Name = "Trạng Thái";
+            dgrid_DtNhanVien.Columns[9].Name = "Mật Khẩu";
+            dgrid_DtNhanVien.Columns[10].Name = "Chức Vụ";
+            dgrid_DtNhanVien.Columns[11].Name = "Ca Làm Việc";
+            dgrid_DtNhanVien.Rows.Clear();
+            foreach (var x in _NhanVienService.GetAll(tbt_searchNV.Text.ToLower().Trim()))
+            {
+                dgrid_DtNhanVien.Rows.Add(stt++, x.Ma, x.Ten, x.GioiTinh, x.NgaySinh, x.DiaChi, x.SDT, x.Email,
+                    x.TrangThai == 1 ? "Hoạt Động" : "Không Hoạt Động", x.MatKhau, x.TenCv);
+            }
+        }
+
+        private void cbb_searchCV_TextChanged(object sender, EventArgs e)
+        {
+            tbt_searchNV.Text = "";
+            var cv = _chucVuService.GetAll().FirstOrDefault(c => c.Ten == cbb_searchCV.Text.Trim());
+            if (cv == null)
+            {
+             LoadDataNV(null);   
+             return;
+            }
+            LoadDataNV(cv.Ma);
+        }
+
+        private void tbt_searchNV_TextChanged(object sender, EventArgs e)
+        {
+            cbb_searchCV.Text = "";
+        }
+
     }
 }

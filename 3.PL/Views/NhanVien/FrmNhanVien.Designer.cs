@@ -67,10 +67,8 @@
             this.btn_addNV = new System.Windows.Forms.Button();
             this.dgrid_DtNhanVien = new System.Windows.Forms.DataGridView();
             this.tbt_searchNV = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.cbb_searchTT = new System.Windows.Forms.ComboBox();
             this.cbb_searchCV = new System.Windows.Forms.ComboBox();
             this.btn_search = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -130,10 +128,8 @@
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.splitContainer1.Panel2.Controls.Add(this.dgrid_DtNhanVien);
             this.splitContainer1.Panel2.Controls.Add(this.tbt_searchNV);
-            this.splitContainer1.Panel2.Controls.Add(this.label13);
             this.splitContainer1.Panel2.Controls.Add(this.label12);
             this.splitContainer1.Panel2.Controls.Add(this.label11);
-            this.splitContainer1.Panel2.Controls.Add(this.cbb_searchTT);
             this.splitContainer1.Panel2.Controls.Add(this.cbb_searchCV);
             this.splitContainer1.Panel2.Controls.Add(this.btn_search);
             this.splitContainer1.Size = new System.Drawing.Size(1323, 847);
@@ -341,6 +337,7 @@
             this.txt_sdtNV.Size = new System.Drawing.Size(331, 27);
             this.txt_sdtNV.TabIndex = 52;
             this.txt_sdtNV.TextChanged += new System.EventHandler(this.txt_sdtNV_TextChanged);
+            this.txt_sdtNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_sdtNV_KeyPress);
             // 
             // txt_emailNV
             // 
@@ -509,16 +506,7 @@
             this.tbt_searchNV.Name = "tbt_searchNV";
             this.tbt_searchNV.Size = new System.Drawing.Size(205, 27);
             this.tbt_searchNV.TabIndex = 51;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(418, 133);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(103, 21);
-            this.label13.TabIndex = 50;
-            this.label13.Text = "Trạng thái:";
+            this.tbt_searchNV.TextChanged += new System.EventHandler(this.tbt_searchNV_TextChanged);
             // 
             // label12
             // 
@@ -540,15 +528,6 @@
             this.label11.TabIndex = 50;
             this.label11.Text = "Tên nhân viên:";
             // 
-            // cbb_searchTT
-            // 
-            this.cbb_searchTT.FormattingEnabled = true;
-            this.cbb_searchTT.Location = new System.Drawing.Point(418, 160);
-            this.cbb_searchTT.Name = "cbb_searchTT";
-            this.cbb_searchTT.Size = new System.Drawing.Size(111, 28);
-            this.cbb_searchTT.TabIndex = 55;
-            this.cbb_searchTT.Text = "Tất cả";
-            // 
             // cbb_searchCV
             // 
             this.cbb_searchCV.FormattingEnabled = true;
@@ -556,7 +535,7 @@
             this.cbb_searchCV.Name = "cbb_searchCV";
             this.cbb_searchCV.Size = new System.Drawing.Size(111, 28);
             this.cbb_searchCV.TabIndex = 55;
-            this.cbb_searchCV.Text = "Tất cả";
+            this.cbb_searchCV.TextChanged += new System.EventHandler(this.cbb_searchCV_TextChanged);
             // 
             // btn_search
             // 
@@ -568,6 +547,7 @@
             this.btn_search.TabIndex = 41;
             this.btn_search.Text = "Tìm";
             this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // FrmNhanVien
             // 
@@ -618,10 +598,8 @@
         private System.Windows.Forms.Button btn_addCV;
         private System.Windows.Forms.DataGridView dgrid_DtNhanVien;
         private System.Windows.Forms.TextBox tbt_searchNV;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cbb_searchTT;
         private System.Windows.Forms.ComboBox cbb_searchCV;
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.Panel panel1;

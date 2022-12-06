@@ -183,7 +183,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(654, 847);
             this.panel1.TabIndex = 68;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -457,6 +456,7 @@
             this.txt_DonGiaSP.Name = "txt_DonGiaSP";
             this.txt_DonGiaSP.Size = new System.Drawing.Size(125, 27);
             this.txt_DonGiaSP.TabIndex = 153;
+            this.txt_DonGiaSP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_DonGiaSP_KeyPress);
             // 
             // label8
             // 
