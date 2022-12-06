@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using _2.BUS.IServices;
 using _2.BUS.Services;
 using _2.BUS.ViewModels;
+using _3.PL.Views.BanHang;
 using CustomControls.RJControls;
 
 namespace _3.PL.Views
@@ -69,5 +70,10 @@ namespace _3.PL.Views
             ShowBill(MaBan);
         }
 
+        private void btn_ThanhToan_Click(object sender, EventArgs e)
+        {
+            FrmThanhToan frm = new FrmThanhToan();
+            frm.ShowDialog();
+        }
     }
 }

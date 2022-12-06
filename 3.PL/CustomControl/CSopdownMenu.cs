@@ -11,7 +11,7 @@ using System.ComponentModel;
 
 namespace CustomControls.RJControls
 {
-    public class RJDropdownMenu : ContextMenuStrip
+    public class CSopdownMenu : ContextMenuStrip
     {
         //Fields
         private bool isMainMenu;
@@ -22,7 +22,7 @@ namespace CustomControls.RJControls
         private Bitmap menuItemHeaderSize;
 
         //Constructor
-        public RJDropdownMenu(IContainer container)
+        public CSopdownMenu(IContainer container)
             : base(container)
         {
 

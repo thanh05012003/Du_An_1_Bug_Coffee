@@ -48,7 +48,7 @@ namespace _3.PL.Views
         private void btn_add_Click(object sender, EventArgs e)
         {
             QlVoucherView vc = new QlVoucherView();
-            if (tbt_MaKM.Text.Trim() == "" || tbt_TenKM.Text.Trim() == "" || date_ngayKT.Value < date_ngayBD.Value || tbt_sale.Text.Trim() == "" || tbt_moTa.Text.Trim() == "")
+            if (tbt_MaKM.Texts.Trim() == "" || tbt_TenKM.Texts.Trim() == "" || date_ngayKT.Value < date_ngayBD.Value || tbt_sale.Texts.Trim() == "" || tbt_moTa.Texts.Trim() == "")
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin");
             }
@@ -56,12 +56,12 @@ namespace _3.PL.Views
             {
                 vc = new QlVoucherView()
                 {
-                    Ma = tbt_MaKM.Text,
-                    Ten = tbt_TenKM.Text,
+                    Ma = tbt_MaKM.Texts,
+                    Ten = tbt_TenKM.Texts,
                     NgayBatDau = date_ngayBD.Value,
                     NgayKetThuc = date_ngayKT.Value,
                     TrangThai = rb_hoatDong.Checked ? 1 : 0,
-                    GiamGia = int.Parse(tbt_sale.Text),
+                    GiamGia = int.Parse(tbt_sale.Texts),
                     MoTa = tbt_moTa.Text
                 };
                 _voucherService.add(vc);
@@ -74,21 +74,21 @@ namespace _3.PL.Views
             int rowIndex = e.RowIndex;
             if (rowIndex == _voucherService.GetAll().Count)
             {
-                return; 
+                return;
             }
             _maWhenClick = dtg_showKM.Rows[rowIndex].Cells[1].Value.ToString();
             var vc = _voucherService.GetAll().FirstOrDefault(c => c.Ma == _maWhenClick);
             if (vc != null)
             {
-                tbt_MaKM.Text = vc.Ma;
-                tbt_TenKM.Text = vc.Ten;
-                tbt_moTa.Text = vc.MoTa;
-                tbt_sale.Text = vc.GiamGia.ToString();
+                tbt_MaKM.Texts = vc.Ma;
+                tbt_TenKM.Texts = vc.Ten;
+                tbt_moTa.Texts = vc.MoTa;
+                tbt_sale.Texts = vc.GiamGia.ToString();
                 date_ngayBD.Value = vc.NgayBatDau.Value;
                 date_ngayKT.Value = vc.NgayKetThuc.Value;
                 if (vc.TrangThai == 1)
                 {
-                    rb_hoatDong.Checked = true; 
+                    rb_hoatDong.Checked = true;
                 }
                 else
                 {
@@ -96,5 +96,6 @@ namespace _3.PL.Views
                 }
             }
         }
+
     }
 }
