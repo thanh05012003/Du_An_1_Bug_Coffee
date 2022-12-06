@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSanPham));
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_TimKiem = new System.Windows.Forms.TextBox();
@@ -320,6 +321,7 @@
             // 
             // txt_MaSanPham
             // 
+            this.txt_MaSanPham.Enabled = false;
             this.txt_MaSanPham.Location = new System.Drawing.Point(167, 73);
             this.txt_MaSanPham.Name = "txt_MaSanPham";
             this.txt_MaSanPham.Size = new System.Drawing.Size(318, 27);
@@ -345,6 +347,7 @@
             this.txt_TenSanPham.Name = "txt_TenSanPham";
             this.txt_TenSanPham.Size = new System.Drawing.Size(318, 27);
             this.txt_TenSanPham.TabIndex = 1;
+            this.txt_TenSanPham.TextChanged += new System.EventHandler(this.txt_TenSanPham_TextChanged);
             // 
             // rdb_DangBan
             // 
@@ -418,6 +421,8 @@
             // 
             // pbx_ImgSanPham
             // 
+            this.pbx_ImgSanPham.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbx_ImgSanPham.BackgroundImage")));
+            this.pbx_ImgSanPham.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbx_ImgSanPham.Location = new System.Drawing.Point(1084, 76);
             this.pbx_ImgSanPham.Name = "pbx_ImgSanPham";
             this.pbx_ImgSanPham.Size = new System.Drawing.Size(199, 165);

@@ -91,8 +91,13 @@ namespace _3.PL.Views
             QlSanPhamView sp = new QlSanPhamView();
             var lsp = _iloaiSanPhamServices.GetAll()
                 .FirstOrDefault(c => c.Ma.ToLower() + "-" + c.Ten.ToLower() == cbx_MaLoaiSP.Text.ToLower());
+            
             if (lsp != null)
             {
+                //if (pbx_ImgSanPham.Location == null)
+                //{
+                //    pbx_ImgSanPham.Image
+                //}
                 sp = new QlSanPhamView()
                 {
                     Ma = txt_MaSanPham.Text,
@@ -255,5 +260,10 @@ namespace _3.PL.Views
             frm.ShowDialog();
             LoadDataLSP();
         }
+
+        private void txt_TenSanPham_TextChanged(object sender, EventArgs e)
+        {
+            txt_MaSanPham.Text = "SP00" + (_iSanPhamServices.GetAll().Count + 1);
+        }   
     }
 }

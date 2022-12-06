@@ -47,15 +47,8 @@ namespace _3.PL.Views
                     var mkmoi = _inhanVienServices.GetAll().FirstOrDefault();
                     mkmoi.MatKhau = txt_MatKhauMoi.Texts;
                     _inhanVienServices.update(mkmoi);
-                    MessageBox.Show("Đổi mật khẩu thành công. Vui lòng đăng nhập lại");
+                    MessageBox.Show("Đổi mật khẩu thành công.");
                 }
-                this.Hide();
-                Application.Exit();
-                FrmMain m = new FrmMain();
-                this.Close();
-
-                FrmLogin login = new FrmLogin();
-                login.ShowDialog();
                 this.Close();
             }
         }

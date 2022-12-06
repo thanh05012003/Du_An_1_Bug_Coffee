@@ -39,6 +39,7 @@ namespace _2.BUS.Services
                 NgayTao = obj.NgayTao,
                 MaVC = obj.MaVC,
                 TrangThai = obj.TrangThai,
+                MaBan = obj.MaBan
                 
             };
             if (_hoaDonRepository.Add(hoaDon))

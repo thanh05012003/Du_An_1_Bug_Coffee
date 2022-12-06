@@ -105,7 +105,7 @@ namespace _3.PL.Views.BanHang
             {
                 cbb_Ban.Items.Add(x.Ten);
             }
-            cbb_Ban.SelectedIndex = 0;
+            //cbb_Ban.SelectedIndex = 0;
         }
 
         public void LoadHoTenKH()
@@ -136,12 +136,26 @@ namespace _3.PL.Views.BanHang
                     Size = new System.Drawing.Size(142, 187),
                     BackColor = Color.DarkOliveGreen
                 };
-                Panel icon = new Panel()
+                Panel icon = new Panel();
+                if (x.URL == null)
                 {
-                    Dock = DockStyle.Top,
-                    BackgroundImage = Image.FromFile(x.URL),
-                    BackgroundImageLayout = ImageLayout.Zoom,
-                };
+                   icon = new Panel()
+                    {
+                        Dock = DockStyle.Top,
+                        //BackgroundImage = Image.FromFile(x.URL),
+                        BackgroundImageLayout = ImageLayout.Zoom,
+                    };
+                }
+                else
+                { 
+                    icon = new Panel()
+                    {
+                        Dock = DockStyle.Top,
+                        BackgroundImage = Image.FromFile(x.URL),
+                        BackgroundImageLayout = ImageLayout.Zoom,
+                    };
+                }
+                
                 icon.Tag = x;
                 icon.Click += btn_Click_1;
                 products.Controls.Add(icon);
@@ -176,7 +190,6 @@ namespace _3.PL.Views.BanHang
             txt_TenSP.Text = sp.Ten;
             txt_DonGiaSP.Text = Math.Round(sp.Gia, 0).ToString();
         }
-
 
         public void showBtnHdcho()
         {
