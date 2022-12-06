@@ -59,7 +59,7 @@ namespace _3.PL.Views
             dgrid_HoaDon.Rows.Clear();
             foreach (var x in _ihoaDonCTServices.GetAll())
             {
-                dgrid_HoaDon.Rows.Add(stt++, x.MaHD, x.MaSP, x.SoLuong,x.DonGia,x.MaBan);
+                dgrid_HoaDon.Rows.Add(stt++, x.MaHD, x.MaSP, x.SoLuong,x.DonGia);
             }
         }
 

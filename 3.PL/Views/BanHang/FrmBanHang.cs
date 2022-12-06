@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -17,10 +18,10 @@ namespace _3.PL.Views.BanHang
         private IKhachHangService _khachHangService;
         private INhanVienService _nhanVienService;
         private ILoaiSanPhamService _loaiSanPhamService;
-        IHoaDonCTService _hoaDonCTService;
-        private string _maSPWhenClick;
-        private string _maHDWhenClick;
-        private int i = 0;
+        private IHoaDonCTService _hoaDonCTService;
+        private string _maSPWhenClick = "";
+        private string _maHDWhenClick = "";
+    
 
 
         public FrmBanHang()
@@ -39,21 +40,42 @@ namespace _3.PL.Views.BanHang
             LoadHoTenKH();
             ShowHdCho();
             showBtnHdcho();
+            LoadHdChoCT();
         }
 
         #region Method
 
+        public void LoadHdChoCT()
+        {
+            dgrid_HdChoCT.ColumnCount = 6;
+            dgrid_HdChoCT.Columns[0].Name = "Mã SP";
+            dgrid_HdChoCT.Columns[1].Name = "Tên SP";
+            dgrid_HdChoCT.Columns[2].Name = "Đơn giá";
+            dgrid_HdChoCT.Columns[3].Name = "Số lượng";
+            dgrid_HdChoCT.Columns[4].Name = "Thành tiền";
+            dgrid_HdChoCT.Columns[5].Name = "Ghi chú";
+            dgrid_HdChoCT.Rows.Clear();
+            foreach (var x in _hoaDonCTService.GetAll().Where(c =>c.MaHD == _maHDWhenClick))
+            {
+                foreach (var a in _hoaDonService.GetAll().Where(c =>c.Ma == x.MaHD))
+                {
+                    if (a.TrangThai.ToLower() == "chờ order")
+                    {
+                        dgrid_HdChoCT.Rows.Add(x.MaSP, x.TenSp, x.DonGia, x.SoLuong, (x.SoLuong * x.DonGia));
+                    }
+                }
+                
+            }
+        }
         public QlHoaDonCTView GetDataHdCtfromGui()
         {
             QlHoaDonCTView HoaDonCt = new QlHoaDonCTView();
-            var table = _banService.GetAll().FirstOrDefault(c => c.Ten == cbb_Ban.Text);
             HoaDonCt = new QlHoaDonCTView()
             {
                 MaHD = _maHDWhenClick,
                 MaSP = _maSPWhenClick,
                 SoLuong = int.Parse(nud_SoLuong.Text),
                 DonGia = decimal.Parse(txt_DonGiaSP.Text),
-                MaBan = table.Ma,
             };
             return HoaDonCt;
         }
@@ -61,6 +83,7 @@ namespace _3.PL.Views.BanHang
         {
             QlHoaDonView lstHdView = new QlHoaDonView();
             var NV = _nhanVienService.GetAll().FirstOrDefault(c => c.SDT == Properties.Settings.Default.Tk);
+            var table = _banService.GetAll().FirstOrDefault(c => c.Ten == cbb_Ban.Text);
             if (NV != null)
             {
                 lstHdView = new QlHoaDonView()
@@ -69,6 +92,7 @@ namespace _3.PL.Views.BanHang
                     MaNV = NV.Ma,
                     TrangThai = "Chờ order",
                     NgayTao = DateTime.Now,
+                    MaBan = table.Ma,
                 };
             }
 
@@ -81,6 +105,7 @@ namespace _3.PL.Views.BanHang
             {
                 cbb_Ban.Items.Add(x.Ten);
             }
+            cbb_Ban.SelectedIndex = 0;
         }
 
         public void LoadHoTenKH()
@@ -152,11 +177,6 @@ namespace _3.PL.Views.BanHang
             txt_DonGiaSP.Text = Math.Round(sp.Gia, 0).ToString();
         }
 
-        private void Btn_Click(object? sender, EventArgs e)
-        {
-            //_maSPWhenClick = ((sender as Button).Tag as QlSanPhamView).Ma;
-            //flp_HdChoCt.Controls.Remove(pane);
-        }
 
         public void showBtnHdcho()
         {
@@ -200,13 +220,13 @@ namespace _3.PL.Views.BanHang
         //lấy ra mã sản phẩm khi click vào ảnh
         void btn_Click_1(object sender, EventArgs e)
         {
-            i += 1;
             _maSPWhenClick = ((sender as Panel).Tag as QlSanPhamView).Ma;
             ShowBill(_maSPWhenClick);
         }
         public void btn_Click_Hd(object sender, EventArgs e)
         {
             _maHDWhenClick = ((sender as Button).Tag as QlHoaDonView).Ma;
+            LoadHdChoCT();
         }
         private void btn_GiaoHang_Click(object sender, EventArgs e)
         {
@@ -235,16 +255,46 @@ namespace _3.PL.Views.BanHang
 
         private void btn_ThemHD_Click_1(object sender, EventArgs e)
         {
-            MessageBox.Show(_hoaDonService.add(HoaDonCho()));
-            ShowHdCho();
-            showBtnHdcho();
+            if (cbb_Ban.Text.Trim() == "")
+            {
+                MessageBox.Show("Bạn chưa chọn bàn");
+            }
+            else
+            {
+                var temp = HoaDonCho();
+                _maHDWhenClick = temp.Ma;
+                MessageBox.Show(_hoaDonService.add(temp));
+                showBtnHdcho();
+                ShowHdCho();
+            }
+           
         }
         #endregion
 
         private void btn_ThemSp_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(_hoaDonCTService.add(GetDataHdCtfromGui()));
-
+            var sp = _hoaDonCTService.GetAll().FirstOrDefault(c => c.MaSP == _maSPWhenClick && c.MaHD == _maHDWhenClick);
+            if (_maHDWhenClick.Trim() == "")
+            {
+                MessageBox.Show("Bạn chưa chọn hoá đơn");
+            }
+            else
+            {
+                if (sp != null) // nếu click thêm 1 sản phẩm đã tồn tại trong hoá đơn thì sẽ cập nhật lại số lượng
+                {
+                    var htct = _hoaDonCTService.GetAll().FirstOrDefault(c => c.MaHD == _maHDWhenClick);
+                    var temp = GetDataHdCtfromGui();
+                    temp.SoLuong = int.Parse(nud_SoLuong.Text) + htct.SoLuong;
+                    MessageBox.Show(_hoaDonCTService.update(temp));
+                    LoadHdChoCT();
+                }
+                else
+                {
+                    MessageBox.Show(_hoaDonCTService.add(GetDataHdCtfromGui()));
+                    LoadHdChoCT();
+                }
+            }
+            
         }
 
         private void btn_XacNhan_Click(object sender, EventArgs e)
@@ -254,6 +304,18 @@ namespace _3.PL.Views.BanHang
             temp.TrangThai = "đã order";
             MessageBox.Show(_hoaDonService.update(temp));
             ShowHdCho();
+            LoadHdChoCT();
+            showBtnHdcho();
+        }
+
+        private void FrmBanHang_Load(object sender, EventArgs e)
+        {
+            LoadHdChoCT();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

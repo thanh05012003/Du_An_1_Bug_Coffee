@@ -30,7 +30,6 @@ namespace _2.BUS.Services
                 MaSP = obj.MaSP,
                 SoLuong = obj.SoLuong,
                 DonGia = obj.DonGia,
-                MaBan = obj.MaBan
             };
             if (_hoaDonCTRepository.Add(hdct))
             {
@@ -54,7 +53,6 @@ namespace _2.BUS.Services
                 MaSP = obj.MaSP,
                 SoLuong = obj.SoLuong,
                 DonGia = obj.DonGia,
-                MaBan = obj.MaBan
             };
             if (_hoaDonCTRepository.Update(hdct))
             {
@@ -74,7 +72,6 @@ namespace _2.BUS.Services
                     MaSP = a.MaSP,
                     SoLuong = a.SoLuong,
                     DonGia = a.DonGia,
-                    MaBan = a.MaBan,
                     TenSp = b.Ten
                 };
             return lstHoaDonCT.ToList();
@@ -89,10 +86,9 @@ namespace _2.BUS.Services
                     MaSP = a.MaSP,
                     SoLuong = a.SoLuong,
                     DonGia = a.DonGia,
-                    MaBan = a.MaBan,
                     TenSp = b.Ten
                 };
-            return lstHoaDonCT.Where(c =>c.MaHD == ma || c.MaBan == ma).ToList();
+            return lstHoaDonCT.Where(c =>c.MaHD == ma ).ToList();
         }
     }
 }

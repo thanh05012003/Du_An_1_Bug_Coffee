@@ -52,6 +52,7 @@ namespace _1.DAL.Repositories
             tempobj.MaVC = obj.MaVC;
             tempobj.TrangThai = obj.TrangThai;
             tempobj.GhiChu = obj.GhiChu;
+            tempobj.MaBan = obj.MaBan;
             _DbContext.Update(tempobj);
             _DbContext.SaveChanges();
             return true;

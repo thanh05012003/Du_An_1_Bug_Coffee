@@ -10,8 +10,8 @@ using _1.DAL.Context;
 namespace _1.DAL.Migrations
 {
     [DbContext(typeof(FpolyDbContext))]
-    [Migration("20221204090855_bugcf041222")]
-    partial class bugcf041222
+    [Migration("20221205204833_bugcf0342021222")]
+    partial class bugcf0342021222
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -80,6 +80,9 @@ namespace _1.DAL.Migrations
                     b.Property<string>("GhiChu")
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<string>("MaBan")
+                        .HasColumnType("varchar(20)");
+
                     b.Property<string>("MaKH")
                         .HasColumnType("varchar(20)");
 
@@ -96,6 +99,8 @@ namespace _1.DAL.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Ma");
+
+                    b.HasIndex("MaBan");
 
                     b.HasIndex("MaKH");
 
@@ -117,9 +122,6 @@ namespace _1.DAL.Migrations
                     b.Property<decimal>("DonGia")
                         .HasColumnType("money");
 
-                    b.Property<string>("MaBan")
-                        .HasColumnType("varchar(20)");
-
                     b.Property<int>("SoLuong")
                         .HasColumnType("int");
 
@@ -127,8 +129,6 @@ namespace _1.DAL.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.HasKey("MaSP", "MaHD");
-
-                    b.HasIndex("MaBan");
 
                     b.HasIndex("MaHD");
 
@@ -288,6 +288,10 @@ namespace _1.DAL.Migrations
 
             modelBuilder.Entity("_1.DAL.DomainClass.HoaDon", b =>
                 {
+                    b.HasOne("_1.DAL.DomainClass.Ban", "Ban")
+                        .WithMany()
+                        .HasForeignKey("MaBan");
+
                     b.HasOne("_1.DAL.DomainClass.KhachHang", "KhachHang")
                         .WithMany()
                         .HasForeignKey("MaKH");
@@ -300,6 +304,8 @@ namespace _1.DAL.Migrations
                         .WithMany()
                         .HasForeignKey("MaVC");
 
+                    b.Navigation("Ban");
+
                     b.Navigation("KhachHang");
 
                     b.Navigation("NhanVien");
@@ -309,10 +315,6 @@ namespace _1.DAL.Migrations
 
             modelBuilder.Entity("_1.DAL.DomainClass.HoaDonCT", b =>
                 {
-                    b.HasOne("_1.DAL.DomainClass.Ban", "Ban")
-                        .WithMany()
-                        .HasForeignKey("MaBan");
-
                     b.HasOne("_1.DAL.DomainClass.HoaDon", "HoaDon")
                         .WithMany()
                         .HasForeignKey("MaHD")
@@ -324,8 +326,6 @@ namespace _1.DAL.Migrations
                         .HasForeignKey("MaSP")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Ban");
 
                     b.Navigation("HoaDon");
 

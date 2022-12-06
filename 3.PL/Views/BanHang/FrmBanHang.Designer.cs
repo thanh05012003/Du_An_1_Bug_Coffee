@@ -42,7 +42,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pane_HDCho = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.flp_HdChoCt = new System.Windows.Forms.FlowLayoutPanel();
+            this.dgrid_HdChoCT = new System.Windows.Forms.DataGridView();
             this.cbb_TenKH = new System.Windows.Forms.ComboBox();
             this.btn_ThemKH = new System.Windows.Forms.Button();
             this.btn_search = new System.Windows.Forms.Button();
@@ -73,6 +73,7 @@
             this.panel2.SuspendLayout();
             this.pane_HDCho.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrid_HdChoCT)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_SoLuong)).BeginInit();
             this.SuspendLayout();
@@ -182,6 +183,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(654, 847);
             this.panel1.TabIndex = 68;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -222,7 +224,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.flp_HdChoCt);
+            this.groupBox1.Controls.Add(this.dgrid_HdChoCT);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
@@ -230,14 +232,17 @@
             this.groupBox1.TabIndex = 145;
             this.groupBox1.TabStop = false;
             // 
-            // flp_HdChoCt
+            // dgrid_HdChoCT
             // 
-            this.flp_HdChoCt.AutoScroll = true;
-            this.flp_HdChoCt.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flp_HdChoCt.Location = new System.Drawing.Point(3, 23);
-            this.flp_HdChoCt.Name = "flp_HdChoCt";
-            this.flp_HdChoCt.Size = new System.Drawing.Size(663, 229);
-            this.flp_HdChoCt.TabIndex = 145;
+            this.dgrid_HdChoCT.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dgrid_HdChoCT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgrid_HdChoCT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgrid_HdChoCT.Location = new System.Drawing.Point(3, 23);
+            this.dgrid_HdChoCT.Name = "dgrid_HdChoCT";
+            this.dgrid_HdChoCT.RowHeadersWidth = 51;
+            this.dgrid_HdChoCT.RowTemplate.Height = 29;
+            this.dgrid_HdChoCT.Size = new System.Drawing.Size(663, 235);
+            this.dgrid_HdChoCT.TabIndex = 0;
             // 
             // cbb_TenKH
             // 
@@ -422,9 +427,19 @@
             // nud_SoLuong
             // 
             this.nud_SoLuong.Location = new System.Drawing.Point(454, 51);
+            this.nud_SoLuong.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nud_SoLuong.Name = "nud_SoLuong";
             this.nud_SoLuong.Size = new System.Drawing.Size(120, 27);
             this.nud_SoLuong.TabIndex = 155;
+            this.nud_SoLuong.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label9
             // 
@@ -511,6 +526,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmBanHang";
             this.Text = "Bán hàng";
+            this.Load += new System.EventHandler(this.FrmBanHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtg_hdGiao)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_hdCho)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -520,6 +536,7 @@
             this.pane_HDCho.ResumeLayout(false);
             this.pane_HDCho.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgrid_HdChoCT)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_SoLuong)).EndInit();
@@ -552,7 +569,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.FlowLayoutPanel flp_HdChoCt;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txt_DonGiaSP;
@@ -568,5 +584,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btn_ThemSp;
         private System.Windows.Forms.Button btn_XoaSp;
+        private System.Windows.Forms.DataGridView dgrid_HdChoCT;
     }
 }

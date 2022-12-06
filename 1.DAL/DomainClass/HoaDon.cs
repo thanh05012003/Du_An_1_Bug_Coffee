@@ -15,8 +15,10 @@ namespace _1.DAL.DomainClass
         public string MaVC { get; set; }
         public string TrangThai { get; set; }
         public string GhiChu { get; set; }
+        public string MaBan { get; set; }
         public virtual KhachHang KhachHang { get; set; }
         public virtual NhanVien NhanVien { get; set; }
         public virtual Voucher Voucher { get; set; }
+        public virtual Ban Ban { get; set; }
     }
 }

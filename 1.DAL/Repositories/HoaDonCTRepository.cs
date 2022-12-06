@@ -42,7 +42,13 @@ namespace _1.DAL.Repositories
         public bool Update(HoaDonCT obj)
         {
             if (obj == null) return false;
-            _DbContext.Update(obj);
+            var temp = _DbContext.HoaDonCT.FirstOrDefault(x => x.MaHD == obj.MaHD);
+            temp.MaHD = obj.MaHD;
+            temp.MaSP = obj.MaSP;
+            temp.SoLuong = obj.SoLuong; 
+            temp.DonGia = obj.DonGia;
+            temp.TrangThai = obj.TrangThai;
+            _DbContext.HoaDonCT.Update(temp);
             _DbContext.SaveChanges();
             return true;
         }

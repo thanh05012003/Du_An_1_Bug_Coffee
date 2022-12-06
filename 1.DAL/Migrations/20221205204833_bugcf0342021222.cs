@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace _1.DAL.Migrations
 {
-    public partial class bugcf041222 : Migration
+    public partial class bugcf0342021222 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -159,11 +159,18 @@ namespace _1.DAL.Migrations
                     NgayTao = table.Column<DateTime>(type: "date", nullable: true),
                     MaVC = table.Column<string>(type: "varchar(20)", nullable: true),
                     TrangThai = table.Column<string>(type: "nvarchar(100)", nullable: true),
-                    GhiChu = table.Column<string>(type: "nvarchar(100)", nullable: true)
+                    GhiChu = table.Column<string>(type: "nvarchar(100)", nullable: true),
+                    MaBan = table.Column<string>(type: "varchar(20)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_HoaDon", x => x.Ma);
+                    table.ForeignKey(
+                        name: "FK_HoaDon_Ban_MaBan",
+                        column: x => x.MaBan,
+                        principalTable: "Ban",
+                        principalColumn: "Ma",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_HoaDon_KhachHang_MaKH",
                         column: x => x.MaKH,
@@ -192,18 +199,11 @@ namespace _1.DAL.Migrations
                     MaSP = table.Column<string>(type: "varchar(20)", nullable: false),
                     SoLuong = table.Column<int>(type: "int", nullable: false),
                     DonGia = table.Column<decimal>(type: "money", nullable: false),
-                    MaBan = table.Column<string>(type: "varchar(20)", nullable: true),
                     TrangThai = table.Column<string>(type: "nvarchar(100)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_HoaDonCT", x => new { x.MaSP, x.MaHD });
-                    table.ForeignKey(
-                        name: "FK_HoaDonCT_Ban_MaBan",
-                        column: x => x.MaBan,
-                        principalTable: "Ban",
-                        principalColumn: "Ma",
-                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_HoaDonCT_HoaDon_MaHD",
                         column: x => x.MaHD,
@@ -219,6 +219,11 @@ namespace _1.DAL.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_HoaDon_MaBan",
+                table: "HoaDon",
+                column: "MaBan");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_HoaDon_MaKH",
                 table: "HoaDon",
                 column: "MaKH");
@@ -232,11 +237,6 @@ namespace _1.DAL.Migrations
                 name: "IX_HoaDon_MaVC",
                 table: "HoaDon",
                 column: "MaVC");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_HoaDonCT_MaBan",
-                table: "HoaDonCT",
-                column: "MaBan");
 
             migrationBuilder.CreateIndex(
                 name: "IX_HoaDonCT_MaHD",
@@ -265,13 +265,13 @@ namespace _1.DAL.Migrations
                 name: "HoaDonCT");
 
             migrationBuilder.DropTable(
-                name: "Ban");
-
-            migrationBuilder.DropTable(
                 name: "HoaDon");
 
             migrationBuilder.DropTable(
                 name: "SanPham");
+
+            migrationBuilder.DropTable(
+                name: "Ban");
 
             migrationBuilder.DropTable(
                 name: "KhachHang");
