@@ -1,12 +1,6 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using _3.PL.Views;
-using _3.PL.Views.BanHang;
-using _3.PL.Views.NhanVien;
-using _3.PL.Views.SanPham;
 
 namespace _3.PL
 {

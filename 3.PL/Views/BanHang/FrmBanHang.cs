@@ -194,7 +194,7 @@ namespace _3.PL.Views.BanHang
             flp_HoaDon.Controls.Clear();
             foreach (var x in _hoaDonService.GetAll())
             {
-                if (x.TrangThai == "Chờ chờ order")
+                if (x.TrangThai == "Chờ order")
                 {
                     Button btn = new Button()
                     {
@@ -277,6 +277,9 @@ namespace _3.PL.Views.BanHang
                 _maHDWhenClick = temp.Ma;
                 temp.MaBan = ban.Ma;
                 MessageBox.Show(_hoaDonService.add(temp));
+                //var tempban = updateTrangThaiBan();
+                //tempban.TrangThai = 0;
+                //_banService.update(tempban);
                 showBtnHdcho();
                 ShowHdCho();
             }
@@ -310,12 +313,27 @@ namespace _3.PL.Views.BanHang
             
         }
 
+        private QlBanView updateTrangThaiBan()
+        {
+            var table = _banService.GetAll().FirstOrDefault(c => c.Ten == cbb_Ban.Text);
+            QlBanView ban = new QlBanView()
+            {
+                Ma = table.Ma,
+                Ten = table.Ten,
+                TrangThai = table.TrangThai,
+            };
+            return ban;
+        }
+
         private void btn_XacNhan_Click(object sender, EventArgs e)
         {
+            var ban = _banService.GetAll().FirstOrDefault(c => c.Ten == cbb_Ban.Text);
             var temp = HoaDonCho();
             temp.Ma = _maHDWhenClick;
+            temp.MaBan = ban.Ma;
             temp.TrangThai = "Chờ pha chế";
             MessageBox.Show(_hoaDonService.update(temp));
+            
             ShowHdCho();
             LoadHdChoCT();
             showBtnHdcho();

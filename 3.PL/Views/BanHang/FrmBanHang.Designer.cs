@@ -342,7 +342,7 @@
             // 
             // flp_HoaDon
             // 
-            this.flp_HoaDon.Location = new System.Drawing.Point(6, 207);
+            this.flp_HoaDon.Location = new System.Drawing.Point(3, 201);
             this.flp_HoaDon.Name = "flp_HoaDon";
             this.flp_HoaDon.Size = new System.Drawing.Size(478, 34);
             this.flp_HoaDon.TabIndex = 105;

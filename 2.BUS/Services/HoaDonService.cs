@@ -101,12 +101,12 @@ namespace _2.BUS.Services
             {
                 return GetAll();
             }
-            var lstHoaDon = from a in _hoaDonRepository.GetAll()
-                join b in _nhanVienRepository.GetAll() on a.MaNV equals b.Ma
+            var lstHoaDon = from a in _hoaDonRepository.GetAll().Where(c => c.MaBan == input)
+                            join b in _nhanVienRepository.GetAll() on a.MaNV equals b.Ma
                 join d in _hoaDonCtRepository.GetAll() on a.Ma equals d.MaHD
                 join e in _sanPhamRepository.GetAll() on d.MaSP equals e.Ma
-                join g in _banRepository.GetAll() on a.MaBan equals g.Ma 
-                select new QlHoaDonView()
+                            join g in _banRepository.GetAll() on a.MaBan equals g.Ma
+                            select new QlHoaDonView()
                 {
                     Ma = a.Ma,
                     MaKH = a.MaKH,
@@ -121,7 +121,7 @@ namespace _2.BUS.Services
                     MaBan = g.Ma,
                     DonGia = d.DonGia,
                 };
-            return lstHoaDon.Where(c =>c.MaBan == input).ToList();
+            return lstHoaDon.ToList();  
         }
     }
 }

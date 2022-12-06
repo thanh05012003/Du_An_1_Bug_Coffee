@@ -33,7 +33,11 @@ namespace _1.DAL.Repositories
         public bool Update(Ban obj)
         {
             if (obj == null) return false;
-            _DbContext.Update(obj);
+            var temp = _DbContext.Ban.FirstOrDefault(c =>c.Ma == obj.Ma);
+            temp.Ma = obj.Ma;
+            temp.Ten = obj.Ten;
+            temp.TrangThai = obj.TrangThai;
+            _DbContext.Ban.Update(temp);
             _DbContext.SaveChanges();
             return true;
         }

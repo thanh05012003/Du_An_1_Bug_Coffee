@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using _2.BUS.IServices;
 using _2.BUS.Services;
@@ -58,7 +59,7 @@ namespace _3.PL.Views
             dgrid_TTSp.Columns[1].Name = "Số lượng";
             dgrid_TTSp.Columns[2].Name = "Đơn giá";
             dgrid_TTSp.Rows.Clear();
-            foreach (var x in _hoaDonService.GetAll(ma))
+            foreach (var x in _hoaDonService.GetAll(ma).Where(c =>c.MaBan == ma))
             {
                 dgrid_TTSp.Rows.Add(x.TenSP,x.Soluong,Math.Round(x.DonGia,0));
             }
