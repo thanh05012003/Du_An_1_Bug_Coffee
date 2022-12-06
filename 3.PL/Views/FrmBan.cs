@@ -30,7 +30,7 @@ namespace _3.PL.Views
             {
                 CSButton btn = new CSButton()
                 {
-                    Size = new System.Drawing.Size(280, 280),
+                    Size = new System.Drawing.Size(243, 243),
                     BorderRadius = 50,
                     ForeColor = Color.Black
                 };
@@ -68,5 +68,6 @@ namespace _3.PL.Views
             string MaBan = ((sender as CSButton).Tag as QlBanView).Ma;
             ShowBill(MaBan);
         }
+
     }
 }
