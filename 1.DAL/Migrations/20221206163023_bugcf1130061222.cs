@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace _1.DAL.Migrations
 {
-    public partial class bugcf0342021222 : Migration
+    public partial class bugcf1130061222 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -80,7 +80,7 @@ namespace _1.DAL.Migrations
                 columns: table => new
                 {
                     Ma = table.Column<string>(type: "varchar(20)", nullable: false),
-                    Ten = table.Column<string>(type: "nvarchar(20)", nullable: false),
+                    Ten = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     NgayBatDau = table.Column<DateTime>(type: "date", nullable: false),
                     NgayKetThuc = table.Column<DateTime>(type: "date", nullable: false),
                     TrangThai = table.Column<int>(type: "int", nullable: false),

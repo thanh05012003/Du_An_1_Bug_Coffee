@@ -23,7 +23,6 @@ namespace _3.PL.Views
             InitializeComponent();
             loadDataKM();
             rb_hoatDong.Checked = true;
-
         }
         public void loadDataKM()
         {
@@ -38,35 +37,40 @@ namespace _3.PL.Views
             dtg_showKM.Columns[6].Name = "Giảm giá";
             dtg_showKM.Columns[7].Name = "Mô tả";
             dtg_showKM.Rows.Clear();
-
             foreach (var x in _voucherService.GetAll())
             {
                 dtg_showKM.Rows.Add(stt++, x.Ma, x.Ten, x.NgayBatDau, x.NgayKetThuc,
                     (x.TrangThai == 1 ? "Hoạt động" : "Không hoạt động"), x.GiamGia, x.MoTa);
             }
         }
-        private void btn_add_Click(object sender, EventArgs e)
+
+        public QlVoucherView GetdataformGUi()
         {
             QlVoucherView vc = new QlVoucherView();
+            vc = new QlVoucherView()
+            {
+                Ma = tbt_MaKM.Texts,
+                Ten = tbt_TenKM.Texts,
+                NgayBatDau = date_ngayBD.Value,
+                NgayKetThuc = date_ngayKT.Value,
+                TrangThai = rb_hoatDong.Checked ? 1 : 0,
+                GiamGia = int.Parse(tbt_sale.Texts),
+                MoTa = tbt_moTa.Text
+            };
+            return vc;
+        }
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+           
             if (tbt_MaKM.Texts.Trim() == "" || tbt_TenKM.Texts.Trim() == "" || date_ngayKT.Value < date_ngayBD.Value || tbt_sale.Texts.Trim() == "" || tbt_moTa.Texts.Trim() == "")
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin");
             }
             else
             {
-                vc = new QlVoucherView()
-                {
-                    Ma = tbt_MaKM.Texts,
-                    Ten = tbt_TenKM.Texts,
-                    NgayBatDau = date_ngayBD.Value,
-                    NgayKetThuc = date_ngayKT.Value,
-                    TrangThai = rb_hoatDong.Checked ? 1 : 0,
-                    GiamGia = int.Parse(tbt_sale.Texts),
-                    MoTa = tbt_moTa.Text
-                };
-                _voucherService.add(vc);
+                MessageBox.Show(_voucherService.add(GetdataformGUi()));
+                loadDataKM();
             }
-            loadDataKM();
         }
 
         private void dtg_showKM_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -97,5 +101,9 @@ namespace _3.PL.Views
             }
         }
 
+        private void tbt_TenKM__TextChanged(object sender, EventArgs e)
+        {
+            tbt_MaKM.Texts = "VC00" + (_voucherService.GetAll().Count + 1);
+        }
     }
 }

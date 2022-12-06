@@ -15,7 +15,7 @@ namespace _1.DAL.Configurations
         {
             builder.HasKey(k => k.Ma);
             builder.Property(p => p.Ma).HasColumnType("varchar(20)").IsRequired();
-            builder.Property(p => p.Ten).HasColumnType("nvarchar(20)").IsRequired();
+            builder.Property(p => p.Ten).HasColumnType("nvarchar(max)").IsRequired();
             builder.Property(p => p.NgayBatDau).HasColumnType("date").IsRequired();
             builder.Property(p => p.NgayKetThuc).HasColumnType("date").IsRequired();
             builder.Property(p => p.TrangThai).HasColumnType("int").IsRequired();

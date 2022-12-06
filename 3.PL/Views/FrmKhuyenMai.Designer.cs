@@ -313,6 +313,7 @@
             this.tbt_TenKM.TabIndex = 8;
             this.tbt_TenKM.Texts = "";
             this.tbt_TenKM.UnderlinedStyle = false;
+            this.tbt_TenKM._TextChanged += new System.EventHandler(this.tbt_TenKM__TextChanged);
             // 
             // tbt_MaKM
             // 
