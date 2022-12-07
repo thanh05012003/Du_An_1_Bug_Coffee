@@ -65,7 +65,7 @@ namespace _3.PL.Views.BanHang
 
         private void btn_ThanhToan_Click(object sender, EventArgs e)
         {
-            var hd = _HoaDonService.GetAll().FirstOrDefault(c => c.MaBan == Properties.Settings.Default.MaBan && c.Ma == Properties.Settings.Default.MaHd);
+            var hd = _HoaDonService.GetAll().FirstOrDefault(c => c.MaBan == Properties.Settings.Default.MaBan && c.Ma == Properties.Settings.Default.MaHd || c.Ma == Properties.Settings.Default.MaHd);
             var ban = _BanService.GetAll().FirstOrDefault(c => c.Ma == Properties.Settings.Default.MaBan);
             hd.TrangThai = "Đã thanh toán";
             if (ban !=null)
