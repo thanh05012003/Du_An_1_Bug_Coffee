@@ -61,12 +61,13 @@ namespace _3.PL.Views
             dgrid_TTSp.Columns[1].Name = "Số lượng";
             dgrid_TTSp.Columns[2].Name = "Đơn giá";
             dgrid_TTSp.Rows.Clear();
-            foreach (var x in _hoaDonService.GetAll(ma).Where(c =>c.MaBan == ma))
+            foreach (var x in _hoaDonService.GetAll(ma))
             {
                 if (x.TrangThai == "Chờ pha chế" || x.TrangThai == "Chờ thanh toán");
                 {
-                   Properties.Settings.Default.MaHd = x.Ma;
                     dgrid_TTSp.Rows.Add(x.TenSP, x.Soluong, Math.Round(x.DonGia, 0));
+                    Properties.Settings.Default.MaHd = x.Ma;
+                    Properties.Settings.Default.MaBan = x.MaBan;
                 }
                 if (x.TrangThai == "Đã thanh toán")
                 {
@@ -78,7 +79,7 @@ namespace _3.PL.Views
         public void btn_Click(object sender, EventArgs e)
         {
              var _maBanWhenClick = ((sender as CSButton).Tag as QlBanView).Ma;
-            Properties.Settings.Default.MaBan = _maBanWhenClick;
+            //Properties.Settings.Default.MaBan = _maBanWhenClick;
             ShowBill(_maBanWhenClick);
         }
 

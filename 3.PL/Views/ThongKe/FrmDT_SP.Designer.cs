@@ -31,8 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.pnl_TuyChon = new System.Windows.Forms.Panel();
-            this.lbl_HuyTC = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
             this.lbl_GiaoTC = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.lbl_BanTC = new System.Windows.Forms.Label();
@@ -42,8 +40,6 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.pnl_Month = new System.Windows.Forms.Panel();
-            this.lbl_HuyMonth = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.lbl_GiaoMonth = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.lbl_BanMonth = new System.Windows.Forms.Label();
@@ -53,8 +49,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.dtp_BDChon = new System.Windows.Forms.DateTimePicker();
             this.pnl_7Day = new System.Windows.Forms.Panel();
-            this.lbl_Huy7Day = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.lbl_Giao7Day = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.lbl_Ban7Day = new System.Windows.Forms.Label();
@@ -63,8 +57,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dtp_KTChon = new System.Windows.Forms.DateTimePicker();
             this.pnl_Today = new System.Windows.Forms.Panel();
-            this.lbl_HuyToday = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.lbl_GiaoToday = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lbl_BanToday = new System.Windows.Forms.Label();
@@ -132,8 +124,6 @@
             // pnl_TuyChon
             // 
             this.pnl_TuyChon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.pnl_TuyChon.Controls.Add(this.lbl_HuyTC);
-            this.pnl_TuyChon.Controls.Add(this.label26);
             this.pnl_TuyChon.Controls.Add(this.lbl_GiaoTC);
             this.pnl_TuyChon.Controls.Add(this.label28);
             this.pnl_TuyChon.Controls.Add(this.lbl_BanTC);
@@ -145,26 +135,6 @@
             this.pnl_TuyChon.Name = "pnl_TuyChon";
             this.pnl_TuyChon.Size = new System.Drawing.Size(278, 248);
             this.pnl_TuyChon.TabIndex = 65;
-            // 
-            // lbl_HuyTC
-            // 
-            this.lbl_HuyTC.AutoSize = true;
-            this.lbl_HuyTC.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_HuyTC.Location = new System.Drawing.Point(218, 192);
-            this.lbl_HuyTC.Name = "lbl_HuyTC";
-            this.lbl_HuyTC.Size = new System.Drawing.Size(21, 24);
-            this.lbl_HuyTC.TabIndex = 39;
-            this.lbl_HuyTC.Text = "X";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label26.Location = new System.Drawing.Point(40, 192);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(126, 24);
-            this.label26.TabIndex = 38;
-            this.label26.Text = "Hóa đơn hủy:";
             // 
             // lbl_GiaoTC
             // 
@@ -246,8 +216,6 @@
             // pnl_Month
             // 
             this.pnl_Month.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.pnl_Month.Controls.Add(this.lbl_HuyMonth);
-            this.pnl_Month.Controls.Add(this.label20);
             this.pnl_Month.Controls.Add(this.lbl_GiaoMonth);
             this.pnl_Month.Controls.Add(this.label22);
             this.pnl_Month.Controls.Add(this.lbl_BanMonth);
@@ -259,26 +227,6 @@
             this.pnl_Month.Name = "pnl_Month";
             this.pnl_Month.Size = new System.Drawing.Size(278, 248);
             this.pnl_Month.TabIndex = 67;
-            // 
-            // lbl_HuyMonth
-            // 
-            this.lbl_HuyMonth.AutoSize = true;
-            this.lbl_HuyMonth.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_HuyMonth.Location = new System.Drawing.Point(215, 192);
-            this.lbl_HuyMonth.Name = "lbl_HuyMonth";
-            this.lbl_HuyMonth.Size = new System.Drawing.Size(21, 24);
-            this.lbl_HuyMonth.TabIndex = 39;
-            this.lbl_HuyMonth.Text = "X";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(37, 192);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(126, 24);
-            this.label20.TabIndex = 38;
-            this.label20.Text = "Hóa đơn hủy:";
             // 
             // lbl_GiaoMonth
             // 
@@ -358,8 +306,6 @@
             // pnl_7Day
             // 
             this.pnl_7Day.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.pnl_7Day.Controls.Add(this.lbl_Huy7Day);
-            this.pnl_7Day.Controls.Add(this.label14);
             this.pnl_7Day.Controls.Add(this.lbl_Giao7Day);
             this.pnl_7Day.Controls.Add(this.label16);
             this.pnl_7Day.Controls.Add(this.lbl_Ban7Day);
@@ -370,26 +316,6 @@
             this.pnl_7Day.Name = "pnl_7Day";
             this.pnl_7Day.Size = new System.Drawing.Size(278, 248);
             this.pnl_7Day.TabIndex = 68;
-            // 
-            // lbl_Huy7Day
-            // 
-            this.lbl_Huy7Day.AutoSize = true;
-            this.lbl_Huy7Day.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_Huy7Day.Location = new System.Drawing.Point(218, 192);
-            this.lbl_Huy7Day.Name = "lbl_Huy7Day";
-            this.lbl_Huy7Day.Size = new System.Drawing.Size(21, 24);
-            this.lbl_Huy7Day.TabIndex = 39;
-            this.lbl_Huy7Day.Text = "X";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(40, 192);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(126, 24);
-            this.label14.TabIndex = 38;
-            this.label14.Text = "Hóa đơn hủy:";
             // 
             // lbl_Giao7Day
             // 
@@ -462,8 +388,6 @@
             // pnl_Today
             // 
             this.pnl_Today.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.pnl_Today.Controls.Add(this.lbl_HuyToday);
-            this.pnl_Today.Controls.Add(this.label12);
             this.pnl_Today.Controls.Add(this.lbl_GiaoToday);
             this.pnl_Today.Controls.Add(this.label10);
             this.pnl_Today.Controls.Add(this.lbl_BanToday);
@@ -474,26 +398,6 @@
             this.pnl_Today.Name = "pnl_Today";
             this.pnl_Today.Size = new System.Drawing.Size(278, 248);
             this.pnl_Today.TabIndex = 66;
-            // 
-            // lbl_HuyToday
-            // 
-            this.lbl_HuyToday.AutoSize = true;
-            this.lbl_HuyToday.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_HuyToday.Location = new System.Drawing.Point(202, 192);
-            this.lbl_HuyToday.Name = "lbl_HuyToday";
-            this.lbl_HuyToday.Size = new System.Drawing.Size(21, 24);
-            this.lbl_HuyToday.TabIndex = 33;
-            this.lbl_HuyToday.Text = "X";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(24, 192);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(126, 24);
-            this.label12.TabIndex = 32;
-            this.label12.Text = "Hóa đơn hủy:";
             // 
             // lbl_GiaoToday
             // 
@@ -714,8 +618,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel pnl_TuyChon;
-        private System.Windows.Forms.Label lbl_HuyTC;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label lbl_GiaoTC;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label lbl_BanTC;
@@ -725,8 +627,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel pnl_Month;
-        private System.Windows.Forms.Label lbl_HuyMonth;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label lbl_GiaoMonth;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label lbl_BanMonth;
@@ -736,8 +636,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.DateTimePicker dtp_BDChon;
         private System.Windows.Forms.Panel pnl_7Day;
-        private System.Windows.Forms.Label lbl_Huy7Day;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lbl_Giao7Day;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label lbl_Ban7Day;
@@ -746,8 +644,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtp_KTChon;
         private System.Windows.Forms.Panel pnl_Today;
-        private System.Windows.Forms.Label lbl_HuyToday;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lbl_GiaoToday;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lbl_BanToday;

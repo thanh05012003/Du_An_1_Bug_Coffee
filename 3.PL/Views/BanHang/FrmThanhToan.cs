@@ -65,20 +65,36 @@ namespace _3.PL.Views.BanHang
 
         private void btn_ThanhToan_Click(object sender, EventArgs e)
         {
-            var hd = _HoaDonService.GetAll().FirstOrDefault(c => c.MaBan == Properties.Settings.Default.MaBan || c.Ma == Properties.Settings.Default.MaHd);
+            var hd = _HoaDonService.GetAll().FirstOrDefault(c => c.MaBan == Properties.Settings.Default.MaBan && c.Ma == Properties.Settings.Default.MaHd);
             var ban = _BanService.GetAll().FirstOrDefault(c => c.Ma == Properties.Settings.Default.MaBan);
             hd.TrangThai = "Đã thanh toán";
             if (ban !=null)
             {
                 ban.TrangThai = 1;
                 _BanService.update(ban);
+
             }
             if (hd!=null)
             {
-                hd.MaKH = _QlKhachHangView.Ma;
-                _HoaDonService.update(hd);
-                MessageBox.Show("Thanh toán thành công");
-                this.Close();
+                if (hd.TrangThai == "Chờ pha chế")
+                {
+                    hd.TrangThai = "Đã thanh toán";
+                    hd.GhiChu = "Chờ pha chế"; 
+                    hd.MaKH = _QlKhachHangView.Ma;
+                    _HoaDonService.update(hd);
+                    MessageBox.Show("Thanh toán thành công");
+                    this.Close();
+                }
+                else
+                {
+                    hd.TrangThai = "Đã thanh toán";
+                    hd.MaKH = _QlKhachHangView.Ma;
+                    _HoaDonService.update(hd);
+                    MessageBox.Show("Thanh toán thành công");
+                    Properties.Settings.Default.MaBan = "";
+                    this.Close();
+                }
+               
             }
         }
 
