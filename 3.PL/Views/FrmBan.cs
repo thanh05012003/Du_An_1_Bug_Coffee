@@ -16,8 +16,6 @@ namespace _3.PL.Views
         private IBanService _banService;
         private IHoaDonCTService _hoaDonCtService;
         private IHoaDonService _hoaDonService;
-        public string _maBanWhenClick;
-
 
         public FrmBan()
         {
@@ -65,8 +63,9 @@ namespace _3.PL.Views
             dgrid_TTSp.Rows.Clear();
             foreach (var x in _hoaDonService.GetAll(ma).Where(c =>c.MaBan == ma))
             {
-                if (x.TrangThai == "Chờ pha chế")
+                if (x.TrangThai == "Chờ pha chế" || x.TrangThai == "Chờ thanh toán");
                 {
+                   Properties.Settings.Default.MaHd = x.Ma;
                     dgrid_TTSp.Rows.Add(x.TenSP, x.Soluong, Math.Round(x.DonGia, 0));
                 }
             }
@@ -74,7 +73,7 @@ namespace _3.PL.Views
 
         public void btn_Click(object sender, EventArgs e)
         {
-            _maBanWhenClick = ((sender as CSButton).Tag as QlBanView).Ma;
+             var _maBanWhenClick = ((sender as CSButton).Tag as QlBanView).Ma;
             Properties.Settings.Default.MaBan = _maBanWhenClick;
             ShowBill(_maBanWhenClick);
         }

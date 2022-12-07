@@ -41,7 +41,8 @@ namespace _2.BUS.Services
                 NgayTao = obj.NgayTao,
                 MaVC = obj.MaVC,
                 TrangThai = obj.TrangThai,
-                MaBan = obj.MaBan
+                MaBan = obj.MaBan,
+                GhiChu = obj.GhiChu,
             };
             if (_hoaDonRepository.Add(hoaDon))
             {
@@ -67,7 +68,8 @@ namespace _2.BUS.Services
                 NgayTao = obj.NgayTao,
                 MaVC = obj.MaVC,
                 TrangThai = obj.TrangThai,
-                MaBan = obj.MaBan
+                MaBan = obj.MaBan,
+                GhiChu = obj.GhiChu
             };
             if (_hoaDonRepository.Update(hoaDon))
             {

@@ -15,10 +15,12 @@ namespace _2.BUS.Services
     {
         private IHoaDonCTRepository _hoaDonCTRepository;
         private ISanPhamRepository _sanPhamRepository;
+        private IHoaDonRepository _hoaDonRepository;
         public HoaDonCTService()
         {
             _hoaDonCTRepository = new HoaDonCTRepository();
             _sanPhamRepository = new SanPhamRepository();
+            _hoaDonRepository = new HoaDonRepository();
         }
 
         public string add(QlHoaDonCTView obj)
@@ -65,14 +67,16 @@ namespace _2.BUS.Services
         public List<QlHoaDonCTView> GetAll()
         {
             var lstHoaDonCT = from a in _hoaDonCTRepository.GetAll()
-                join b in _sanPhamRepository.GetAll() on a.MaSP equals b.Ma 
+                join b in _sanPhamRepository.GetAll() on a.MaSP equals b.Ma
+                join c in _hoaDonRepository.GetAll() on a.MaHD equals c.Ma 
                 select new QlHoaDonCTView()
                 {
                     MaHD = a.MaHD,
                     MaSP = a.MaSP,
                     SoLuong = a.SoLuong,
                     DonGia = a.DonGia,
-                    TenSp = b.Ten
+                    TenSp = b.Ten,
+                    TrangThai = c.TrangThai
                 };
             return lstHoaDonCT.ToList();
         }

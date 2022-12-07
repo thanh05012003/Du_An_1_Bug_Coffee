@@ -76,8 +76,17 @@ namespace _2.BUS.Services
             {
                 return GetAll();
             }
-          
-            return GetAll().Where(c =>c.Ma == input).ToList();
+            var lstBan = from a in _banRepository.GetAll()
+                join b in _hoaDonRepository.GetAll() on a.Ma equals b.MaBan
+                select new QlBanView()
+                {
+                    Ma = a.Ma,
+                    Ten = a.Ten,
+                    TrangThai = a.TrangThai,
+                    MaHD = b.Ma,
+                };
+
+            return lstBan.Where(c =>c.Ma == input || c.MaHD == input).ToList();
         }
     }
 }

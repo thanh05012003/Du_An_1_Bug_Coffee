@@ -35,7 +35,6 @@ namespace _3.PL.Views.BanHang
             loadSp();
             LoadLoaiSP();
             LoadBan();
-            LoadHoTenKH();
             ShowHdCho();
             showBtnHdcho();
             LoadHdChoCT();
@@ -81,7 +80,6 @@ namespace _3.PL.Views.BanHang
         {
             QlHoaDonView lstHdView = new QlHoaDonView();
             var NV = _nhanVienService.GetAll().FirstOrDefault(c => c.SDT == Properties.Settings.Default.Tk);
-            //var table = _banService.GetAll().FirstOrDefault(c => c.Ten == cbb_Ban.Text);
             if (NV != null)
             {
                 lstHdView = new QlHoaDonView()
@@ -90,7 +88,6 @@ namespace _3.PL.Views.BanHang
                     MaNV = NV.Ma,
                     TrangThai = "Chờ order",
                     NgayTao = DateTime.Now,
-                    //MaBan = table.Ma,
                 };
             }
 
@@ -101,23 +98,11 @@ namespace _3.PL.Views.BanHang
             cbb_Ban.Items.Clear();
             foreach (var x in _banService.GetAll())
             {
-                if (x.TrangThai == 1)
-                {
-                    cbb_Ban.ForeColor = Color.Red;
-                }
                 cbb_Ban.Items.Add(x.Ten);
             }
             //cbb_Ban.SelectedIndex = 0;
         }
 
-        public void LoadHoTenKH()
-        {
-            cbb_TenKH.Items.Clear();
-            foreach (var x in _khachHangService.GetAll())
-            {
-                cbb_TenKH.Items.Add(x.Ten);
-            }
-        }
 
         public void LoadLoaiSP()
         {
@@ -139,12 +124,11 @@ namespace _3.PL.Views.BanHang
                     BackColor = Color.DarkOliveGreen
                 };
                 Panel icon = new Panel();
-                if (x.URL == null)
+                if (x.URL == null) // nếu không có đường dẫn sẽ không hiển thị ảnh sản phẩm
                 {
                    icon = new Panel()
                     {
                         Dock = DockStyle.Top,
-                        //BackgroundImage = Image.FromFile(x.URL),
                         BackgroundImageLayout = ImageLayout.Zoom,
                     };
                 }
@@ -153,11 +137,10 @@ namespace _3.PL.Views.BanHang
                     icon = new Panel()
                     {
                         Dock = DockStyle.Top,
-                        BackgroundImage = Image.FromFile(x.URL),
+                        BackgroundImage = Image.FromFile(x.URL), // hiển thị ảnh nếu có đường dẫn
                         BackgroundImageLayout = ImageLayout.Zoom,
                     };
                 }
-                
                 icon.Tag = x;
                 icon.Click += btn_Click_1;
                 products.Controls.Add(icon);
@@ -192,7 +175,6 @@ namespace _3.PL.Views.BanHang
             txt_TenSP.Text = sp.Ten;
             txt_DonGiaSP.Text = Math.Round(sp.Gia, 0).ToString();
         }
-
         public void showBtnHdcho()
         {
             flp_HoaDon.Controls.Clear();
@@ -232,8 +214,8 @@ namespace _3.PL.Views.BanHang
         #endregion
 
         #region Event
-        //lấy ra mã sản phẩm khi click vào ảnh
-        void btn_Click_1(object sender, EventArgs e)
+        
+        public void btn_Click_1(object sender, EventArgs e) //lấy ra mã sản phẩm khi click vào ảnh
         {
             _maSPWhenClick = ((sender as Panel).Tag as QlSanPhamView).Ma;
             ShowBill(_maSPWhenClick);
@@ -243,11 +225,7 @@ namespace _3.PL.Views.BanHang
             _maHDWhenClick = ((sender as Button).Tag as QlHoaDonView).Ma;
             LoadHdChoCT();
         }
-        private void btn_GiaoHang_Click(object sender, EventArgs e)
-        {
-            FrmGiaoHang frm = new FrmGiaoHang();
-            frm.ShowDialog();
-        }
+     
         private void btn_ThemKH_Click(object sender, EventArgs e)
         {
             FrmKhachHang frm = new FrmKhachHang();
@@ -255,42 +233,14 @@ namespace _3.PL.Views.BanHang
 
         }
 
-        private void btn_search_Click(object sender, EventArgs e)
-        {
-            var nv = _khachHangService.GetAll().FirstOrDefault(c =>c.SDT == txt_SDT.Text.Trim());
-            if (nv!=null)
-            {
-                cbb_TenKH.Text = nv.Ten;
-            }
-            else
-            {
-                MessageBox.Show("Không tìm thấy khách hàng này");
-            }
-        }
-
         private void btn_ThemHD_Click_1(object sender, EventArgs e)
         {
-            if (cbb_Ban.Text.Trim() == "")
-            {
-                MessageBox.Show("Bạn chưa chọn bàn");
-            }
-            else
-            {
-                var ban = _banService.GetAll().FirstOrDefault(c => c.Ten == cbb_Ban.Text);
-                var temp = HoaDonCho();
-                _maHDWhenClick = temp.Ma;
-                temp.MaBan = ban.Ma;
-                MessageBox.Show(_hoaDonService.add(temp));
-                var tempban = updateTrangThaiBan();
-                tempban.TrangThai = 0;
-                _banService.update(tempban);
-                showBtnHdcho();
-                ShowHdCho();
-            }
-           
+            var temp = HoaDonCho();
+            _maHDWhenClick = temp.Ma;
+            MessageBox.Show(_hoaDonService.add(temp));
+            showBtnHdcho();
+            ShowHdCho();
         }
-        #endregion
-
         private void btn_ThemSp_Click(object sender, EventArgs e)
         {
             var sp = _hoaDonCTService.GetAll().FirstOrDefault(c => c.MaSP == _maSPWhenClick && c.MaHD == _maHDWhenClick);
@@ -305,8 +255,11 @@ namespace _3.PL.Views.BanHang
                     var htct = _hoaDonCTService.GetAll().FirstOrDefault(c => c.MaHD == _maHDWhenClick);
                     var temp = GetDataHdCtfromGui();
                     temp.SoLuong = int.Parse(nud_SoLuong.Text) + htct.SoLuong;
-                    MessageBox.Show(_hoaDonCTService.update(temp));
-                    LoadHdChoCT();
+                    if (temp != null)
+                    {
+                        MessageBox.Show(_hoaDonCTService.update(temp));
+                        LoadHdChoCT();
+                    }
                 }
                 else
                 {
@@ -314,45 +267,67 @@ namespace _3.PL.Views.BanHang
                     LoadHdChoCT();
                 }
             }
-            
         }
-
-        private QlBanView updateTrangThaiBan()
-        {
-            var table = _banService.GetAll().FirstOrDefault(c => c.Ten == cbb_Ban.Text);
-            QlBanView ban = new QlBanView()
-            {
-                Ma = table.Ma,
-                Ten = table.Ten,
-                TrangThai = table.TrangThai,
-            };
-            return ban;
-        }
-
         private void btn_XacNhan_Click(object sender, EventArgs e)
         {
             var ban = _banService.GetAll().FirstOrDefault(c => c.Ten == cbb_Ban.Text);
             var temp = HoaDonCho();
-            temp.Ma = _maHDWhenClick;
-            temp.MaBan = ban.Ma;
-            temp.TrangThai = "Chờ pha chế";
-            MessageBox.Show(_hoaDonService.update(temp));
-            ShowHdCho();
-            LoadHdChoCT();
-            showBtnHdcho();
-            _maHDWhenClick = "";
+            var sp = _hoaDonCTService.GetAll().FirstOrDefault(c => c.MaHD == _maHDWhenClick);
+            if (sp == null)
+            {
+                MessageBox.Show("Bạn chưa chọn đồ uống nào");
+            }
+            else
+            {
+                if (ban == null)
+                {
+                    MessageBox.Show("Vui lòng chọn bàn");
+                }
+                else
+                {
+                    temp.Ma = _maHDWhenClick;
+                    temp.MaBan = ban.Ma;
+                    temp.TrangThai = "Chờ pha chế";
+                    ban.TrangThai = 0;
+                    _banService.update(ban);
+                    MessageBox.Show(_hoaDonService.update(temp));
+                    ShowHdCho();
+                    LoadHdChoCT();
+                    showBtnHdcho();
+                    _maHDWhenClick = "";
+                }
+            }
+            
         }
-
-        private void FrmBanHang_Load(object sender, EventArgs e)
-        {
-            LoadHdChoCT();
-        }
-
-
-        private void txt_DonGiaSP_KeyPress(object sender, KeyPressEventArgs e)
+        private void txt_DonGiaSP_KeyPress(object sender, KeyPressEventArgs e) // chỉ cho phép nhập số
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
+        }
+        #endregion
+
+        private void btn_MangDi_Click(object sender, EventArgs e)
+        {
+            var temp = HoaDonCho();
+            var sp = _hoaDonCTService.GetAll().FirstOrDefault(c => c.MaHD == _maHDWhenClick);
+            Properties.Settings.Default.MaHd = _maHDWhenClick;
+            if (sp == null)
+            {
+                MessageBox.Show("Bạn chưa chọn đồ uống nào");
+            }
+            else
+            {
+                temp.Ma = _maHDWhenClick;
+                temp.TrangThai = "Chờ pha chế";
+                temp.GhiChu = "Mang đi";
+                MessageBox.Show(_hoaDonService.update(temp));
+                ShowHdCho();
+                LoadHdChoCT();
+                showBtnHdcho();
+                _maHDWhenClick = "";
+                FrmThanhToan frm = new FrmThanhToan();
+                frm.ShowDialog();
+            }
         }
     }
 }

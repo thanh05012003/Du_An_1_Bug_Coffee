@@ -82,5 +82,17 @@ namespace _3.PL.Properties {
                 this["MaBan"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string MaHd {
+            get {
+                return ((string)(this["MaHd"]));
+            }
+            set {
+                this["MaHd"] = value;
+            }
+        }
     }
 }

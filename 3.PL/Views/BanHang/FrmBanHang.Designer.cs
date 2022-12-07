@@ -43,14 +43,8 @@
             this.pane_HDCho = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgrid_HdChoCT = new System.Windows.Forms.DataGridView();
-            this.cbb_TenKH = new System.Windows.Forms.ComboBox();
-            this.btn_ThemKH = new System.Windows.Forms.Button();
-            this.btn_search = new System.Windows.Forms.Button();
-            this.txt_SDT = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.btn_XacNhan = new CustomControls.RJControls.CSButton();
-            this.btn_GiaoHang = new CustomControls.RJControls.CSButton();
+            this.btn_MangDi = new CustomControls.RJControls.CSButton();
             this.flp_HoaDon = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_XoaSp = new System.Windows.Forms.Button();
@@ -207,14 +201,8 @@
             // pane_HDCho
             // 
             this.pane_HDCho.Controls.Add(this.groupBox1);
-            this.pane_HDCho.Controls.Add(this.cbb_TenKH);
-            this.pane_HDCho.Controls.Add(this.btn_ThemKH);
-            this.pane_HDCho.Controls.Add(this.btn_search);
-            this.pane_HDCho.Controls.Add(this.txt_SDT);
-            this.pane_HDCho.Controls.Add(this.label6);
-            this.pane_HDCho.Controls.Add(this.label7);
             this.pane_HDCho.Controls.Add(this.btn_XacNhan);
-            this.pane_HDCho.Controls.Add(this.btn_GiaoHang);
+            this.pane_HDCho.Controls.Add(this.btn_MangDi);
             this.pane_HDCho.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pane_HDCho.Location = new System.Drawing.Point(654, 230);
             this.pane_HDCho.Name = "pane_HDCho";
@@ -243,65 +231,6 @@
             this.dgrid_HdChoCT.Size = new System.Drawing.Size(663, 235);
             this.dgrid_HdChoCT.TabIndex = 0;
             // 
-            // cbb_TenKH
-            // 
-            this.cbb_TenKH.FormattingEnabled = true;
-            this.cbb_TenKH.Location = new System.Drawing.Point(30, 351);
-            this.cbb_TenKH.Name = "cbb_TenKH";
-            this.cbb_TenKH.Size = new System.Drawing.Size(198, 28);
-            this.cbb_TenKH.TabIndex = 106;
-            // 
-            // btn_ThemKH
-            // 
-            this.btn_ThemKH.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btn_ThemKH.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_ThemKH.Location = new System.Drawing.Point(238, 350);
-            this.btn_ThemKH.Name = "btn_ThemKH";
-            this.btn_ThemKH.Size = new System.Drawing.Size(68, 29);
-            this.btn_ThemKH.TabIndex = 143;
-            this.btn_ThemKH.Text = "+";
-            this.btn_ThemKH.UseVisualStyleBackColor = false;
-            this.btn_ThemKH.Click += new System.EventHandler(this.btn_ThemKH_Click);
-            // 
-            // btn_search
-            // 
-            this.btn_search.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btn_search.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_search.Location = new System.Drawing.Point(235, 287);
-            this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(68, 29);
-            this.btn_search.TabIndex = 142;
-            this.btn_search.Text = "search";
-            this.btn_search.UseVisualStyleBackColor = false;
-            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
-            // 
-            // txt_SDT
-            // 
-            this.txt_SDT.Location = new System.Drawing.Point(30, 288);
-            this.txt_SDT.Name = "txt_SDT";
-            this.txt_SDT.Size = new System.Drawing.Size(198, 27);
-            this.txt_SDT.TabIndex = 140;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(31, 327);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 20);
-            this.label6.TabIndex = 139;
-            this.label6.Text = "Họ tên:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(30, 264);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 20);
-            this.label7.TabIndex = 138;
-            this.label7.Text = "SĐT:";
-            // 
             // btn_XacNhan
             // 
             this.btn_XacNhan.BackColor = System.Drawing.Color.MediumSlateBlue;
@@ -321,24 +250,24 @@
             this.btn_XacNhan.UseVisualStyleBackColor = false;
             this.btn_XacNhan.Click += new System.EventHandler(this.btn_XacNhan_Click);
             // 
-            // btn_GiaoHang
+            // btn_MangDi
             // 
-            this.btn_GiaoHang.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_GiaoHang.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_GiaoHang.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_GiaoHang.BorderRadius = 15;
-            this.btn_GiaoHang.BorderSize = 0;
-            this.btn_GiaoHang.FlatAppearance.BorderSize = 0;
-            this.btn_GiaoHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_GiaoHang.ForeColor = System.Drawing.Color.White;
-            this.btn_GiaoHang.Location = new System.Drawing.Point(31, 498);
-            this.btn_GiaoHang.Name = "btn_GiaoHang";
-            this.btn_GiaoHang.Size = new System.Drawing.Size(188, 50);
-            this.btn_GiaoHang.TabIndex = 136;
-            this.btn_GiaoHang.Text = "Giao hàng";
-            this.btn_GiaoHang.TextColor = System.Drawing.Color.White;
-            this.btn_GiaoHang.UseVisualStyleBackColor = false;
-            this.btn_GiaoHang.Click += new System.EventHandler(this.btn_GiaoHang_Click);
+            this.btn_MangDi.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_MangDi.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_MangDi.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_MangDi.BorderRadius = 15;
+            this.btn_MangDi.BorderSize = 0;
+            this.btn_MangDi.FlatAppearance.BorderSize = 0;
+            this.btn_MangDi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_MangDi.ForeColor = System.Drawing.Color.White;
+            this.btn_MangDi.Location = new System.Drawing.Point(31, 498);
+            this.btn_MangDi.Name = "btn_MangDi";
+            this.btn_MangDi.Size = new System.Drawing.Size(188, 50);
+            this.btn_MangDi.TabIndex = 136;
+            this.btn_MangDi.Text = "Mang đi";
+            this.btn_MangDi.TextColor = System.Drawing.Color.White;
+            this.btn_MangDi.UseVisualStyleBackColor = false;
+            this.btn_MangDi.Click += new System.EventHandler(this.btn_MangDi_Click);
             // 
             // flp_HoaDon
             // 
@@ -377,9 +306,9 @@
             // 
             this.btn_XoaSp.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btn_XoaSp.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_XoaSp.Location = new System.Drawing.Point(401, 150);
+            this.btn_XoaSp.Location = new System.Drawing.Point(518, 136);
             this.btn_XoaSp.Name = "btn_XoaSp";
-            this.btn_XoaSp.Size = new System.Drawing.Size(68, 29);
+            this.btn_XoaSp.Size = new System.Drawing.Size(130, 54);
             this.btn_XoaSp.TabIndex = 159;
             this.btn_XoaSp.Text = "Xoá";
             this.btn_XoaSp.UseVisualStyleBackColor = false;
@@ -388,11 +317,11 @@
             // 
             this.btn_ThemSp.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btn_ThemSp.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_ThemSp.Location = new System.Drawing.Point(327, 150);
+            this.btn_ThemSp.Location = new System.Drawing.Point(351, 137);
             this.btn_ThemSp.Name = "btn_ThemSp";
-            this.btn_ThemSp.Size = new System.Drawing.Size(68, 29);
+            this.btn_ThemSp.Size = new System.Drawing.Size(130, 54);
             this.btn_ThemSp.TabIndex = 146;
-            this.btn_ThemSp.Text = "Thêm";
+            this.btn_ThemSp.Text = "Thêm vào hoá đơn";
             this.btn_ThemSp.UseVisualStyleBackColor = false;
             this.btn_ThemSp.Click += new System.EventHandler(this.btn_ThemSp_Click);
             // 
@@ -527,7 +456,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmBanHang";
             this.Text = "Bán hàng";
-            this.Load += new System.EventHandler(this.FrmBanHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtg_hdGiao)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_hdCho)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -535,7 +463,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.pane_HDCho.ResumeLayout(false);
-            this.pane_HDCho.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_HdChoCT)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -561,14 +488,8 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel pane_HDCho;
         private CustomControls.RJControls.CSButton btn_XacNhan;
-        private CustomControls.RJControls.CSButton btn_GiaoHang;
+        private CustomControls.RJControls.CSButton btn_MangDi;
         private System.Windows.Forms.FlowLayoutPanel flp_HoaDon;
-        private System.Windows.Forms.ComboBox cbb_TenKH;
-        private System.Windows.Forms.Button btn_ThemKH;
-        private System.Windows.Forms.Button btn_search;
-        private System.Windows.Forms.TextBox txt_SDT;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label9;

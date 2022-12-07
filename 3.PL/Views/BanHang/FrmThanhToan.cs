@@ -20,6 +20,7 @@ namespace _3.PL.Views.BanHang
         private IHoaDonService _HoaDonService;
         private decimal tongtien = 0;
         private QlKhachHangView _QlKhachHangView;
+        private IBanService _BanService;
         public FrmThanhToan()
         {
             InitializeComponent();
@@ -27,6 +28,7 @@ namespace _3.PL.Views.BanHang
             _HoaDonCTService = new HoaDonCTService();
             _HoaDonService = new HoaDonService();
             _QlKhachHangView = new QlKhachHangView();
+            _BanService = new BanService();
             loadTenKH();
         }
 
@@ -54,7 +56,7 @@ namespace _3.PL.Views.BanHang
         private void FrmThanhToan_Load(object sender, EventArgs e)
         {
            
-            foreach (var x in _HoaDonCTService.GetAll())
+            foreach (var x in _HoaDonCTService.GetAll().Where(c =>c.MaHD == Properties.Settings.Default.MaHd))
             {
                 tongtien += (x.DonGia * x.SoLuong);
             }
@@ -63,11 +65,21 @@ namespace _3.PL.Views.BanHang
 
         private void btn_ThanhToan_Click(object sender, EventArgs e)
         {
-            var hd = _HoaDonService.GetAll().FirstOrDefault(c => c.MaBan == Properties.Settings.Default.MaBan);
-            lb_DiaChi.Text = hd.MaBan;
+            var hd = _HoaDonService.GetAll().FirstOrDefault(c => c.MaBan == Properties.Settings.Default.MaBan || c.Ma == Properties.Settings.Default.MaHd);
+            var ban = _BanService.GetAll().FirstOrDefault(c => c.Ma == Properties.Settings.Default.MaBan);
             hd.TrangThai = "Đã thanh toán";
-            hd.MaKH = _QlKhachHangView.Ma;
-            MessageBox.Show(_HoaDonService.update(hd));
+            if (ban !=null)
+            {
+                ban.TrangThai = 1;
+                _BanService.update(ban);
+            }
+            if (hd!=null)
+            {
+                hd.MaKH = _QlKhachHangView.Ma;
+                _HoaDonService.update(hd);
+                MessageBox.Show("Thanh toán thành công");
+                this.Close();
+            }
         }
 
         private void btn_SearchKH_Click(object sender, EventArgs e)
