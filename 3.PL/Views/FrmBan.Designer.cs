@@ -30,11 +30,11 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmb_Ban = new System.Windows.Forms.ComboBox();
+            this.btn_TachHd = new CustomControls.RJControls.CSButton();
+            this.btn_ChuyenBan = new CustomControls.RJControls.CSButton();
             this.btn_ThanhToan = new CustomControls.RJControls.CSButton();
             this.dgrid_TTSp = new System.Windows.Forms.DataGridView();
-            this.btn_ChuyenBan = new CustomControls.RJControls.CSButton();
-            this.btn_TachHd = new CustomControls.RJControls.CSButton();
-            this.cmb_Ban = new System.Windows.Forms.ComboBox();
             this.btn_ThemMon = new CustomControls.RJControls.CSButton();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.cmb_LoaiSanPham = new CustomControls.RJControls.CSComboBox();
@@ -64,6 +64,52 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(539, 323);
             this.panel1.TabIndex = 1;
+            // 
+            // cmb_Ban
+            // 
+            this.cmb_Ban.FormattingEnabled = true;
+            this.cmb_Ban.Location = new System.Drawing.Point(10, 154);
+            this.cmb_Ban.Name = "cmb_Ban";
+            this.cmb_Ban.Size = new System.Drawing.Size(151, 28);
+            this.cmb_Ban.TabIndex = 11;
+            // 
+            // btn_TachHd
+            // 
+            this.btn_TachHd.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_TachHd.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_TachHd.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_TachHd.BorderRadius = 15;
+            this.btn_TachHd.BorderSize = 0;
+            this.btn_TachHd.FlatAppearance.BorderSize = 0;
+            this.btn_TachHd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TachHd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_TachHd.ForeColor = System.Drawing.Color.White;
+            this.btn_TachHd.Location = new System.Drawing.Point(8, 34);
+            this.btn_TachHd.Name = "btn_TachHd";
+            this.btn_TachHd.Size = new System.Drawing.Size(135, 40);
+            this.btn_TachHd.TabIndex = 10;
+            this.btn_TachHd.Text = "Tách hoá đơn";
+            this.btn_TachHd.TextColor = System.Drawing.Color.White;
+            this.btn_TachHd.UseVisualStyleBackColor = false;
+            // 
+            // btn_ChuyenBan
+            // 
+            this.btn_ChuyenBan.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_ChuyenBan.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_ChuyenBan.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_ChuyenBan.BorderRadius = 15;
+            this.btn_ChuyenBan.BorderSize = 0;
+            this.btn_ChuyenBan.FlatAppearance.BorderSize = 0;
+            this.btn_ChuyenBan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ChuyenBan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_ChuyenBan.ForeColor = System.Drawing.Color.White;
+            this.btn_ChuyenBan.Location = new System.Drawing.Point(8, 108);
+            this.btn_ChuyenBan.Name = "btn_ChuyenBan";
+            this.btn_ChuyenBan.Size = new System.Drawing.Size(135, 40);
+            this.btn_ChuyenBan.TabIndex = 9;
+            this.btn_ChuyenBan.Text = "Chuyển bàn";
+            this.btn_ChuyenBan.TextColor = System.Drawing.Color.White;
+            this.btn_ChuyenBan.UseVisualStyleBackColor = false;
             // 
             // btn_ThanhToan
             // 
@@ -97,52 +143,6 @@
             this.dgrid_TTSp.RowTemplate.Height = 29;
             this.dgrid_TTSp.Size = new System.Drawing.Size(539, 373);
             this.dgrid_TTSp.TabIndex = 2;
-            // 
-            // btn_ChuyenBan
-            // 
-            this.btn_ChuyenBan.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_ChuyenBan.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_ChuyenBan.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_ChuyenBan.BorderRadius = 15;
-            this.btn_ChuyenBan.BorderSize = 0;
-            this.btn_ChuyenBan.FlatAppearance.BorderSize = 0;
-            this.btn_ChuyenBan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ChuyenBan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_ChuyenBan.ForeColor = System.Drawing.Color.White;
-            this.btn_ChuyenBan.Location = new System.Drawing.Point(6, 167);
-            this.btn_ChuyenBan.Name = "btn_ChuyenBan";
-            this.btn_ChuyenBan.Size = new System.Drawing.Size(135, 40);
-            this.btn_ChuyenBan.TabIndex = 9;
-            this.btn_ChuyenBan.Text = "Chuyển bàn";
-            this.btn_ChuyenBan.TextColor = System.Drawing.Color.White;
-            this.btn_ChuyenBan.UseVisualStyleBackColor = false;
-            // 
-            // btn_TachHd
-            // 
-            this.btn_TachHd.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_TachHd.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_TachHd.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_TachHd.BorderRadius = 15;
-            this.btn_TachHd.BorderSize = 0;
-            this.btn_TachHd.FlatAppearance.BorderSize = 0;
-            this.btn_TachHd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_TachHd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_TachHd.ForeColor = System.Drawing.Color.White;
-            this.btn_TachHd.Location = new System.Drawing.Point(87, 24);
-            this.btn_TachHd.Name = "btn_TachHd";
-            this.btn_TachHd.Size = new System.Drawing.Size(135, 40);
-            this.btn_TachHd.TabIndex = 10;
-            this.btn_TachHd.Text = "Tách hoá đơn";
-            this.btn_TachHd.TextColor = System.Drawing.Color.White;
-            this.btn_TachHd.UseVisualStyleBackColor = false;
-            // 
-            // cmb_Ban
-            // 
-            this.cmb_Ban.FormattingEnabled = true;
-            this.cmb_Ban.Location = new System.Drawing.Point(8, 213);
-            this.cmb_Ban.Name = "cmb_Ban";
-            this.cmb_Ban.Size = new System.Drawing.Size(151, 28);
-            this.cmb_Ban.TabIndex = 11;
             // 
             // btn_ThemMon
             // 

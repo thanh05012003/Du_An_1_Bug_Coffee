@@ -68,6 +68,10 @@ namespace _3.PL.Views
                    Properties.Settings.Default.MaHd = x.Ma;
                     dgrid_TTSp.Rows.Add(x.TenSP, x.Soluong, Math.Round(x.DonGia, 0));
                 }
+                if (x.TrangThai == "Đã thanh toán")
+                {
+                    dgrid_TTSp.Rows.Clear();
+                }
             }
         }
 

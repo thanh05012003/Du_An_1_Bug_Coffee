@@ -45,22 +45,44 @@ namespace _3.PL.Views
             }
         }
 
-        public void LoadHdCT(string Ma)
+
+        private void btn_XacNhan_Click(object sender, EventArgs e)
+        {
+            
+            var hd = _hoaDonService.GetAll().FirstOrDefault(c => c.Ma == _maWhenClick);
+            if (hd != null)
+            {
+                if (hd.GhiChu == "Mang đi")
+                {
+                    hd.TrangThai = "Đã thanh toán";
+                    hd.GhiChu = "Hoàn thành";
+                   MessageBox.Show(_hoaDonService.update(hd));
+                   _maWhenClick = "";
+                    loadHoaDon();
+                   loadHdCt();
+                }
+                else if (hd.TrangThai == "Chờ pha chế")
+                {
+                    hd.TrangThai = "Chờ thanh toán";
+                    MessageBox.Show(_hoaDonService.update(hd));
+                    _maWhenClick = "";
+                    loadHoaDon();
+                    loadHdCt();
+                }
+            }
+        }
+
+        public void loadHdCt()
         {
             dgrid_HoaDonCT.ColumnCount = 3;
             dgrid_HoaDonCT.Columns[0].Name = "Tên";
             dgrid_HoaDonCT.Columns[1].Name = "Số lượng";
             dgrid_HoaDonCT.Columns[2].Name = "Đơn giá";
             dgrid_HoaDonCT.Rows.Clear();
-            foreach (var x in _hoaDonCTService.GetAll(Ma))
+            foreach (var x in _hoaDonCTService.GetAll().Where(c => c.MaHD == _maWhenClick.Trim()))
             {
                 dgrid_HoaDonCT.Rows.Add(x.TenSp, x.SoLuong, x.DonGia);
             }
-        }
-
-        private void btn_XacNhan_Click(object sender, EventArgs e)
-        {
-         
         }
 
         private void dgrid_HoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -71,17 +93,9 @@ namespace _3.PL.Views
                 return;
             }
             _maWhenClick =  dgrid_HoaDon.Rows[rowIndex].Cells[0].Value.ToString();
-            if (_maWhenClick.Trim() != "")
+            if (_maWhenClick != null)
             {
-                dgrid_HoaDonCT.ColumnCount = 3;
-                dgrid_HoaDonCT.Columns[0].Name = "Tên";
-                dgrid_HoaDonCT.Columns[1].Name = "Số lượng";
-                dgrid_HoaDonCT.Columns[2].Name = "Đơn giá";
-                dgrid_HoaDonCT.Rows.Clear();
-                foreach (var x in _hoaDonCTService.GetAll().Where(c =>c.MaHD == _maWhenClick.Trim()))
-                {
-                    dgrid_HoaDonCT.Rows.Add(x.TenSp, x.SoLuong, x.DonGia);
-                }
+                loadHdCt(); 
             }
         }
     }
