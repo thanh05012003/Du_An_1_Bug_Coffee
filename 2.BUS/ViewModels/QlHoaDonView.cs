@@ -17,5 +17,6 @@ namespace _2.BUS.ViewModels
         public string TenSP { get; set; }
         public int Soluong { get; set; }
         public decimal DonGia { get; set; }
+        public string TenBan { get; set; }
     }
 }

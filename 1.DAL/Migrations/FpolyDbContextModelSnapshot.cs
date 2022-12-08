@@ -91,7 +91,7 @@ namespace _1.DAL.Migrations
                         .HasColumnType("varchar(20)");
 
                     b.Property<DateTime?>("NgayTao")
-                        .HasColumnType("date");
+                        .HasColumnType("datetime");
 
                     b.Property<string>("TrangThai")
                         .HasColumnType("nvarchar(100)");

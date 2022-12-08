@@ -39,4 +39,20 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Template\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspose.Words" Version="22.12.0" />
+    <PackageReference Include="Microsoft.ReportViewer.Common" Version="10.0.40219.1" />
+    <PackageReference Include="Microsoft.ReportViewer.WinForms" Version="10.0.40219.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Aspose.Words">
+      <HintPath>..\..\..\Custom-DateTimePicker-WinForm-main\XuatBaoCaoWordBangMailMergeAspose\Dll\Aspose.Words.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

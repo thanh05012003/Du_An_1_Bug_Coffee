@@ -34,7 +34,6 @@
             this.dtp_KTXuat = new System.Windows.Forms.DateTimePicker();
             this.dtp_BDXuat = new System.Windows.Forms.DateTimePicker();
             this.btn_XuatTK = new System.Windows.Forms.Button();
-            this.btn_GiaoCa = new System.Windows.Forms.Button();
             this.btn_DT_SP = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
@@ -96,20 +95,6 @@
             this.btn_XuatTK.Text = "Xuất TK";
             this.btn_XuatTK.UseVisualStyleBackColor = false;
             // 
-            // btn_GiaoCa
-            // 
-            this.btn_GiaoCa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btn_GiaoCa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_GiaoCa.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_GiaoCa.Location = new System.Drawing.Point(227, 4);
-            this.btn_GiaoCa.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_GiaoCa.Name = "btn_GiaoCa";
-            this.btn_GiaoCa.Size = new System.Drawing.Size(180, 66);
-            this.btn_GiaoCa.TabIndex = 57;
-            this.btn_GiaoCa.Text = "Giao ca";
-            this.btn_GiaoCa.UseVisualStyleBackColor = false;
-            this.btn_GiaoCa.Click += new System.EventHandler(this.btn_GiaoCa_Click_1);
-            // 
             // btn_DT_SP
             // 
             this.btn_DT_SP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -142,7 +127,6 @@
             this.Controls.Add(this.dtp_KTXuat);
             this.Controls.Add(this.dtp_BDXuat);
             this.Controls.Add(this.btn_XuatTK);
-            this.Controls.Add(this.btn_GiaoCa);
             this.Controls.Add(this.btn_DT_SP);
             this.Controls.Add(this.pane_ThongKe);
             this.Controls.Add(this.panel1);
@@ -160,7 +144,6 @@
         private System.Windows.Forms.DateTimePicker dtp_KTXuat;
         private System.Windows.Forms.DateTimePicker dtp_BDXuat;
         private System.Windows.Forms.Button btn_XuatTK;
-        private System.Windows.Forms.Button btn_GiaoCa;
         private System.Windows.Forms.Button btn_DT_SP;
         private System.Windows.Forms.Panel panel1;
     }

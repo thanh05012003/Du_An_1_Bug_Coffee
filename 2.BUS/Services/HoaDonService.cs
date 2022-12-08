@@ -14,21 +14,20 @@ namespace _2.BUS.Services
     public class HoaDonService:IHoaDonService
     {
         private IHoaDonRepository _hoaDonRepository;
-        private IKhachHangService _khachHangService;
+
         private INhanVienRepository _nhanVienRepository;
-        private IVoucherService _voucherService;
+        private IKhachHangRepository _khachHangRepository;
         private ISanPhamRepository _sanPhamRepository;
         private IHoaDonCTRepository _hoaDonCtRepository;
         private IBanRepository _banRepository;
         public HoaDonService()
         {
             _hoaDonRepository = new HoaDonRepository();
-            _khachHangService =  new KhachHangService();
             _nhanVienRepository = new NhanVienRepository();
-            _voucherService = new VoucherService();
             _sanPhamRepository = new SanPhamRepository();
             _hoaDonCtRepository = new HoaDonCTRepository();
             _banRepository = new BanRepository();
+            _khachHangRepository = new KhachHangRepository();
         }
         public string add(QlHoaDonView obj)
         {
@@ -104,12 +103,13 @@ namespace _2.BUS.Services
             {
                 return GetAll();
             }
-            var lstHoaDon = from a in _hoaDonRepository.GetAll().Where(c => c.MaBan == input)
-                            join b in _nhanVienRepository.GetAll() on a.MaNV equals b.Ma
+
+            var lstHoaDon = from a in _hoaDonRepository.GetAll().Where(c => c.MaBan == input || c.Ma == input)
+                join b in _nhanVienRepository.GetAll() on a.MaNV equals b.Ma
                 join d in _hoaDonCtRepository.GetAll() on a.Ma equals d.MaHD
                 join e in _sanPhamRepository.GetAll() on d.MaSP equals e.Ma
-                            join g in _banRepository.GetAll() on a.MaBan equals g.Ma
-                            select new QlHoaDonView()
+                join g in _banRepository.GetAll() on a.MaBan equals g.Ma
+                select new QlHoaDonView()
                 {
                     Ma = a.Ma,
                     MaKH = a.MaKH,
@@ -123,6 +123,7 @@ namespace _2.BUS.Services
                     Soluong = d.SoLuong,
                     MaBan = g.Ma,
                     DonGia = d.DonGia,
+                    TenBan = g.Ten,
                 };
             return lstHoaDon.ToList();  
         }

@@ -43,3 +43,4 @@ C:\Users\ADMIN\Desktop\New folder\Du_An_1_Bug_Coffee\2.BUS\obj\Debug\net5.0\2.BU
 C:\Users\ADMIN\Desktop\New folder\Du_An_1_Bug_Coffee\2.BUS\obj\Debug\net5.0\refint\2.BUS.dll
 C:\Users\ADMIN\Desktop\New folder\Du_An_1_Bug_Coffee\2.BUS\obj\Debug\net5.0\2.BUS.pdb
 C:\Users\ADMIN\Desktop\New folder\Du_An_1_Bug_Coffee\2.BUS\obj\Debug\net5.0\ref\2.BUS.dll
+C:\Users\ADMIN\Desktop\New folder\Du_An_1_Bug_Coffee\2.BUS\bin\Debug\net5.0\Aspose.Words.dll

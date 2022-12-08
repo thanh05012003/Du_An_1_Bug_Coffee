@@ -1,5 +1,6 @@
 ﻿using System;
 using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,7 @@ namespace _3.PL.Views.BanHang
     public partial class FrmKhachHang : Form
     {
         private IKhachHangService _khachHangService;
+        private string _maWhenClick;
         public FrmKhachHang()
         {
             InitializeComponent();
@@ -60,7 +62,7 @@ namespace _3.PL.Views.BanHang
             {
                 return;
             }
-            var _maWhenClick = dgrid_TTKhachHang.Rows[rowindex].Cells[0].Value.ToString();
+           _maWhenClick = dgrid_TTKhachHang.Rows[rowindex].Cells[0].Value.ToString();
             var rd = _khachHangService.GetAll().FirstOrDefault(c => c.Ma.ToLower() == _maWhenClick.ToLower());
             txt_MaKH.Texts = rd.Ma;
             txt_HoTen.Texts = rd.Ten;
@@ -96,6 +98,19 @@ namespace _3.PL.Views.BanHang
                     LoadDataKH();
                 }
             }
+        }
+
+        private void txt_DiemTl_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void btn_CapNhat_Click(object sender, EventArgs e)
+        {
+            var temp = GetDataFromGui();
+            temp.Ma = _maWhenClick;
+            MessageBox.Show(_khachHangService.update(temp));
         }
     }
 }

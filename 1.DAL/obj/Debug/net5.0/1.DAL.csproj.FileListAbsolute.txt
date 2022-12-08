@@ -43,3 +43,5 @@ C:\Users\ADMIN\Desktop\New folder\Du_An_1_Bug_Coffee\1.DAL\obj\Debug\net5.0\refi
 C:\Users\ADMIN\Desktop\New folder\Du_An_1_Bug_Coffee\1.DAL\obj\Debug\net5.0\1.DAL.pdb
 C:\Users\ADMIN\Desktop\New folder\Du_An_1_Bug_Coffee\1.DAL\obj\Debug\net5.0\1.DAL.genruntimeconfig.cache
 C:\Users\ADMIN\Desktop\New folder\Du_An_1_Bug_Coffee\1.DAL\obj\Debug\net5.0\ref\1.DAL.dll
+C:\Users\ADMIN\Desktop\New folder\Du_An_1_Bug_Coffee\1.DAL\bin\Debug\net5.0\Aspose.Words.dll
+C:\Users\ADMIN\Desktop\New folder\Du_An_1_Bug_Coffee\1.DAL\obj\Debug\net5.0\1.DAL.csproj.CopyComplete

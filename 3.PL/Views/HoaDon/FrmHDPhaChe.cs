@@ -38,7 +38,7 @@ namespace _3.PL.Views
             dgrid_HoaDon.Rows.Clear();
             foreach (var x in _hoaDonService.GetAll())
             {
-                if (x.TrangThai == "Chờ pha chế" || x.GhiChu =="Mang đi")
+                if (x.TrangThai == "Chờ pha chế" || x.GhiChu =="Mang đi" || x.GhiChu =="Chờ pha chế")
                 {
                     dgrid_HoaDon.Rows.Add(x.Ma, x.TenNV, x.NgayTao,x.TrangThai,x.GhiChu);
                 }
@@ -52,7 +52,7 @@ namespace _3.PL.Views
             var hd = _hoaDonService.GetAll().FirstOrDefault(c => c.Ma == _maWhenClick);
             if (hd != null)
             {
-                if (hd.GhiChu == "Mang đi")
+                if (hd.GhiChu == "Mang đi" || hd.GhiChu == "Chờ pha chế")
                 {
                     hd.TrangThai = "Đã thanh toán";
                     hd.GhiChu = "Hoàn thành";
@@ -64,6 +64,7 @@ namespace _3.PL.Views
                 else if (hd.TrangThai == "Chờ pha chế")
                 {
                     hd.TrangThai = "Chờ thanh toán";
+                    hd.GhiChu = "";
                     MessageBox.Show(_hoaDonService.update(hd));
                     _maWhenClick = "";
                     loadHoaDon();
@@ -88,11 +89,19 @@ namespace _3.PL.Views
         private void dgrid_HoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int rowIndex = e.RowIndex;
-            if (rowIndex == _hoaDonService.GetAll().Where(c => (c.TrangThai == "Đã thanh toán" && c.GhiChu == "Mang đi") || c.TrangThai == "Chờ pha chế").Count())
+            if (rowIndex == _hoaDonService.GetAll().Where(c => (c.TrangThai == "Đã thanh toán" && c.GhiChu == "Mang đi") || c.TrangThai == "Chờ pha chế"|| (c.TrangThai == "Đã thanh toán" && c.GhiChu == "Chờ pha chế")).Count())
             {
                 return;
             }
-            _maWhenClick =  dgrid_HoaDon.Rows[rowIndex].Cells[0].Value.ToString();
+
+            try
+            {
+                _maWhenClick =  dgrid_HoaDon.Rows[rowIndex].Cells[0].Value.ToString();
+            }
+            catch (Exception exception)
+            {
+               return;
+            }
             if (_maWhenClick != null)
             {
                 loadHdCt(); 

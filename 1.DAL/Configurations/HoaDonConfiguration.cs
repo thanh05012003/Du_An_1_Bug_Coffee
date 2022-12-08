@@ -17,7 +17,7 @@ namespace _1.DAL.Configurations
             builder.Property(c => c.Ma).HasColumnType("varchar(20)");
             builder.Property(c => c.MaKH);
             builder.Property(c => c.MaNV);
-            builder.Property(c => c.NgayTao).HasColumnType("date");
+            builder.Property(c => c.NgayTao).HasColumnType("datetime");
             builder.Property(c => c.TrangThai).HasColumnType("nvarchar(100)");
             builder.Property(c => c.GhiChu).HasColumnType("nvarchar(100)");
             builder.Property(c => c.MaBan);

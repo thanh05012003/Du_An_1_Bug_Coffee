@@ -68,7 +68,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pane_LSHD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_HoaDonCT)).BeginInit();
@@ -117,7 +116,6 @@
             this.pane_LSHD.Controls.Add(this.label2);
             this.pane_LSHD.Controls.Add(this.label1);
             this.pane_LSHD.Controls.Add(this.textBox2);
-            this.pane_LSHD.Controls.Add(this.textBox1);
             this.pane_LSHD.Controls.Add(this.label3);
             this.pane_LSHD.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pane_LSHD.Location = new System.Drawing.Point(0, 0);
@@ -136,6 +134,7 @@
             this.btn_KhoiPhuc.TabIndex = 54;
             this.btn_KhoiPhuc.Text = "Khôi phục HĐ";
             this.btn_KhoiPhuc.UseVisualStyleBackColor = false;
+            this.btn_KhoiPhuc.Click += new System.EventHandler(this.btn_KhoiPhuc_Click);
             // 
             // dgrid_HoaDonCT
             // 
@@ -150,7 +149,7 @@
             // 
             // txt_DiaChi
             // 
-            this.txt_DiaChi.Location = new System.Drawing.Point(311, 647);
+            this.txt_DiaChi.Location = new System.Drawing.Point(353, 647);
             this.txt_DiaChi.Multiline = true;
             this.txt_DiaChi.Name = "txt_DiaChi";
             this.txt_DiaChi.Size = new System.Drawing.Size(269, 77);
@@ -168,7 +167,7 @@
             // 
             this.lbl_TrangThai.AutoSize = true;
             this.lbl_TrangThai.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_TrangThai.Location = new System.Drawing.Point(311, 414);
+            this.lbl_TrangThai.Location = new System.Drawing.Point(353, 414);
             this.lbl_TrangThai.Name = "lbl_TrangThai";
             this.lbl_TrangThai.Size = new System.Drawing.Size(35, 40);
             this.lbl_TrangThai.TabIndex = 50;
@@ -178,7 +177,7 @@
             // 
             this.lbl_TongTienHD.AutoSize = true;
             this.lbl_TongTienHD.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_TongTienHD.Location = new System.Drawing.Point(503, 574);
+            this.lbl_TongTienHD.Location = new System.Drawing.Point(545, 574);
             this.lbl_TongTienHD.Name = "lbl_TongTienHD";
             this.lbl_TongTienHD.Size = new System.Drawing.Size(21, 24);
             this.lbl_TongTienHD.TabIndex = 49;
@@ -188,7 +187,7 @@
             // 
             this.lbl_ChiPhi.AutoSize = true;
             this.lbl_ChiPhi.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_ChiPhi.Location = new System.Drawing.Point(503, 531);
+            this.lbl_ChiPhi.Location = new System.Drawing.Point(545, 531);
             this.lbl_ChiPhi.Name = "lbl_ChiPhi";
             this.lbl_ChiPhi.Size = new System.Drawing.Size(21, 24);
             this.lbl_ChiPhi.TabIndex = 48;
@@ -198,7 +197,7 @@
             // 
             this.lbl_TongTienSP.AutoSize = true;
             this.lbl_TongTienSP.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_TongTienSP.Location = new System.Drawing.Point(503, 487);
+            this.lbl_TongTienSP.Location = new System.Drawing.Point(545, 487);
             this.lbl_TongTienSP.Name = "lbl_TongTienSP";
             this.lbl_TongTienSP.Size = new System.Drawing.Size(21, 24);
             this.lbl_TongTienSP.TabIndex = 47;
@@ -226,11 +225,10 @@
             // 
             // lbl_TGTao
             // 
-            this.lbl_TGTao.AutoSize = true;
             this.lbl_TGTao.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_TGTao.Location = new System.Drawing.Point(208, 487);
             this.lbl_TGTao.Name = "lbl_TGTao";
-            this.lbl_TGTao.Size = new System.Drawing.Size(21, 24);
+            this.lbl_TGTao.Size = new System.Drawing.Size(139, 44);
             this.lbl_TGTao.TabIndex = 44;
             this.lbl_TGTao.Text = "X";
             // 
@@ -268,7 +266,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(311, 616);
+            this.label14.Location = new System.Drawing.Point(353, 616);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(73, 24);
             this.label14.TabIndex = 40;
@@ -278,7 +276,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(311, 574);
+            this.label13.Location = new System.Drawing.Point(353, 574);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(124, 24);
             this.label13.TabIndex = 39;
@@ -288,7 +286,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(311, 487);
+            this.label12.Location = new System.Drawing.Point(353, 487);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(118, 24);
             this.label12.TabIndex = 38;
@@ -298,7 +296,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(311, 531);
+            this.label11.Location = new System.Drawing.Point(353, 531);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(119, 24);
             this.label11.TabIndex = 37;
@@ -308,7 +306,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(311, 362);
+            this.label10.Location = new System.Drawing.Point(353, 362);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(100, 24);
             this.label10.TabIndex = 36;
@@ -407,6 +405,8 @@
             // 
             // dgrid_HoaDon
             // 
+            this.dgrid_HoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgrid_HoaDon.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgrid_HoaDon.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgrid_HoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrid_HoaDon.Location = new System.Drawing.Point(13, 87);
@@ -415,6 +415,7 @@
             this.dgrid_HoaDon.RowTemplate.Height = 29;
             this.dgrid_HoaDon.Size = new System.Drawing.Size(1264, 227);
             this.dgrid_HoaDon.TabIndex = 18;
+            this.dgrid_HoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_HoaDon_CellClick);
             // 
             // cmb_TrangThai
             // 
@@ -514,17 +515,6 @@
             this.textBox2.TabIndex = 8;
             this.textBox2.Text = "+ HD giao";
             // 
-            // textBox1
-            // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.Color.Red;
-            this.textBox1.Location = new System.Drawing.Point(228, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(90, 32);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.Text = "+ HD hủy";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -593,7 +583,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
     }
 }

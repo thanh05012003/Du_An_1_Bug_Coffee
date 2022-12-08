@@ -39,6 +39,7 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.cmb_LoaiSanPham = new CustomControls.RJControls.CSComboBox();
             this.cmb_SanPham = new CustomControls.RJControls.CSComboBox();
+            this.csButton1 = new CustomControls.RJControls.CSButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_TTSp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -55,6 +56,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.csButton1);
             this.panel1.Controls.Add(this.cmb_Ban);
             this.panel1.Controls.Add(this.btn_TachHd);
             this.panel1.Controls.Add(this.btn_ChuyenBan);
@@ -208,6 +210,25 @@
             this.cmb_SanPham.TabIndex = 6;
             this.cmb_SanPham.Texts = "";
             // 
+            // csButton1
+            // 
+            this.csButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.csButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.csButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.csButton1.BorderRadius = 15;
+            this.csButton1.BorderSize = 0;
+            this.csButton1.FlatAppearance.BorderSize = 0;
+            this.csButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.csButton1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.csButton1.ForeColor = System.Drawing.Color.White;
+            this.csButton1.Location = new System.Drawing.Point(10, 208);
+            this.csButton1.Name = "csButton1";
+            this.csButton1.Size = new System.Drawing.Size(135, 40);
+            this.csButton1.TabIndex = 12;
+            this.csButton1.Text = "Gộp bàn";
+            this.csButton1.TextColor = System.Drawing.Color.White;
+            this.csButton1.UseVisualStyleBackColor = false;
+            // 
             // FrmBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -242,5 +263,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private CustomControls.RJControls.CSComboBox cmb_LoaiSanPham;
         private CustomControls.RJControls.CSComboBox cmb_SanPham;
+        private CustomControls.RJControls.CSButton csButton1;
     }
 }

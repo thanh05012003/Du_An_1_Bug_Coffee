@@ -12,6 +12,13 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms" Version="150.1537.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Aspose.Words">
+      <HintPath>..\..\..\Custom-DateTimePicker-WinForm-main\XuatBaoCaoWordBangMailMergeAspose\Dll\Aspose.Words.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

@@ -34,10 +34,6 @@ namespace _3.PL.Views.ThongKe
         }
 
 
-        private void btn_GiaoCa_Click_1(object sender, EventArgs e)
-        {
-            OpenChildForm(new FrmGiaoCa(), sender);
-        }
 
         private void btn_DT_SP_Click(object sender, EventArgs e)
         {

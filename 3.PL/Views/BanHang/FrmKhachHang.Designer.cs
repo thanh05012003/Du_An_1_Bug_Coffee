@@ -86,6 +86,7 @@
             this.btn_CapNhat.Text = "Cập nhật";
             this.btn_CapNhat.TextColor = System.Drawing.Color.White;
             this.btn_CapNhat.UseVisualStyleBackColor = false;
+            this.btn_CapNhat.Click += new System.EventHandler(this.btn_CapNhat_Click);
             // 
             // btn_Them
             // 
@@ -148,8 +149,9 @@
             this.txt_DiemTl.PlaceholderText = "";
             this.txt_DiemTl.Size = new System.Drawing.Size(324, 35);
             this.txt_DiemTl.TabIndex = 9;
-            this.txt_DiemTl.Texts = "";
+            this.txt_DiemTl.Texts = "0";
             this.txt_DiemTl.UnderlinedStyle = false;
+            this.txt_DiemTl.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_DiemTl_KeyPress);
             // 
             // txt_SDT
             // 
