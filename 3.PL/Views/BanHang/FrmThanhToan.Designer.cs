@@ -45,7 +45,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_SearchKH = new CustomControls.RJControls.CSButton();
             this.txt_SDT = new CustomControls.RJControls.CSTextBox();
-            this.cmb_TenKh = new CustomControls.RJControls.CSComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_DiemTl = new CustomControls.RJControls.CSTextBox();
             this.cbx_DoiDiem = new System.Windows.Forms.CheckBox();
@@ -53,6 +52,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.btn_XacNhan = new CustomControls.RJControls.CSButton();
             this.btn_XuatHoaDon = new CustomControls.RJControls.CSButton();
+            this.txt_TenKhachHang = new CustomControls.RJControls.CSTextBox();
             this.SuspendLayout();
             // 
             // Lb_TienTraLai
@@ -279,25 +279,6 @@
             this.txt_SDT.UnderlinedStyle = false;
             this.txt_SDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_SDT_KeyPress);
             // 
-            // cmb_TenKh
-            // 
-            this.cmb_TenKh.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmb_TenKh.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmb_TenKh.BorderSize = 2;
-            this.cmb_TenKh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmb_TenKh.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cmb_TenKh.ForeColor = System.Drawing.Color.DimGray;
-            this.cmb_TenKh.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmb_TenKh.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cmb_TenKh.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmb_TenKh.Location = new System.Drawing.Point(261, 80);
-            this.cmb_TenKh.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmb_TenKh.Name = "cmb_TenKh";
-            this.cmb_TenKh.Padding = new System.Windows.Forms.Padding(2);
-            this.cmb_TenKh.Size = new System.Drawing.Size(224, 34);
-            this.cmb_TenKh.TabIndex = 35;
-            this.cmb_TenKh.Texts = "";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -401,11 +382,34 @@
             this.btn_XuatHoaDon.UseVisualStyleBackColor = false;
             this.btn_XuatHoaDon.Click += new System.EventHandler(this.btn_XuatHoaDon_Click);
             // 
+            // txt_TenKhachHang
+            // 
+            this.txt_TenKhachHang.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_TenKhachHang.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_TenKhachHang.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_TenKhachHang.BorderRadius = 15;
+            this.txt_TenKhachHang.BorderSize = 2;
+            this.txt_TenKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_TenKhachHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_TenKhachHang.Location = new System.Drawing.Point(261, 80);
+            this.txt_TenKhachHang.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TenKhachHang.Multiline = false;
+            this.txt_TenKhachHang.Name = "txt_TenKhachHang";
+            this.txt_TenKhachHang.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_TenKhachHang.PasswordChar = false;
+            this.txt_TenKhachHang.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_TenKhachHang.PlaceholderText = "";
+            this.txt_TenKhachHang.Size = new System.Drawing.Size(184, 35);
+            this.txt_TenKhachHang.TabIndex = 43;
+            this.txt_TenKhachHang.Texts = "";
+            this.txt_TenKhachHang.UnderlinedStyle = false;
+            // 
             // FrmThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 563);
+            this.Controls.Add(this.txt_TenKhachHang);
             this.Controls.Add(this.btn_XuatHoaDon);
             this.Controls.Add(this.btn_XacNhan);
             this.Controls.Add(this.lb_GiamGia);
@@ -413,7 +417,6 @@
             this.Controls.Add(this.cbx_DoiDiem);
             this.Controls.Add(this.txt_DiemTl);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.cmb_TenKh);
             this.Controls.Add(this.Lb_TienTraLai);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
@@ -432,7 +435,6 @@
             this.Controls.Add(this.txt_SDT);
             this.Name = "FrmThanhToan";
             this.Text = "Thanh toán";
-            this.Load += new System.EventHandler(this.FrmThanhToan_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -456,7 +458,6 @@
         private System.Windows.Forms.Label label1;
         private CustomControls.RJControls.CSButton btn_SearchKH;
         private CustomControls.RJControls.CSTextBox txt_SDT;
-        private CustomControls.RJControls.CSComboBox cmb_TenKh;
         private System.Windows.Forms.Label label6;
         private CustomControls.RJControls.CSTextBox txt_DiemTl;
         private System.Windows.Forms.CheckBox cbx_DoiDiem;
@@ -464,5 +465,6 @@
         private System.Windows.Forms.Label label10;
         private CustomControls.RJControls.CSButton btn_XacNhan;
         private CustomControls.RJControls.CSButton btn_XuatHoaDon;
+        private CustomControls.RJControls.CSTextBox txt_TenKhachHang;
     }
 }

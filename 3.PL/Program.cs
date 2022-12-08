@@ -4,6 +4,7 @@ using _3.PL.Views;
 using _3.PL.Views.BanHang;
 using _3.PL.Views.SanPham;
 
+
 namespace _3.PL
 {
     internal static class Program
@@ -17,7 +18,7 @@ namespace _3.PL
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmBan());
+            Application.Run(new FrmLogin());
         }
     }
 }

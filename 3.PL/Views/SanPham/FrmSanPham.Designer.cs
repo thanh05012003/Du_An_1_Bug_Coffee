@@ -53,19 +53,19 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_MaSanPham = new System.Windows.Forms.TextBox();
-            this.txt_GiaBan = new System.Windows.Forms.TextBox();
-            this.txt_Mota = new System.Windows.Forms.TextBox();
-            this.txt_TenSanPham = new System.Windows.Forms.TextBox();
-            this.rdb_DangBan = new System.Windows.Forms.RadioButton();
-            this.rdb_NgungBan = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbx_MaLoaiSP = new CustomControls.RJControls.CSComboBox();
+            this.txt_Mota = new CustomControls.RJControls.CSTextBox();
+            this.txt_GiaBan = new CustomControls.RJControls.CSTextBox();
+            this.txt_MaSanPham = new CustomControls.RJControls.CSTextBox();
+            this.txt_TenSanPham = new CustomControls.RJControls.CSTextBox();
             this.btn_ThemAnh = new CustomControls.RJControls.CSButton();
             this.pbx_ImgSanPham = new System.Windows.Forms.PictureBox();
             this.csButton1 = new CustomControls.RJControls.CSButton();
             this.btn_CapNhat = new CustomControls.RJControls.CSButton();
             this.btn_Them = new CustomControls.RJControls.CSButton();
-            this.cbx_MaLoaiSP = new System.Windows.Forms.ComboBox();
+            this.rdb_NgungBan = new CustomControls.RJControls.CSRadioButton();
+            this.rdb_DangBan = new CustomControls.RJControls.CSRadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_QLSanPham)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -144,7 +144,7 @@
             this.dgrid_QLSanPham.BackgroundColor = System.Drawing.Color.DarkGray;
             this.dgrid_QLSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrid_QLSanPham.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgrid_QLSanPham.Location = new System.Drawing.Point(3, 121);
+            this.dgrid_QLSanPham.Location = new System.Drawing.Point(3, 139);
             this.dgrid_QLSanPham.Name = "dgrid_QLSanPham";
             this.dgrid_QLSanPham.RowHeadersWidth = 51;
             this.dgrid_QLSanPham.RowTemplate.Height = 29;
@@ -164,9 +164,9 @@
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox3.Location = new System.Drawing.Point(0, 384);
+            this.groupBox3.Location = new System.Drawing.Point(0, 366);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1323, 463);
+            this.groupBox3.Size = new System.Drawing.Size(1323, 481);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông Tin Sản Phẩm";
@@ -319,73 +319,21 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Trạng Thái :";
             // 
-            // txt_MaSanPham
-            // 
-            this.txt_MaSanPham.Enabled = false;
-            this.txt_MaSanPham.Location = new System.Drawing.Point(167, 73);
-            this.txt_MaSanPham.Name = "txt_MaSanPham";
-            this.txt_MaSanPham.Size = new System.Drawing.Size(318, 27);
-            this.txt_MaSanPham.TabIndex = 1;
-            // 
-            // txt_GiaBan
-            // 
-            this.txt_GiaBan.Location = new System.Drawing.Point(647, 73);
-            this.txt_GiaBan.Name = "txt_GiaBan";
-            this.txt_GiaBan.Size = new System.Drawing.Size(318, 27);
-            this.txt_GiaBan.TabIndex = 1;
-            // 
-            // txt_Mota
-            // 
-            this.txt_Mota.Location = new System.Drawing.Point(647, 160);
-            this.txt_Mota.Name = "txt_Mota";
-            this.txt_Mota.Size = new System.Drawing.Size(318, 27);
-            this.txt_Mota.TabIndex = 1;
-            // 
-            // txt_TenSanPham
-            // 
-            this.txt_TenSanPham.Location = new System.Drawing.Point(167, 160);
-            this.txt_TenSanPham.Name = "txt_TenSanPham";
-            this.txt_TenSanPham.Size = new System.Drawing.Size(318, 27);
-            this.txt_TenSanPham.TabIndex = 1;
-            this.txt_TenSanPham.TextChanged += new System.EventHandler(this.txt_TenSanPham_TextChanged);
-            // 
-            // rdb_DangBan
-            // 
-            this.rdb_DangBan.AutoSize = true;
-            this.rdb_DangBan.Location = new System.Drawing.Point(167, 249);
-            this.rdb_DangBan.Name = "rdb_DangBan";
-            this.rdb_DangBan.Size = new System.Drawing.Size(95, 24);
-            this.rdb_DangBan.TabIndex = 2;
-            this.rdb_DangBan.TabStop = true;
-            this.rdb_DangBan.Text = "Đang Bán";
-            this.rdb_DangBan.UseVisualStyleBackColor = true;
-            // 
-            // rdb_NgungBan
-            // 
-            this.rdb_NgungBan.AutoSize = true;
-            this.rdb_NgungBan.Location = new System.Drawing.Point(368, 249);
-            this.rdb_NgungBan.Name = "rdb_NgungBan";
-            this.rdb_NgungBan.Size = new System.Drawing.Size(105, 24);
-            this.rdb_NgungBan.TabIndex = 2;
-            this.rdb_NgungBan.TabStop = true;
-            this.rdb_NgungBan.Text = "Ngừng Bán";
-            this.rdb_NgungBan.UseVisualStyleBackColor = true;
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Honeydew;
+            this.groupBox1.Controls.Add(this.rdb_DangBan);
+            this.groupBox1.Controls.Add(this.rdb_NgungBan);
+            this.groupBox1.Controls.Add(this.cbx_MaLoaiSP);
+            this.groupBox1.Controls.Add(this.txt_Mota);
+            this.groupBox1.Controls.Add(this.txt_GiaBan);
+            this.groupBox1.Controls.Add(this.txt_MaSanPham);
+            this.groupBox1.Controls.Add(this.txt_TenSanPham);
             this.groupBox1.Controls.Add(this.btn_ThemAnh);
             this.groupBox1.Controls.Add(this.pbx_ImgSanPham);
             this.groupBox1.Controls.Add(this.csButton1);
             this.groupBox1.Controls.Add(this.btn_CapNhat);
             this.groupBox1.Controls.Add(this.btn_Them);
-            this.groupBox1.Controls.Add(this.cbx_MaLoaiSP);
-            this.groupBox1.Controls.Add(this.rdb_NgungBan);
-            this.groupBox1.Controls.Add(this.rdb_DangBan);
-            this.groupBox1.Controls.Add(this.txt_TenSanPham);
-            this.groupBox1.Controls.Add(this.txt_Mota);
-            this.groupBox1.Controls.Add(this.txt_GiaBan);
-            this.groupBox1.Controls.Add(this.txt_MaSanPham);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label6);
@@ -400,12 +348,120 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sản Phẩm";
             // 
+            // cbx_MaLoaiSP
+            // 
+            this.cbx_MaLoaiSP.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cbx_MaLoaiSP.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbx_MaLoaiSP.BorderSize = 1;
+            this.cbx_MaLoaiSP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbx_MaLoaiSP.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbx_MaLoaiSP.ForeColor = System.Drawing.Color.DimGray;
+            this.cbx_MaLoaiSP.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbx_MaLoaiSP.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbx_MaLoaiSP.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbx_MaLoaiSP.Location = new System.Drawing.Point(666, 245);
+            this.cbx_MaLoaiSP.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbx_MaLoaiSP.Name = "cbx_MaLoaiSP";
+            this.cbx_MaLoaiSP.Padding = new System.Windows.Forms.Padding(1);
+            this.cbx_MaLoaiSP.Size = new System.Drawing.Size(287, 38);
+            this.cbx_MaLoaiSP.TabIndex = 13;
+            this.cbx_MaLoaiSP.Texts = "";
+            // 
+            // txt_Mota
+            // 
+            this.txt_Mota.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_Mota.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_Mota.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_Mota.BorderRadius = 15;
+            this.txt_Mota.BorderSize = 2;
+            this.txt_Mota.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_Mota.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_Mota.Location = new System.Drawing.Point(666, 160);
+            this.txt_Mota.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Mota.Multiline = false;
+            this.txt_Mota.Name = "txt_Mota";
+            this.txt_Mota.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_Mota.PasswordChar = false;
+            this.txt_Mota.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_Mota.PlaceholderText = "";
+            this.txt_Mota.Size = new System.Drawing.Size(287, 35);
+            this.txt_Mota.TabIndex = 12;
+            this.txt_Mota.Texts = "";
+            this.txt_Mota.UnderlinedStyle = false;
+            // 
+            // txt_GiaBan
+            // 
+            this.txt_GiaBan.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_GiaBan.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_GiaBan.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_GiaBan.BorderRadius = 15;
+            this.txt_GiaBan.BorderSize = 2;
+            this.txt_GiaBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_GiaBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_GiaBan.Location = new System.Drawing.Point(666, 70);
+            this.txt_GiaBan.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_GiaBan.Multiline = false;
+            this.txt_GiaBan.Name = "txt_GiaBan";
+            this.txt_GiaBan.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_GiaBan.PasswordChar = false;
+            this.txt_GiaBan.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_GiaBan.PlaceholderText = "";
+            this.txt_GiaBan.Size = new System.Drawing.Size(287, 35);
+            this.txt_GiaBan.TabIndex = 11;
+            this.txt_GiaBan.Texts = "";
+            this.txt_GiaBan.UnderlinedStyle = false;
+            // 
+            // txt_MaSanPham
+            // 
+            this.txt_MaSanPham.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_MaSanPham.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_MaSanPham.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_MaSanPham.BorderRadius = 15;
+            this.txt_MaSanPham.BorderSize = 2;
+            this.txt_MaSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_MaSanPham.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_MaSanPham.Location = new System.Drawing.Point(169, 76);
+            this.txt_MaSanPham.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_MaSanPham.Multiline = false;
+            this.txt_MaSanPham.Name = "txt_MaSanPham";
+            this.txt_MaSanPham.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_MaSanPham.PasswordChar = false;
+            this.txt_MaSanPham.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_MaSanPham.PlaceholderText = "";
+            this.txt_MaSanPham.Size = new System.Drawing.Size(312, 35);
+            this.txt_MaSanPham.TabIndex = 10;
+            this.txt_MaSanPham.Texts = "";
+            this.txt_MaSanPham.UnderlinedStyle = false;
+            // 
+            // txt_TenSanPham
+            // 
+            this.txt_TenSanPham.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_TenSanPham.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_TenSanPham.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_TenSanPham.BorderRadius = 15;
+            this.txt_TenSanPham.BorderSize = 2;
+            this.txt_TenSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_TenSanPham.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_TenSanPham.Location = new System.Drawing.Point(169, 160);
+            this.txt_TenSanPham.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TenSanPham.Multiline = false;
+            this.txt_TenSanPham.Name = "txt_TenSanPham";
+            this.txt_TenSanPham.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_TenSanPham.PasswordChar = false;
+            this.txt_TenSanPham.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_TenSanPham.PlaceholderText = "";
+            this.txt_TenSanPham.Size = new System.Drawing.Size(312, 35);
+            this.txt_TenSanPham.TabIndex = 9;
+            this.txt_TenSanPham.Texts = "";
+            this.txt_TenSanPham.UnderlinedStyle = false;
+            this.txt_TenSanPham._TextChanged += new System.EventHandler(this.txt_TenSanPham__TextChanged);
+            // 
             // btn_ThemAnh
             // 
             this.btn_ThemAnh.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btn_ThemAnh.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.btn_ThemAnh.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_ThemAnh.BorderRadius = 0;
+            this.btn_ThemAnh.BorderRadius = 15;
             this.btn_ThemAnh.BorderSize = 0;
             this.btn_ThemAnh.FlatAppearance.BorderSize = 0;
             this.btn_ThemAnh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -489,13 +545,35 @@
             this.btn_Them.UseVisualStyleBackColor = false;
             this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
-            // cbx_MaLoaiSP
+            // rdb_NgungBan
             // 
-            this.cbx_MaLoaiSP.FormattingEnabled = true;
-            this.cbx_MaLoaiSP.Location = new System.Drawing.Point(647, 247);
-            this.cbx_MaLoaiSP.Name = "cbx_MaLoaiSP";
-            this.cbx_MaLoaiSP.Size = new System.Drawing.Size(306, 28);
-            this.cbx_MaLoaiSP.TabIndex = 3;
+            this.rdb_NgungBan.AutoSize = true;
+            this.rdb_NgungBan.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.rdb_NgungBan.Location = new System.Drawing.Point(330, 252);
+            this.rdb_NgungBan.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rdb_NgungBan.Name = "rdb_NgungBan";
+            this.rdb_NgungBan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rdb_NgungBan.Size = new System.Drawing.Size(115, 24);
+            this.rdb_NgungBan.TabIndex = 14;
+            this.rdb_NgungBan.TabStop = true;
+            this.rdb_NgungBan.Text = "Ngưng bán";
+            this.rdb_NgungBan.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rdb_NgungBan.UseVisualStyleBackColor = true;
+            // 
+            // rdb_DangBan
+            // 
+            this.rdb_DangBan.AutoSize = true;
+            this.rdb_DangBan.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.rdb_DangBan.Location = new System.Drawing.Point(185, 254);
+            this.rdb_DangBan.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rdb_DangBan.Name = "rdb_DangBan";
+            this.rdb_DangBan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rdb_DangBan.Size = new System.Drawing.Size(105, 24);
+            this.rdb_DangBan.TabIndex = 15;
+            this.rdb_DangBan.TabStop = true;
+            this.rdb_DangBan.Text = "Đang bán";
+            this.rdb_DangBan.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rdb_DangBan.UseVisualStyleBackColor = true;
             // 
             // FrmSanPham
             // 
@@ -549,20 +627,19 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_MaSanPham;
-        private System.Windows.Forms.TextBox txt_GiaBan;
-        private System.Windows.Forms.TextBox txt_Mota;
-        private System.Windows.Forms.TextBox txt_TenSanPham;
-        private System.Windows.Forms.RadioButton rdb_DangBan;
-        private System.Windows.Forms.RadioButton rdb_NgungBan;
         private System.Windows.Forms.GroupBox groupBox1;
         private CustomControls.RJControls.CSButton btn_Them;
         private CustomControls.RJControls.CSButton btn_CapNhat;
-        private System.Windows.Forms.ComboBox cbx_MaLoaiSP;
 
         private CustomControls.RJControls.CSButton csButton1;
         private System.Windows.Forms.PictureBox pbx_ImgSanPham;
         private CustomControls.RJControls.CSButton btn_ThemAnh;
-
+        private CustomControls.RJControls.CSTextBox txt_TenSanPham;
+        private CustomControls.RJControls.CSTextBox txt_MaSanPham;
+        private CustomControls.RJControls.CSTextBox txt_GiaBan;
+        private CustomControls.RJControls.CSComboBox cbx_MaLoaiSP;
+        private CustomControls.RJControls.CSTextBox txt_Mota;
+        private CustomControls.RJControls.CSRadioButton rdb_NgungBan;
+        private CustomControls.RJControls.CSRadioButton rdb_DangBan;
     }
 }

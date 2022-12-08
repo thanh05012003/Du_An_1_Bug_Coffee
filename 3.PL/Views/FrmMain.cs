@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using _2.BUS.IServices;
 using _2.BUS.Services;
 using _3.PL.Views.BanHang;
-using _3.PL.Views.ThongKe;
+
 
 namespace _3.PL.Views
 {
@@ -82,23 +82,6 @@ namespace _3.PL.Views
             }
         }
 
-        public void setColor(object btn)
-        {
-            var count = 1;
-           
-            if (count == 0)
-            {
-                btn = Color.MediumSlateBlue;
-                count = 1;
-            }
-            else
-            {
-                btn = Color.MediumSpringGreen;
-                count = 0;
-            }
-        }
-
-     
 
         private void btn_SanPham_Click_1(object sender, EventArgs e)
         {
@@ -112,7 +95,7 @@ namespace _3.PL.Views
 
         private void btn_ThongKe_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(new FrmThongKe(), sender);
+            OpenChildForm(new FrmDT_SP(), sender);
         }
 
         private void btn_KhuyenMai_Click_1(object sender, EventArgs e)

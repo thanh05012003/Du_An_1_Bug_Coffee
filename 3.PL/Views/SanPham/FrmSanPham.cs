@@ -90,7 +90,7 @@ namespace _3.PL.Views
         {
             QlSanPhamView sp = new QlSanPhamView();
             var lsp = _iloaiSanPhamServices.GetAll()
-                .FirstOrDefault(c => c.Ma.ToLower() + "-" + c.Ten.ToLower() == cbx_MaLoaiSP.Text.ToLower());
+                .FirstOrDefault(c => c.Ma.ToLower() + "-" + c.Ten.ToLower() == cbx_MaLoaiSP.Texts.ToLower());
             
             if (lsp != null)
             {
@@ -100,10 +100,10 @@ namespace _3.PL.Views
                 //}
                 sp = new QlSanPhamView()
                 {
-                    Ma = txt_MaSanPham.Text,
-                    Ten = txt_TenSanPham.Text,
-                    Gia = Convert.ToDecimal(txt_GiaBan.Text),
-                    MoTa = txt_Mota.Text,
+                    Ma = txt_MaSanPham.Texts,
+                    Ten = txt_TenSanPham.Texts,
+                    Gia = Convert.ToDecimal(txt_GiaBan.Texts),
+                    MoTa = txt_Mota.Texts,
                     MaLsp = lsp.Ma,
                     TrangThai = rdb_DangBan.Checked ? 1 : 0,
                     URL = pbx_ImgSanPham.ImageLocation
@@ -119,14 +119,14 @@ namespace _3.PL.Views
 
         public bool checknhap()
         {
-            if (txt_MaSanPham.Text.Trim() == "" || txt_TenSanPham.Text.Trim() == "" || txt_GiaBan.Text.Trim() == "" ) return false;
+            if (txt_MaSanPham.Texts.Trim() == "" || txt_TenSanPham.Texts.Trim() == "" || txt_GiaBan.Texts.Trim() == "" ) return false;
             return true;
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            var masp = _iSanPhamServices.GetAll().FirstOrDefault(x => x.Ma == txt_MaSanPham.Text);
-            var tensp = _iSanPhamServices.GetAll().FirstOrDefault(x => x.Ten == txt_TenSanPham.Text);
+            var masp = _iSanPhamServices.GetAll().FirstOrDefault(x => x.Ma == txt_MaSanPham.Texts);
+            var tensp = _iSanPhamServices.GetAll().FirstOrDefault(x => x.Ten == txt_TenSanPham.Texts);
             if (checknhap() == false)
             {
                 MessageBox.Show("Không được để trống các trường", "Chú ý");
@@ -142,11 +142,11 @@ namespace _3.PL.Views
                 MessageBox.Show("Sản phẩm này đã tồn tại");
                 return;
             }
-            else if (txt_GiaBan.Text.Trim() == "")
+            else if (txt_GiaBan.Texts.Trim() == "")
             {
                 MessageBox.Show("Không được bỏ trống giá");
             }
-            else if (txt_Mota.Text.Trim() == "")
+            else if (txt_Mota.Texts.Trim() == "")
             {
                 MessageBox.Show("Không được bỏ trống mô tả");
             }
@@ -175,13 +175,20 @@ namespace _3.PL.Views
                 return;
             }
 
-            _maWhenClick = dgrid_QLSanPham.Rows[rowIndex].Cells[1].Value.ToString();
+            try
+            {
+                _maWhenClick = dgrid_QLSanPham.Rows[rowIndex].Cells[1].Value.ToString();
+            }
+            catch (Exception exception)
+            {
+              return;
+            }
             var _sanphamView = _iSanPhamServices.GetAll().FirstOrDefault(c => c.Ma == _maWhenClick);
-            txt_MaSanPham.Text = _sanphamView.Ma;
-            txt_TenSanPham.Text = _sanphamView.Ten;
-            txt_GiaBan.Text = Math.Round(_sanphamView.Gia,0).ToString();
-            txt_Mota.Text = _sanphamView.MoTa;
-            cbx_MaLoaiSP.Text = _sanphamView.MaLsp + "-" + _sanphamView.TenLoaiSp;
+            txt_MaSanPham.Texts = _sanphamView.Ma;
+            txt_TenSanPham.Texts = _sanphamView.Ten;
+            txt_GiaBan.Texts = Math.Round(_sanphamView.Gia,0).ToString();
+            txt_Mota.Texts = _sanphamView.MoTa;
+            cbx_MaLoaiSP.Texts = _sanphamView.MaLsp + "-" + _sanphamView.TenLoaiSp;
             if (_sanphamView.TrangThai == 1)
             {
                 rdb_DangBan.Checked = true;
@@ -261,9 +268,10 @@ namespace _3.PL.Views
             LoadDataLSP();
         }
 
-        private void txt_TenSanPham_TextChanged(object sender, EventArgs e)
+
+        private void txt_TenSanPham__TextChanged(object sender, EventArgs e)
         {
-            txt_MaSanPham.Text = "SP00" + (_iSanPhamServices.GetAll().Count + 1);
-        }   
+            txt_MaSanPham.Texts = "SP00" + (_iSanPhamServices.GetAll().Count + 1);
+        }
     }
 }

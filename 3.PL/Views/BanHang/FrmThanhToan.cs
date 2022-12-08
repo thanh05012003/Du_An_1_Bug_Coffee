@@ -36,18 +36,10 @@ namespace _3.PL.Views.BanHang
             _QlKhachHangView = new QlKhachHangView();
             _BanService = new BanService();
             _voucherService = new VoucherService();
-            loadTenKH();
             LoadThanhToan();
             loadVoucher();
         }
 
-        public void loadTenKH()
-        {
-            foreach (var x in _KhachHangService.GetAll())
-            {
-                cmb_TenKh.Items.Add(x.Ten);
-            }
-        }
 
         public void loadVoucher()
         {
@@ -74,11 +66,6 @@ namespace _3.PL.Views.BanHang
             lb_TongTien.Text = tongtien.ToString("C0");
         }
 
-        private void FrmThanhToan_Load(object sender, EventArgs e)
-        {
-
-
-        }
 
         private void btn_ThanhToan_Click(object sender, EventArgs e)
         {
@@ -129,7 +116,7 @@ namespace _3.PL.Views.BanHang
             {
                 if (_QlKhachHangView != null)
                 {
-                    cmb_TenKh.Texts = _QlKhachHangView.Ten;
+                    txt_TenKhachHang.Texts = _QlKhachHangView.Ten;
                     lb_DiaChi.Text = _QlKhachHangView.DiaChi;
                 }
                 else
@@ -226,7 +213,7 @@ namespace _3.PL.Views.BanHang
                 HoaDon.MailMerge.Execute(new[] { "Gio_Ra" }, new[] { DateTime.Now.ToString("hh:mm:ss") });
                 HoaDon.MailMerge.Execute(new[] { "Tien_Hang" }, new[] { tienHang.ToString("C0") });
                 HoaDon.MailMerge.Execute(new[] { "Giam_Gia" }, new[] { giamGia.ToString() });
-                HoaDon.MailMerge.Execute(new[] { "Ten_Kh" }, new[] { cmb_TenKh.Texts });
+                HoaDon.MailMerge.Execute(new[] { "Ten_Kh" }, new[] { txt_TenKhachHang.Texts });
                 HoaDon.MailMerge.Execute(new[] { "Ma_hd" }, new[] { x.Ma });
 
                 string path = @"C:\Users\ADMIN\Desktop\HoaDon"; // đường dẫn folder
@@ -260,5 +247,6 @@ namespace _3.PL.Views.BanHang
                 MessageBox.Show("Xuất hoá đơn thành công");
             }
         }
+
     }
 }
