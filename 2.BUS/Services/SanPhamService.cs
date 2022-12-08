@@ -95,5 +95,15 @@ namespace _2.BUS.Services
            
             return GetAll().Where(c =>c.Ma == input).ToList();
         }
+
+        public List<QlSanPhamView> TimKiem(string input)
+        {
+            if (input == null)
+            {
+                return GetAll();
+            }
+
+            return GetAll().Where(c => c.MaLsp == input || c.TrangThai.ToString() == input).ToList();
+        }
     }
 }

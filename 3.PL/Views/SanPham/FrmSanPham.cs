@@ -44,26 +44,35 @@ namespace _3.PL.Views
             cbx_MaLoaiSP.Items.Clear();
             foreach (var x in _iloaiSanPhamServices.GetAll())
             {
-                
                 cbx_MaLoaiSP.Items.Add(x.Ma + "-" + x.Ten);
+            }
+
+            if (cbx_MaLoaiSP != null)
+            {
+                cbx_MaLoaiSP.SelectedIndex = 0;
             }
         }
 
         public void LoadDataLoaiSP()
         {
-           
+            cbx_Lsp.Items.Clear();
             foreach (var x in _iloaiSanPhamServices.GetAll())
             {
-                cbx_Lsp.Items.Clear();
                 cbx_Lsp.Items.Add(x.Ten);
             }
         }
 
         public void LoadDataTrangThai()
         {
-            foreach (var x in _iSanPhamServices.GetAll())
+            List<string> TrangThai =  new List<string>()
             {
-                cbx_TrangThai.Items.Add(x.TrangThai);
+                "Tất cả",
+                "Đang bán",
+                "Ngưng bán"
+            };
+            foreach (var x in TrangThai)
+            {
+                cbx_TrangThai.Items.Add(x);
             }
         }
 
@@ -81,7 +90,7 @@ namespace _3.PL.Views
             dgrid_QLSanPham.Rows.Clear();
             foreach (var x in _iSanPhamServices.GetAll())
             {
-                dgrid_QLSanPham.Rows.Add(stt++, x.Ma, x.Ten, Math.Round(x.Gia,0), x.MoTa, x.TenLoaiSp,
+                dgrid_QLSanPham.Rows.Add(stt++, x.Ma, x.Ten, x.Gia.ToString("C0"), x.MoTa, x.TenLoaiSp,
                     x.TrangThai == 1 ? "Đang Bán" : "Ngưng Bán");
             }
         }
@@ -233,11 +242,11 @@ namespace _3.PL.Views
             dgrid_QLSanPham.Columns[6].Name = "Trạng Thái";
             dgrid_QLSanPham.Rows.Clear();
             var sanpham = _iSanPhamServices.GetAll()
-                .Where(c => c.Ma.ToLower().StartsWith(txt_TimKiem.Text.ToLower()) ||
-                            c.Ten.ToLower().StartsWith(txt_TimKiem.Text.ToLower()));
+                .Where(c => c.Ma.ToLower().StartsWith(txt_TimKiem.Texts.ToLower()) ||
+                            c.Ten.ToLower().StartsWith(txt_TimKiem.Texts.ToLower()));
             foreach (var x in sanpham)
             {
-                dgrid_QLSanPham.Rows.Add(stt++, x.Ma, x.Ten, x.Gia, x.MoTa, x.MaLsp,
+                dgrid_QLSanPham.Rows.Add(stt++, x.Ma, x.Ten, x.Gia.ToString("C0"), x.MoTa, x.MaLsp,
                     x.TrangThai == 1 ? "Đang Bán" : "Ngưng Bán", x.TenLoaiSp);
             }
         }
@@ -272,6 +281,55 @@ namespace _3.PL.Views
         private void txt_TenSanPham__TextChanged(object sender, EventArgs e)
         {
             txt_MaSanPham.Texts = "SP00" + (_iSanPhamServices.GetAll().Count + 1);
+        }
+
+        private void cbx_Lsp_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            int stt = 1;
+            dgrid_QLSanPham.ColumnCount = 7;
+            dgrid_QLSanPham.Columns[0].Name = "STT";
+            dgrid_QLSanPham.Columns[1].Name = "Mã Sản Phẩm";
+            dgrid_QLSanPham.Columns[2].Name = "Tên Sản Phẩm";
+            dgrid_QLSanPham.Columns[3].Name = "Giá bán";
+            dgrid_QLSanPham.Columns[4].Name = "Mô Tả";
+            dgrid_QLSanPham.Columns[5].Name = "Loại Sản Phẩm";
+            dgrid_QLSanPham.Columns[6].Name = "Trạng Thái";
+            dgrid_QLSanPham.Rows.Clear();
+            
+            var lsp = _iloaiSanPhamServices.GetAll().FirstOrDefault(c => c.Ten == cbx_Lsp.Texts);
+            foreach (var x in _iSanPhamServices.TimKiem(lsp.Ma))
+            {
+                dgrid_QLSanPham.Rows.Add(stt++, x.Ma, x.Ten, x.Gia.ToString("C0"), x.MoTa, x.TenLoaiSp,
+                    x.TrangThai == 1 ? "Đang Bán" : "Ngưng Bán");
+            }
+        }
+
+        private void cbx_TrangThai_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            int stt = 1;
+            dgrid_QLSanPham.ColumnCount = 7;
+            dgrid_QLSanPham.Columns[0].Name = "STT";
+            dgrid_QLSanPham.Columns[1].Name = "Mã Sản Phẩm";
+            dgrid_QLSanPham.Columns[2].Name = "Tên Sản Phẩm";
+            dgrid_QLSanPham.Columns[3].Name = "Giá bán";
+            dgrid_QLSanPham.Columns[4].Name = "Mô Tả";
+            dgrid_QLSanPham.Columns[5].Name = "Loại Sản Phẩm";
+            dgrid_QLSanPham.Columns[6].Name = "Trạng Thái";
+            dgrid_QLSanPham.Rows.Clear();
+            var tt = cbx_TrangThai.Texts == "Đang bán" ? "1" : "0";
+            foreach (var x in _iSanPhamServices.TimKiem(tt))
+            {
+                if (cbx_TrangThai.Texts!="Tất cả")
+                {
+                    dgrid_QLSanPham.Rows.Add(stt++, x.Ma, x.Ten, x.Gia.ToString("C0"), x.MoTa, x.TenLoaiSp,
+                        x.TrangThai == 1 ? "Đang Bán" : "Ngưng Bán");
+                }
+                else
+                {
+                    LoadDataSP();
+                }
+                
+            }
         }
     }
 }

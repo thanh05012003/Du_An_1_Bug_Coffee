@@ -13,6 +13,7 @@ namespace _2.BUS.IServices
         string delete(QlSanPhamView obj);
         string update(QlSanPhamView obj);
         List<QlSanPhamView> GetAll();
-        List<QlSanPhamView> GetAll(string ma);
+        List<QlSanPhamView> GetAll(string input);
+        List<QlSanPhamView> TimKiem(string input);
     }
 }

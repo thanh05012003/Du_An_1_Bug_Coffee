@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSanPham));
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.txt_TimKiem = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.btn_TimKiem = new System.Windows.Forms.Button();
-            this.cbx_Lsp = new System.Windows.Forms.ComboBox();
-            this.cbx_TrangThai = new System.Windows.Forms.ComboBox();
             this.dgrid_QLSanPham = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cbx_TrangThai = new CustomControls.RJControls.CSComboBox();
+            this.cbx_Lsp = new CustomControls.RJControls.CSComboBox();
+            this.btn_TimKiem = new CustomControls.RJControls.CSButton();
+            this.txt_TimKiem = new CustomControls.RJControls.CSTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -54,6 +54,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdb_DangBan = new CustomControls.RJControls.CSRadioButton();
+            this.rdb_NgungBan = new CustomControls.RJControls.CSRadioButton();
             this.cbx_MaLoaiSP = new CustomControls.RJControls.CSComboBox();
             this.txt_Mota = new CustomControls.RJControls.CSTextBox();
             this.txt_GiaBan = new CustomControls.RJControls.CSTextBox();
@@ -64,8 +66,6 @@
             this.csButton1 = new CustomControls.RJControls.CSButton();
             this.btn_CapNhat = new CustomControls.RJControls.CSButton();
             this.btn_Them = new CustomControls.RJControls.CSButton();
-            this.rdb_NgungBan = new CustomControls.RJControls.CSRadioButton();
-            this.rdb_DangBan = new CustomControls.RJControls.CSRadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_QLSanPham)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -94,13 +94,6 @@
             this.label12.TabIndex = 6;
             this.label12.Text = "Loại Sản Phẩm";
             // 
-            // txt_TimKiem
-            // 
-            this.txt_TimKiem.Location = new System.Drawing.Point(76, 75);
-            this.txt_TimKiem.Name = "txt_TimKiem";
-            this.txt_TimKiem.Size = new System.Drawing.Size(282, 27);
-            this.txt_TimKiem.TabIndex = 8;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -110,33 +103,6 @@
             this.label11.Size = new System.Drawing.Size(76, 21);
             this.label11.TabIndex = 5;
             this.label11.Text = "Tìm Kiếm";
-            // 
-            // btn_TimKiem
-            // 
-            this.btn_TimKiem.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_TimKiem.Location = new System.Drawing.Point(383, 74);
-            this.btn_TimKiem.Name = "btn_TimKiem";
-            this.btn_TimKiem.Size = new System.Drawing.Size(91, 29);
-            this.btn_TimKiem.TabIndex = 9;
-            this.btn_TimKiem.Text = "Tìm Kiếm";
-            this.btn_TimKiem.UseVisualStyleBackColor = true;
-            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
-            // 
-            // cbx_Lsp
-            // 
-            this.cbx_Lsp.FormattingEnabled = true;
-            this.cbx_Lsp.Location = new System.Drawing.Point(647, 74);
-            this.cbx_Lsp.Name = "cbx_Lsp";
-            this.cbx_Lsp.Size = new System.Drawing.Size(219, 28);
-            this.cbx_Lsp.TabIndex = 11;
-            // 
-            // cbx_TrangThai
-            // 
-            this.cbx_TrangThai.FormattingEnabled = true;
-            this.cbx_TrangThai.Location = new System.Drawing.Point(965, 74);
-            this.cbx_TrangThai.Name = "cbx_TrangThai";
-            this.cbx_TrangThai.Size = new System.Drawing.Size(219, 28);
-            this.cbx_TrangThai.TabIndex = 10;
             // 
             // dgrid_QLSanPham
             // 
@@ -155,12 +121,12 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.groupBox3.Controls.Add(this.dgrid_QLSanPham);
             this.groupBox3.Controls.Add(this.cbx_TrangThai);
             this.groupBox3.Controls.Add(this.cbx_Lsp);
             this.groupBox3.Controls.Add(this.btn_TimKiem);
-            this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.txt_TimKiem);
+            this.groupBox3.Controls.Add(this.dgrid_QLSanPham);
+            this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -170,6 +136,87 @@
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông Tin Sản Phẩm";
+            // 
+            // cbx_TrangThai
+            // 
+            this.cbx_TrangThai.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cbx_TrangThai.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbx_TrangThai.BorderSize = 2;
+            this.cbx_TrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbx_TrangThai.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbx_TrangThai.ForeColor = System.Drawing.Color.DimGray;
+            this.cbx_TrangThai.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbx_TrangThai.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbx_TrangThai.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbx_TrangThai.Location = new System.Drawing.Point(970, 71);
+            this.cbx_TrangThai.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbx_TrangThai.Name = "cbx_TrangThai";
+            this.cbx_TrangThai.Padding = new System.Windows.Forms.Padding(2);
+            this.cbx_TrangThai.Size = new System.Drawing.Size(219, 34);
+            this.cbx_TrangThai.TabIndex = 16;
+            this.cbx_TrangThai.Texts = "";
+            this.cbx_TrangThai.OnSelectedIndexChanged += new System.EventHandler(this.cbx_TrangThai_OnSelectedIndexChanged);
+            // 
+            // cbx_Lsp
+            // 
+            this.cbx_Lsp.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cbx_Lsp.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbx_Lsp.BorderSize = 2;
+            this.cbx_Lsp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbx_Lsp.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbx_Lsp.ForeColor = System.Drawing.Color.DimGray;
+            this.cbx_Lsp.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbx_Lsp.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbx_Lsp.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbx_Lsp.Location = new System.Drawing.Point(647, 75);
+            this.cbx_Lsp.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbx_Lsp.Name = "cbx_Lsp";
+            this.cbx_Lsp.Padding = new System.Windows.Forms.Padding(2);
+            this.cbx_Lsp.Size = new System.Drawing.Size(219, 34);
+            this.cbx_Lsp.TabIndex = 15;
+            this.cbx_Lsp.Texts = "";
+            this.cbx_Lsp.OnSelectedIndexChanged += new System.EventHandler(this.cbx_Lsp_OnSelectedIndexChanged);
+            // 
+            // btn_TimKiem
+            // 
+            this.btn_TimKiem.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_TimKiem.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_TimKiem.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_TimKiem.BorderRadius = 10;
+            this.btn_TimKiem.BorderSize = 0;
+            this.btn_TimKiem.FlatAppearance.BorderSize = 0;
+            this.btn_TimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TimKiem.ForeColor = System.Drawing.Color.White;
+            this.btn_TimKiem.Location = new System.Drawing.Point(390, 75);
+            this.btn_TimKiem.Name = "btn_TimKiem";
+            this.btn_TimKiem.Size = new System.Drawing.Size(91, 29);
+            this.btn_TimKiem.TabIndex = 14;
+            this.btn_TimKiem.Text = "Tìm kiếm";
+            this.btn_TimKiem.TextColor = System.Drawing.Color.White;
+            this.btn_TimKiem.UseVisualStyleBackColor = false;
+            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
+            // 
+            // txt_TimKiem
+            // 
+            this.txt_TimKiem.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_TimKiem.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_TimKiem.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_TimKiem.BorderRadius = 15;
+            this.txt_TimKiem.BorderSize = 2;
+            this.txt_TimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_TimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_TimKiem.Location = new System.Drawing.Point(45, 69);
+            this.txt_TimKiem.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TimKiem.Multiline = false;
+            this.txt_TimKiem.Name = "txt_TimKiem";
+            this.txt_TimKiem.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_TimKiem.PasswordChar = false;
+            this.txt_TimKiem.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_TimKiem.PlaceholderText = "";
+            this.txt_TimKiem.Size = new System.Drawing.Size(312, 35);
+            this.txt_TimKiem.TabIndex = 13;
+            this.txt_TimKiem.Texts = "";
+            this.txt_TimKiem.UnderlinedStyle = false;
             // 
             // label7
             // 
@@ -347,6 +394,36 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sản Phẩm";
+            // 
+            // rdb_DangBan
+            // 
+            this.rdb_DangBan.AutoSize = true;
+            this.rdb_DangBan.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.rdb_DangBan.Location = new System.Drawing.Point(185, 254);
+            this.rdb_DangBan.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rdb_DangBan.Name = "rdb_DangBan";
+            this.rdb_DangBan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rdb_DangBan.Size = new System.Drawing.Size(105, 24);
+            this.rdb_DangBan.TabIndex = 15;
+            this.rdb_DangBan.TabStop = true;
+            this.rdb_DangBan.Text = "Đang bán";
+            this.rdb_DangBan.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rdb_DangBan.UseVisualStyleBackColor = true;
+            // 
+            // rdb_NgungBan
+            // 
+            this.rdb_NgungBan.AutoSize = true;
+            this.rdb_NgungBan.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.rdb_NgungBan.Location = new System.Drawing.Point(330, 252);
+            this.rdb_NgungBan.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rdb_NgungBan.Name = "rdb_NgungBan";
+            this.rdb_NgungBan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rdb_NgungBan.Size = new System.Drawing.Size(115, 24);
+            this.rdb_NgungBan.TabIndex = 14;
+            this.rdb_NgungBan.TabStop = true;
+            this.rdb_NgungBan.Text = "Ngưng bán";
+            this.rdb_NgungBan.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rdb_NgungBan.UseVisualStyleBackColor = true;
             // 
             // cbx_MaLoaiSP
             // 
@@ -545,36 +622,6 @@
             this.btn_Them.UseVisualStyleBackColor = false;
             this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
-            // rdb_NgungBan
-            // 
-            this.rdb_NgungBan.AutoSize = true;
-            this.rdb_NgungBan.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.rdb_NgungBan.Location = new System.Drawing.Point(330, 252);
-            this.rdb_NgungBan.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rdb_NgungBan.Name = "rdb_NgungBan";
-            this.rdb_NgungBan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rdb_NgungBan.Size = new System.Drawing.Size(115, 24);
-            this.rdb_NgungBan.TabIndex = 14;
-            this.rdb_NgungBan.TabStop = true;
-            this.rdb_NgungBan.Text = "Ngưng bán";
-            this.rdb_NgungBan.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rdb_NgungBan.UseVisualStyleBackColor = true;
-            // 
-            // rdb_DangBan
-            // 
-            this.rdb_DangBan.AutoSize = true;
-            this.rdb_DangBan.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.rdb_DangBan.Location = new System.Drawing.Point(185, 254);
-            this.rdb_DangBan.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rdb_DangBan.Name = "rdb_DangBan";
-            this.rdb_DangBan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rdb_DangBan.Size = new System.Drawing.Size(105, 24);
-            this.rdb_DangBan.TabIndex = 15;
-            this.rdb_DangBan.TabStop = true;
-            this.rdb_DangBan.Text = "Đang bán";
-            this.rdb_DangBan.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rdb_DangBan.UseVisualStyleBackColor = true;
-            // 
             // FrmSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -605,11 +652,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txt_TimKiem;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button btn_TimKiem;
-        private System.Windows.Forms.ComboBox cbx_Lsp;
-        private System.Windows.Forms.ComboBox cbx_TrangThai;
         private System.Windows.Forms.DataGridView dgrid_QLSanPham;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label7;
@@ -641,5 +684,9 @@
         private CustomControls.RJControls.CSTextBox txt_Mota;
         private CustomControls.RJControls.CSRadioButton rdb_NgungBan;
         private CustomControls.RJControls.CSRadioButton rdb_DangBan;
+        private CustomControls.RJControls.CSTextBox txt_TimKiem;
+        private CustomControls.RJControls.CSButton btn_TimKiem;
+        private CustomControls.RJControls.CSComboBox cbx_Lsp;
+        private CustomControls.RJControls.CSComboBox cbx_TrangThai;
     }
 }
