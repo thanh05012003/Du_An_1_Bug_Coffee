@@ -136,7 +136,7 @@ namespace _3.PL.Views
             {
                 lb_HoTenFail.Visible = true;
                 lb_HoTenFail.Text = "không được để trống tên";
-               
+                return false;
             }
             else
             {
@@ -144,7 +144,7 @@ namespace _3.PL.Views
                 {
                     lb_NgaySinhFail.Visible = true;
                     lb_NgaySinhFail.Text = "vui lòng chọn ngày sinh";
-                    
+                    return false;
                 }
                 else
                 {
@@ -152,7 +152,7 @@ namespace _3.PL.Views
                     {
                         lb_EmailFail.Visible = true;
                         lb_EmailFail.Text = "không được để trống email";
-                       
+                        return false;
                     }
                     else
                     {
@@ -160,7 +160,7 @@ namespace _3.PL.Views
                         {
                             lb_SDTFail.Visible = true;
                             lb_SDTFail.Text = "không được để trống SDT";
-                            
+                            return false;
                         }
                         else
                         {
@@ -168,7 +168,7 @@ namespace _3.PL.Views
                             {
                                 lb_MatKauFail.Visible = true;
                                 lb_MatKauFail.Text = "không được để trống mật khẩu";
-                                
+                                return false;
                             }
                             else
                             {
@@ -176,6 +176,7 @@ namespace _3.PL.Views
                                 {
                                     lb_VaiTroFail.Visible = true;
                                     lb_VaiTroFail.Text = "vui lòng chọn vai trò";
+                                    return false;
                                 }
                                 else
                                 {
@@ -184,7 +185,7 @@ namespace _3.PL.Views
                                     if (nv!=null)
                                     {
                                         MessageBox.Show("số điện thoại này đã tồn tại");
-                                        
+                                        return false;
                                     }
                                     else
                                     {

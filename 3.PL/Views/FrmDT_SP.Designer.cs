@@ -67,10 +67,19 @@
             this.csButton1 = new CustomControls.RJControls.CSButton();
             this.dtp_tuNgay = new CustomControls.RJControls.CSDatePicker();
             this.dtp_denNgay = new CustomControls.RJControls.CSDatePicker();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lb_TkNam = new System.Windows.Forms.Label();
+            this.lb_MangDiYear = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lb_TaiQuanYear = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pnl_TuyChon.SuspendLayout();
             this.pnl_Month.SuspendLayout();
             this.pnl_Today.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_ThongKe)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_Chọn
@@ -122,7 +131,7 @@
             this.pnl_TuyChon.Controls.Add(this.label30);
             this.pnl_TuyChon.Controls.Add(this.label4);
             this.pnl_TuyChon.Controls.Add(this.panel8);
-            this.pnl_TuyChon.Location = new System.Drawing.Point(1009, 134);
+            this.pnl_TuyChon.Location = new System.Drawing.Point(1008, 134);
             this.pnl_TuyChon.Name = "pnl_TuyChon";
             this.pnl_TuyChon.Size = new System.Drawing.Size(278, 248);
             this.pnl_TuyChon.TabIndex = 90;
@@ -203,7 +212,7 @@
             this.pnl_Month.Controls.Add(this.label24);
             this.pnl_Month.Controls.Add(this.label3);
             this.pnl_Month.Controls.Add(this.panel6);
-            this.pnl_Month.Location = new System.Drawing.Point(510, 134);
+            this.pnl_Month.Location = new System.Drawing.Point(340, 134);
             this.pnl_Month.Name = "pnl_Month";
             this.pnl_Month.Size = new System.Drawing.Size(278, 248);
             this.pnl_Month.TabIndex = 92;
@@ -283,7 +292,7 @@
             this.pnl_Today.Controls.Add(this.label8);
             this.pnl_Today.Controls.Add(this.lbl_VndToday);
             this.pnl_Today.Controls.Add(this.label1);
-            this.pnl_Today.Location = new System.Drawing.Point(11, 134);
+            this.pnl_Today.Location = new System.Drawing.Point(6, 134);
             this.pnl_Today.Name = "pnl_Today";
             this.pnl_Today.Size = new System.Drawing.Size(278, 248);
             this.pnl_Today.TabIndex = 91;
@@ -484,11 +493,93 @@
             this.dtp_denNgay.TabIndex = 104;
             this.dtp_denNgay.TextColor = System.Drawing.Color.White;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.lb_TkNam);
+            this.panel1.Controls.Add(this.lb_MangDiYear);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.lb_TaiQuanYear);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Location = new System.Drawing.Point(674, 134);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(278, 248);
+            this.panel1.TabIndex = 93;
+            // 
+            // lb_TkNam
+            // 
+            this.lb_TkNam.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_TkNam.Location = new System.Drawing.Point(60, 38);
+            this.lb_TkNam.Name = "lb_TkNam";
+            this.lb_TkNam.Size = new System.Drawing.Size(176, 72);
+            this.lb_TkNam.TabIndex = 38;
+            this.lb_TkNam.Text = "000.000. đ";
+            // 
+            // lb_MangDiYear
+            // 
+            this.lb_MangDiYear.AutoSize = true;
+            this.lb_MangDiYear.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_MangDiYear.Location = new System.Drawing.Point(215, 181);
+            this.lb_MangDiYear.Name = "lb_MangDiYear";
+            this.lb_MangDiYear.Size = new System.Drawing.Size(21, 24);
+            this.lb_MangDiYear.TabIndex = 37;
+            this.lb_MangDiYear.Text = "X";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(37, 181);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(84, 24);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "Mang đi:";
+            // 
+            // lb_TaiQuanYear
+            // 
+            this.lb_TaiQuanYear.AutoSize = true;
+            this.lb_TaiQuanYear.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_TaiQuanYear.Location = new System.Drawing.Point(215, 141);
+            this.lb_TaiQuanYear.Name = "lb_TaiQuanYear";
+            this.lb_TaiQuanYear.Size = new System.Drawing.Size(21, 24);
+            this.lb_TaiQuanYear.TabIndex = 35;
+            this.lb_TaiQuanYear.Text = "X";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.Location = new System.Drawing.Point(37, 141);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(135, 24);
+            this.label14.TabIndex = 34;
+            this.label14.Text = "Dùng tại quán:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.Location = new System.Drawing.Point(94, 1);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(76, 37);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "Năm";
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(282, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(278, 125);
+            this.panel2.TabIndex = 1;
+            // 
             // FrmDT_SP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1305, 727);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtp_denNgay);
             this.Controls.Add(this.dtp_tuNgay);
             this.Controls.Add(this.csButton1);
@@ -518,6 +609,8 @@
             this.pnl_Today.ResumeLayout(false);
             this.pnl_Today.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_ThongKe)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -564,5 +657,13 @@
         private CustomControls.RJControls.CSButton csButton1;
         private CustomControls.RJControls.CSDatePicker dtp_tuNgay;
         private CustomControls.RJControls.CSDatePicker dtp_denNgay;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lb_TkNam;
+        private System.Windows.Forms.Label lb_MangDiYear;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lb_TaiQuanYear;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel2;
     }
 }

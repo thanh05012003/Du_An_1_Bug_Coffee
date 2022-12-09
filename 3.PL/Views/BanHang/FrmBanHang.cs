@@ -58,7 +58,7 @@ namespace _3.PL.Views.BanHang
                 {
                     if (a.TrangThai == "Chờ order")
                     {
-                        dgrid_HdChoCT.Rows.Add(x.MaSP, x.TenSp, x.DonGia, x.SoLuong, (x.SoLuong * x.DonGia));
+                        dgrid_HdChoCT.Rows.Add(x.MaSP, x.TenSp, x.DonGia.ToString("C0"), x.SoLuong, (x.SoLuong * x.DonGia).ToString("C0"));
                     }
                 }
                 
@@ -96,7 +96,7 @@ namespace _3.PL.Views.BanHang
         public void LoadBan()
         {
             cbb_Ban.Items.Clear();
-            foreach (var x in _banService.GetAll())
+            foreach (var x in _banService.GetAll().Where(c=>c.TrangThai == 1))
             {
                 cbb_Ban.Items.Add(x.Ten);
             }
@@ -328,6 +328,43 @@ namespace _3.PL.Views.BanHang
                 FrmThanhToan frm = new FrmThanhToan();
                 frm.ShowDialog();
             }
+        }
+
+        private void dgrid_HdChoCT_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            if (rowIndex == _hoaDonCTService.GetAll().Where(c => c.MaHD == _maHDWhenClick).Count()) ;
+            try
+            {
+                _maSPWhenClick = dgrid_HdChoCT.Rows[rowIndex].Cells[0].Value.ToString();
+            }
+            catch (Exception exception)
+            {
+                return;
+            }
+            var hdct = _hoaDonCTService.GetAll().FirstOrDefault(c => c.MaSP == _maSPWhenClick);
+            foreach (var x in _sanPhamService.GetAll().Where(c =>c.Ma == hdct.MaSP))
+            {
+                txt_TenSP.Text = x.Ten;
+                txt_DonGiaSP.Text = Math.Round(x.Gia, 0).ToString();
+                nud_SoLuong.Text = hdct.SoLuong.ToString();
+            }
+        }
+
+        private void btn_XoaSp_Click(object sender, EventArgs e)
+        {
+            var hdct = _hoaDonCTService.GetAll()
+                .FirstOrDefault(c => c.MaHD == _maHDWhenClick && c.MaSP == _maSPWhenClick);
+            if (hdct.SoLuong > 1)
+            {
+                hdct.SoLuong = hdct.SoLuong - 1;
+                _hoaDonCTService.update(hdct);
+            }
+            else
+            {
+                _hoaDonCTService.delete(hdct);
+            }
+            LoadHdChoCT();
         }
     }
 }

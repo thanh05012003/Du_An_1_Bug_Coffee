@@ -230,6 +230,7 @@
             this.dgrid_HdChoCT.RowTemplate.Height = 29;
             this.dgrid_HdChoCT.Size = new System.Drawing.Size(663, 235);
             this.dgrid_HdChoCT.TabIndex = 0;
+            this.dgrid_HdChoCT.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_HdChoCT_CellClick);
             // 
             // btn_XacNhan
             // 
@@ -312,6 +313,7 @@
             this.btn_XoaSp.TabIndex = 159;
             this.btn_XoaSp.Text = "Xoá";
             this.btn_XoaSp.UseVisualStyleBackColor = false;
+            this.btn_XoaSp.Click += new System.EventHandler(this.btn_XoaSp_Click);
             // 
             // btn_ThemSp
             // 

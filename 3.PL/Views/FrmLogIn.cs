@@ -39,15 +39,15 @@ namespace _3.PL.Views
                 }
                 else
                 {
-                    if (txt_MatKhau.Texts.Length < 8)
+                    if (txt_MatKhau.Texts.Length < 6)
                     {
                         txt_MatKhau.Texts = "";
                         txt_MatKhau.PlaceholderColor = Color.Red;
-                        txt_MatKhau.PlaceholderText = "mật khẩu phải nhiều hơn 8 kí tự";
+                        txt_MatKhau.PlaceholderText = "mật khẩu phải nhiều hơn 6 kí tự";
                     }
                     else
                     {
-                        if (txt_TaiKhoan.Texts == "admin" && txt_MatKhau.Texts == "012345678")
+                        if (txt_TaiKhoan.Texts == "admin" && txt_MatKhau.Texts == "123456")
                         {
                             Properties.Settings.Default.Tk = txt_TaiKhoan.Texts;
                             //Properties.Settings.Default.Mk = txt_MatKhau.Texts;

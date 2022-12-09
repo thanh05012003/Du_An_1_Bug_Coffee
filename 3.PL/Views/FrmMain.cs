@@ -85,6 +85,7 @@ namespace _3.PL.Views
 
         private void btn_SanPham_Click_1(object sender, EventArgs e)
         {
+          
             OpenChildForm(new FrmSanPham(), sender);
         }
 
@@ -105,7 +106,25 @@ namespace _3.PL.Views
 
         private void btn_NhanVien_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(new FrmNhanVien(), sender);
+            if (lb_UserName.Text.ToLower() == "admin")
+            {
+                OpenChildForm(new FrmNhanVien(), sender);
+            }
+            var nv = _nhanVienService.GetAll().FirstOrDefault(c =>
+                c.SDT.ToLower() == Properties.Settings.Default.Tk.Trim());
+            if (nv == null) 
+            {
+                return;
+            }
+            if (nv.MaCV == "CV01")
+            {
+                OpenChildForm(new FrmNhanVien(),sender);
+              
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyền mở chức năng này");
+            }
         }
 
         private void btn_TrangChu_Click(object sender, EventArgs e)
@@ -115,14 +134,29 @@ namespace _3.PL.Views
 
         private void btn_BanHang_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FrmBanHang(),sender);
+            if (lb_UserName.Text == "admin")
+            {
+                MessageBox.Show("Bạn đang đăng nhập bằng tài khoản admin. Bạn không thể mở chức năng này!");
+            }
+            else
+            {
+                OpenChildForm(new FrmBanHang(),sender);
+            }
+            
         }
 
         private void btn_DoiMatKhau_Click(object sender, EventArgs e)
         {
-            FrmDoiPass frm = new FrmDoiPass();
-            frm.ShowDialog();
-            
+            if (lb_UserName.Text == "admin")
+            {
+                MessageBox.Show("Bạn đang đăng nhập bằng tài khoản admin. Bạn không thể mở chức năng này!");
+            }
+            else
+            {
+                FrmDoiPass frm = new FrmDoiPass();
+                frm.ShowDialog();
+            }
         }
+
     }
 }

@@ -43,7 +43,20 @@ namespace _2.BUS.Services
 
         public string delete(QlHoaDonCTView obj)
         {
-            throw new NotImplementedException();
+            if (obj == null) return "Xoá không thành công";
+            HoaDonCT hdct = new HoaDonCT()
+            {
+                MaHD = obj.MaHD,
+                MaSP = obj.MaSP,
+                SoLuong = obj.SoLuong,
+                DonGia = obj.DonGia,
+            };
+            if (_hoaDonCTRepository.Delete(hdct))
+            {
+                return "Xoá thành công";
+            }
+
+            return "Xoá không thành công";
         }
 
         public string update(QlHoaDonCTView obj)

@@ -25,15 +25,25 @@ namespace _3.PL.Views
             _hoaDonCtService = new HoaDonCTService();
             _hoaDonService = new HoaDonService();
             loadTable();
-            loadBan();
+            loadChuyenBan();
+            LoadGopBan();
         }
 
-        public void loadBan()
+        public void loadChuyenBan()
         {
             cmb_Ban.Items.Clear();
-            foreach (var x in _banService.GetAll())
+            foreach (var x in _banService.GetAll().Where(c =>c.TrangThai == 1))
             {
                 cmb_Ban.Items.Add(x.Ten);
+            }
+        }
+
+        public void LoadGopBan()
+        {
+            cmb_GopBan.Items.Clear();
+            foreach (var x in _banService.GetAll().Where(c => c.TrangThai == 0))
+            {
+                cmb_GopBan.Items.Add(x.Ten);
             }
         }
 
@@ -105,6 +115,7 @@ namespace _3.PL.Views
         {
             var maban = _banService.GetAll().FirstOrDefault(c => c.Ten == cmb_Ban.Text);
             var banchuyen = _banService.GetAll().FirstOrDefault(c => c.Ma == _maBanChuyen);
+            if (banchuyen == null) { MessageBox.Show("Vui lòng chọn bàn muốn chuyển"); return; }
             if (cmb_Ban.Text.Trim() != "")
             {
                 if (maban.Ma == banchuyen.Ma)
@@ -132,13 +143,25 @@ namespace _3.PL.Views
 
                     MessageBox.Show("Chuyển bàn thành công");
                 }
-
                 loadTable();
+                loadChuyenBan();
+                _maBanChuyen = "";
             }
             else
             {
                 MessageBox.Show("Vui lòng chọn bàn muốn chuyển");
             }
+        }
+
+        private void btn_TachHd_Click(object sender, EventArgs e)
+        {
+            FrmTachHD frm = new FrmTachHD();
+            frm.ShowDialog();
+        }
+
+        private void btn_GopBan_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

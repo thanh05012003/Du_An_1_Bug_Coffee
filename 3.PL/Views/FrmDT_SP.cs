@@ -22,8 +22,11 @@ namespace _3.PL.Views
         private int HdGiaoMon = 0;
         private int HdBanCs = 0;
         private int HdGiaoCs = 0;
+        private int HdBanYear = 0;
+        private int HdGiaoYear = 0;
         private decimal tongTien = 0;
         private decimal tongTienThang = 0;
+        private decimal tongTienNam = 0;
         private decimal tongCs = 0;
         public FrmDT_SP()
         {
@@ -32,6 +35,7 @@ namespace _3.PL.Views
             _hoaDonService = new HoaDonService();
             loadThongKeNgay();
             LoadThongKeThang();
+            LoadThongKeNam();
         }
 
         public void loadThongKeNgay()
@@ -123,6 +127,29 @@ namespace _3.PL.Views
             lbl_TkMonth.Text = tongTienThang.ToString("C0");
             lbl_BanMonth.Text = HdBanMon.ToString();
             lbl_GiaoMonth.Text = HdGiaoMon.ToString();
+        }
+        public void LoadThongKeNam()
+        {
+
+            foreach (var x in _hoaDonCTService.GetAll())
+            {
+                foreach (var c in _hoaDonService.GetAll().Where(c => c.Ma == x.MaHD))
+                {
+                    if (c.TrangThai == "Đã thanh toán")
+                    {
+                        if (c.NgayTao.Value.Year.ToString() == DateTime.Now.Year.ToString())
+                        {
+                            tongTienNam += (x.DonGia * x.SoLuong);
+                            HdBanYear = _hoaDonService.GetAll().Where(c => c.MaBan != null).Count();
+                            HdGiaoYear = _hoaDonService.GetAll().Where(c => c.MaBan == null).Count();
+                        }
+                    }
+                }
+            }
+
+            lb_TkNam.Text = tongTienNam.ToString("C0");
+            lb_TaiQuanYear.Text = HdBanYear.ToString();
+            lb_MangDiYear.Text = HdGiaoYear.ToString();
         }
 
         private void btn_Chọn_Click_1(object sender, EventArgs e)

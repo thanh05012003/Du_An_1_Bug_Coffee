@@ -28,7 +28,8 @@ namespace _1.DAL.Repositories
         public bool Delete(HoaDonCT obj)
         {
             if (obj == null) return false;
-            _DbContext.Remove(obj);
+            var temp = _DbContext.HoaDonCT.FirstOrDefault(x => x.MaHD == obj.MaHD);
+            _DbContext.HoaDonCT.Remove(temp);
             _DbContext.SaveChanges();
             return true;
         }

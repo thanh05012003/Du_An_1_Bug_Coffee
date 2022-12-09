@@ -42,7 +42,6 @@
             this.btn_TrangChu = new CustomControls.RJControls.CSButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_DoiMatKhau = new CustomControls.RJControls.CSButton();
-            this.btn_GiaoCa = new CustomControls.RJControls.CSButton();
             this.lb_UserName = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lb_Time = new System.Windows.Forms.Label();
@@ -248,7 +247,6 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.panel2.Controls.Add(this.btn_DoiMatKhau);
-            this.panel2.Controls.Add(this.btn_GiaoCa);
             this.panel2.Controls.Add(this.lb_UserName);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.btn_DangXuat);
@@ -267,7 +265,7 @@
             this.btn_DoiMatKhau.FlatAppearance.BorderSize = 0;
             this.btn_DoiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DoiMatKhau.ForeColor = System.Drawing.Color.Black;
-            this.btn_DoiMatKhau.Location = new System.Drawing.Point(165, 14);
+            this.btn_DoiMatKhau.Location = new System.Drawing.Point(16, 14);
             this.btn_DoiMatKhau.Name = "btn_DoiMatKhau";
             this.btn_DoiMatKhau.Size = new System.Drawing.Size(129, 42);
             this.btn_DoiMatKhau.TabIndex = 7;
@@ -276,30 +274,12 @@
             this.btn_DoiMatKhau.UseVisualStyleBackColor = false;
             this.btn_DoiMatKhau.Click += new System.EventHandler(this.btn_DoiMatKhau_Click);
             // 
-            // btn_GiaoCa
-            // 
-            this.btn_GiaoCa.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_GiaoCa.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_GiaoCa.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_GiaoCa.BorderRadius = 5;
-            this.btn_GiaoCa.BorderSize = 0;
-            this.btn_GiaoCa.FlatAppearance.BorderSize = 0;
-            this.btn_GiaoCa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_GiaoCa.ForeColor = System.Drawing.Color.Black;
-            this.btn_GiaoCa.Location = new System.Drawing.Point(18, 13);
-            this.btn_GiaoCa.Name = "btn_GiaoCa";
-            this.btn_GiaoCa.Size = new System.Drawing.Size(129, 42);
-            this.btn_GiaoCa.TabIndex = 6;
-            this.btn_GiaoCa.Text = "Giao Ca";
-            this.btn_GiaoCa.TextColor = System.Drawing.Color.Black;
-            this.btn_GiaoCa.UseVisualStyleBackColor = false;
-            // 
             // lb_UserName
             // 
             this.lb_UserName.AutoSize = true;
             this.lb_UserName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lb_UserName.ForeColor = System.Drawing.Color.White;
-            this.lb_UserName.Location = new System.Drawing.Point(480, 22);
+            this.lb_UserName.Location = new System.Drawing.Point(331, 22);
             this.lb_UserName.Name = "lb_UserName";
             this.lb_UserName.Size = new System.Drawing.Size(170, 23);
             this.lb_UserName.TabIndex = 5;
@@ -327,7 +307,7 @@
             // 
             // btn_DangXuat
             // 
-            this.btn_DangXuat.Location = new System.Drawing.Point(313, 14);
+            this.btn_DangXuat.Location = new System.Drawing.Point(164, 14);
             this.btn_DangXuat.Name = "btn_DangXuat";
             this.btn_DangXuat.Size = new System.Drawing.Size(123, 41);
             this.btn_DangXuat.TabIndex = 2;
@@ -394,6 +374,6 @@
         private CustomControls.RJControls.CSButton btn_SanPham;
         private CustomControls.RJControls.CSButton btn_TrangChu;
         private CustomControls.RJControls.CSButton btn_DoiMatKhau;
-        private CustomControls.RJControls.CSButton btn_GiaoCa;
+    
     }
 }
