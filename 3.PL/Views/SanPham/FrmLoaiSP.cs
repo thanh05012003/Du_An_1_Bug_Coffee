@@ -31,21 +31,12 @@ namespace _3.PL.Views.SanPham
             QlLoaiSanPhamView lsp = new QlLoaiSanPhamView();
             lsp = new QlLoaiSanPhamView()
             {
-                Ma = txt_MaLSP.Text,
-                Ten = txt_TenLSP.Text,
+                Ma = txt_MaLSP.Texts,
+                Ten = txt_TenLSP.Texts,
             };
             return lsp;
         }
 
-        private void btn_Them_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(_iloaiSanPhamServices.add(GetDatafromGui()));
-        }
-
-        private void txt_TenLSP_TextChanged(object sender, EventArgs e)
-        {
-            txt_MaLSP.Text = "LSP0" + (_iloaiSanPhamServices.GetAll().Count + 1);
-        }
 
         public void LoadDataLSP()
         {
@@ -61,7 +52,30 @@ namespace _3.PL.Views.SanPham
             }
         }
 
-        private void btn_Sua_Click(object sender, EventArgs e)
+
+        private void dtgrid_LSP_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            if (rowIndex == _iloaiSanPhamServices.GetAll().Count) return;
+            try
+            {
+                _maWhenClick = dtgrid_LSP.Rows[rowIndex].Cells[1].Value.ToString();
+            }
+            catch (Exception exception)
+            {
+                return;
+            }
+            var lsp = _iloaiSanPhamServices.GetAll().First(c => c.Ma == _maWhenClick);
+            if (lsp == null)
+            {
+                return;
+            }
+            txt_MaLSP.Texts = lsp.Ma;
+            txt_TenLSP.Texts = lsp.Ten;
+        }
+
+
+        private void btn_Sua_Click_1(object sender, EventArgs e)
         {
             var temp = GetDatafromGui();
             temp.Ma = _maWhenClick;
@@ -69,18 +83,23 @@ namespace _3.PL.Views.SanPham
             LoadDataLSP();
         }
 
-        private void dtgrid_LSP_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void btn_Them_Click_1(object sender, EventArgs e)
         {
-            int rowIndex = e.RowIndex;
-            if (rowIndex == _iloaiSanPhamServices.GetAll().Count) return;
-            _maWhenClick = dtgrid_LSP.Rows[rowIndex].Cells[1].Value.ToString();
-            var lsp = _iloaiSanPhamServices.GetAll().First(c => c.Ma == _maWhenClick);
+            var lsp = _iloaiSanPhamServices.GetAll().FirstOrDefault(c => c.Ten.ToLower() == txt_TenLSP.Texts.ToLower());
             if (lsp == null)
             {
-                return;
+                MessageBox.Show("Loại sản phẩm này đã tồn tại");
             }
-            txt_MaLSP.Text = lsp.Ma;
-            txt_TenLSP.Text = lsp.Ten;
+            else
+            {
+                MessageBox.Show(_iloaiSanPhamServices.add(GetDatafromGui()));
+                LoadDataLSP();
+            }
+        }
+
+        private void txt_TenLSP__TextChanged(object sender, EventArgs e)
+        {
+            txt_MaLSP.Texts = "LSP0" + (_iloaiSanPhamServices.GetAll().Count + 1);
         }
     }
 }

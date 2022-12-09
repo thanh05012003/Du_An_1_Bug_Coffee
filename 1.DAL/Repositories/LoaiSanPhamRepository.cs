@@ -35,7 +35,17 @@ namespace _1.DAL.Repositories
 
         public List<LoaiSanPham> GetAll()
         {
-            return _DbContext.LoaiSanPham.ToList();
+            List<LoaiSanPham> lstsp;
+            try
+            {
+                 lstsp = _DbContext.LoaiSanPham.ToList();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            return lstsp;
         }
 
         public bool Update(LoaiSanPham obj)

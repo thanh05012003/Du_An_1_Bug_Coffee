@@ -16,6 +16,7 @@ namespace _3.PL.Views
         private IBanService _banService;
         private IHoaDonCTService _hoaDonCtService;
         private IHoaDonService _hoaDonService;
+        private string _maBanChuyen;
 
         public FrmBan()
         {
@@ -24,11 +25,21 @@ namespace _3.PL.Views
             _hoaDonCtService = new HoaDonCTService();
             _hoaDonService = new HoaDonService();
             loadTable();
+            loadBan();
         }
 
+        public void loadBan()
+        {
+            cmb_Ban.Items.Clear();
+            foreach (var x in _banService.GetAll())
+            {
+                cmb_Ban.Items.Add(x.Ten);
+            }
+        }
 
         public void loadTable()
         {
+            flowLayoutPanel1.Controls.Clear();
             List <QlBanView> listtable = _banService.GetAll();
             foreach (var x in listtable)
             {
@@ -80,6 +91,7 @@ namespace _3.PL.Views
         {
              var _maBanWhenClick = ((sender as CSButton).Tag as QlBanView).Ma;
             //Properties.Settings.Default.MaBan = _maBanWhenClick;
+            _maBanChuyen = _maBanWhenClick;
             ShowBill(_maBanWhenClick);
         }
 
@@ -87,6 +99,46 @@ namespace _3.PL.Views
         {
             FrmThanhToan frm = new FrmThanhToan();
             frm.ShowDialog();
+        }
+
+        private void btn_ChuyenBan_Click(object sender, EventArgs e)
+        {
+            var maban = _banService.GetAll().FirstOrDefault(c => c.Ten == cmb_Ban.Text);
+            var banchuyen = _banService.GetAll().FirstOrDefault(c => c.Ma == _maBanChuyen);
+            if (cmb_Ban.Text.Trim() != "")
+            {
+                if (maban.Ma == banchuyen.Ma)
+                {
+                    MessageBox.Show("Bạn đang ở bàn này");
+                    return;
+                }
+                DialogResult dr = MessageBox.Show(
+                    $"Bạn có chắc muốn chuyển từ {banchuyen.Ten} qua {maban.Ten} không ?",
+                    "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dr == DialogResult.OK)
+                {
+                    foreach (var c in _hoaDonService.GetAll().Where(c => c.MaBan == _maBanChuyen))
+                    {
+                        if (c.TrangThai == "Chờ pha chế" || c.TrangThai == "Chờ thanh toán")
+                        {
+                            c.MaBan = maban.Ma;
+                            _hoaDonService.update(c);
+                            maban.TrangThai = 0;
+                            _banService.update(maban);
+                            banchuyen.TrangThai = 1;
+                            _banService.update(banchuyen);
+                        }
+                    }
+
+                    MessageBox.Show("Chuyển bàn thành công");
+                }
+
+                loadTable();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn bàn muốn chuyển");
+            }
         }
     }
 }

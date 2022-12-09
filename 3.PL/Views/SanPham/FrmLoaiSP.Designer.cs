@@ -28,50 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Sua = new System.Windows.Forms.Button();
-            this.btn_Them = new System.Windows.Forms.Button();
-            this.txt_TenLSP = new System.Windows.Forms.TextBox();
-            this.txt_MaLSP = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtgrid_LSP = new System.Windows.Forms.DataGridView();
+            this.txt_MaLSP = new CustomControls.RJControls.CSTextBox();
+            this.txt_TenLSP = new CustomControls.RJControls.CSTextBox();
+            this.btn_Sua = new CustomControls.RJControls.CSButton();
+            this.btn_Them = new CustomControls.RJControls.CSButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrid_LSP)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_Sua
-            // 
-            this.btn_Sua.Location = new System.Drawing.Point(327, 176);
-            this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(146, 50);
-            this.btn_Sua.TabIndex = 11;
-            this.btn_Sua.Text = "Sửa";
-            this.btn_Sua.UseVisualStyleBackColor = true;
-            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
-            // 
-            // btn_Them
-            // 
-            this.btn_Them.Location = new System.Drawing.Point(125, 176);
-            this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(125, 50);
-            this.btn_Them.TabIndex = 10;
-            this.btn_Them.Text = "Thêm";
-            this.btn_Them.UseVisualStyleBackColor = true;
-            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
-            // 
-            // txt_TenLSP
-            // 
-            this.txt_TenLSP.Location = new System.Drawing.Point(294, 97);
-            this.txt_TenLSP.Name = "txt_TenLSP";
-            this.txt_TenLSP.Size = new System.Drawing.Size(195, 27);
-            this.txt_TenLSP.TabIndex = 9;
-            this.txt_TenLSP.TextChanged += new System.EventHandler(this.txt_TenLSP_TextChanged);
-            // 
-            // txt_MaLSP
-            // 
-            this.txt_MaLSP.Location = new System.Drawing.Point(294, 36);
-            this.txt_MaLSP.Name = "txt_MaLSP";
-            this.txt_MaLSP.Size = new System.Drawing.Size(195, 27);
-            this.txt_MaLSP.TabIndex = 8;
             // 
             // label2
             // 
@@ -95,6 +60,9 @@
             // 
             // dtgrid_LSP
             // 
+            this.dtgrid_LSP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgrid_LSP.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dtgrid_LSP.BackgroundColor = System.Drawing.Color.White;
             this.dtgrid_LSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgrid_LSP.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtgrid_LSP.Location = new System.Drawing.Point(0, 278);
@@ -105,16 +73,101 @@
             this.dtgrid_LSP.TabIndex = 12;
             this.dtgrid_LSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgrid_LSP_CellClick);
             // 
+            // txt_MaLSP
+            // 
+            this.txt_MaLSP.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_MaLSP.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_MaLSP.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_MaLSP.BorderRadius = 15;
+            this.txt_MaLSP.BorderSize = 2;
+            this.txt_MaLSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_MaLSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_MaLSP.Location = new System.Drawing.Point(294, 30);
+            this.txt_MaLSP.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_MaLSP.Multiline = false;
+            this.txt_MaLSP.Name = "txt_MaLSP";
+            this.txt_MaLSP.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_MaLSP.PasswordChar = false;
+            this.txt_MaLSP.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_MaLSP.PlaceholderText = "";
+            this.txt_MaLSP.Size = new System.Drawing.Size(195, 35);
+            this.txt_MaLSP.TabIndex = 13;
+            this.txt_MaLSP.Texts = "";
+            this.txt_MaLSP.UnderlinedStyle = false;
+            // 
+            // txt_TenLSP
+            // 
+            this.txt_TenLSP.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_TenLSP.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt_TenLSP.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt_TenLSP.BorderRadius = 15;
+            this.txt_TenLSP.BorderSize = 2;
+            this.txt_TenLSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_TenLSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_TenLSP.Location = new System.Drawing.Point(294, 95);
+            this.txt_TenLSP.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TenLSP.Multiline = false;
+            this.txt_TenLSP.Name = "txt_TenLSP";
+            this.txt_TenLSP.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_TenLSP.PasswordChar = false;
+            this.txt_TenLSP.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_TenLSP.PlaceholderText = "";
+            this.txt_TenLSP.Size = new System.Drawing.Size(195, 35);
+            this.txt_TenLSP.TabIndex = 14;
+            this.txt_TenLSP.Texts = "";
+            this.txt_TenLSP.UnderlinedStyle = false;
+            this.txt_TenLSP._TextChanged += new System.EventHandler(this.txt_TenLSP__TextChanged);
+            // 
+            // btn_Sua
+            // 
+            this.btn_Sua.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_Sua.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_Sua.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Sua.BorderRadius = 15;
+            this.btn_Sua.BorderSize = 0;
+            this.btn_Sua.FlatAppearance.BorderSize = 0;
+            this.btn_Sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Sua.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_Sua.ForeColor = System.Drawing.Color.White;
+            this.btn_Sua.Location = new System.Drawing.Point(327, 177);
+            this.btn_Sua.Name = "btn_Sua";
+            this.btn_Sua.Size = new System.Drawing.Size(188, 50);
+            this.btn_Sua.TabIndex = 16;
+            this.btn_Sua.Text = "Sửa";
+            this.btn_Sua.TextColor = System.Drawing.Color.White;
+            this.btn_Sua.UseVisualStyleBackColor = false;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click_1);
+            // 
+            // btn_Them
+            // 
+            this.btn_Them.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_Them.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_Them.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Them.BorderRadius = 15;
+            this.btn_Them.BorderSize = 0;
+            this.btn_Them.FlatAppearance.BorderSize = 0;
+            this.btn_Them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Them.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_Them.ForeColor = System.Drawing.Color.White;
+            this.btn_Them.Location = new System.Drawing.Point(78, 177);
+            this.btn_Them.Name = "btn_Them";
+            this.btn_Them.Size = new System.Drawing.Size(188, 50);
+            this.btn_Them.TabIndex = 17;
+            this.btn_Them.Text = "Thêm";
+            this.btn_Them.TextColor = System.Drawing.Color.White;
+            this.btn_Them.UseVisualStyleBackColor = false;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click_1);
+            // 
             // FrmLoaiSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 466);
-            this.Controls.Add(this.dtgrid_LSP);
-            this.Controls.Add(this.btn_Sua);
             this.Controls.Add(this.btn_Them);
+            this.Controls.Add(this.btn_Sua);
             this.Controls.Add(this.txt_TenLSP);
             this.Controls.Add(this.txt_MaLSP);
+            this.Controls.Add(this.dtgrid_LSP);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmLoaiSP";
@@ -126,13 +179,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_Sua;
-        private System.Windows.Forms.Button btn_Them;
-        private System.Windows.Forms.TextBox txt_TenLSP;
-        private System.Windows.Forms.TextBox txt_MaLSP;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dtgrid_LSP;
+        private CustomControls.RJControls.CSTextBox txt_MaLSP;
+        private CustomControls.RJControls.CSTextBox txt_TenLSP;
+        private CustomControls.RJControls.CSButton btn_Sua;
+        private CustomControls.RJControls.CSButton btn_Them;
     }
 }

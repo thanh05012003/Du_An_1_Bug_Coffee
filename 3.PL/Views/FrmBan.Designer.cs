@@ -30,6 +30,7 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.csButton1 = new CustomControls.RJControls.CSButton();
             this.cmb_Ban = new System.Windows.Forms.ComboBox();
             this.btn_TachHd = new CustomControls.RJControls.CSButton();
             this.btn_ChuyenBan = new CustomControls.RJControls.CSButton();
@@ -39,7 +40,6 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.cmb_LoaiSanPham = new CustomControls.RJControls.CSComboBox();
             this.cmb_SanPham = new CustomControls.RJControls.CSComboBox();
-            this.csButton1 = new CustomControls.RJControls.CSButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_TTSp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -66,6 +66,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(539, 323);
             this.panel1.TabIndex = 1;
+            // 
+            // csButton1
+            // 
+            this.csButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.csButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.csButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.csButton1.BorderRadius = 15;
+            this.csButton1.BorderSize = 0;
+            this.csButton1.FlatAppearance.BorderSize = 0;
+            this.csButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.csButton1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.csButton1.ForeColor = System.Drawing.Color.White;
+            this.csButton1.Location = new System.Drawing.Point(10, 208);
+            this.csButton1.Name = "csButton1";
+            this.csButton1.Size = new System.Drawing.Size(135, 40);
+            this.csButton1.TabIndex = 12;
+            this.csButton1.Text = "Gộp bàn";
+            this.csButton1.TextColor = System.Drawing.Color.White;
+            this.csButton1.UseVisualStyleBackColor = false;
             // 
             // cmb_Ban
             // 
@@ -112,6 +131,7 @@
             this.btn_ChuyenBan.Text = "Chuyển bàn";
             this.btn_ChuyenBan.TextColor = System.Drawing.Color.White;
             this.btn_ChuyenBan.UseVisualStyleBackColor = false;
+            this.btn_ChuyenBan.Click += new System.EventHandler(this.btn_ChuyenBan_Click);
             // 
             // btn_ThanhToan
             // 
@@ -209,25 +229,6 @@
             this.cmb_SanPham.Size = new System.Drawing.Size(250, 34);
             this.cmb_SanPham.TabIndex = 6;
             this.cmb_SanPham.Texts = "";
-            // 
-            // csButton1
-            // 
-            this.csButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.csButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.csButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.csButton1.BorderRadius = 15;
-            this.csButton1.BorderSize = 0;
-            this.csButton1.FlatAppearance.BorderSize = 0;
-            this.csButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.csButton1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.csButton1.ForeColor = System.Drawing.Color.White;
-            this.csButton1.Location = new System.Drawing.Point(10, 208);
-            this.csButton1.Name = "csButton1";
-            this.csButton1.Size = new System.Drawing.Size(135, 40);
-            this.csButton1.TabIndex = 12;
-            this.csButton1.Text = "Gộp bàn";
-            this.csButton1.TextColor = System.Drawing.Color.White;
-            this.csButton1.UseVisualStyleBackColor = false;
             // 
             // FrmBan
             // 
