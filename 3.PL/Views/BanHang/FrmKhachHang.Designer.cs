@@ -196,6 +196,7 @@
             this.txt_HoTen.TabIndex = 7;
             this.txt_HoTen.Texts = "";
             this.txt_HoTen.UnderlinedStyle = false;
+            this.txt_HoTen._TextChanged += new System.EventHandler(this.txt_HoTen__TextChanged);
             // 
             // txt_MaKH
             // 

@@ -86,7 +86,7 @@ namespace _3.PL.Views.SanPham
         private void btn_Them_Click_1(object sender, EventArgs e)
         {
             var lsp = _iloaiSanPhamServices.GetAll().FirstOrDefault(c => c.Ten.ToLower() == txt_TenLSP.Texts.ToLower());
-            if (lsp == null)
+            if (lsp != null)
             {
                 MessageBox.Show("Loại sản phẩm này đã tồn tại");
             }

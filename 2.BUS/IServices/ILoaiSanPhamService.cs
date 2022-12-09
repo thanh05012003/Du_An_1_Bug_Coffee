@@ -13,5 +13,6 @@ namespace _2.BUS.IServices
         string delete(QlLoaiSanPhamView obj);
         string update(QlLoaiSanPhamView obj);
         List<QlLoaiSanPhamView> GetAll();
+        List<QlLoaiSanPhamView> GetAll(string input);
     }
 }

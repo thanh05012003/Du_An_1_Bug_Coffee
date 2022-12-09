@@ -46,11 +46,6 @@ namespace _3.PL.Views
             {
                 cbx_MaLoaiSP.Items.Add(x.Ma + "-" + x.Ten);
             }
-
-            if (cbx_MaLoaiSP != null)
-            {
-                cbx_MaLoaiSP.SelectedIndex = 0;
-            }
         }
 
         public void LoadDataLoaiSP()

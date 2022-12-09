@@ -36,14 +36,19 @@
             this.btn_TachHd = new CustomControls.RJControls.CSButton();
             this.btn_ChuyenBan = new CustomControls.RJControls.CSButton();
             this.dgrid_TTSp = new System.Windows.Forms.DataGridView();
-            this.btn_ThemMon = new CustomControls.RJControls.CSButton();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.cmb_LoaiSanPham = new CustomControls.RJControls.CSComboBox();
-            this.cmb_SanPham = new CustomControls.RJControls.CSComboBox();
             this.cmb_GopBan = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmb_SanPham = new CustomControls.RJControls.CSComboBox();
+            this.cmb_LoaiSanPham = new CustomControls.RJControls.CSComboBox();
+            this.nud_SoLuong = new System.Windows.Forms.NumericUpDown();
+            this.btn_ThemMon = new CustomControls.RJControls.CSButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_TTSp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_SoLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -165,50 +170,60 @@
             this.dgrid_TTSp.Size = new System.Drawing.Size(539, 373);
             this.dgrid_TTSp.TabIndex = 2;
             // 
-            // btn_ThemMon
+            // cmb_GopBan
             // 
-            this.btn_ThemMon.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_ThemMon.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_ThemMon.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_ThemMon.BorderRadius = 15;
-            this.btn_ThemMon.BorderSize = 0;
-            this.btn_ThemMon.FlatAppearance.BorderSize = 0;
-            this.btn_ThemMon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ThemMon.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_ThemMon.ForeColor = System.Drawing.Color.White;
-            this.btn_ThemMon.Location = new System.Drawing.Point(1124, 196);
-            this.btn_ThemMon.Name = "btn_ThemMon";
-            this.btn_ThemMon.Size = new System.Drawing.Size(123, 50);
-            this.btn_ThemMon.TabIndex = 3;
-            this.btn_ThemMon.Text = "Thêm món";
-            this.btn_ThemMon.TextColor = System.Drawing.Color.White;
-            this.btn_ThemMon.UseVisualStyleBackColor = false;
+            this.cmb_GopBan.FormattingEnabled = true;
+            this.cmb_GopBan.Location = new System.Drawing.Point(983, 55);
+            this.cmb_GopBan.Name = "cmb_GopBan";
+            this.cmb_GopBan.Size = new System.Drawing.Size(133, 28);
+            this.cmb_GopBan.TabIndex = 13;
             // 
-            // numericUpDown1
+            // groupBox1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(1267, 210);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(44, 27);
-            this.numericUpDown1.TabIndex = 4;
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.cmb_SanPham);
+            this.groupBox1.Controls.Add(this.cmb_LoaiSanPham);
+            this.groupBox1.Controls.Add(this.nud_SoLuong);
+            this.groupBox1.Controls.Add(this.btn_ThemMon);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox1.Location = new System.Drawing.Point(784, 89);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(539, 205);
+            this.groupBox1.TabIndex = 17;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thêm sản phẩm";
             // 
-            // cmb_LoaiSanPham
+            // label3
             // 
-            this.cmb_LoaiSanPham.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmb_LoaiSanPham.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmb_LoaiSanPham.BorderSize = 2;
-            this.cmb_LoaiSanPham.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmb_LoaiSanPham.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cmb_LoaiSanPham.ForeColor = System.Drawing.Color.DimGray;
-            this.cmb_LoaiSanPham.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmb_LoaiSanPham.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cmb_LoaiSanPham.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmb_LoaiSanPham.Location = new System.Drawing.Point(792, 179);
-            this.cmb_LoaiSanPham.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmb_LoaiSanPham.Name = "cmb_LoaiSanPham";
-            this.cmb_LoaiSanPham.Padding = new System.Windows.Forms.Padding(2);
-            this.cmb_LoaiSanPham.Size = new System.Drawing.Size(250, 34);
-            this.cmb_LoaiSanPham.TabIndex = 5;
-            this.cmb_LoaiSanPham.Texts = "";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(324, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 23);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Số lượng";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(23, 121);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 23);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Tên sản phẩm";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(21, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(125, 23);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Loại sản phẩm";
             // 
             // cmb_SanPham
             // 
@@ -221,36 +236,82 @@
             this.cmb_SanPham.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.cmb_SanPham.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmb_SanPham.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmb_SanPham.Location = new System.Drawing.Point(792, 233);
+            this.cmb_SanPham.Location = new System.Drawing.Point(23, 155);
             this.cmb_SanPham.MinimumSize = new System.Drawing.Size(200, 30);
             this.cmb_SanPham.Name = "cmb_SanPham";
             this.cmb_SanPham.Padding = new System.Windows.Forms.Padding(2);
             this.cmb_SanPham.Size = new System.Drawing.Size(250, 34);
-            this.cmb_SanPham.TabIndex = 6;
+            this.cmb_SanPham.TabIndex = 20;
             this.cmb_SanPham.Texts = "";
             // 
-            // cmb_GopBan
+            // cmb_LoaiSanPham
             // 
-            this.cmb_GopBan.FormattingEnabled = true;
-            this.cmb_GopBan.Location = new System.Drawing.Point(983, 55);
-            this.cmb_GopBan.Name = "cmb_GopBan";
-            this.cmb_GopBan.Size = new System.Drawing.Size(133, 28);
-            this.cmb_GopBan.TabIndex = 13;
+            this.cmb_LoaiSanPham.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmb_LoaiSanPham.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmb_LoaiSanPham.BorderSize = 2;
+            this.cmb_LoaiSanPham.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmb_LoaiSanPham.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmb_LoaiSanPham.ForeColor = System.Drawing.Color.DimGray;
+            this.cmb_LoaiSanPham.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmb_LoaiSanPham.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmb_LoaiSanPham.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmb_LoaiSanPham.Location = new System.Drawing.Point(23, 76);
+            this.cmb_LoaiSanPham.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmb_LoaiSanPham.Name = "cmb_LoaiSanPham";
+            this.cmb_LoaiSanPham.Padding = new System.Windows.Forms.Padding(2);
+            this.cmb_LoaiSanPham.Size = new System.Drawing.Size(250, 34);
+            this.cmb_LoaiSanPham.TabIndex = 19;
+            this.cmb_LoaiSanPham.Texts = "";
+            this.cmb_LoaiSanPham.OnSelectedIndexChanged += new System.EventHandler(this.cmb_LoaiSanPham_OnSelectedIndexChanged_1);
+            // 
+            // nud_SoLuong
+            // 
+            this.nud_SoLuong.Location = new System.Drawing.Point(326, 80);
+            this.nud_SoLuong.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nud_SoLuong.Name = "nud_SoLuong";
+            this.nud_SoLuong.Size = new System.Drawing.Size(94, 27);
+            this.nud_SoLuong.TabIndex = 18;
+            this.nud_SoLuong.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // btn_ThemMon
+            // 
+            this.btn_ThemMon.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_ThemMon.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_ThemMon.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_ThemMon.BorderRadius = 15;
+            this.btn_ThemMon.BorderSize = 0;
+            this.btn_ThemMon.FlatAppearance.BorderSize = 0;
+            this.btn_ThemMon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ThemMon.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_ThemMon.ForeColor = System.Drawing.Color.White;
+            this.btn_ThemMon.Location = new System.Drawing.Point(324, 139);
+            this.btn_ThemMon.Name = "btn_ThemMon";
+            this.btn_ThemMon.Size = new System.Drawing.Size(123, 50);
+            this.btn_ThemMon.TabIndex = 17;
+            this.btn_ThemMon.Text = "Thêm món";
+            this.btn_ThemMon.TextColor = System.Drawing.Color.White;
+            this.btn_ThemMon.UseVisualStyleBackColor = false;
+            this.btn_ThemMon.Click += new System.EventHandler(this.btn_ThemMon_Click_1);
             // 
             // FrmBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1323, 847);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cmb_GopBan);
             this.Controls.Add(this.btn_GopBan);
-            this.Controls.Add(this.cmb_SanPham);
             this.Controls.Add(this.cmb_Ban);
-            this.Controls.Add(this.cmb_LoaiSanPham);
             this.Controls.Add(this.btn_TachHd);
-            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.btn_ChuyenBan);
-            this.Controls.Add(this.btn_ThemMon);
             this.Controls.Add(this.dgrid_TTSp);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -258,7 +319,9 @@
             this.Text = "FrmBan";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_TTSp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_SoLuong)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -272,11 +335,15 @@
         private System.Windows.Forms.ComboBox cmb_Ban;
         private CustomControls.RJControls.CSButton btn_TachHd;
         private CustomControls.RJControls.CSButton btn_ChuyenBan;
-        private CustomControls.RJControls.CSButton btn_ThemMon;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private CustomControls.RJControls.CSComboBox cmb_LoaiSanPham;
-        private CustomControls.RJControls.CSComboBox cmb_SanPham;
         private CustomControls.RJControls.CSButton btn_GopBan;
         private System.Windows.Forms.ComboBox cmb_GopBan;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private CustomControls.RJControls.CSComboBox cmb_SanPham;
+        private CustomControls.RJControls.CSComboBox cmb_LoaiSanPham;
+        private System.Windows.Forms.NumericUpDown nud_SoLuong;
+        private CustomControls.RJControls.CSButton btn_ThemMon;
     }
 }

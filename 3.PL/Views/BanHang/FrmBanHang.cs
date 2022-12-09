@@ -297,7 +297,6 @@ namespace _3.PL.Views.BanHang
                     _maHDWhenClick = "";
                 }
             }
-            
         }
         private void txt_DonGiaSP_KeyPress(object sender, KeyPressEventArgs e) // chỉ cho phép nhập số
         {

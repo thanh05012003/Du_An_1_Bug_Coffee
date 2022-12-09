@@ -48,6 +48,7 @@
             this.btn_DangXuat = new System.Windows.Forms.Button();
             this.gr_CuaHang = new System.Windows.Forms.GroupBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btn_Themban = new CustomControls.RJControls.CSButton();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -246,6 +247,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panel2.Controls.Add(this.btn_Themban);
             this.panel2.Controls.Add(this.btn_DoiMatKhau);
             this.panel2.Controls.Add(this.lb_UserName);
             this.panel2.Controls.Add(this.panel3);
@@ -265,7 +267,7 @@
             this.btn_DoiMatKhau.FlatAppearance.BorderSize = 0;
             this.btn_DoiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DoiMatKhau.ForeColor = System.Drawing.Color.Black;
-            this.btn_DoiMatKhau.Location = new System.Drawing.Point(16, 14);
+            this.btn_DoiMatKhau.Location = new System.Drawing.Point(124, 14);
             this.btn_DoiMatKhau.Name = "btn_DoiMatKhau";
             this.btn_DoiMatKhau.Size = new System.Drawing.Size(129, 42);
             this.btn_DoiMatKhau.TabIndex = 7;
@@ -279,7 +281,7 @@
             this.lb_UserName.AutoSize = true;
             this.lb_UserName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lb_UserName.ForeColor = System.Drawing.Color.White;
-            this.lb_UserName.Location = new System.Drawing.Point(331, 22);
+            this.lb_UserName.Location = new System.Drawing.Point(439, 22);
             this.lb_UserName.Name = "lb_UserName";
             this.lb_UserName.Size = new System.Drawing.Size(170, 23);
             this.lb_UserName.TabIndex = 5;
@@ -307,7 +309,7 @@
             // 
             // btn_DangXuat
             // 
-            this.btn_DangXuat.Location = new System.Drawing.Point(164, 14);
+            this.btn_DangXuat.Location = new System.Drawing.Point(272, 14);
             this.btn_DangXuat.Name = "btn_DangXuat";
             this.btn_DangXuat.Size = new System.Drawing.Size(123, 41);
             this.btn_DangXuat.TabIndex = 2;
@@ -330,6 +332,26 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // btn_Themban
+            // 
+            this.btn_Themban.AutoSize = true;
+            this.btn_Themban.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Themban.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Themban.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Themban.BorderRadius = 5;
+            this.btn_Themban.BorderSize = 0;
+            this.btn_Themban.FlatAppearance.BorderSize = 0;
+            this.btn_Themban.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Themban.ForeColor = System.Drawing.Color.Black;
+            this.btn_Themban.Location = new System.Drawing.Point(6, 13);
+            this.btn_Themban.Name = "btn_Themban";
+            this.btn_Themban.Size = new System.Drawing.Size(85, 42);
+            this.btn_Themban.TabIndex = 8;
+            this.btn_Themban.Text = "Thêm bàn";
+            this.btn_Themban.TextColor = System.Drawing.Color.Black;
+            this.btn_Themban.UseVisualStyleBackColor = false;
+            this.btn_Themban.Click += new System.EventHandler(this.btn_Themban_Click);
             // 
             // FrmMain
             // 
@@ -374,6 +396,6 @@
         private CustomControls.RJControls.CSButton btn_SanPham;
         private CustomControls.RJControls.CSButton btn_TrangChu;
         private CustomControls.RJControls.CSButton btn_DoiMatKhau;
-    
+        private CustomControls.RJControls.CSButton btn_Themban;
     }
 }

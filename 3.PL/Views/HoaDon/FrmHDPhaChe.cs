@@ -38,7 +38,7 @@ namespace _3.PL.Views
             dgrid_HoaDon.Rows.Clear();
             foreach (var x in _hoaDonService.GetAll())
             {
-                if (x.TrangThai == "Chờ pha chế" || x.GhiChu =="Mang đi" || x.GhiChu =="Chờ pha chế")
+                if (x.TrangThai == "Chờ pha chế" || x.GhiChu =="Mang đi" || x.GhiChu == "Chờ pha chế")
                 {
                     dgrid_HoaDon.Rows.Add(x.Ma, x.TenNV, x.NgayTao,x.TrangThai,x.GhiChu);
                 }
@@ -48,27 +48,30 @@ namespace _3.PL.Views
 
         private void btn_XacNhan_Click(object sender, EventArgs e)
         {
-            
-            var hd = _hoaDonService.GetAll().FirstOrDefault(c => c.Ma == _maWhenClick);
-            if (hd != null)
+            DialogResult dlg = MessageBox.Show("Xác nhận đã hoàn thành", "xác nhận", MessageBoxButtons.OKCancel);
+            if ( dlg == DialogResult.OK)
             {
-                if (hd.GhiChu == "Mang đi" || hd.GhiChu == "Chờ pha chế")
+                var hd = _hoaDonService.GetAll().FirstOrDefault(c => c.Ma == _maWhenClick);
+                if (hd != null)
                 {
-                    hd.TrangThai = "Đã thanh toán";
-                    hd.GhiChu = "Hoàn thành";
-                   MessageBox.Show(_hoaDonService.update(hd));
-                   _maWhenClick = "";
-                    loadHoaDon();
-                   loadHdCt();
-                }
-                else if (hd.TrangThai == "Chờ pha chế")
-                {
-                    hd.TrangThai = "Chờ thanh toán";
-                    hd.GhiChu = "";
-                    MessageBox.Show(_hoaDonService.update(hd));
-                    _maWhenClick = "";
-                    loadHoaDon();
-                    loadHdCt();
+                    if (hd.GhiChu == "Mang đi" || hd.GhiChu == "Chờ pha chế")
+                    {
+                        hd.TrangThai = "Đã thanh toán";
+                        hd.GhiChu = "Hoàn thành";
+                        MessageBox.Show(_hoaDonService.update(hd));
+                        _maWhenClick = "";
+                        loadHoaDon();
+                        loadHdCt();
+                    }
+                    else if (hd.TrangThai == "Chờ pha chế")
+                    {
+                        hd.TrangThai = "Chờ thanh toán";
+                        hd.GhiChu = "";
+                        MessageBox.Show(_hoaDonService.update(hd));
+                        _maWhenClick = "";
+                        loadHoaDon();
+                        loadHdCt();
+                    }
                 }
             }
         }

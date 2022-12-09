@@ -31,30 +31,8 @@
             this.pane_LSHD = new System.Windows.Forms.Panel();
             this.btn_KhoiPhuc = new System.Windows.Forms.Button();
             this.dgrid_HoaDonCT = new System.Windows.Forms.DataGridView();
-            this.txt_DiaChi = new System.Windows.Forms.TextBox();
             this.txt_GhiChu = new System.Windows.Forms.TextBox();
-            this.lbl_TrangThai = new System.Windows.Forms.Label();
-            this.lbl_TongTienHD = new System.Windows.Forms.Label();
-            this.lbl_ChiPhi = new System.Windows.Forms.Label();
-            this.lbl_TongTienSP = new System.Windows.Forms.Label();
-            this.lbl_LoaiTT = new System.Windows.Forms.Label();
-            this.lbl_TGThanhToan = new System.Windows.Forms.Label();
-            this.lbl_TGTao = new System.Windows.Forms.Label();
-            this.lbl_Sdt = new System.Windows.Forms.Label();
-            this.lbl_KhachHang = new System.Windows.Forms.Label();
-            this.lbl_MaHD = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dgrid_HoaDon = new System.Windows.Forms.DataGridView();
@@ -79,30 +57,8 @@
             this.pane_LSHD.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.pane_LSHD.Controls.Add(this.btn_KhoiPhuc);
             this.pane_LSHD.Controls.Add(this.dgrid_HoaDonCT);
-            this.pane_LSHD.Controls.Add(this.txt_DiaChi);
             this.pane_LSHD.Controls.Add(this.txt_GhiChu);
-            this.pane_LSHD.Controls.Add(this.lbl_TrangThai);
-            this.pane_LSHD.Controls.Add(this.lbl_TongTienHD);
-            this.pane_LSHD.Controls.Add(this.lbl_ChiPhi);
-            this.pane_LSHD.Controls.Add(this.lbl_TongTienSP);
-            this.pane_LSHD.Controls.Add(this.lbl_LoaiTT);
-            this.pane_LSHD.Controls.Add(this.lbl_TGThanhToan);
-            this.pane_LSHD.Controls.Add(this.lbl_TGTao);
-            this.pane_LSHD.Controls.Add(this.lbl_Sdt);
-            this.pane_LSHD.Controls.Add(this.lbl_KhachHang);
-            this.pane_LSHD.Controls.Add(this.lbl_MaHD);
-            this.pane_LSHD.Controls.Add(this.label14);
-            this.pane_LSHD.Controls.Add(this.label13);
-            this.pane_LSHD.Controls.Add(this.label12);
-            this.pane_LSHD.Controls.Add(this.label11);
-            this.pane_LSHD.Controls.Add(this.label10);
             this.pane_LSHD.Controls.Add(this.label9);
-            this.pane_LSHD.Controls.Add(this.label8);
-            this.pane_LSHD.Controls.Add(this.label7);
-            this.pane_LSHD.Controls.Add(this.label6);
-            this.pane_LSHD.Controls.Add(this.label25);
-            this.pane_LSHD.Controls.Add(this.label26);
-            this.pane_LSHD.Controls.Add(this.label27);
             this.pane_LSHD.Controls.Add(this.textBox4);
             this.pane_LSHD.Controls.Add(this.label5);
             this.pane_LSHD.Controls.Add(this.dgrid_HoaDon);
@@ -128,7 +84,7 @@
             this.btn_KhoiPhuc.BackColor = System.Drawing.Color.Ivory;
             this.btn_KhoiPhuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_KhoiPhuc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_KhoiPhuc.Location = new System.Drawing.Point(895, 612);
+            this.btn_KhoiPhuc.Location = new System.Drawing.Point(562, 637);
             this.btn_KhoiPhuc.Name = "btn_KhoiPhuc";
             this.btn_KhoiPhuc.Size = new System.Drawing.Size(150, 64);
             this.btn_KhoiPhuc.TabIndex = 54;
@@ -140,20 +96,12 @@
             // 
             this.dgrid_HoaDonCT.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgrid_HoaDonCT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrid_HoaDonCT.Location = new System.Drawing.Point(666, 378);
+            this.dgrid_HoaDonCT.Location = new System.Drawing.Point(13, 378);
             this.dgrid_HoaDonCT.Name = "dgrid_HoaDonCT";
             this.dgrid_HoaDonCT.RowHeadersWidth = 51;
             this.dgrid_HoaDonCT.RowTemplate.Height = 29;
-            this.dgrid_HoaDonCT.Size = new System.Drawing.Size(611, 177);
+            this.dgrid_HoaDonCT.Size = new System.Drawing.Size(1264, 177);
             this.dgrid_HoaDonCT.TabIndex = 53;
-            // 
-            // txt_DiaChi
-            // 
-            this.txt_DiaChi.Location = new System.Drawing.Point(353, 647);
-            this.txt_DiaChi.Multiline = true;
-            this.txt_DiaChi.Name = "txt_DiaChi";
-            this.txt_DiaChi.Size = new System.Drawing.Size(269, 77);
-            this.txt_DiaChi.TabIndex = 52;
             // 
             // txt_GhiChu
             // 
@@ -162,155 +110,6 @@
             this.txt_GhiChu.Name = "txt_GhiChu";
             this.txt_GhiChu.Size = new System.Drawing.Size(269, 77);
             this.txt_GhiChu.TabIndex = 51;
-            // 
-            // lbl_TrangThai
-            // 
-            this.lbl_TrangThai.AutoSize = true;
-            this.lbl_TrangThai.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_TrangThai.Location = new System.Drawing.Point(353, 414);
-            this.lbl_TrangThai.Name = "lbl_TrangThai";
-            this.lbl_TrangThai.Size = new System.Drawing.Size(35, 40);
-            this.lbl_TrangThai.TabIndex = 50;
-            this.lbl_TrangThai.Text = "X";
-            // 
-            // lbl_TongTienHD
-            // 
-            this.lbl_TongTienHD.AutoSize = true;
-            this.lbl_TongTienHD.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_TongTienHD.Location = new System.Drawing.Point(545, 574);
-            this.lbl_TongTienHD.Name = "lbl_TongTienHD";
-            this.lbl_TongTienHD.Size = new System.Drawing.Size(21, 24);
-            this.lbl_TongTienHD.TabIndex = 49;
-            this.lbl_TongTienHD.Text = "X";
-            // 
-            // lbl_ChiPhi
-            // 
-            this.lbl_ChiPhi.AutoSize = true;
-            this.lbl_ChiPhi.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_ChiPhi.Location = new System.Drawing.Point(545, 531);
-            this.lbl_ChiPhi.Name = "lbl_ChiPhi";
-            this.lbl_ChiPhi.Size = new System.Drawing.Size(21, 24);
-            this.lbl_ChiPhi.TabIndex = 48;
-            this.lbl_ChiPhi.Text = "X";
-            // 
-            // lbl_TongTienSP
-            // 
-            this.lbl_TongTienSP.AutoSize = true;
-            this.lbl_TongTienSP.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_TongTienSP.Location = new System.Drawing.Point(545, 487);
-            this.lbl_TongTienSP.Name = "lbl_TongTienSP";
-            this.lbl_TongTienSP.Size = new System.Drawing.Size(21, 24);
-            this.lbl_TongTienSP.TabIndex = 47;
-            this.lbl_TongTienSP.Text = "X";
-            // 
-            // lbl_LoaiTT
-            // 
-            this.lbl_LoaiTT.AutoSize = true;
-            this.lbl_LoaiTT.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_LoaiTT.Location = new System.Drawing.Point(208, 574);
-            this.lbl_LoaiTT.Name = "lbl_LoaiTT";
-            this.lbl_LoaiTT.Size = new System.Drawing.Size(21, 24);
-            this.lbl_LoaiTT.TabIndex = 46;
-            this.lbl_LoaiTT.Text = "X";
-            // 
-            // lbl_TGThanhToan
-            // 
-            this.lbl_TGThanhToan.AutoSize = true;
-            this.lbl_TGThanhToan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_TGThanhToan.Location = new System.Drawing.Point(208, 531);
-            this.lbl_TGThanhToan.Name = "lbl_TGThanhToan";
-            this.lbl_TGThanhToan.Size = new System.Drawing.Size(21, 24);
-            this.lbl_TGThanhToan.TabIndex = 45;
-            this.lbl_TGThanhToan.Text = "X";
-            // 
-            // lbl_TGTao
-            // 
-            this.lbl_TGTao.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_TGTao.Location = new System.Drawing.Point(208, 487);
-            this.lbl_TGTao.Name = "lbl_TGTao";
-            this.lbl_TGTao.Size = new System.Drawing.Size(139, 44);
-            this.lbl_TGTao.TabIndex = 44;
-            this.lbl_TGTao.Text = "X";
-            // 
-            // lbl_Sdt
-            // 
-            this.lbl_Sdt.AutoSize = true;
-            this.lbl_Sdt.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_Sdt.Location = new System.Drawing.Point(208, 444);
-            this.lbl_Sdt.Name = "lbl_Sdt";
-            this.lbl_Sdt.Size = new System.Drawing.Size(21, 24);
-            this.lbl_Sdt.TabIndex = 43;
-            this.lbl_Sdt.Text = "X";
-            // 
-            // lbl_KhachHang
-            // 
-            this.lbl_KhachHang.AutoSize = true;
-            this.lbl_KhachHang.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_KhachHang.Location = new System.Drawing.Point(208, 403);
-            this.lbl_KhachHang.Name = "lbl_KhachHang";
-            this.lbl_KhachHang.Size = new System.Drawing.Size(21, 24);
-            this.lbl_KhachHang.TabIndex = 42;
-            this.lbl_KhachHang.Text = "X";
-            // 
-            // lbl_MaHD
-            // 
-            this.lbl_MaHD.AutoSize = true;
-            this.lbl_MaHD.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_MaHD.Location = new System.Drawing.Point(208, 362);
-            this.lbl_MaHD.Name = "lbl_MaHD";
-            this.lbl_MaHD.Size = new System.Drawing.Size(21, 24);
-            this.lbl_MaHD.TabIndex = 41;
-            this.lbl_MaHD.Text = "X";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(353, 616);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 24);
-            this.label14.TabIndex = 40;
-            this.label14.Text = "Địa chỉ:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(353, 574);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(124, 24);
-            this.label13.TabIndex = 39;
-            this.label13.Text = "Tổng tiền HD:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(353, 487);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(118, 24);
-            this.label12.TabIndex = 38;
-            this.label12.Text = "Tổng tiền SP:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(353, 531);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(119, 24);
-            this.label11.TabIndex = 37;
-            this.label11.Text = "Chi phí khác:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(353, 362);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(100, 24);
-            this.label10.TabIndex = 36;
-            this.label10.Text = "Trạng thái:";
             // 
             // label9
             // 
@@ -321,66 +120,6 @@
             this.label9.Size = new System.Drawing.Size(80, 24);
             this.label9.TabIndex = 35;
             this.label9.Text = "Ghi chú:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(19, 574);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(149, 24);
-            this.label8.TabIndex = 34;
-            this.label8.Text = "Loại thanh toán:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(19, 531);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(137, 24);
-            this.label7.TabIndex = 33;
-            this.label7.Text = "TG thanh toán:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(19, 487);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 24);
-            this.label6.TabIndex = 32;
-            this.label6.Text = "TG tạo:";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label25.Location = new System.Drawing.Point(19, 444);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(47, 24);
-            this.label25.TabIndex = 31;
-            this.label25.Text = "SĐT:";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label26.Location = new System.Drawing.Point(19, 403);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(113, 24);
-            this.label26.TabIndex = 30;
-            this.label26.Text = "Khách hàng:";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label27.Location = new System.Drawing.Point(19, 362);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(74, 24);
-            this.label27.TabIndex = 29;
-            this.label27.Text = "Mã HD:";
             // 
             // textBox4
             // 
@@ -546,30 +285,8 @@
         private System.Windows.Forms.Panel pane_LSHD;
         private System.Windows.Forms.Button btn_KhoiPhuc;
         private System.Windows.Forms.DataGridView dgrid_HoaDonCT;
-        private System.Windows.Forms.TextBox txt_DiaChi;
         private System.Windows.Forms.TextBox txt_GhiChu;
-        private System.Windows.Forms.Label lbl_TrangThai;
-        private System.Windows.Forms.Label lbl_TongTienHD;
-        private System.Windows.Forms.Label lbl_ChiPhi;
-        private System.Windows.Forms.Label lbl_TongTienSP;
-        private System.Windows.Forms.Label lbl_LoaiTT;
-        private System.Windows.Forms.Label lbl_TGThanhToan;
-        private System.Windows.Forms.Label lbl_TGTao;
-        private System.Windows.Forms.Label lbl_Sdt;
-        private System.Windows.Forms.Label lbl_KhachHang;
-        private System.Windows.Forms.Label lbl_MaHD;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgrid_HoaDon;

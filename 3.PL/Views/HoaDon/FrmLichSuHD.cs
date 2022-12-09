@@ -19,12 +19,14 @@ namespace _3.PL.Views
         private IHoaDonCTService _ihoaDonCTServices;
         private IKhachHangService _khachHangService;
         private string _maHdWhenClick;
+        private IBanService _banService;
         public FrmLichSuHD()
         {
             InitializeComponent();
             _ihoaDonServices = new HoaDonService();
             _ihoaDonCTServices = new HoaDonCTService();
            _khachHangService = new KhachHangService();
+           _banService = new BanService();
             LoadHoaDon();
             LoadHoaDonCT(null);
         }
@@ -114,14 +116,10 @@ namespace _3.PL.Views
             {
                 foreach (var c in _ihoaDonServices.GetAll().Where(c =>c.Ma == x.MaHD))
                 {
-                    lbl_MaHD.Text = c.Ma;
-                    lbl_KhachHang.Text = c.MaKH;
-                    lbl_TGTao.Text = c.NgayTao.Value.ToString("dd-MM-yyyy HH:mm:ss");
                     tongtien += (x.DonGia * x.SoLuong);
                 }
-               
             }
-            lbl_TongTienSP.Text = tongtien.ToString("C0");
+            
         }
 
         private void btn_KhoiPhuc_Click(object sender, EventArgs e)
@@ -129,12 +127,16 @@ namespace _3.PL.Views
             var hd = _ihoaDonServices.GetAll().FirstOrDefault(c => c.Ma == _maHdWhenClick);
             if (hd != null)
             {
-                hd.TrangThai = "Chờ pha chế";
-                hd.GhiChu = "Khôi phục hoá đơn vì "+ txt_GhiChu.Text;
+                var ban = _banService.GetAll().FirstOrDefault(c => c.Ma == hd.MaBan);
+                
+                hd.TrangThai = "Chờ thanh toán";
+                hd.GhiChu = "Khôi phục hoá đơn vì " + txt_GhiChu.Text;
                 _ihoaDonServices.update(hd);
-                MessageBox.Show("Khôi phục thành công");
                 LoadHoaDon();
                 LoadHoaDonCT(null);
+                ban.TrangThai = 0;
+                _banService.update(ban);
+                MessageBox.Show("Khôi phục thành công");
             }
         }
     }

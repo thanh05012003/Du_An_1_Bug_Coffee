@@ -50,7 +50,14 @@ namespace _1.DAL.Repositories
             temp.DonGia = obj.DonGia;
             temp.TrangThai = obj.TrangThai;
             _DbContext.HoaDonCT.Update(temp);
-            _DbContext.SaveChanges();
+            try
+            {
+                _DbContext.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
             return true;
         }
     }

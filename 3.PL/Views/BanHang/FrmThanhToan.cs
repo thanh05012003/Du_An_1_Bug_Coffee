@@ -66,14 +66,9 @@ namespace _3.PL.Views.BanHang
             lb_TongTien.Text = tongtien.ToString("C0");
         }
 
-
-        private void btn_ThanhToan_Click(object sender, EventArgs e)
+        public void thanhToan()
         {
-            DialogResult dr = MessageBox.Show("Bạn có chắc muốn thanh toán không ?", "Xác nhận",
-                MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (dr == DialogResult.OK)
-            {
-                var hd = _HoaDonService.GetAll().FirstOrDefault(c =>
+              var hd = _HoaDonService.GetAll().FirstOrDefault(c =>
                     c.MaBan == Properties.Settings.Default.MaBan && c.Ma == Properties.Settings.Default.MaHd ||
                     c.Ma == Properties.Settings.Default.MaHd);
                 var ban = _BanService.GetAll().FirstOrDefault(c => c.Ma == Properties.Settings.Default.MaBan);
@@ -93,6 +88,13 @@ namespace _3.PL.Views.BanHang
                         hd.GhiChu = "Chờ pha chế";
                         _HoaDonService.update(hd);
                         MessageBox.Show("Thanh toán thành công");
+                        var kh = _KhachHangService.GetAll().FirstOrDefault(c => c.SDT == txt_SDT.Texts);
+                        if (kh != null)
+                        {
+                            kh.DiemTL = (kh.DiemTL + 1000);
+                            _KhachHangService.update(kh);
+                        }
+
                         this.Close();
                     }
                     else
@@ -103,9 +105,25 @@ namespace _3.PL.Views.BanHang
                         _HoaDonService.update(hd);
                         MessageBox.Show("Thanh toán thành công");
                         Properties.Settings.Default.MaBan = "";
+                        var kh = _KhachHangService.GetAll().FirstOrDefault(c => c.SDT == txt_SDT.Texts);
+                        if (kh != null)
+                        {
+                            kh.DiemTL = (kh.DiemTL + 1000);
+                            _KhachHangService.update(kh);
+                        }
+
                         this.Close();
                     }
                 }
+        }
+
+        private void btn_ThanhToan_Click(object sender, EventArgs e)
+        {  
+            DialogResult dr = MessageBox.Show("Bạn có muốn thanh toán không ?", "Xác nhận",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                XuatHoaDon();
             }
         }
 
@@ -195,57 +213,62 @@ namespace _3.PL.Views.BanHang
 
         private void btn_XacNhan_Click(object sender, EventArgs e)
         {
-            getdata();
+           getdata();
         }
 
         public void XuatHoaDon()
         {
-            //Bước 1: Nạp file mẫu
-            string pa = @"C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\Template\HoaDon_TheBugCoffee1.doc";
-            Document HoaDon = new Document(pa);
-            string tenTep = "";
-            foreach (var x in _HoaDonService.GetAll(Properties.Settings.Default.MaHd))
+            DialogResult dr = MessageBox.Show("Bạn có xuất hoá đơn không ?", "Xác nhận",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
             {
-                //Bước 2: Điền các thông tin cố định
-                HoaDon.MailMerge.Execute(new[] { "BAN_X" }, new[] { x.TenBan });
-                HoaDon.MailMerge.Execute(new[] { "Ngay_Tao" }, new[] { x.NgayTao.Value.ToString() });
-                HoaDon.MailMerge.Execute(new[] { "Ten_Nv" }, new[] { x.TenNV });
-                HoaDon.MailMerge.Execute(new[] { "Gio_Ra" }, new[] { DateTime.Now.ToString("hh:mm:ss") });
-                HoaDon.MailMerge.Execute(new[] { "Tien_Hang" }, new[] { tienHang.ToString("C0") });
-                HoaDon.MailMerge.Execute(new[] { "Giam_Gia" }, new[] { giamGia.ToString() });
-                HoaDon.MailMerge.Execute(new[] { "Ten_Kh" }, new[] { txt_TenKhachHang.Texts });
-                HoaDon.MailMerge.Execute(new[] { "Ma_hd" }, new[] { x.Ma });
-
-                string path = @"C:\Users\ADMIN\Desktop\HoaDon"; // đường dẫn folder
-                if (!Directory.Exists(path))
-                    Directory.CreateDirectory(path); // tạo folder ( Hoá đơn) mới nếu chưa có
-                Random rd = new Random();
-                tenTep = $"{path}\\{$"{rd.Next(1000) + x.Ma}.docx"}";
-
-                //Bước 3: Điền thông tin lên bảng
-                Table ThongTinSanPham = HoaDon.GetChild(NodeType.Table, 0, true) as Table;//Lấy bảng thứ 1 trong file mẫu
-                int HangHienTai = 1;
-                ThongTinSanPham.InsertRows(HangHienTai, HangHienTai, 1);
-                for (int i = 1; i <= _HoaDonCTService.GetAll(Properties.Settings.Default.MaHd).Count - 1; i++)
+                //Bước 1: Nạp file mẫu
+                string pa = @"C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\Template\HoaDon_TheBugCoffee1.doc";
+                Document HoaDon = new Document(pa);
+                string tenTep = "";
+                foreach (var x in _HoaDonService.GetAll(Properties.Settings.Default.MaHd))
                 {
-                    ThongTinSanPham.PutValue(HangHienTai, 0, (1).ToString());//Cột STT
-                    ThongTinSanPham.PutValue(HangHienTai, 1, x.TenSP);//Cột mặt hàng
-                    ThongTinSanPham.PutValue(HangHienTai, 2, x.Soluong.ToString());//Cột số lượng
-                    ThongTinSanPham.PutValue(HangHienTai, 3, x.DonGia.ToString("C0"));//Cột đơn giá
-                    HangHienTai++;
+                    //Bước 2: Điền các thông tin cố định
+                    HoaDon.MailMerge.Execute(new[] { "BAN_X" }, new[] { x.TenBan });
+                    HoaDon.MailMerge.Execute(new[] { "Ngay_Tao" }, new[] { x.NgayTao.Value.ToString() });
+                    HoaDon.MailMerge.Execute(new[] { "Ten_Nv" }, new[] { x.TenNV });
+                    HoaDon.MailMerge.Execute(new[] { "Gio_Ra" }, new[] { DateTime.Now.ToString("hh:mm:ss") });
+                    HoaDon.MailMerge.Execute(new[] { "Tien_Hang" }, new[] { tienHang.ToString("C0") });
+                    HoaDon.MailMerge.Execute(new[] { "Giam_Gia" }, new[] { giamGia.ToString() });
+                    HoaDon.MailMerge.Execute(new[] { "Ten_Kh" }, new[] { txt_TenKhachHang.Texts });
+                    HoaDon.MailMerge.Execute(new[] { "Ma_hd" }, new[] { x.Ma });
+                    HoaDon.MailMerge.Execute(new[] { "Tong_Tien" }, new[] { tongtien.ToString("C0") });
+
+                    string path = @"C:\Users\ADMIN\Desktop\HoaDon"; // đường dẫn folder
+                    if (!Directory.Exists(path))
+                        Directory.CreateDirectory(path); // tạo folder ( Hoá đơn) mới nếu chưa có
+                    Random rd = new Random();
+                    tenTep = $"{path}\\{$"{rd.Next(1000) + x.Ma}.docx"}";
+
+                    //Bước 3: Điền thông tin lên bảng
+                    Table ThongTinSanPham = HoaDon.GetChild(NodeType.Table, 0, true) as Table;//Lấy bảng thứ 1 trong file mẫu
+                    int HangHienTai = 1;
+                    ThongTinSanPham.InsertRows(HangHienTai, HangHienTai, 1);
+
+                    for (int i = 1; i <= _HoaDonCTService.GetAll(Properties.Settings.Default.MaHd).Count - 1; i++)
+                    {
+                        ThongTinSanPham.PutValue(HangHienTai, 0, (1).ToString());//Cột STT
+                        ThongTinSanPham.PutValue(HangHienTai, 1, x.TenSP);//Cột mặt hàng
+                        ThongTinSanPham.PutValue(HangHienTai, 2, x.Soluong.ToString());//Cột số lượng
+                        ThongTinSanPham.PutValue(HangHienTai, 3, x.DonGia.ToString("C0"));//Cột đơn giá
+                        HangHienTai++;
+                    }
                 }
+                HoaDon.Save(tenTep);
+                MessageBox.Show("xuất hoá đơn thành công");
+                
+                thanhToan();
             }
-            HoaDon.Save(tenTep);
-        }
-        private void btn_XuatHoaDon_Click(object sender, EventArgs e)
-        {
-            DialogResult dr = MessageBox.Show("Bạn có chắc xuất hoá không ?", "Xác nhận",
-                MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (dr == DialogResult.OK)
+            else
             {
-                XuatHoaDon();
-                MessageBox.Show("Xuất hoá đơn thành công");
+                thanhToan();
             }
+           
         }
 
     }

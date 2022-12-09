@@ -41,7 +41,14 @@ namespace _1.DAL.Repositories
         public bool Update(KhachHang obj)
         {
             if (obj == null) return false;
-            _DbContext.Update(obj);
+            var temp = _DbContext.KhachHang.FirstOrDefault(c =>c.Ma == obj.Ma);
+            temp.Ma = obj.Ma;
+            temp.Ten = obj.Ten;
+            temp.DiaChi = obj.DiaChi;
+            temp.DiemTL = obj.DiemTL;
+            temp.NgaySinh = obj.NgaySinh;
+            temp.SDT = obj.SDT;
+            _DbContext.Update(temp);
             _DbContext.SaveChanges();
             return true;
         }

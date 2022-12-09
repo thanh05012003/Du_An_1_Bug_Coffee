@@ -66,5 +66,15 @@ namespace _2.BUS.Services
                 };
             return lstLoaiSp.ToList();
         }
+
+        public List<QlLoaiSanPhamView> GetAll(string input)
+        {
+            if (input == null)
+            {
+                return GetAll();
+            }
+
+            return GetAll().Where(c => c.Ma == input).ToList();
+        }
     }
 }

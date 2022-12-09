@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows.Forms;
 using _2.BUS.IServices;
 using _2.BUS.Services;
+using _2.BUS.ViewModels;
 using _3.PL.Views.BanHang;
 
 
@@ -127,7 +128,7 @@ namespace _3.PL.Views
             }
         }
 
-        private void btn_TrangChu_Click(object sender, EventArgs e)
+        public void btn_TrangChu_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmBan(),sender);
         }
@@ -158,5 +159,28 @@ namespace _3.PL.Views
             }
         }
 
+        private void btn_Themban_Click(object sender, EventArgs e)
+        {
+            IBanService _banService = new BanService();
+            int soban = 1;
+            QlBanView ban = new QlBanView()
+            {
+                Ma = "B00" + (_banService.GetAll().Count + 1),
+                Ten = "Bàn " + (_banService.GetAll().Count + 1),
+                TrangThai = 1,
+            };
+            if (_banService.GetAll().Count >= 9)
+            {
+                ban.Ma = "B0" + (_banService.GetAll().Count + 1);
+            }
+            DialogResult dlg =
+                MessageBox.Show($"Bạn đang có {_banService.GetAll().Count} bàn, bạn có chắc muốn thêm bàn nữa không?","Xác nhận",MessageBoxButtons.OKCancel);
+            if (dlg == DialogResult.OK)
+            {
+                MessageBox.Show(_banService.add(ban));
+                OpenChildForm(new FrmBan(),sender);
+            }
+            
+        }
     }
 }

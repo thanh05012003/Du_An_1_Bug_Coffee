@@ -24,6 +24,7 @@ namespace _3.PL.Views.BanHang
             InitializeComponent();
             _khachHangService = new KhachHangService();
             LoadDataKH();
+            txt_MaKH.Enabled = false;
         }
         public void LoadDataKH()
         {
@@ -73,6 +74,7 @@ namespace _3.PL.Views.BanHang
 
         private void btn_Them_Click_1(object sender, EventArgs e)
         {
+            var kh = _khachHangService.GetAll().FirstOrDefault(c =>c.SDT == txt_SDT.Texts.Trim());
             DialogResult dialog = MessageBox.Show("Bạn có muốn thêm khách hàng này không?", "Thông Báo", MessageBoxButtons.YesNo);
             if (dialog == DialogResult.Yes)
             {
@@ -88,9 +90,9 @@ namespace _3.PL.Views.BanHang
                 {
                     MessageBox.Show("Không được bỏ trống sđt");
                 }
-                else if (txt_DiemTl.Texts.Trim() == "")
+                else if (kh !=null)
                 {
-                    MessageBox.Show("Không được bỏ trống điểm tích lũy");
+                    MessageBox.Show("Số điện thoại này đã tồn tại");
                 }
                 else
                 {
@@ -111,6 +113,11 @@ namespace _3.PL.Views.BanHang
             var temp = GetDataFromGui();
             temp.Ma = _maWhenClick;
             MessageBox.Show(_khachHangService.update(temp));
+        }
+
+        private void txt_HoTen__TextChanged(object sender, EventArgs e)
+        {
+            txt_MaKH.Texts = "KH00" + (_khachHangService.GetAll().Count + 1);
         }
     }
 }

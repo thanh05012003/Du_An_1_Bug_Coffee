@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 using _2.BUS.IServices;
 using _2.BUS.Services;
@@ -15,8 +16,12 @@ namespace _3.PL.Views
     {
         private IBanService _banService;
         private IHoaDonCTService _hoaDonCtService;
+        private INhanVienService _nhanVienService;
         private IHoaDonService _hoaDonService;
         private string _maBanChuyen;
+        private string _maHdWhenClick;
+        private ISanPhamService _sanPhamService;
+        private ILoaiSanPhamService _loaiSanPhamService;
 
         public FrmBan()
         {
@@ -24,11 +29,32 @@ namespace _3.PL.Views
             _banService = new BanService();
             _hoaDonCtService = new HoaDonCTService();
             _hoaDonService = new HoaDonService();
+            _sanPhamService = new SanPhamService();
+            _loaiSanPhamService = new LoaiSanPhamService();
+            _nhanVienService = new NhanVienService();
             loadTable();
             loadChuyenBan();
             LoadGopBan();
+            loadSP(null);
+            loadLoaiSanPham();
         }
 
+        public void loadLoaiSanPham()
+        {
+            cmb_LoaiSanPham.Items.Clear();
+            foreach (var x in _loaiSanPhamService.GetAll())
+            {
+                cmb_LoaiSanPham.Items.Add(x.Ten);
+            }
+        }
+        public void loadSP(string ma)
+        {
+            cmb_SanPham.Items.Clear();
+            foreach (var x in _sanPhamService.TimKiem(ma))
+            {
+               cmb_SanPham.Items.Add(x.Ten);
+            }
+        }
         public void loadChuyenBan()
         {
             cmb_Ban.Items.Clear();
@@ -56,7 +82,7 @@ namespace _3.PL.Views
                 CSButton btn = new CSButton()
                 {
                     Size = new System.Drawing.Size(243, 243),
-                    BorderRadius = 50,
+                    BorderRadius = 120,
                     ForeColor = Color.Black
                 };
                 btn.Text = x.Ten + "  " + (x.TrangThai == 1 ? "Còn trống" : "Có người");
@@ -162,6 +188,97 @@ namespace _3.PL.Views
         private void btn_GopBan_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public QlHoaDonCTView getDataSPfromGui()
+        {
+            //sản phẩm khi chọn trên cmb
+            var sp = _sanPhamService.GetAll().FirstOrDefault(c => c.Ten == cmb_SanPham.Texts);
+            QlHoaDonCTView lstHdCt;
+            lstHdCt = new QlHoaDonCTView()
+            {
+                MaHD = _maHdWhenClick,
+                MaSP = sp.Ma,
+                DonGia = sp.Gia,
+                SoLuong = int.Parse(nud_SoLuong.Text)
+            };
+            return lstHdCt;
+        }
+        public QlHoaDonView HoaDonCho()
+        {
+            QlHoaDonView lstHdView = new QlHoaDonView();
+            var NV = _nhanVienService.GetAll().FirstOrDefault(c => c.SDT == Properties.Settings.Default.Tk);
+            if (NV != null)
+            {
+                lstHdView = new QlHoaDonView()
+                {
+                    Ma = "HD00" + (_hoaDonService.GetAll().Count + 1),
+                    MaNV = NV.Ma,
+                    TrangThai = "Chờ pha chế",
+                    NgayTao = DateTime.Now,
+                };
+            }
+
+            return lstHdView;
+        }
+        private void btn_ThemMon_Click_1(object sender, EventArgs e)
+        {
+           
+            var ban = _banService.GetAll().FirstOrDefault();
+            if (ban.TrangThai == 0)
+            {
+                foreach (var c in _hoaDonService.GetAll().Where(c => c.MaBan == _maBanChuyen))
+                {
+                    if (c.TrangThai == "Chờ pha chế" || c.TrangThai == "Chờ thanh toán")
+                    {
+                        DialogResult dlg = MessageBox.Show($"Bạn có muốn thêm sản phẩm vào {ban.Ten} không?",
+                            "xác nhận", MessageBoxButtons.OKCancel);
+                        if (dlg == DialogResult.OK)
+                        {
+                            var tempsp = getDataSPfromGui();
+                            var hdct = _hoaDonCtService.GetAll()
+                                .FirstOrDefault(x => x.MaHD == c.Ma && x.MaSP == tempsp.MaSP);
+                            if (hdct != null) // cập nhật lại số lượng nếu đã tồn tại
+                            {
+                                tempsp.MaHD = c.Ma;
+                                tempsp.MaSP = hdct.MaSP;
+                                tempsp.SoLuong = hdct.SoLuong + int.Parse(nud_SoLuong.Text);
+                                MessageBox.Show(_hoaDonCtService.update(tempsp));
+                                ShowBill(c.MaBan);
+                            }
+                            else // thêm sản phẩm vào hoá đơn ( thêm vào bàn có người)
+                            {
+                                tempsp.MaHD = c.Ma;
+                                _hoaDonCtService.add(tempsp);
+                                ShowBill(c.Ma);
+                            }
+                        }
+                    }
+                }
+            }else
+            {
+                var temp = HoaDonCho();             //
+                _maHdWhenClick = temp.Ma;                      //
+                temp.MaBan = ban.Ma;                           // tạo hoá đơn khi ấn thêm món ( nếu bàn còn trống )
+                _hoaDonService.add(temp);                      //
+
+                var tempsp = getDataSPfromGui();  // thêm sản phẩm sau khi tạo hoá đơn
+                _hoaDonCtService.add(tempsp);                  //
+
+                ban.TrangThai = 0;                               //
+                _banService.update(ban);                         // update lại trạng thái bàn khi sau thêm hoá đơn
+                MessageBox.Show("Thêm sản phẩm thành công");
+
+                loadTable();                                     // load lại trạng thái bàn sau khi thêm hoá đơn
+                ShowBill(ban.Ma);
+            }
+        }
+        
+        private void cmb_LoaiSanPham_OnSelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+            var lsp = _loaiSanPhamService.GetAll().FirstOrDefault(c => c.Ten == cmb_LoaiSanPham.Texts);
+            loadSP(lsp.Ma);
         }
     }
 }

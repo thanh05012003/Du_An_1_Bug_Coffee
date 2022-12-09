@@ -51,7 +51,6 @@
             this.lb_GiamGia = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.btn_XacNhan = new CustomControls.RJControls.CSButton();
-            this.btn_XuatHoaDon = new CustomControls.RJControls.CSButton();
             this.txt_TenKhachHang = new CustomControls.RJControls.CSTextBox();
             this.SuspendLayout();
             // 
@@ -188,7 +187,7 @@
             this.btn_ThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ThanhToan.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_ThanhToan.ForeColor = System.Drawing.Color.White;
-            this.btn_ThanhToan.Location = new System.Drawing.Point(367, 489);
+            this.btn_ThanhToan.Location = new System.Drawing.Point(207, 487);
             this.btn_ThanhToan.Name = "btn_ThanhToan";
             this.btn_ThanhToan.Size = new System.Drawing.Size(227, 48);
             this.btn_ThanhToan.TabIndex = 25;
@@ -362,26 +361,6 @@
             this.btn_XacNhan.UseVisualStyleBackColor = false;
             this.btn_XacNhan.Click += new System.EventHandler(this.btn_XacNhan_Click);
             // 
-            // btn_XuatHoaDon
-            // 
-            this.btn_XuatHoaDon.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_XuatHoaDon.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_XuatHoaDon.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_XuatHoaDon.BorderRadius = 20;
-            this.btn_XuatHoaDon.BorderSize = 0;
-            this.btn_XuatHoaDon.FlatAppearance.BorderSize = 0;
-            this.btn_XuatHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_XuatHoaDon.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_XuatHoaDon.ForeColor = System.Drawing.Color.White;
-            this.btn_XuatHoaDon.Location = new System.Drawing.Point(30, 489);
-            this.btn_XuatHoaDon.Name = "btn_XuatHoaDon";
-            this.btn_XuatHoaDon.Size = new System.Drawing.Size(227, 48);
-            this.btn_XuatHoaDon.TabIndex = 42;
-            this.btn_XuatHoaDon.Text = "Xuất hoá đơn";
-            this.btn_XuatHoaDon.TextColor = System.Drawing.Color.White;
-            this.btn_XuatHoaDon.UseVisualStyleBackColor = false;
-            this.btn_XuatHoaDon.Click += new System.EventHandler(this.btn_XuatHoaDon_Click);
-            // 
             // txt_TenKhachHang
             // 
             this.txt_TenKhachHang.BackColor = System.Drawing.SystemColors.Window;
@@ -410,7 +389,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 563);
             this.Controls.Add(this.txt_TenKhachHang);
-            this.Controls.Add(this.btn_XuatHoaDon);
             this.Controls.Add(this.btn_XacNhan);
             this.Controls.Add(this.lb_GiamGia);
             this.Controls.Add(this.label10);
@@ -464,7 +442,6 @@
         private System.Windows.Forms.Label lb_GiamGia;
         private System.Windows.Forms.Label label10;
         private CustomControls.RJControls.CSButton btn_XacNhan;
-        private CustomControls.RJControls.CSButton btn_XuatHoaDon;
         private CustomControls.RJControls.CSTextBox txt_TenKhachHang;
     }
 }
