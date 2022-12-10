@@ -225,13 +225,7 @@ namespace _3.PL.Views.BanHang
             _maHDWhenClick = ((sender as Button).Tag as QlHoaDonView).Ma;
             LoadHdChoCT();
         }
-     
-        private void btn_ThemKH_Click(object sender, EventArgs e)
-        {
-            FrmKhachHang frm = new FrmKhachHang();
-            frm.ShowDialog();
-
-        }
+        
 
         private void btn_ThemHD_Click_1(object sender, EventArgs e)
         {
@@ -316,16 +310,20 @@ namespace _3.PL.Views.BanHang
             }
             else
             {
-                temp.Ma = _maHDWhenClick;
-                temp.TrangThai = "Chờ pha chế";
-                temp.GhiChu = "Mang đi";
-                MessageBox.Show(_hoaDonService.update(temp));
-                ShowHdCho();
-                LoadHdChoCT();
-                showBtnHdcho();
-                _maHDWhenClick = "";
-                FrmThanhToan frm = new FrmThanhToan();
-                frm.ShowDialog();
+                DialogResult dlg = MessageBox.Show("Xác nhận thanh toán", "xác nhận", MessageBoxButtons.YesNo);
+                if (dlg == DialogResult.Yes)
+                {
+                    FrmThanhToan frm = new FrmThanhToan();
+                    frm.ShowDialog();
+                    temp.Ma = _maHDWhenClick;
+                    temp.TrangThai = "Chờ pha chế";
+                    temp.GhiChu = "Mang đi";
+                   _hoaDonService.update(temp);
+                    ShowHdCho();
+                    LoadHdChoCT();
+                    showBtnHdcho();
+                    _maHDWhenClick = "";
+                }
             }
         }
 

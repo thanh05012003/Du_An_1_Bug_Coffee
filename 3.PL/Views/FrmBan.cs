@@ -85,7 +85,7 @@ namespace _3.PL.Views
                     BorderRadius = 120,
                     ForeColor = Color.Black
                 };
-                btn.Text = x.Ten + "  " + (x.TrangThai == 1 ? "Còn trống" : "Có người");
+                btn.Text = x.Ten/* + "  " + (x.TrangThai == 1 ? "Còn trống" : "Có người")*/;
                 btn.Tag = x;
                 btn.Click += btn_Click;
                 switch (x.TrangThai)
@@ -110,7 +110,7 @@ namespace _3.PL.Views
             dgrid_TTSp.Rows.Clear();
             foreach (var x in _hoaDonService.GetAll(ma))
             {
-                if (x.TrangThai == "Chờ pha chế" || x.TrangThai == "Chờ thanh toán");
+                if (x.TrangThai == "Chờ pha chế" || x.TrangThai == "Chờ thanh toán")
                 {
                     dgrid_TTSp.Rows.Add(x.TenSP, x.Soluong, Math.Round(x.DonGia, 0));
                     Properties.Settings.Default.MaHd = x.Ma;
@@ -223,14 +223,20 @@ namespace _3.PL.Views
         }
         private void btn_ThemMon_Click_1(object sender, EventArgs e)
         {
+            if (cmb_SanPham.Texts.Trim() == "")
+            {
+                MessageBox.Show("Bạn chưa chọn sản phẩm");
+                return;
+            }
             var nv = _nhanVienService.GetAll().FirstOrDefault(c => c.SDT == Properties.Settings.Default.Tk);
             if (nv.MaCV == "CV02"|| nv == null)
             {
                 MessageBox.Show("Bạn không có quyền thêm sản phẩm");
                 return;
             }
+            
             var ban = _banService.GetAll().FirstOrDefault();
-            if (ban.TrangThai == 0)
+            if (ban.TrangThai == 0) // nếu bàn có người
             {
                 foreach (var c in _hoaDonService.GetAll().Where(c => c.MaBan == _maBanChuyen))
                 {
@@ -281,7 +287,6 @@ namespace _3.PL.Views
         
         private void cmb_LoaiSanPham_OnSelectedIndexChanged_1(object sender, EventArgs e)
         {
-
             var lsp = _loaiSanPhamService.GetAll().FirstOrDefault(c => c.Ten == cmb_LoaiSanPham.Texts);
             loadSP(lsp.Ma);
         }

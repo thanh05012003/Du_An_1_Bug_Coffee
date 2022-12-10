@@ -67,6 +67,7 @@
             // 
             // dgrid_HoaDonCT
             // 
+            this.dgrid_HoaDonCT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgrid_HoaDonCT.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgrid_HoaDonCT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrid_HoaDonCT.Location = new System.Drawing.Point(13, 378);
