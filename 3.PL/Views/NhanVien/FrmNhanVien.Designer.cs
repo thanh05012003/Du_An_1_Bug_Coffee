@@ -63,7 +63,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_updateNV = new System.Windows.Forms.Button();
-            this.btn_addCV = new System.Windows.Forms.Button();
             this.btn_addNV = new System.Windows.Forms.Button();
             this.dgrid_DtNhanVien = new System.Windows.Forms.DataGridView();
             this.tbt_searchNV = new System.Windows.Forms.TextBox();
@@ -120,7 +119,6 @@
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.btn_updateNV);
-            this.splitContainer1.Panel1.Controls.Add(this.btn_addCV);
             this.splitContainer1.Panel1.Controls.Add(this.btn_addNV);
             // 
             // splitContainer1.Panel2
@@ -464,18 +462,6 @@
             this.btn_updateNV.UseVisualStyleBackColor = false;
             this.btn_updateNV.Click += new System.EventHandler(this.btn_updateNV_Click);
             // 
-            // btn_addCV
-            // 
-            this.btn_addCV.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btn_addCV.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_addCV.Location = new System.Drawing.Point(570, 650);
-            this.btn_addCV.Name = "btn_addCV";
-            this.btn_addCV.Size = new System.Drawing.Size(34, 30);
-            this.btn_addCV.TabIndex = 41;
-            this.btn_addCV.Text = "+";
-            this.btn_addCV.UseVisualStyleBackColor = false;
-            this.btn_addCV.Click += new System.EventHandler(this.btn_addCV_Click);
-            // 
             // btn_addNV
             // 
             this.btn_addNV.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -595,7 +581,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btn_addCV;
         private System.Windows.Forms.DataGridView dgrid_DtNhanVien;
         private System.Windows.Forms.TextBox tbt_searchNV;
         private System.Windows.Forms.Label label12;

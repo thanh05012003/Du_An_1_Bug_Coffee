@@ -14,12 +14,15 @@ namespace _3.PL.Views
     public partial class FrmMain : Form
     {
         private INhanVienService _nhanVienService;
+        private QlNhanVienView ql;
         public FrmMain()
         {
             InitializeComponent();
            _nhanVienService = new NhanVienService();
+           ql = new QlNhanVienView();
+           ql = _nhanVienService.GetAll().FirstOrDefault(c =>
+               c.SDT.ToLower() == Properties.Settings.Default.Tk.Trim());
         }
-
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -86,7 +89,11 @@ namespace _3.PL.Views
 
         private void btn_SanPham_Click_1(object sender, EventArgs e)
         {
-          
+            if (ql.MaCV == "CV02")
+            {
+                MessageBox.Show("Bạn không có quyền mở chức năng này");
+                return;
+            }
             OpenChildForm(new FrmSanPham(), sender);
         }
 
@@ -111,13 +118,11 @@ namespace _3.PL.Views
             {
                 OpenChildForm(new FrmNhanVien(), sender);
             }
-            var nv = _nhanVienService.GetAll().FirstOrDefault(c =>
-                c.SDT.ToLower() == Properties.Settings.Default.Tk.Trim());
-            if (nv == null) 
+            if (ql == null) 
             {
                 return;
             }
-            if (nv.MaCV == "CV01")
+            if (ql.MaCV == "CV01")
             {
                 OpenChildForm(new FrmNhanVien(),sender);
               
@@ -135,12 +140,18 @@ namespace _3.PL.Views
 
         private void btn_BanHang_Click(object sender, EventArgs e)
         {
+          
             if (lb_UserName.Text == "admin")
             {
                 MessageBox.Show("Bạn đang đăng nhập bằng tài khoản admin. Bạn không thể mở chức năng này!");
             }
             else
             {
+                if (ql.MaCV == "CV02")
+                {
+                    MessageBox.Show("Bạn không có quyền mở chức năng này");
+                    return;
+                }
                 OpenChildForm(new FrmBanHang(),sender);
             }
             

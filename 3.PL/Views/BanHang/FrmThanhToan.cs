@@ -23,6 +23,7 @@ namespace _3.PL.Views.BanHang
         private decimal tienHang = 0;
         private decimal giamGia;
         private string _maVoucher;
+        string tenTep = "";
         private QlKhachHangView _QlKhachHangView;
         private IBanService _BanService;
         private IVoucherService _voucherService;
@@ -39,7 +40,6 @@ namespace _3.PL.Views.BanHang
             LoadThanhToan();
             loadVoucher();
         }
-
 
         public void loadVoucher()
         {
@@ -123,7 +123,17 @@ namespace _3.PL.Views.BanHang
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-                XuatHoaDon();
+                DialogResult dlg = MessageBox.Show("Bạn có muốn xuất hoá đơn không ?", "Xác nhận",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dlg == DialogResult.Yes)
+                {
+                    XuatHoaDon();
+                    thanhToan();
+                }
+                else
+                {
+                    thanhToan();
+                }
             }
         }
 
@@ -218,58 +228,74 @@ namespace _3.PL.Views.BanHang
 
         public void XuatHoaDon()
         {
+            //Bước 1: Nạp file mẫu
+            string pa = @"C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\Template\HoaDon_TheBugCoffee1.doc";
+            Document HoaDon = new Document(pa);
+
+            var x = _HoaDonService.GetAll().FirstOrDefault(c =>c.Ma == Properties.Settings.Default.MaHd);
+           
+            //Bước 2: Điền các thông tin cố định
+           
+                HoaDon.MailMerge.Execute(new[] { "BAN_X" }, new[] { x.TenBan });
+            
+            HoaDon.MailMerge.Execute(new[] { "Ngay_Tao" }, new[] { x.NgayTao.Value.ToString() });
+            HoaDon.MailMerge.Execute(new[] { "Ten_Nv" }, new[] { x.TenNV });
+            HoaDon.MailMerge.Execute(new[] { "Gio_Ra" }, new[] { DateTime.Now.ToString("hh:mm:ss") });
+            HoaDon.MailMerge.Execute(new[] { "Tien_Hang" }, new[] { tienHang.ToString("C0") });
+            HoaDon.MailMerge.Execute(new[] { "Giam_Gia" }, new[] { giamGia.ToString("C0") });
+            HoaDon.MailMerge.Execute(new[] { "Ten_Kh" }, new[] { txt_TenKhachHang.Texts });
+            HoaDon.MailMerge.Execute(new[] { "Ma_hd" }, new[] { x.Ma });
+            HoaDon.MailMerge.Execute(new[] { "Tong_Tien" }, new[] { (tongtien - giamGia).ToString("C0") });
+
+            string path = @"C:\Users\ADMIN\Desktop\HoaDon"; // đường dẫn folder
+            if (!Directory.Exists(path))
+                Directory.CreateDirectory(path); // tạo folder ( Hoá đơn) mới nếu chưa có
+            Random rd = new Random();
+            tenTep = $"{path}\\{$"{rd.Next(1000) + x.Ma}.docx"}";
+
+            //Bước 3: Điền thông tin lên bảng
+            Table ThongTinSanPham =
+                HoaDon.GetChild(NodeType.Table, 0, true) as Table; //Lấy bảng thứ 1 trong file mẫu
+            int HangHienTai = 1;
+            ThongTinSanPham.InsertRows(HangHienTai, HangHienTai, 1);
+
+            foreach (var c in _HoaDonCTService.GetAll().Where(c =>c.MaHD == x.Ma))
+            {
+                if (_HoaDonCTService.GetAll().Where(c => c.MaHD == Properties.Settings.Default.MaHd).Count() == 1)
+                {
+                    for (int i = 1; i <= _HoaDonCTService.GetAll().Where(c => c.MaHD == Properties.Settings.Default.MaHd).Count(); i++)
+                    {
+                        ThongTinSanPham.PutValue(HangHienTai, 0, (1).ToString()); //Cột STT
+                        ThongTinSanPham.PutValue(HangHienTai, 1, c.TenSp); //Cột mặt hàng
+                        ThongTinSanPham.PutValue(HangHienTai, 2, c.SoLuong.ToString()); //Cột số lượng
+                        ThongTinSanPham.PutValue(HangHienTai, 3, c.DonGia.ToString("C0")); //Cột đơn giá
+                        HangHienTai++;
+                    }
+                }
+                else
+                {
+                    for (int i = 1; i <= _HoaDonCTService.GetAll().Where(c => c.MaHD == Properties.Settings.Default.MaHd).Count() - 1; i++)
+                    {
+                        ThongTinSanPham.PutValue(HangHienTai, 0, (1).ToString()); //Cột STT
+                        ThongTinSanPham.PutValue(HangHienTai, 1, c.TenSp); //Cột mặt hàng
+                        ThongTinSanPham.PutValue(HangHienTai, 2, c.SoLuong.ToString()); //Cột số lượng
+                        ThongTinSanPham.PutValue(HangHienTai, 3, c.DonGia.ToString("C0")); //Cột đơn giá
+                        HangHienTai++;
+                    }
+                }
+            }
+            HoaDon.Save(tenTep);
+            MessageBox.Show("Xuất hoá đơn thành công");
+        }
+
+        private void btn_XuatHoaDon_Click(object sender, EventArgs e)
+        {
             DialogResult dr = MessageBox.Show("Bạn có xuất hoá đơn không ?", "Xác nhận",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-                //Bước 1: Nạp file mẫu
-                string pa = @"C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\Template\HoaDon_TheBugCoffee1.doc";
-                Document HoaDon = new Document(pa);
-                string tenTep = "";
-                foreach (var x in _HoaDonService.GetAll(Properties.Settings.Default.MaHd))
-                {
-                    //Bước 2: Điền các thông tin cố định
-                    HoaDon.MailMerge.Execute(new[] { "BAN_X" }, new[] { x.TenBan });
-                    HoaDon.MailMerge.Execute(new[] { "Ngay_Tao" }, new[] { x.NgayTao.Value.ToString() });
-                    HoaDon.MailMerge.Execute(new[] { "Ten_Nv" }, new[] { x.TenNV });
-                    HoaDon.MailMerge.Execute(new[] { "Gio_Ra" }, new[] { DateTime.Now.ToString("hh:mm:ss") });
-                    HoaDon.MailMerge.Execute(new[] { "Tien_Hang" }, new[] { tienHang.ToString("C0") });
-                    HoaDon.MailMerge.Execute(new[] { "Giam_Gia" }, new[] { giamGia.ToString() });
-                    HoaDon.MailMerge.Execute(new[] { "Ten_Kh" }, new[] { txt_TenKhachHang.Texts });
-                    HoaDon.MailMerge.Execute(new[] { "Ma_hd" }, new[] { x.Ma });
-                    HoaDon.MailMerge.Execute(new[] { "Tong_Tien" }, new[] { tongtien.ToString("C0") });
-
-                    string path = @"C:\Users\ADMIN\Desktop\HoaDon"; // đường dẫn folder
-                    if (!Directory.Exists(path))
-                        Directory.CreateDirectory(path); // tạo folder ( Hoá đơn) mới nếu chưa có
-                    Random rd = new Random();
-                    tenTep = $"{path}\\{$"{rd.Next(1000) + x.Ma}.docx"}";
-
-                    //Bước 3: Điền thông tin lên bảng
-                    Table ThongTinSanPham = HoaDon.GetChild(NodeType.Table, 0, true) as Table;//Lấy bảng thứ 1 trong file mẫu
-                    int HangHienTai = 1;
-                    ThongTinSanPham.InsertRows(HangHienTai, HangHienTai, 1);
-
-                    for (int i = 1; i <= _HoaDonCTService.GetAll(Properties.Settings.Default.MaHd).Count - 1; i++)
-                    {
-                        ThongTinSanPham.PutValue(HangHienTai, 0, (1).ToString());//Cột STT
-                        ThongTinSanPham.PutValue(HangHienTai, 1, x.TenSP);//Cột mặt hàng
-                        ThongTinSanPham.PutValue(HangHienTai, 2, x.Soluong.ToString());//Cột số lượng
-                        ThongTinSanPham.PutValue(HangHienTai, 3, x.DonGia.ToString("C0"));//Cột đơn giá
-                        HangHienTai++;
-                    }
-                }
-                HoaDon.Save(tenTep);
-                MessageBox.Show("xuất hoá đơn thành công");
-                
-                thanhToan();
+                XuatHoaDon();
             }
-            else
-            {
-                thanhToan();
-            }
-           
         }
-
     }
 }

@@ -14,5 +14,6 @@ namespace _2.BUS.IServices
         string update(QlHoaDonView obj);
         List<QlHoaDonView> GetAll();
         List<QlHoaDonView> GetAll(string input);
+        List<QlHoaDonView> Lshd();
     }
 }

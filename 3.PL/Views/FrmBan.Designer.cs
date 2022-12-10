@@ -71,8 +71,8 @@
             // 
             // btn_ThanhToan
             // 
-            this.btn_ThanhToan.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_ThanhToan.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_ThanhToan.BackColor = System.Drawing.Color.LightPink;
+            this.btn_ThanhToan.BackgroundColor = System.Drawing.Color.LightPink;
             this.btn_ThanhToan.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btn_ThanhToan.BorderRadius = 20;
             this.btn_ThanhToan.BorderSize = 0;

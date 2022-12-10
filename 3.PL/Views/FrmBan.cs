@@ -223,7 +223,12 @@ namespace _3.PL.Views
         }
         private void btn_ThemMon_Click_1(object sender, EventArgs e)
         {
-           
+            var nv = _nhanVienService.GetAll().FirstOrDefault(c => c.SDT == Properties.Settings.Default.Tk);
+            if (nv.MaCV == "CV02"|| nv == null)
+            {
+                MessageBox.Show("Bạn không có quyền thêm sản phẩm");
+                return;
+            }
             var ban = _banService.GetAll().FirstOrDefault();
             if (ban.TrangThai == 0)
             {

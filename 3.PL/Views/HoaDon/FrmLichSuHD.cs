@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,6 +21,7 @@ namespace _3.PL.Views
         private IKhachHangService _khachHangService;
         private string _maHdWhenClick;
         private IBanService _banService;
+        private IVoucherService _voucherService;
         public FrmLichSuHD()
         {
             InitializeComponent();
@@ -27,6 +29,7 @@ namespace _3.PL.Views
             _ihoaDonCTServices = new HoaDonCTService();
            _khachHangService = new KhachHangService();
            _banService = new BanService();
+           _voucherService = new VoucherService();
             LoadHoaDon();
             LoadHoaDonCT(null);
         }
@@ -34,22 +37,22 @@ namespace _3.PL.Views
         public void LoadHoaDon()
         {
             int stt = 1;
-            dgrid_HoaDon.ColumnCount = 8;
+            dgrid_HoaDon.ColumnCount = 9;
             dgrid_HoaDon.Columns[0].Name = "STT";
             dgrid_HoaDon.Columns[1].Name = "Mã HĐ";
-            dgrid_HoaDon.Columns[2].Name = "Tên Khách Hàng";
-            dgrid_HoaDon.Columns[3].Name = "Mã Nhân Viên";
+            dgrid_HoaDon.Columns[2].Name = "Khách Hàng";
+            dgrid_HoaDon.Columns[3].Name = "Nhân Viên";
             dgrid_HoaDon.Columns[4].Name = "Ngày Tạo";
-            dgrid_HoaDon.Columns[5].Name = "Mã Voucher";
+            dgrid_HoaDon.Columns[5].Name = "Voucher";
             dgrid_HoaDon.Columns[6].Name = "Trạng Thái";
             dgrid_HoaDon.Columns[7].Name = "Ghi Chú";
+            dgrid_HoaDon.Columns[8].Name = "Bàn";
             dgrid_HoaDon.Rows.Clear();
             foreach (var x in _ihoaDonServices.GetAll())
             {
-                if (x.TrangThai == "Đã thanh toán")
-                {
-                    dgrid_HoaDon.Rows.Add(stt++, x.Ma, x.TenKH, x.MaNV, x.NgayTao, x.MaVC, x.TrangThai, x.GhiChu);
-                }
+
+                dgrid_HoaDon.Rows.Add(stt++, x.Ma, x.MaKH, x.TenNV, x.NgayTao, x.MaVC, x.TrangThai, x.GhiChu,
+                    x.MaBan);
             }
         }
 
@@ -119,25 +122,7 @@ namespace _3.PL.Views
                     tongtien += (x.DonGia * x.SoLuong);
                 }
             }
-            
         }
 
-        private void btn_KhoiPhuc_Click(object sender, EventArgs e)
-        {
-            var hd = _ihoaDonServices.GetAll().FirstOrDefault(c => c.Ma == _maHdWhenClick);
-            if (hd != null)
-            {
-                var ban = _banService.GetAll().FirstOrDefault(c => c.Ma == hd.MaBan);
-                
-                hd.TrangThai = "Chờ thanh toán";
-                hd.GhiChu = "Khôi phục hoá đơn vì " + txt_GhiChu.Text;
-                _ihoaDonServices.update(hd);
-                LoadHoaDon();
-                LoadHoaDonCT(null);
-                ban.TrangThai = 0;
-                _banService.update(ban);
-                MessageBox.Show("Khôi phục thành công");
-            }
-        }
     }
 }

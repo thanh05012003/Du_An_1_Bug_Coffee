@@ -20,6 +20,7 @@ namespace _2.BUS.Services
         private ISanPhamRepository _sanPhamRepository;
         private IHoaDonCTRepository _hoaDonCtRepository;
         private IBanRepository _banRepository;
+        IVoucherRepository _voucherRepository;
         public HoaDonService()
         {
             _hoaDonRepository = new HoaDonRepository();
@@ -28,6 +29,7 @@ namespace _2.BUS.Services
             _hoaDonCtRepository = new HoaDonCTRepository();
             _banRepository = new BanRepository();
             _khachHangRepository = new KhachHangRepository();
+            _voucherRepository = new VoucherRepository();
         }
         public string add(QlHoaDonView obj)
         {
@@ -126,6 +128,27 @@ namespace _2.BUS.Services
                     TenBan = g.Ten,
                 };
             return lstHoaDon.ToList();  
+        }
+
+        public List<QlHoaDonView> Lshd()
+        {
+            var lstHoaDon = from a in _hoaDonRepository.GetAll()
+                //join b in _khachHangRepository.GetAll() on a.MaKH equals b.Ma
+                join c in _nhanVienRepository.GetAll() on a.MaNV equals c.Ma
+                            join d in _voucherRepository.GetAll() on a.MaVC equals d.Ma
+                            //join e in _banRepository.GetAll() on a.MaBan equals e.Ma
+                select new QlHoaDonView()
+                {
+                    Ma = a.Ma,
+                    //TenKH = b.Ten,
+                    TenNV = c.Ten,
+                    NgayTao = a.NgayTao,
+                    TenVouCher = d.Ten,
+                    GhiChu = a.GhiChu,  
+                    TrangThai = a.TrangThai,
+                    //TenBan = e.Ten,
+                };
+            return lstHoaDon.ToList();
         }
     }
 }

@@ -122,12 +122,16 @@ namespace _3.PL.Views
             }
         }
 
-        private void btn_addCV_Click(object sender, EventArgs e)
-        {
-            FrmChucVu  frm = new FrmChucVu();
-            frm.ShowDialog();
-            loadDataCV();
-        }
+        //private void btn_addCV_Click(object sender, EventArgs e)
+        //{
+        //    //if ()
+        //    //{
+                
+        //    //}
+        //    FrmChucVu  frm = new FrmChucVu();
+        //    frm.ShowDialog();
+        //    loadDataCV();
+        //}
 
         public bool Check()
         {
