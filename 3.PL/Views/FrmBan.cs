@@ -182,8 +182,20 @@ namespace _3.PL.Views
 
         private void btn_TachHd_Click(object sender, EventArgs e)
         {
-            FrmTachHD frm = new FrmTachHD();
-            frm.ShowDialog();
+            if (_maBanChuyen == null)
+            {
+                MessageBox.Show("Vui lòng chọn bàn muốn tách");
+                return;
+            }
+            var Ban = _banService.GetAll().FirstOrDefault(c => c.Ma == _maBanChuyen);
+            DialogResult dr = MessageBox.Show(
+                $"Bạn có chắc muốn tách hoá đơn {Ban.Ten.ToUpper()} không ?",
+                "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dr == DialogResult.OK)
+            {
+                FrmTachHD frm = new FrmTachHD();
+                frm.ShowDialog();
+            }
         }
 
         private void btn_GopBan_Click(object sender, EventArgs e)
@@ -239,9 +251,10 @@ namespace _3.PL.Views
             var NV = _nhanVienService.GetAll().FirstOrDefault(c => c.SDT == Properties.Settings.Default.Tk);
             if (NV != null)
             {
+                Random rd = new Random();
                 lstHdView = new QlHoaDonView()
                 {
-                    Ma = "HD00" + (_hoaDonService.GetAll().Count + 1),
+                    Ma = "HD" + ((_hoaDonService.GetAll().Count + rd.Next(1000000))),
                     MaNV = NV.Ma,
                     TrangThai = "Chờ pha chế",
                     NgayTao = DateTime.Now,

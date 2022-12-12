@@ -25,9 +25,6 @@
     <Compile Update="Views\BanHang\FrmBanHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\BanHang\FrmGiaoHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Views\BanHang\FrmKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>

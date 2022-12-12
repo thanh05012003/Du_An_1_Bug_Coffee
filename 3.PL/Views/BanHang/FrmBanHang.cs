@@ -84,9 +84,10 @@ namespace _3.PL.Views.BanHang
             var NV = _nhanVienService.GetAll().FirstOrDefault(c => c.SDT == Properties.Settings.Default.Tk);
             if (NV != null)
             {
+                Random rd = new Random();
                 lstHdView = new QlHoaDonView()
                 {
-                    Ma = "HD00" + (_hoaDonService.GetAll().Count + 1),
+                    Ma = "HD" + (_hoaDonService.GetAll().Count + rd.Next(1000000)),
                     MaNV = NV.Ma,
                     TrangThai = "Chờ order",
                     NgayTao = DateTime.Now,
@@ -352,12 +353,18 @@ namespace _3.PL.Views.BanHang
             if (rowIndex == _hoaDonCTService.GetAll().Where(c => c.MaHD == _maHDWhenClick).Count()) ;
             try
             {
+                if (dgrid_HdChoCT.Rows[rowIndex].Cells[0].Value.ToString() == null)
+                {
+                    return;
+                }
                 _maSPWhenClick = dgrid_HdChoCT.Rows[rowIndex].Cells[0].Value.ToString();
+                
             }
             catch (Exception exception)
             {
                 return;
             }
+
             var hdct = _hoaDonCTService.GetAll().FirstOrDefault(c => c.MaSP == _maSPWhenClick);
             foreach (var x in _sanPhamService.GetAll().Where(c =>c.Ma == hdct.MaSP))
             {

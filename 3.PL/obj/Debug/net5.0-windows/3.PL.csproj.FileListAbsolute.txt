@@ -48,7 +48,6 @@ C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\CustomCo
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\customs.Products.resources
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Properties.Resources.resources
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.BanHang.FrmBanHang.resources
-C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmGiaoHang.resources
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.BanHang.FrmKhachHang.resources
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmTachHD.resources
 C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\obj\Debug\net5.0-windows\_3.PL.Views.FrmDoiPass.resources
