@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             this.pane_HDPC = new System.Windows.Forms.Panel();
-            this.dgrid_HoaDon = new System.Windows.Forms.DataGridView();
+            this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_XacNhan = new System.Windows.Forms.Button();
+            this.dgrid_HoaDon = new System.Windows.Forms.DataGridView();
+            this.btn_HoanThanh = new System.Windows.Forms.Button();
             this.dgrid_HoaDonCT = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,8 +44,10 @@
             // pane_HDPC
             // 
             this.pane_HDPC.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.pane_HDPC.Controls.Add(this.dgrid_HoaDon);
+            this.pane_HDPC.Controls.Add(this.btn_Xoa);
             this.pane_HDPC.Controls.Add(this.btn_XacNhan);
+            this.pane_HDPC.Controls.Add(this.dgrid_HoaDon);
+            this.pane_HDPC.Controls.Add(this.btn_HoanThanh);
             this.pane_HDPC.Controls.Add(this.dgrid_HoaDonCT);
             this.pane_HDPC.Controls.Add(this.label2);
             this.pane_HDPC.Controls.Add(this.label1);
@@ -52,6 +56,32 @@
             this.pane_HDPC.Name = "pane_HDPC";
             this.pane_HDPC.Size = new System.Drawing.Size(1305, 770);
             this.pane_HDPC.TabIndex = 8;
+            // 
+            // btn_Xoa
+            // 
+            this.btn_Xoa.BackColor = System.Drawing.Color.White;
+            this.btn_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Xoa.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_Xoa.Location = new System.Drawing.Point(976, 621);
+            this.btn_Xoa.Name = "btn_Xoa";
+            this.btn_Xoa.Size = new System.Drawing.Size(150, 64);
+            this.btn_Xoa.TabIndex = 31;
+            this.btn_Xoa.Text = "Xoá";
+            this.btn_Xoa.UseVisualStyleBackColor = false;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
+            // 
+            // btn_XacNhan
+            // 
+            this.btn_XacNhan.BackColor = System.Drawing.Color.White;
+            this.btn_XacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_XacNhan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_XacNhan.Location = new System.Drawing.Point(206, 621);
+            this.btn_XacNhan.Name = "btn_XacNhan";
+            this.btn_XacNhan.Size = new System.Drawing.Size(150, 64);
+            this.btn_XacNhan.TabIndex = 30;
+            this.btn_XacNhan.Text = "Xác nhận";
+            this.btn_XacNhan.UseVisualStyleBackColor = false;
+            this.btn_XacNhan.Click += new System.EventHandler(this.btn_XacNhan_Click_1);
             // 
             // dgrid_HoaDon
             // 
@@ -66,18 +96,18 @@
             this.dgrid_HoaDon.TabIndex = 29;
             this.dgrid_HoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_HoaDon_CellClick);
             // 
-            // btn_XacNhan
+            // btn_HoanThanh
             // 
-            this.btn_XacNhan.BackColor = System.Drawing.Color.White;
-            this.btn_XacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_XacNhan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_XacNhan.Location = new System.Drawing.Point(564, 623);
-            this.btn_XacNhan.Name = "btn_XacNhan";
-            this.btn_XacNhan.Size = new System.Drawing.Size(150, 64);
-            this.btn_XacNhan.TabIndex = 4;
-            this.btn_XacNhan.Text = "Xác Nhận";
-            this.btn_XacNhan.UseVisualStyleBackColor = false;
-            this.btn_XacNhan.Click += new System.EventHandler(this.btn_XacNhan_Click);
+            this.btn_HoanThanh.BackColor = System.Drawing.Color.White;
+            this.btn_HoanThanh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_HoanThanh.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_HoanThanh.Location = new System.Drawing.Point(776, 621);
+            this.btn_HoanThanh.Name = "btn_HoanThanh";
+            this.btn_HoanThanh.Size = new System.Drawing.Size(150, 64);
+            this.btn_HoanThanh.TabIndex = 4;
+            this.btn_HoanThanh.Text = "Hoàn thành";
+            this.btn_HoanThanh.UseVisualStyleBackColor = false;
+            this.btn_HoanThanh.Click += new System.EventHandler(this.btn_XacNhan_Click);
             // 
             // dgrid_HoaDonCT
             // 
@@ -89,6 +119,7 @@
             this.dgrid_HoaDonCT.RowTemplate.Height = 29;
             this.dgrid_HoaDonCT.Size = new System.Drawing.Size(559, 440);
             this.dgrid_HoaDonCT.TabIndex = 3;
+            this.dgrid_HoaDonCT.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_HoaDonCT_CellClick);
             // 
             // label2
             // 
@@ -129,10 +160,12 @@
         #endregion
 
         private System.Windows.Forms.Panel pane_HDPC;
-        private System.Windows.Forms.Button btn_XacNhan;
+        private System.Windows.Forms.Button btn_HoanThanh;
         private System.Windows.Forms.DataGridView dgrid_HoaDonCT;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgrid_HoaDon;
+        private System.Windows.Forms.Button btn_XacNhan;
+        private System.Windows.Forms.Button btn_Xoa;
     }
 }

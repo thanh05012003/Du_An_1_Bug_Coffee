@@ -32,6 +32,7 @@ namespace _2.BUS.Services
                 MaSP = obj.MaSP,
                 SoLuong = obj.SoLuong,
                 DonGia = obj.DonGia,
+                TrangThai = obj.TrangThai,
             };
             if (_hoaDonCTRepository.Add(hdct))
             {
@@ -50,6 +51,7 @@ namespace _2.BUS.Services
                 MaSP = obj.MaSP,
                 SoLuong = obj.SoLuong,
                 DonGia = obj.DonGia,
+                TrangThai = obj.TrangThai,
             };
             if (_hoaDonCTRepository.Delete(hdct))
             {
@@ -68,6 +70,7 @@ namespace _2.BUS.Services
                 MaSP = obj.MaSP,
                 SoLuong = obj.SoLuong,
                 DonGia = obj.DonGia,
+                TrangThai = obj.TrangThai
             };
             if (_hoaDonCTRepository.Update(hdct))
             {
@@ -89,7 +92,7 @@ namespace _2.BUS.Services
                     SoLuong = a.SoLuong,
                     DonGia = a.DonGia,
                     TenSp = b.Ten,
-                    TrangThai = c.TrangThai
+                    TrangThai = a.TrangThai
                 };
             return lstHoaDonCT.ToList();
         }

@@ -41,6 +41,7 @@
             this.btn_SanPham = new CustomControls.RJControls.CSButton();
             this.btn_TrangChu = new CustomControls.RJControls.CSButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_Themban = new CustomControls.RJControls.CSButton();
             this.btn_DoiMatKhau = new CustomControls.RJControls.CSButton();
             this.lb_UserName = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -48,7 +49,6 @@
             this.btn_DangXuat = new System.Windows.Forms.Button();
             this.gr_CuaHang = new System.Windows.Forms.GroupBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btn_Themban = new CustomControls.RJControls.CSButton();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -78,12 +78,12 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.Lavender;
+            this.panel4.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.panel4.Controls.Add(this.btn_BanHang);
             this.panel4.Controls.Add(this.btn_NhanVien);
             this.panel4.Controls.Add(this.btn_KhuyenMai);
             this.panel4.Controls.Add(this.btn_ThongKe);
             this.panel4.Controls.Add(this.btn_HoaDon);
-            this.panel4.Controls.Add(this.btn_BanHang);
             this.panel4.Controls.Add(this.btn_SanPham);
             this.panel4.Controls.Add(this.btn_TrangChu);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -193,7 +193,7 @@
             this.btn_BanHang.ForeColor = System.Drawing.Color.White;
             this.btn_BanHang.Image = ((System.Drawing.Image)(resources.GetObject("btn_BanHang.Image")));
             this.btn_BanHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_BanHang.Location = new System.Drawing.Point(3, 444);
+            this.btn_BanHang.Location = new System.Drawing.Point(3, 356);
             this.btn_BanHang.Name = "btn_BanHang";
             this.btn_BanHang.Size = new System.Drawing.Size(263, 82);
             this.btn_BanHang.TabIndex = 23;
@@ -215,7 +215,7 @@
             this.btn_SanPham.ForeColor = System.Drawing.Color.White;
             this.btn_SanPham.Image = ((System.Drawing.Image)(resources.GetObject("btn_SanPham.Image")));
             this.btn_SanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_SanPham.Location = new System.Drawing.Point(3, 356);
+            this.btn_SanPham.Location = new System.Drawing.Point(0, 444);
             this.btn_SanPham.Name = "btn_SanPham";
             this.btn_SanPham.Size = new System.Drawing.Size(263, 82);
             this.btn_SanPham.TabIndex = 22;
@@ -256,6 +256,26 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1341, 72);
             this.panel2.TabIndex = 2;
+            // 
+            // btn_Themban
+            // 
+            this.btn_Themban.AutoSize = true;
+            this.btn_Themban.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Themban.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Themban.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Themban.BorderRadius = 5;
+            this.btn_Themban.BorderSize = 0;
+            this.btn_Themban.FlatAppearance.BorderSize = 0;
+            this.btn_Themban.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Themban.ForeColor = System.Drawing.Color.Black;
+            this.btn_Themban.Location = new System.Drawing.Point(6, 13);
+            this.btn_Themban.Name = "btn_Themban";
+            this.btn_Themban.Size = new System.Drawing.Size(85, 42);
+            this.btn_Themban.TabIndex = 8;
+            this.btn_Themban.Text = "Thêm bàn";
+            this.btn_Themban.TextColor = System.Drawing.Color.Black;
+            this.btn_Themban.UseVisualStyleBackColor = false;
+            this.btn_Themban.Click += new System.EventHandler(this.btn_Themban_Click);
             // 
             // btn_DoiMatKhau
             // 
@@ -333,31 +353,11 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btn_Themban
-            // 
-            this.btn_Themban.AutoSize = true;
-            this.btn_Themban.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Themban.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Themban.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Themban.BorderRadius = 5;
-            this.btn_Themban.BorderSize = 0;
-            this.btn_Themban.FlatAppearance.BorderSize = 0;
-            this.btn_Themban.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Themban.ForeColor = System.Drawing.Color.Black;
-            this.btn_Themban.Location = new System.Drawing.Point(6, 13);
-            this.btn_Themban.Name = "btn_Themban";
-            this.btn_Themban.Size = new System.Drawing.Size(85, 42);
-            this.btn_Themban.TabIndex = 8;
-            this.btn_Themban.Text = "Thêm bàn";
-            this.btn_Themban.TextColor = System.Drawing.Color.Black;
-            this.btn_Themban.UseVisualStyleBackColor = false;
-            this.btn_Themban.Click += new System.EventHandler(this.btn_Themban_Click);
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1613, 967);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.gr_CuaHang);

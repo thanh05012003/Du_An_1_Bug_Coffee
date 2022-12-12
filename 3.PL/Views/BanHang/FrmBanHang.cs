@@ -2,6 +2,7 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Design;
 using System.Linq;
 using System.Windows.Forms;
 using _2.BUS.IServices;
@@ -32,7 +33,7 @@ namespace _3.PL.Views.BanHang
             _nhanVienService = new NhanVienService();
             _loaiSanPhamService = new LoaiSanPhamService();
             _hoaDonCTService = new HoaDonCTService();
-            loadSp();
+            loadSp(null);
             LoadLoaiSP();
             LoadBan();
             ShowHdCho();
@@ -41,7 +42,6 @@ namespace _3.PL.Views.BanHang
         }
 
         #region Method
-
         public void LoadHdChoCT()
         {
             dgrid_HdChoCT.ColumnCount = 6;
@@ -66,6 +66,7 @@ namespace _3.PL.Views.BanHang
         }
         public QlHoaDonCTView GetDataHdCtfromGui()
         {
+          
             QlHoaDonCTView HoaDonCt = new QlHoaDonCTView();
             HoaDonCt = new QlHoaDonCTView()
             {
@@ -73,6 +74,7 @@ namespace _3.PL.Views.BanHang
                 MaSP = _maSPWhenClick,
                 SoLuong = int.Parse(nud_SoLuong.Text),
                 DonGia = decimal.Parse(txt_DonGiaSP.Text),
+                TrangThai = ""
             };
             return HoaDonCt;
         }
@@ -107,21 +109,31 @@ namespace _3.PL.Views.BanHang
         public void LoadLoaiSP()
         {
             cbb_loaiSP.Items.Clear();
+            cbb_loaiSP.Items.Add("Tất cả");
             foreach (var x in _loaiSanPhamService.GetAll())
             {
                 cbb_loaiSP.Items.Add(x.Ten);
             }
         }
 
-        public void loadSp() //load thông tin sản phẩm
+        public void loadSp(string input) //load thông tin sản phẩm
         {
-            List<QlSanPhamView> lstsp = _sanPhamService.GetAll();
+            flowLayoutPanel1.Controls.Clear();
+            List<QlSanPhamView> lstsp;
+            if (input == null)
+            {
+                lstsp = _sanPhamService.GetAll();
+            }
+            else
+            {
+                lstsp = _sanPhamService.GetAll().Where(c => c.MaLsp == input).ToList();
+            }
             foreach (var x in lstsp)
             {
                 Panel products = new Panel()
                 {
-                    Size = new System.Drawing.Size(142, 187),
-                    BackColor = Color.DarkOliveGreen
+                    Size = new System.Drawing.Size(140, 180),
+                    BackColor = Color.LightGray
                 };
                 Panel icon = new Panel();
                 if (x.URL == null) // nếu không có đường dẫn sẽ không hiển thị ảnh sản phẩm
@@ -159,7 +171,7 @@ namespace _3.PL.Views.BanHang
                     Font = new Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold,
                         System.Drawing.GraphicsUnit.Point),
                     ForeColor = Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0))))),
-                    Location = new Point(17, 157),
+                    Location = new Point(17, 155),
                     Size = new Size(107, 23),
                     Text = Math.Round(x.Gia, 0).ToString("C0"),
                 };
@@ -237,6 +249,11 @@ namespace _3.PL.Views.BanHang
         }
         private void btn_ThemSp_Click(object sender, EventArgs e)
         {
+            if (txt_TenSP.Text.Trim() == "")
+            {
+                MessageBox.Show("Bạn chưa chọn sản phẩm");
+                return;
+            }
             var sp = _hoaDonCTService.GetAll().FirstOrDefault(c => c.MaSP == _maSPWhenClick && c.MaHD == _maHDWhenClick);
             if (_maHDWhenClick.Trim() == "")
             {
@@ -246,6 +263,7 @@ namespace _3.PL.Views.BanHang
             {
                 if (sp != null) // nếu click thêm 1 sản phẩm đã tồn tại trong hoá đơn thì sẽ cập nhật lại số lượng
                 {
+                  
                     var htct = _hoaDonCTService.GetAll().FirstOrDefault(c => c.MaHD == _maHDWhenClick);
                     var temp = GetDataHdCtfromGui();
                     temp.SoLuong = int.Parse(nud_SoLuong.Text) + htct.SoLuong;
@@ -257,7 +275,8 @@ namespace _3.PL.Views.BanHang
                 }
                 else
                 {
-                    MessageBox.Show(_hoaDonCTService.add(GetDataHdCtfromGui()));
+                    var hdct = GetDataHdCtfromGui();
+                    MessageBox.Show(_hoaDonCTService.add(hdct));
                     LoadHdChoCT();
                 }
             }
@@ -354,7 +373,7 @@ namespace _3.PL.Views.BanHang
                 .FirstOrDefault(c => c.MaHD == _maHDWhenClick && c.MaSP == _maSPWhenClick);
             if (hdct.SoLuong > 1)
             {
-                hdct.SoLuong = hdct.SoLuong - 1;
+                hdct.SoLuong -= hdct.SoLuong - 1;
                 _hoaDonCTService.update(hdct);
             }
             else
@@ -362,6 +381,19 @@ namespace _3.PL.Views.BanHang
                 _hoaDonCTService.delete(hdct);
             }
             LoadHdChoCT();
+        }
+
+        private void cbb_loaiSP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var lsp = _loaiSanPhamService.GetAll().FirstOrDefault(c => c.Ten == cbb_loaiSP.Text.Trim());
+            if (lsp == null)
+            {
+                 loadSp(null);
+            }
+            else
+            {
+                loadSp(lsp.Ma);
+            }
         }
     }
 }

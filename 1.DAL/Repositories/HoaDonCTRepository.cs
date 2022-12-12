@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace _1.DAL.Repositories
 {
@@ -21,7 +22,14 @@ namespace _1.DAL.Repositories
         {
             if(obj == null) return false;
             _DbContext.HoaDonCT.Add(obj);
-            _DbContext.SaveChanges();
+            try
+            {
+                _DbContext.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
             return true;
         }
 
@@ -43,13 +51,13 @@ namespace _1.DAL.Repositories
         public bool Update(HoaDonCT obj)
         {
             if (obj == null) return false;
-            var temp = _DbContext.HoaDonCT.FirstOrDefault(x => x.MaHD == obj.MaHD);
-            temp.MaHD = obj.MaHD;
-            temp.MaSP = obj.MaSP;
-            temp.SoLuong = obj.SoLuong; 
-            temp.DonGia = obj.DonGia;
-            temp.TrangThai = obj.TrangThai;
-            _DbContext.HoaDonCT.Update(temp);
+            var tempb = _DbContext.HoaDonCT.FirstOrDefault(x => x.MaHD == obj.MaHD && x.MaSP == obj.MaSP);
+            tempb.MaHD = obj.MaHD;
+            tempb.MaSP = obj.MaSP;
+            tempb.SoLuong = obj.SoLuong; 
+            tempb.DonGia = obj.DonGia;
+            tempb.TrangThai = obj.TrangThai;
+            _DbContext.HoaDonCT.Update(tempb);
             try
             {
                 _DbContext.SaveChanges();

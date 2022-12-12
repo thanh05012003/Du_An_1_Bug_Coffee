@@ -29,13 +29,8 @@
         private void InitializeComponent()
         {
             this.cbb_loaiSP = new System.Windows.Forms.ComboBox();
-            this.dtg_hdGiao = new System.Windows.Forms.DataGridView();
             this.dtg_hdCho = new System.Windows.Forms.DataGridView();
-            this.tbt_check = new System.Windows.Forms.Button();
-            this.tbt_tenSP = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -61,7 +56,6 @@
             this.cbb_Ban = new System.Windows.Forms.ComboBox();
             this.button9 = new System.Windows.Forms.Button();
             this.btn_ThemHD = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_hdGiao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_hdCho)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -75,86 +69,39 @@
             // cbb_loaiSP
             // 
             this.cbb_loaiSP.FormattingEnabled = true;
-            this.cbb_loaiSP.Location = new System.Drawing.Point(452, 41);
+            this.cbb_loaiSP.Location = new System.Drawing.Point(452, 15);
             this.cbb_loaiSP.Name = "cbb_loaiSP";
             this.cbb_loaiSP.Size = new System.Drawing.Size(166, 28);
             this.cbb_loaiSP.TabIndex = 66;
-            // 
-            // dtg_hdGiao
-            // 
-            this.dtg_hdGiao.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dtg_hdGiao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg_hdGiao.Location = new System.Drawing.Point(29, 683);
-            this.dtg_hdGiao.Name = "dtg_hdGiao";
-            this.dtg_hdGiao.RowHeadersWidth = 51;
-            this.dtg_hdGiao.RowTemplate.Height = 29;
-            this.dtg_hdGiao.Size = new System.Drawing.Size(591, 152);
-            this.dtg_hdGiao.TabIndex = 58;
+            this.cbb_loaiSP.SelectedIndexChanged += new System.EventHandler(this.cbb_loaiSP_SelectedIndexChanged);
             // 
             // dtg_hdCho
             // 
             this.dtg_hdCho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtg_hdCho.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dtg_hdCho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg_hdCho.Location = new System.Drawing.Point(29, 505);
+            this.dtg_hdCho.Location = new System.Drawing.Point(13, 662);
             this.dtg_hdCho.Name = "dtg_hdCho";
             this.dtg_hdCho.RowHeadersWidth = 51;
             this.dtg_hdCho.RowTemplate.Height = 29;
-            this.dtg_hdCho.Size = new System.Drawing.Size(591, 152);
+            this.dtg_hdCho.Size = new System.Drawing.Size(605, 152);
             this.dtg_hdCho.TabIndex = 57;
-            // 
-            // tbt_check
-            // 
-            this.tbt_check.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tbt_check.Location = new System.Drawing.Point(326, 41);
-            this.tbt_check.Name = "tbt_check";
-            this.tbt_check.Size = new System.Drawing.Size(94, 29);
-            this.tbt_check.TabIndex = 55;
-            this.tbt_check.Text = "Xem";
-            this.tbt_check.UseVisualStyleBackColor = true;
-            // 
-            // tbt_tenSP
-            // 
-            this.tbt_tenSP.Location = new System.Drawing.Point(13, 42);
-            this.tbt_tenSP.Name = "tbt_tenSP";
-            this.tbt_tenSP.Size = new System.Drawing.Size(307, 27);
-            this.tbt_tenSP.TabIndex = 54;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(13, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 20);
-            this.label1.TabIndex = 50;
-            this.label1.Text = "Tên sản phẩm:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(452, 14);
+            this.label2.Location = new System.Drawing.Point(304, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(130, 20);
             this.label2.TabIndex = 51;
             this.label2.Text = "Loại sản phẩm:";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(29, 660);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 20);
-            this.label4.TabIndex = 53;
-            this.label4.Text = "Hóa đơn giao";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(29, 482);
+            this.label3.Location = new System.Drawing.Point(27, 639);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 20);
             this.label3.TabIndex = 52;
@@ -163,14 +110,9 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.dtg_hdGiao);
             this.panel1.Controls.Add(this.cbb_loaiSP);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.tbt_tenSP);
-            this.panel1.Controls.Add(this.tbt_check);
             this.panel1.Controls.Add(this.dtg_hdCho);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -183,9 +125,9 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.flowLayoutPanel1);
-            this.panel2.Location = new System.Drawing.Point(12, 82);
+            this.panel2.Location = new System.Drawing.Point(12, 54);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(608, 382);
+            this.panel2.Size = new System.Drawing.Size(608, 566);
             this.panel2.TabIndex = 67;
             // 
             // flowLayoutPanel1
@@ -195,7 +137,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(606, 380);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(606, 564);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // pane_HDCho
@@ -458,7 +400,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmBanHang";
             this.Text = "Bán hàng";
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_hdGiao)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_hdCho)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -477,13 +418,8 @@
         #endregion
 
         private System.Windows.Forms.ComboBox cbb_loaiSP;
-        private System.Windows.Forms.DataGridView dtg_hdGiao;
         private System.Windows.Forms.DataGridView dtg_hdCho;
-        private System.Windows.Forms.Button tbt_check;
-        private System.Windows.Forms.TextBox tbt_tenSP;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;

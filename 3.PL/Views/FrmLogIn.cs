@@ -110,23 +110,5 @@ namespace _3.PL.Views
             Check();
         }
 
-        private void chk_Save_CheckedChanged(object sender, EventArgs e)
-        {
-            if (txt_TaiKhoan.Texts !=  "" && txt_MatKhau.Texts != "")
-            {
-                if (chk_Save.Checked == true)
-                {
-                    Properties.Settings.Default.Tk = txt_TaiKhoan.Texts;
-                    Properties.Settings.Default.Mk = txt_MatKhau.Texts;
-                    Properties.Settings.Default.Save();
-                }
-                else
-                {
-                    Properties.Settings.Default.Tk = "";
-                    Properties.Settings.Default.Mk = "";
-                    Properties.Settings.Default.Save();
-                }
-            }
-        }
     }
 }

@@ -127,6 +127,7 @@ namespace _3.PL.Views
         {
              var _maBanWhenClick = ((sender as CSButton).Tag as QlBanView).Ma;
             //Properties.Settings.Default.MaBan = _maBanWhenClick;
+            Properties.Settings.Default.MaBan = _maBanWhenClick;
             _maBanChuyen = _maBanWhenClick;
             ShowBill(_maBanWhenClick);
         }
@@ -187,7 +188,34 @@ namespace _3.PL.Views
 
         private void btn_GopBan_Click(object sender, EventArgs e)
         {
+            if (cmb_GopBan.Text.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng chọn bàn muốn gộp");
+                return;
+            }
 
+            var BanGop = _banService.GetAll().FirstOrDefault(c => c.Ten == cmb_GopBan.Text);
+            var banchuyen = _banService.GetAll().FirstOrDefault(c => c.Ma == _maBanChuyen);
+            DialogResult dr = MessageBox.Show(
+                $"Bạn có chắc muốn gộp {banchuyen.Ten} với {BanGop.Ten} không ?",
+                "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dr == DialogResult.OK)
+            {
+                foreach (var c in _hoaDonService.GetAll().Where(c => c.MaBan == _maBanChuyen))
+                {
+                    if (c.TrangThai == "Chờ pha chế" || c.TrangThai == "Chờ thanh toán")
+                    {
+                        c.MaBan = BanGop.Ma;
+                        _hoaDonService.update(c);
+                        BanGop.TrangThai = 0;
+                        _banService.update(BanGop);
+                        banchuyen.TrangThai = 1;
+                        _banService.update(banchuyen);
+                    }
+                }
+
+                MessageBox.Show("Chuyển bàn thành công");
+            }
         }
 
         public QlHoaDonCTView getDataSPfromGui()
@@ -200,7 +228,8 @@ namespace _3.PL.Views
                 MaHD = _maHdWhenClick,
                 MaSP = sp.Ma,
                 DonGia = sp.Gia,
-                SoLuong = int.Parse(nud_SoLuong.Text)
+                SoLuong = int.Parse(nud_SoLuong.Text),
+                TrangThai = ""
             };
             return lstHdCt;
         }
@@ -235,11 +264,12 @@ namespace _3.PL.Views
                 return;
             }
             
-            var ban = _banService.GetAll().FirstOrDefault();
+            var ban = _banService.GetAll().FirstOrDefault(c =>c.Ma == _maBanChuyen);
             if (ban.TrangThai == 0) // nếu bàn có người
             {
                 foreach (var c in _hoaDonService.GetAll().Where(c => c.MaBan == _maBanChuyen))
                 {
+                    //var c = _hoaDonService.GetAll().FirstOrDefault(c => c.MaBan == _maBanChuyen);
                     if (c.TrangThai == "Chờ pha chế" || c.TrangThai == "Chờ thanh toán")
                     {
                         DialogResult dlg = MessageBox.Show($"Bạn có muốn thêm sản phẩm vào {ban.Ten} không?",
@@ -247,6 +277,7 @@ namespace _3.PL.Views
                         if (dlg == DialogResult.OK)
                         {
                             var tempsp = getDataSPfromGui();
+                            var hd = _hoaDonService.GetAll().FirstOrDefault(a => a.Ma == c.Ma);
                             var hdct = _hoaDonCtService.GetAll()
                                 .FirstOrDefault(x => x.MaHD == c.Ma && x.MaSP == tempsp.MaSP);
                             if (hdct != null) // cập nhật lại số lượng nếu đã tồn tại
@@ -254,13 +285,20 @@ namespace _3.PL.Views
                                 tempsp.MaHD = c.Ma;
                                 tempsp.MaSP = hdct.MaSP;
                                 tempsp.SoLuong = hdct.SoLuong + int.Parse(nud_SoLuong.Text);
+                                tempsp.TrangThai = $"Thêm {nud_SoLuong.Text}";
                                 MessageBox.Show(_hoaDonCtService.update(tempsp));
+                                //cập nhật lại trạng thái hoá đơn để pha chế làm
+                                hd.TrangThai = "Chờ pha chế";
+                                _hoaDonService.update(hd);
                                 ShowBill(c.MaBan);
                             }
-                            else // thêm sản phẩm vào hoá đơn ( thêm vào bàn có người)
+                            else // thêm sản phẩm vào hoá đơn ( thêm vào bàn có người )
                             {
+                                tempsp.TrangThai = "";
                                 tempsp.MaHD = c.Ma;
                                 _hoaDonCtService.add(tempsp);
+                                hd.TrangThai = "Chờ pha chế";
+                                _hoaDonService.update(hd);
                                 ShowBill(c.Ma);
                             }
                         }
@@ -270,10 +308,12 @@ namespace _3.PL.Views
             {
                 var temp = HoaDonCho();             //
                 _maHdWhenClick = temp.Ma;                      //
-                temp.MaBan = ban.Ma;                           // tạo hoá đơn khi ấn thêm món ( nếu bàn còn trống )
+                temp.MaBan = ban.Ma;
+                temp.TrangThai = "Chờ pha chế";                // tạo hoá đơn khi ấn thêm món ( nếu bàn còn trống )
                 _hoaDonService.add(temp);                      //
 
                 var tempsp = getDataSPfromGui();  // thêm sản phẩm sau khi tạo hoá đơn
+                tempsp.TrangThai = "";
                 _hoaDonCtService.add(tempsp);                  //
 
                 ban.TrangThai = 0;                               //

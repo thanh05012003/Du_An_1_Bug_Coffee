@@ -50,8 +50,8 @@ namespace _3.PL.Views
                         if (c.TrangThai == "Đã thanh toán")
                         {
                             tongTien += (x.DonGia * x.SoLuong);
-                            HdBanDay = _hoaDonService.GetAll().Where(c =>c.MaBan!=null).Count();
-                            HdGiaoDay = _hoaDonService.GetAll().Where(c => c.MaBan == null).Count();
+                            HdBanDay = _hoaDonService.GetAll().Where(c =>c.MaBan!=null && c.NgayTao.Value.ToString("d") == DateTime.Now.ToString("d")).Count();
+                            HdGiaoDay = _hoaDonService.GetAll().Where(c => c.MaBan == null && c.NgayTao.Value.ToString("d") == DateTime.Now.ToString("d")).Count();
                         }
                     }
                 }
@@ -85,8 +85,8 @@ namespace _3.PL.Views
                         if (c.TrangThai == "Đã thanh toán")
                         {
                             tongCs += (x.DonGia * x.SoLuong);
-                            HdBanCs = _hoaDonService.GetAll().Where(c => c.MaBan != null).Count();
-                            HdGiaoCs = _hoaDonService.GetAll().Where(c => c.MaBan == null).Count();
+                            HdBanCs = _hoaDonService.GetAll().Where(c => c.MaBan != null && (c.NgayTao.Value >= dtp_tuNgay.Value && c.NgayTao.Value <= dtp_denNgay.Value)).Count();
+                            HdGiaoCs = _hoaDonService.GetAll().Where(c => c.MaBan == null && (c.NgayTao.Value >= dtp_tuNgay.Value && c.NgayTao.Value <= dtp_denNgay.Value)).Count();
                         }
                     }
                     else
@@ -117,8 +117,8 @@ namespace _3.PL.Views
                         if (c.NgayTao.Value.Month.ToString() == DateTime.Now.Month.ToString())
                         {
                             tongTienThang += (x.DonGia * x.SoLuong);
-                            HdBanMon = _hoaDonService.GetAll().Where(c => c.MaBan != null).Count();
-                            HdGiaoMon = _hoaDonService.GetAll().Where(c => c.MaBan == null).Count();
+                            HdBanMon = _hoaDonService.GetAll().Where(c => c.MaBan != null && (c.NgayTao.Value.Month.ToString() == DateTime.Now.Month.ToString())).Count();
+                            HdGiaoMon = _hoaDonService.GetAll().Where(c => c.MaBan == null && (c.NgayTao.Value.Month.ToString() == DateTime.Now.Month.ToString())).Count();
                         }
                     }
                 }
@@ -140,8 +140,8 @@ namespace _3.PL.Views
                         if (c.NgayTao.Value.Year.ToString() == DateTime.Now.Year.ToString())
                         {
                             tongTienNam += (x.DonGia * x.SoLuong);
-                            HdBanYear = _hoaDonService.GetAll().Where(c => c.MaBan != null).Count();
-                            HdGiaoYear = _hoaDonService.GetAll().Where(c => c.MaBan == null).Count();
+                            HdBanYear = _hoaDonService.GetAll().Where(c => c.MaBan != null && (c.NgayTao.Value.Year.ToString() == DateTime.Now.Year.ToString())).Count();
+                            HdGiaoYear = _hoaDonService.GetAll().Where(c => c.MaBan == null && (c.NgayTao.Value.Year.ToString() == DateTime.Now.Year.ToString())).Count();
                         }
                     }
                 }

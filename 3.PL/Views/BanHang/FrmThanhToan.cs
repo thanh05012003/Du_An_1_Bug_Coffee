@@ -57,10 +57,17 @@ namespace _3.PL.Views.BanHang
 
         public void LoadThanhToan()
         {
-            foreach (var x in _HoaDonCTService.GetAll().Where(c => c.MaHD == Properties.Settings.Default.MaHd))
+            foreach (var hd in _HoaDonService.GetAll().Where(c =>c.MaBan == Properties.Settings.Default.MaBan))
             {
-                tongtien += (x.DonGia * x.SoLuong);
-                tienHang += (x.DonGia * x.SoLuong);
+                if (hd.TrangThai == "Chờ pha chế" || hd.TrangThai == "Chờ thanh toán")
+                {
+                    foreach (var x in _HoaDonCTService.GetAll().Where(c => c.MaHD == hd.Ma))
+                    {
+                        tongtien += (x.DonGia * x.SoLuong);
+                        tienHang += (x.DonGia * x.SoLuong);
+                    }
+                }
+               
             }
 
             lb_TongTien.Text = tongtien.ToString("C0");
@@ -231,13 +238,18 @@ namespace _3.PL.Views.BanHang
             //Bước 1: Nạp file mẫu
             string pa = @"C:\Users\ADMIN\Desktop\Du_An_1_Bug_Coffee\3.PL\Template\HoaDon_TheBugCoffee1.doc";
             Document HoaDon = new Document(pa);
-
             var x = _HoaDonService.GetAll().FirstOrDefault(c =>c.Ma == Properties.Settings.Default.MaHd);
-           
             //Bước 2: Điền các thông tin cố định
+            var ban = _BanService.GetAll().FirstOrDefault(c => c.Ma == x.MaBan);
            
-                HoaDon.MailMerge.Execute(new[] { "BAN_X" }, new[] { x.TenBan });
-            
+            if (ban==null)
+            {
+                HoaDon.MailMerge.Execute(new[] { "BAN_X" }, new[] { "" });
+            }
+            else
+            {
+                HoaDon.MailMerge.Execute(new[] { "BAN_X" }, new[] { ban.Ten });
+            }
             HoaDon.MailMerge.Execute(new[] { "Ngay_Tao" }, new[] { x.NgayTao.Value.ToString() });
             HoaDon.MailMerge.Execute(new[] { "Ten_Nv" }, new[] { x.TenNV });
             HoaDon.MailMerge.Execute(new[] { "Gio_Ra" }, new[] { DateTime.Now.ToString("hh:mm:ss") });
@@ -246,43 +258,25 @@ namespace _3.PL.Views.BanHang
             HoaDon.MailMerge.Execute(new[] { "Ten_Kh" }, new[] { txt_TenKhachHang.Texts });
             HoaDon.MailMerge.Execute(new[] { "Ma_hd" }, new[] { x.Ma });
             HoaDon.MailMerge.Execute(new[] { "Tong_Tien" }, new[] { (tongtien - giamGia).ToString("C0") });
-
-            string path = @"C:\Users\ADMIN\Desktop\HoaDon"; // đường dẫn folder
+            string path = $@"C:\Users\ADMIN\Desktop\HoaDon"; // đường dẫn folder có tên hoá đơn
             if (!Directory.Exists(path))
                 Directory.CreateDirectory(path); // tạo folder ( Hoá đơn) mới nếu chưa có
             Random rd = new Random();
-            tenTep = $"{path}\\{$"{rd.Next(1000) + x.Ma}.docx"}";
-
+            string filename = $"{rd.Next(1000) + x.Ma}";
+           tenTep = $@"{path}\{filename}.docx";
+           
             //Bước 3: Điền thông tin lên bảng
             Table ThongTinSanPham =
                 HoaDon.GetChild(NodeType.Table, 0, true) as Table; //Lấy bảng thứ 1 trong file mẫu
             int HangHienTai = 1;
-            ThongTinSanPham.InsertRows(HangHienTai, HangHienTai, 1);
-
+            int i = _HoaDonCTService.GetAll().Where(c =>c.MaHD == x.Ma).Count();
             foreach (var c in _HoaDonCTService.GetAll().Where(c =>c.MaHD == x.Ma))
             {
-                if (_HoaDonCTService.GetAll().Where(c => c.MaHD == Properties.Settings.Default.MaHd).Count() == 1)
-                {
-                    for (int i = 1; i <= _HoaDonCTService.GetAll().Where(c => c.MaHD == Properties.Settings.Default.MaHd).Count(); i++)
-                    {
-                        ThongTinSanPham.PutValue(HangHienTai, 0, (1).ToString()); //Cột STT
-                        ThongTinSanPham.PutValue(HangHienTai, 1, c.TenSp); //Cột mặt hàng
-                        ThongTinSanPham.PutValue(HangHienTai, 2, c.SoLuong.ToString()); //Cột số lượng
-                        ThongTinSanPham.PutValue(HangHienTai, 3, c.DonGia.ToString("C0")); //Cột đơn giá
-                        HangHienTai++;
-                    }
-                }
-                else
-                {
-                    for (int i = 1; i <= _HoaDonCTService.GetAll().Where(c => c.MaHD == Properties.Settings.Default.MaHd).Count() - 1; i++)
-                    {
-                        ThongTinSanPham.PutValue(HangHienTai, 0, (1).ToString()); //Cột STT
-                        ThongTinSanPham.PutValue(HangHienTai, 1, c.TenSp); //Cột mặt hàng
-                        ThongTinSanPham.PutValue(HangHienTai, 2, c.SoLuong.ToString()); //Cột số lượng
-                        ThongTinSanPham.PutValue(HangHienTai, 3, c.DonGia.ToString("C0")); //Cột đơn giá
-                        HangHienTai++;
-                    }
-                }
+                ThongTinSanPham.InsertRows(HangHienTai, HangHienTai, 1);
+                ThongTinSanPham.PutValue(HangHienTai, 0, (i--).ToString()); //Cột STT
+                ThongTinSanPham.PutValue(HangHienTai, 1, c.TenSp); //Cột mặt hàng
+                ThongTinSanPham.PutValue(HangHienTai, 2, c.SoLuong.ToString()); //Cột số lượng
+                ThongTinSanPham.PutValue(HangHienTai, 3, c.DonGia.ToString("C0")); //Cột đơn giá
             }
             HoaDon.Save(tenTep);
             MessageBox.Show("Xuất hoá đơn thành công");

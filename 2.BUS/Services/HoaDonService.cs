@@ -55,7 +55,24 @@ namespace _2.BUS.Services
 
         public string delete(QlHoaDonView obj)
         {
-            throw new NotImplementedException();
+            if (obj == null) return "Xoá không thành công";
+            HoaDon hoaDon = new HoaDon()
+            {
+                Ma = obj.Ma,
+                MaKH = obj.MaKH,
+                MaNV = obj.MaNV,
+                NgayTao = obj.NgayTao,
+                MaVC = obj.MaVC,
+                TrangThai = obj.TrangThai,
+                MaBan = obj.MaBan,
+                GhiChu = obj.GhiChu
+            };
+            if (_hoaDonRepository.Delete(hoaDon))
+            {
+                return "Xoá thành công";
+            }
+
+            return "Xoá không thành công";
         }
 
         public string update(QlHoaDonView obj)
