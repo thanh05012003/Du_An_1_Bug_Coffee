@@ -134,11 +134,29 @@ namespace _3.PL.Views.BanHang
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dlg == DialogResult.Yes)
                 {
-                    XuatHoaDon();
-                    thanhToan();
+                    if (cbx_DoiDiem.Checked)
+                    {
+                        XuatHoaDon();
+                        thanhToan();
+                        var kh = _KhachHangService.GetAll().FirstOrDefault(c => c.SDT == txt_SDT.Texts);
+                        if (kh==null)
+                        {
+                            return;
+                        }
+                        kh.DiemTL = 0;
+                        _KhachHangService.update(kh);
+                    }
+                  
                 }
                 else
                 {
+                    var kh = _KhachHangService.GetAll().FirstOrDefault(c => c.SDT == txt_SDT.Texts);
+                    if (kh == null)
+                    {
+                        return;
+                    }
+                    kh.DiemTL = 0;
+                    _KhachHangService.update(kh);
                     thanhToan();
                 }
             }

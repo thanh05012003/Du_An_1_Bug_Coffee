@@ -41,7 +41,15 @@ namespace _1.DAL.Repositories
         public bool Update(Voucher obj)
         {
             if (obj == null) return false;
-            _DbContext.Update(obj);
+            var tempobj = _DbContext.Voucher.FirstOrDefault(c => c.Ma == obj.Ma);
+            tempobj.Ma = obj.Ma;
+            tempobj.Ten = obj.Ten;
+            tempobj.MoTa = obj.MoTa;
+           tempobj.NgayBatDau = obj.NgayBatDau;
+           tempobj.NgayKetThuc = obj.NgayKetThuc;
+           tempobj.GiamGia = obj.GiamGia;
+           tempobj.TrangThai = obj.TrangThai;
+            _DbContext.Update(tempobj);
             _DbContext.SaveChanges();
             return true;
         }

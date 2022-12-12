@@ -13,5 +13,6 @@ namespace _2.BUS.IServices
         string delete(QlVoucherView obj);
         string update(QlVoucherView obj);
         List<QlVoucherView> GetAll();
+        List<QlVoucherView> GetAll(string input);
     }
 }

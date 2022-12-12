@@ -82,5 +82,14 @@ namespace _2.BUS.Services
                 };
             return lstVoucher.ToList();
         }
+
+        public List<QlVoucherView> GetAll(string input)
+        {
+            if (input == null)
+            {
+                return GetAll();
+            }
+            return GetAll().Where(c => c.TrangThai == int.Parse(input)).ToList();
+        }
     }
 }

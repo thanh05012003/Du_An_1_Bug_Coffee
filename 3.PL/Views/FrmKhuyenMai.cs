@@ -21,10 +21,11 @@ namespace _3.PL.Views
         {
             _voucherService = new VoucherService();
             InitializeComponent();
-            loadDataKM();
+            loadDataKM(null);
             rb_hoatDong.Checked = true;
         }
-        public void loadDataKM()
+
+        public void loadDataKM(string input)
         {
             int stt = 1;
             dtg_showKM.ColumnCount = 8;
@@ -37,7 +38,7 @@ namespace _3.PL.Views
             dtg_showKM.Columns[6].Name = "Giảm giá";
             dtg_showKM.Columns[7].Name = "Mô tả";
             dtg_showKM.Rows.Clear();
-            foreach (var x in _voucherService.GetAll())
+            foreach (var x in _voucherService.GetAll(input))
             {
                 dtg_showKM.Rows.Add(stt++, x.Ma, x.Ten, x.NgayBatDau, x.NgayKetThuc,
                     (x.TrangThai == 1 ? "Hoạt động" : "Không hoạt động"), x.GiamGia, x.MoTa);
@@ -69,7 +70,7 @@ namespace _3.PL.Views
             else
             {
                 MessageBox.Show(_voucherService.add(GetdataformGUi()));
-                loadDataKM();
+                loadDataKM(null);
             }
         }
 
@@ -105,5 +106,19 @@ namespace _3.PL.Views
         {
             tbt_MaKM.Texts = "VC00" + (_voucherService.GetAll().Count + 1);
         }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            DialogResult dlg = MessageBox.Show("Bạn có muốn cập nhật không?", "Xác nhận", MessageBoxButtons.YesNo);
+            if (dlg == DialogResult.Yes)
+            {
+                var temp = GetdataformGUi();
+                temp.Ma = _maWhenClick;
+                MessageBox.Show(_voucherService.update(temp));
+                loadDataKM(null);
+            }
+        }
+
+     
     }
 }

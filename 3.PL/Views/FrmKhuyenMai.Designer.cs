@@ -50,9 +50,7 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.cbb_tThaiKM = new CustomControls.RJControls.CSComboBox();
             this.dtg_showKM = new System.Windows.Forms.DataGridView();
-            this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_showKM)).BeginInit();
@@ -172,6 +170,7 @@
             this.btn_update.Text = "Cập nhật";
             this.btn_update.TextColor = System.Drawing.Color.White;
             this.btn_update.UseVisualStyleBackColor = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_add
             // 
@@ -359,34 +358,13 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.cbb_tThaiKM);
             this.groupBox4.Controls.Add(this.dtg_showKM);
-            this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Location = new System.Drawing.Point(607, 12);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(704, 823);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Khuyến Mãi";
-            // 
-            // cbb_tThaiKM
-            // 
-            this.cbb_tThaiKM.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cbb_tThaiKM.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbb_tThaiKM.BorderSize = 2;
-            this.cbb_tThaiKM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cbb_tThaiKM.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbb_tThaiKM.ForeColor = System.Drawing.Color.DimGray;
-            this.cbb_tThaiKM.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbb_tThaiKM.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbb_tThaiKM.ListTextColor = System.Drawing.Color.DimGray;
-            this.cbb_tThaiKM.Location = new System.Drawing.Point(25, 47);
-            this.cbb_tThaiKM.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cbb_tThaiKM.Name = "cbb_tThaiKM";
-            this.cbb_tThaiKM.Padding = new System.Windows.Forms.Padding(2);
-            this.cbb_tThaiKM.Size = new System.Drawing.Size(250, 34);
-            this.cbb_tThaiKM.TabIndex = 5;
-            this.cbb_tThaiKM.Texts = "";
             // 
             // dtg_showKM
             // 
@@ -400,16 +378,6 @@
             this.dtg_showKM.TabIndex = 1;
             this.dtg_showKM.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_showKM_CellClick);
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(25, 23);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(81, 21);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "Trạng Thái";
-            // 
             // FrmKhuyenMai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -422,7 +390,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_showKM)).EndInit();
             this.ResumeLayout(false);
 
@@ -442,7 +409,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dtg_showKM;
-        private System.Windows.Forms.Label label13;
         private CustomControls.RJControls.CSTextBox tbt_sale;
         private CustomControls.RJControls.CSTextBox tbt_moTa;
         private CustomControls.RJControls.CSTextBox tbt_TenKM;
@@ -453,6 +419,5 @@
         private CustomControls.RJControls.CSRadioButton rb_hoatDong;
         private CustomControls.RJControls.CSButton btn_update;
         private CustomControls.RJControls.CSButton btn_add;
-        private CustomControls.RJControls.CSComboBox cbb_tThaiKM;
     }
 }

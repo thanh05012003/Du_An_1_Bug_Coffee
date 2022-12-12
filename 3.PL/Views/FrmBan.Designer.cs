@@ -31,12 +31,10 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_ThanhToan = new CustomControls.RJControls.CSButton();
-            this.btn_GopBan = new CustomControls.RJControls.CSButton();
             this.cmb_Ban = new System.Windows.Forms.ComboBox();
             this.btn_TachHd = new CustomControls.RJControls.CSButton();
             this.btn_ChuyenBan = new CustomControls.RJControls.CSButton();
             this.dgrid_TTSp = new System.Windows.Forms.DataGridView();
-            this.cmb_GopBan = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -88,26 +86,6 @@
             this.btn_ThanhToan.TextColor = System.Drawing.Color.White;
             this.btn_ThanhToan.UseVisualStyleBackColor = false;
             this.btn_ThanhToan.Click += new System.EventHandler(this.btn_ThanhToan_Click);
-            // 
-            // btn_GopBan
-            // 
-            this.btn_GopBan.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_GopBan.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_GopBan.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_GopBan.BorderRadius = 15;
-            this.btn_GopBan.BorderSize = 0;
-            this.btn_GopBan.FlatAppearance.BorderSize = 0;
-            this.btn_GopBan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_GopBan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_GopBan.ForeColor = System.Drawing.Color.White;
-            this.btn_GopBan.Location = new System.Drawing.Point(983, 9);
-            this.btn_GopBan.Name = "btn_GopBan";
-            this.btn_GopBan.Size = new System.Drawing.Size(135, 40);
-            this.btn_GopBan.TabIndex = 12;
-            this.btn_GopBan.Text = "Gộp bàn";
-            this.btn_GopBan.TextColor = System.Drawing.Color.White;
-            this.btn_GopBan.UseVisualStyleBackColor = false;
-            this.btn_GopBan.Click += new System.EventHandler(this.btn_GopBan_Click);
             // 
             // cmb_Ban
             // 
@@ -169,14 +147,6 @@
             this.dgrid_TTSp.RowTemplate.Height = 29;
             this.dgrid_TTSp.Size = new System.Drawing.Size(539, 373);
             this.dgrid_TTSp.TabIndex = 2;
-            // 
-            // cmb_GopBan
-            // 
-            this.cmb_GopBan.FormattingEnabled = true;
-            this.cmb_GopBan.Location = new System.Drawing.Point(983, 55);
-            this.cmb_GopBan.Name = "cmb_GopBan";
-            this.cmb_GopBan.Size = new System.Drawing.Size(133, 28);
-            this.cmb_GopBan.TabIndex = 13;
             // 
             // groupBox1
             // 
@@ -307,8 +277,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1323, 847);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.cmb_GopBan);
-            this.Controls.Add(this.btn_GopBan);
             this.Controls.Add(this.cmb_Ban);
             this.Controls.Add(this.btn_TachHd);
             this.Controls.Add(this.btn_ChuyenBan);
@@ -335,8 +303,6 @@
         private System.Windows.Forms.ComboBox cmb_Ban;
         private CustomControls.RJControls.CSButton btn_TachHd;
         private CustomControls.RJControls.CSButton btn_ChuyenBan;
-        private CustomControls.RJControls.CSButton btn_GopBan;
-        private System.Windows.Forms.ComboBox cmb_GopBan;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
